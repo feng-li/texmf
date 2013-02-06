@@ -17,15 +17,15 @@ Use BibTeX with abbreviations
 
 Setup three .bib files
 
-    myBibTeX.bib
+    References.bib
     full.bib
     abbr.bib
 
-where `myBibTeX.bib` contains the main BibTeX entries and `full.bib` contains the
+where `References.bib` contains the main BibTeX entries and `full.bib` contains the
 full name strings of journals and `abbr.bib` contains the abbreviations.
 
 We take *Journal of the American Statistical Association* as an example. In
-`myBibTeX.bib` file you write every as usual except in the `journal` entry you
+`References.bib` file you write every as usual except in the `journal` entry you
 write with a key, e,g
 
     journal = jasa,
