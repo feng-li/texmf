@@ -15,7 +15,7 @@ General use of BibTeX
 Where to put the BibTeX database
 --------------------------------
 
-For a very long time I set up individual database for each paper. Which makes a
+For a very long time I set up individual database for each paper which makes a
 lot of duplicated entries. Now I use a general solution, put everything into
 the folder (where the environment variable `TEXINPUTS` points to)
 
