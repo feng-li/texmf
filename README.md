@@ -12,6 +12,18 @@ General use of BibTeX
     latex file.tex
     latex file.tex
 
+Where to put the BibTeX database
+--------------------------------
+
+For a very long time I set up individual database for each paper. Which makes a
+lot of duplicated entries. Now I use a general solution, put everything into
+the folder (where the environment variable `TEXINPUTS` points to)
+
+    $HOME/texmf/bibtex/bib/myBibTeXFolder
+
+so that the latex program can find the location without specify the
+location of the BibTeX database.
+
 Use BibTeX with abbreviations
 -----------------------------
 
