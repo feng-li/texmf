@@ -8,7 +8,7 @@
 %% ----------------------------------------
 %% *** BibTeX style for Biometrika ***
 %% (Brett Presnell, 21 April 1998)
-%% 
+%%
  %-------------------------------------------------------------------
  % The original source file contains the following version information:
  % \ProvidesFile{merlin.mbs}[1998/02/25 3.85a (PWD)]
@@ -1525,5 +1525,3 @@ EXECUTE {end.bib}
 %% End of customized bst file
 %%
 %% End of file `biometrika.bst'.
-
-
