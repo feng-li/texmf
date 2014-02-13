@@ -54,8 +54,8 @@ and do the same thing for `abbr.bib` but using the abbreviation
 
 Now in the `file.tex` you choose if you need to use full name or abbreviation as
 
-    \bibliography{abbr,myBibTeX} % no space between files
+    \bibliography{abbr,References} % no space between files
 
 or
 
-    \bibliography{full,myBibTeX} % no space between files
+    \bibliography{full,References} % no space between files
