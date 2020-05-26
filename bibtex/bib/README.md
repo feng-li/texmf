@@ -1,7 +1,8 @@
 Feng Li's BibTeX database
 =========================
 
-Personal BibTeX database
+Feng Li's Personal BibTeX database with interests of Bayesian Statistical Computing,
+Forecasting, Econometrics.
 
 
 General use of BibTeX
@@ -15,20 +16,20 @@ General use of BibTeX
 Where to put the BibTeX database
 --------------------------------
 
-For a very long time I set up individual database for each paper which makes a
-lot of duplicated entries. Now I use a general solution, put everything into
-the folder (where the environment variable `BIBINPUTS` points to)
+For a very long time I set up individual BibTeX database for each paper which yields a lot
+of duplicated entries. Now I use a general solution, put everything into the folder (where
+the environment variable `BIBINPUTS` points to)
 
     $HOME/texmf/bibtex/bib/myBibTeXFolder
 
-so that the latex program can find the location without specify the
-location of the BibTeX database.
+so that the latex program can find the location without specifying the location of the
+BibTeX database.
 
 
 Collaborate with coauthors
 --------------------------
 
-If you want to collaborate with other people but do not want to copy your big bibitex
+If you want to collaborate with other people but do not want to copy your big BibTeX
 database everywhere, you could simply issue a command within your paper folder
 
     bibexport -o for_this_paper_only.bib this_paper.aux
@@ -36,7 +37,7 @@ database everywhere, you could simply issue a command within your paper folder
 Use BibTeX with abbreviations
 -----------------------------
 
-Setup three .bib files
+Setup three `.bib` files
 
     References.bib
     full.bib
