@@ -24,6 +24,15 @@ the folder (where the environment variable `BIBINPUTS` points to)
 so that the latex program can find the location without specify the
 location of the BibTeX database.
 
+
+Collaborate with coauthors
+--------------------------
+
+If you want to collaborate with other people but do not want to copy your big bibitex
+database everywhere, you could simply issue a command within your paper folder
+
+    bibexport -o for_this_paper_only.bib this_paper.aux
+
 Use BibTeX with abbreviations
 -----------------------------
 
