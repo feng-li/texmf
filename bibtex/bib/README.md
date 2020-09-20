@@ -30,12 +30,23 @@ Collaborate with coauthors
 --------------------------
 
 If you want to collaborate with other people but do not want to copy your big BibTeX
-database everywhere, you could simply issue a command within your paper folder
+database everywhere, you could simply issue a command within your paper folder when your
+final version is done.
 
-    bibexport -o for_this_paper_only.bib this_paper.aux
+### `BibTeX`
+
+    bibexport -o <for_this_paper_only>.bib <this_paper>.aux
+
+### `BibLaTeX`
+
+    biber --output_format=bibtex --output_resolve <this_paper>.bcf
+
 
 Use BibTeX with abbreviations
 -----------------------------
+
+Note that this is the specific solution for `BibTeX`.
+
 
 Setup three `.bib` files
 
