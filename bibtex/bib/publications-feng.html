@@ -1,0 +1,988 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>JabRef references</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+<!--
+// QuickSearch script for JabRef HTML export
+// Version: 3.0
+//
+// Copyright (c) 2006-2011, Mark Schenk
+//
+// This software is distributed under a Creative Commons Attribution 3.0 License
+// http://creativecommons.org/licenses/by/3.0/
+//
+// Features:
+// - intuitive find-as-you-type searching
+//    ~ case insensitive
+//    ~ ignore diacritics (optional)
+//
+// - search with/without Regular Expressions
+// - match BibTeX key
+//
+
+// Search settings
+var searchAbstract = true;	// search in abstract
+var searchComment = true;	// search in comment
+
+var noSquiggles = true; 	// ignore diacritics when searching
+var searchRegExp = false; 	// enable RegExp searches
+
+
+if (window.addEventListener) {
+	window.addEventListener("load",initSearch,false); }
+else if (window.attachEvent) {
+	window.attachEvent("onload", initSearch); }
+
+function initSearch() {
+	// check for quick search table and searchfield
+	if (!document.getElementById('qs_table')||!document.getElementById('quicksearch')) { return; }
+
+	// load all the rows and sort into arrays
+	loadTableData();
+
+	//find the query field
+	qsfield = document.getElementById('qs_field');
+
+	// previous search term; used for speed optimisation
+	prevSearch = '';
+
+	//find statistics location
+	stats = document.getElementById('stat');
+	setStatistics(-1);
+
+	// set up preferences
+	initPreferences();
+
+	// shows the searchfield
+	document.getElementById('quicksearch').style.display = 'block';
+	document.getElementById('qs_field').onkeyup = quickSearch;
+}
+
+function loadTableData() {
+	// find table and appropriate rows
+	searchTable = document.getElementById('qs_table');
+	var allRows = searchTable.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+	// split all rows into entryRows and infoRows (e.g. abstract, comment, bibtex)
+	entryRows = new Array(); infoRows = new Array(); absRows = new Array(); revRows = new Array();
+
+	// get data from each row
+	entryRowsData = new Array(); absRowsData = new Array(); revRowsData = new Array();
+
+	BibTeXKeys = new Array();
+
+	for (var i=0, k=0, j=0; i<allRows.length;i++) {
+		if (allRows[i].className.match(/entry/)) {
+			entryRows[j] = allRows[i];
+			entryRowsData[j] = stripDiacritics(getTextContent(allRows[i]));
+			allRows[i].id ? BibTeXKeys[j] = allRows[i].id : allRows[i].id = 'autokey_'+j;
+			j ++;
+		} else {
+			infoRows[k++] = allRows[i];
+			// check for abstract/comment
+			if (allRows[i].className.match(/abstract/)) {
+				absRows.push(allRows[i]);
+				absRowsData[j-1] = stripDiacritics(getTextContent(allRows[i]));
+			} else if (allRows[i].className.match(/comment/)) {
+				revRows.push(allRows[i]);
+				revRowsData[j-1] = stripDiacritics(getTextContent(allRows[i]));
+			}
+		}
+	}
+	//number of entries and rows
+	numEntries = entryRows.length;
+	numInfo = infoRows.length;
+	numAbs = absRows.length;
+	numRev = revRows.length;
+}
+
+function quickSearch(){
+
+	tInput = qsfield;
+
+	if (tInput.value.length == 0) {
+		showAll();
+		setStatistics(-1);
+		qsfield.className = '';
+		return;
+	} else {
+		t = stripDiacritics(tInput.value);
+
+		if(!searchRegExp) { t = escapeRegExp(t); }
+
+		// only search for valid RegExp
+		try {
+			textRegExp = new RegExp(t,"i");
+			closeAllInfo();
+			qsfield.className = '';
+		}
+			catch(err) {
+			prevSearch = tInput.value;
+			qsfield.className = 'invalidsearch';
+			return;
+		}
+	}
+
+	// count number of hits
+	var hits = 0;
+
+	// start looping through all entry rows
+	for (var i = 0; cRow = entryRows[i]; i++){
+
+		// only show search the cells if it isn't already hidden OR if the search term is getting shorter, then search all
+		if(cRow.className.indexOf('noshow')==-1 || tInput.value.length <= prevSearch.length){
+			var found = false;
+
+			if (entryRowsData[i].search(textRegExp) != -1 || BibTeXKeys[i].search(textRegExp) != -1){
+				found = true;
+			} else {
+				if(searchAbstract && absRowsData[i]!=undefined) {
+					if (absRowsData[i].search(textRegExp) != -1){ found=true; }
+				}
+				if(searchComment && revRowsData[i]!=undefined) {
+					if (revRowsData[i].search(textRegExp) != -1){ found=true; }
+				}
+			}
+
+			if (found){
+				cRow.className = 'entry show';
+				hits++;
+			} else {
+				cRow.className = 'entry noshow';
+			}
+		}
+	}
+
+	// update statistics
+	setStatistics(hits)
+
+	// set previous search value
+	prevSearch = tInput.value;
+}
+
+
+// Strip Diacritics from text
+// http://stackoverflow.com/questions/990904/javascript-remove-accents-in-strings
+
+// String containing replacement characters for stripping accents
+var stripstring =
+    'AAAAAAACEEEEIIII'+
+    'DNOOOOO.OUUUUY..'+
+    'aaaaaaaceeeeiiii'+
+    'dnooooo.ouuuuy.y'+
+    'AaAaAaCcCcCcCcDd'+
+    'DdEeEeEeEeEeGgGg'+
+    'GgGgHhHhIiIiIiIi'+
+    'IiIiJjKkkLlLlLlL'+
+    'lJlNnNnNnnNnOoOo'+
+    'OoOoRrRrRrSsSsSs'+
+    'SsTtTtTtUuUuUuUu'+
+    'UuUuWwYyYZzZzZz.';
+
+function stripDiacritics(str){
+
+    if(noSquiggles==false){
+        return str;
+    }
+
+    var answer='';
+    for(var i=0;i<str.length;i++){
+        var ch=str[i];
+        var chindex=ch.charCodeAt(0)-192;   // Index of character code in the strip string
+        if(chindex>=0 && chindex<stripstring.length){
+            // Character is within our table, so we can strip the accent...
+            var outch=stripstring.charAt(chindex);
+            // ...unless it was shown as a '.'
+            if(outch!='.')ch=outch;
+        }
+        answer+=ch;
+    }
+    return answer;
+}
+
+// http://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
+// NOTE: must escape every \ in the export code because of the JabRef Export...
+function escapeRegExp(str) {
+  return str.replace(/[-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+}
+
+function toggleInfo(articleid,info) {
+
+	var entry = document.getElementById(articleid);
+	var abs = document.getElementById('abs_'+articleid);
+	var rev = document.getElementById('rev_'+articleid);
+	var bib = document.getElementById('bib_'+articleid);
+
+	if (abs && info == 'abstract') {
+		abs.className.indexOf('noshow') == -1?abs.className = 'abstract noshow':abs.className = 'abstract show';
+	} else if (rev && info == 'comment') {
+		rev.className.indexOf('noshow') == -1?rev.className = 'comment noshow':rev.className = 'comment show';
+	} else if (bib && info == 'bibtex') {
+		bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex show';
+	} else {
+		return;
+	}
+
+	// check if one or the other is available
+	var revshow; var absshow; var bibshow;
+	(abs && abs.className.indexOf('noshow') == -1)? absshow = true: absshow = false;
+	(rev && rev.className.indexOf('noshow') == -1)? revshow = true: revshow = false;
+	(bib && bib.className.indexOf('noshow') == -1)? bibshow = true: bibshow = false;
+
+	// highlight original entry
+	if(entry) {
+		if (revshow || absshow || bibshow) {
+		entry.className = 'entry highlight show';
+		} else {
+		entry.className = 'entry show';
+		}
+	}
+
+	// When there's a combination of abstract/comment/bibtex showing, need to add class for correct styling
+	if(absshow) {
+		(revshow||bibshow)?abs.className = 'abstract nextshow':abs.className = 'abstract';
+	}
+	if (revshow) {
+		bibshow?rev.className = 'comment nextshow': rev.className = 'comment';
+	}
+
+}
+
+function setStatistics (hits) {
+	if(hits < 0) { hits=numEntries; }
+	if(stats) { stats.firstChild.data = hits + '/' + numEntries}
+}
+
+function getTextContent(node) {
+	// Function written by Arve Bersvendsen
+	// http://www.virtuelvis.com
+
+	if (node.nodeType == 3) {
+	return node.nodeValue;
+	} // text node
+	if (node.nodeType == 1 && node.className != "infolinks") { // element node
+	var text = [];
+	for (var chld = node.firstChild;chld;chld=chld.nextSibling) {
+		text.push(getTextContent(chld));
+	}
+	return text.join("");
+	} return ""; // some other node, won't contain text nodes.
+}
+
+function showAll(){
+	closeAllInfo();
+	for (var i = 0; i < numEntries; i++){ entryRows[i].className = 'entry show'; }
+}
+
+function closeAllInfo(){
+	for (var i=0; i < numInfo; i++){
+		if (infoRows[i].className.indexOf('noshow') ==-1) {
+			infoRows[i].className = infoRows[i].className + ' noshow';
+		}
+	}
+}
+
+function clearQS() {
+	qsfield.value = '';
+	showAll();
+}
+
+function redoQS(){
+	showAll();
+	quickSearch(qsfield);
+}
+
+function updateSetting(obj){
+	var option = obj.id;
+	var checked = obj.value;
+
+	switch(option)
+	 {
+	 case "opt_searchAbs":
+	   searchAbstract=!searchAbstract;
+	   redoQS();
+	   break;
+	 case "opt_searchComment":
+	   searchComment=!searchComment;
+	   redoQS();
+	   break;
+	 case "opt_useRegExp":
+	   searchRegExp=!searchRegExp;
+	   redoQS();
+	   break;
+	 case "opt_noAccents":
+	   noSquiggles=!noSquiggles;
+	   loadTableData();
+	   redoQS();
+	   break;
+	 }
+}
+
+function initPreferences(){
+	if(searchAbstract){document.getElementById("opt_searchAbs").checked = true;}
+	if(searchComment){document.getElementById("opt_searchComment").checked = true;}
+	if(noSquiggles){document.getElementById("opt_noAccents").checked = true;}
+	if(searchRegExp){document.getElementById("opt_useRegExp").checked = true;}
+
+	if(numAbs==0) {document.getElementById("opt_searchAbs").parentNode.style.display = 'none';}
+	if(numRev==0) {document.getElementById("opt_searchComment").parentNode.style.display = 'none';}
+}
+
+function toggleSettings(){
+	var togglebutton = document.getElementById('showsettings');
+	var settings = document.getElementById('settings');
+
+	if(settings.className == "hidden"){
+		settings.className = "show";
+		togglebutton.innerText = "close settings";
+		togglebutton.textContent = "close settings";
+	}else{
+		settings.className = "hidden";
+		togglebutton.innerText = "settings...";
+		togglebutton.textContent = "settings...";
+	}
+}
+
+-->
+</script>
+<style type="text/css">
+body { font-family: Arial, sans-serif; font-size: 13px; line-height: 1.2; padding: 1em; color: #2E2E2E; margin: auto auto; }
+
+form#quicksearch { width: auto; border-style: solid; border-color: gray; border-width: 1px 0px; padding: 0.7em 0.5em; display:none; position:relative; }
+span#searchstat {padding-left: 1em;}
+
+div#settings { margin-top:0.7em; /* border-bottom: 1px transparent solid; background-color: #efefef; border: 1px grey solid; */ }
+div#settings ul {margin: 0; padding: 0; }
+div#settings li {margin: 0; padding: 0 1em 0 0; display: inline; list-style: none; }
+div#settings li + li { border-left: 2px #efefef solid; padding-left: 0.5em;}
+div#settings input { margin-bottom: 0px;}
+
+div#settings.hidden {display:none;}
+
+#showsettings { border: 1px grey solid; padding: 0 0.5em; float:right; line-height: 1.6em; text-align: right; }
+#showsettings:hover { cursor: pointer; }
+
+.invalidsearch { background-color: red; }
+input[type="button"] { border: 1px #2E2E2E solid;}
+
+table { border: 1px gray none; width: 100%; empty-cells: show; border-spacing: 0em 0.1em; margin: 1em 0em; }
+th, td { border: none; padding: 0.5em; vertical-align: top; text-align: justify; }
+
+td a { color: navy; text-decoration: none; }
+td a:hover  { text-decoration: underline; }
+
+tr.noshow { display: none;}
+tr.highlight td { border-top: 2px #2E2E2E solid; font-weight: bold; }
+tr.abstract td, tr.comment td, tr.bibtex td { text-align: justify; border-bottom: 2px #2E2E2E solid; }
+tr.nextshow td { border-bottom-style: none; }
+
+tr.bibtex pre { width: 100%; overflow: auto; white-space: pre-wrap;}
+p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
+
+@media print {
+	p.infolinks, #qs_settings, #quicksearch, t.bibtex { display: none !important; }
+	tr { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<form action="" id="quicksearch">
+<input type="text" id="qs_field" autocomplete="off" placeholder="Type to search..." /> <input type="button" onclick="clearQS()" value="clear" />
+<span id="searchstat">Matching entries: <span id="stat">0</span></span>
+<div id="showsettings" onclick="toggleSettings()">settings...</div>
+<div id="settings" class="hidden">
+<ul>
+<li><input type="checkbox" class="search_setting" id="opt_searchAbs" onchange="updateSetting(this)"><label for="opt_searchAbs"> include abstract</label></li>
+<li><input type="checkbox" class="search_setting" id="opt_searchComment" onchange="updateSetting(this)"><label for="opt_searchComment"> include comment</label></li>
+<li><input type="checkbox" class="search_setting" id="opt_useRegExp" onchange="updateSetting(this)"><label for="opt_useRegExp"> use RegExp</label></li>
+<li><input type="checkbox" class="search_setting" id="opt_noAccents" onchange="updateSetting(this)"><label for="opt_noAccents"> ignore accents</label></li>
+</ul>
+</div>
+</form>
+<table id="qs_table" border="1">
+<tbody>
+<tr id="anderer2022forecasting_ijf" class="entry">
+	<td>Anderer M and Li* F (2022), <i>"Hierarchical forecasting with a top-down alignment of independent level forecasts"</i>, International Journal of Forecasting.  Vol. In Press
+	<p class="infolinks"> [<a href="javascript:toggleInfo('anderer2022forecasting_ijf','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.ijforecast.2021.12.015" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_anderer2022forecasting_ijf" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{anderer2022forecasting_ijf,
+  author = {Matthias Anderer and Feng Li*},
+  title = {Hierarchical forecasting with a top-down alignment of independent level forecasts},
+  journal = {International Journal of Forecasting},
+  year = {2022},
+  volume = {In Press},
+  doi = {10.1016/j.ijforecast.2021.12.015}
+}
+</pre></td>
+</tr>
+<tr id="kang2022forecast_ejor" class="entry">
+	<td>Kang Y, Cao W, Petropoulos F and Li* F (2022), <i>"Forecast with Forecasts: Diversity Matters"</i>, European Journal of Operational Research.  Vol. 31(1), pp. 180-190.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('kang2022forecast_ejor','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.ejor.2021.10.024" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_kang2022forecast_ejor" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{kang2022forecast_ejor,
+  author = {Kang, Yanfei and Cao, Wei and Petropoulos, Fotios and Li*, Feng},
+  title = {Forecast with Forecasts: Diversity Matters},
+  journal = {European Journal of Operational Research},
+  year = {2022},
+  volume = {31},
+  number = {1},
+  pages = {180-190},
+  doi = {10.1016/j.ejor.2021.10.024}
+}
+</pre></td>
+</tr>
+<tr id="kang2022forecast" class="entry">
+	<td>Kang Y, Cao W, Petropoulos F and Li F (2022), <i>"Forecast with Forecasts: Diversity Matters"</i>, European Journal of Operational Research.  Vol. 31(1), pp. 180-190.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('kang2022forecast','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.ejor.2021.10.024" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_kang2022forecast" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{kang2022forecast,
+  author = {Kang, Yanfei and Cao, Wei and Petropoulos, Fotios and Li, Feng},
+  title = {Forecast with Forecasts: Diversity Matters},
+  journal = {European Journal of Operational Research},
+  year = {2022},
+  volume = {31},
+  number = {1},
+  pages = {180-190},
+  doi = {10.1016/j.ejor.2021.10.024}
+}
+</pre></td>
+</tr>
+<tr id="talagala2021fformpp_ijf" class="entry">
+	<td>Talagala TS, Li F and Kang* Y (2021), <i>"FFORMPP: Feature-based forecast model performance prediction"</i>, International Journal of Forecasting.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('talagala2021fformpp_ijf','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.ijforecast.2021.07.002" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_talagala2021fformpp_ijf" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{talagala2021fformpp_ijf,
+  author = {Talagala, Thiyanga S and Li, Feng and Kang*, Yanfei},
+  title = {FFORMPP: Feature-based forecast model performance prediction},
+  journal = {International Journal of Forecasting},
+  year = {2021},
+  doi = {10.1016/j.ijforecast.2021.07.002}
+}
+</pre></td>
+</tr>
+<tr id="petropoulos2021forecasting_ijf" class="entry">
+	<td>Petropoulos F, Apiletti D, Assimakopoulos V, Babai MZ, Barrow DK, Taieb SB, Bergmeir C, Bessa RJ, Bijak J, Boylan JE, Browell J, Carnevale C, Castle JL, Cirillo P, Clements MP, Cordeiro C, Oliveira FLC, Baets SD, Dokumentov A, Ellison J, Fiszeder P, Franses PH, Frazier DT, Gilliland M, Gönül MS, Goodwin P, Grossi L, Grushka-Cockayne Y, Guidolin M, Guidolin M, Gunter U, Guo X, Guseo R, Harvey N, Hendry DF, Hollyman R, Januschowski T, Jeon J, Jose VRR, Kang Y, Koehler AB, Kolassa S, Kourentzes N, Leva S, Li F, Litsiou K, Makridakis S, Martin GM, Martinez AB, Meeran S, Modis T, Nikolopoulos K, Önkal D, Paccagnini A, Panagiotelis A, Panapakidis I, Pavía JM, Pedio M, Pedregal DJ, Pinson P, Ramos P, Rapach DE, Reade JJ, Rostami-Tabar B, Rubaszek M, Sermpinis G, Shang HL, Spiliotis E, Syntetos AA, Talagala PD, Talagala TS, Tashman L, Thomakos D, Thorarinsdottir T, Todini E, Arenas JRT, Wang X, Winkler RL, Yusupova A and Ziel F (2021), <i>"Forecasting: theory and practice"</i>, International Journal of Forecasting.  Vol. In Press
+	<p class="infolinks"> [<a href="javascript:toggleInfo('petropoulos2021forecasting_ijf','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.ijforecast.2021.11.001" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_petropoulos2021forecasting_ijf" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{petropoulos2021forecasting_ijf,
+  author = {Fotios Petropoulos and Daniele Apiletti and Vassilios Assimakopoulos and Mohamed Zied Babai and Devon K. Barrow and Souhaib Ben Taieb and Christoph Bergmeir and Ricardo J. Bessa and Jakub Bijak and John E. Boylan and Jethro Browell and Claudio Carnevale and Jennifer L. Castle and Pasquale Cirillo and Michael P. Clements and Clara Cordeiro and Fernando Luiz Cyrino Oliveira and Shari De Baets and Alexander Dokumentov and Joanne Ellison and Piotr Fiszeder and Philip Hans Franses and David T. Frazier and Michael Gilliland and M. Sinan Gönül and Paul Goodwin and Luigi Grossi and Yael Grushka-Cockayne and Mariangela Guidolin and Massimo Guidolin and Ulrich Gunter and Xiaojia Guo and Renato Guseo and Nigel Harvey and David F. Hendry and Ross Hollyman and Tim Januschowski and Jooyoung Jeon and Victor Richmond R. Jose and Yanfei Kang and Anne B. Koehler and Stephan Kolassa and Nikolaos Kourentzes and Sonia Leva and Feng Li and Konstantia Litsiou and Spyros Makridakis and Gael M. Martin and Andrew B. Martinez and Sheik Meeran and Theodore Modis and Konstantinos Nikolopoulos and Dilek Önkal and Alessia Paccagnini and Anastasios Panagiotelis and Ioannis Panapakidis and Jose M. Pavía and Manuela Pedio and Diego J. Pedregal and Pierre Pinson and Patrícia Ramos and David E. Rapach and J. James Reade and Bahman Rostami-Tabar and Michał Rubaszek and Georgios Sermpinis and Han Lin Shang and Evangelos Spiliotis and Aris A. Syntetos and Priyanga Dilini Talagala and Thiyanga S. Talagala and Len Tashman and Dimitrios Thomakos and Thordis Thorarinsdottir and Ezio Todini and Juan Ramón Trapero Arenas and Xiaoqian Wang and Robert L. Winkler and Alisa Yusupova and Florian Ziel},
+  title = {Forecasting: theory and practice},
+  journal = {International Journal of Forecasting},
+  year = {2021},
+  volume = {In Press},
+  doi = {10.1016/j.ijforecast.2021.11.001}
+}
+</pre></td>
+</tr>
+<tr id="janeway2021clinical_jad" class="entry">
+	<td>Janeway MG, Zhao X, Rosenthaler M, Zuo Y, Balasubramaniyan K, Poulson M, Neufeld M, Siracuse JJ, Takahashi CE, Allee L, Dechert T, Burke PA, Li F and Kalesan B (2021), <i>"Clinical diagnostic phenotypes in hospitalizations due to self-inflicted firearm injury"</i>, Journal of Affective Disorders.  Vol. 278, pp. 172-180.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('janeway2021clinical_jad','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.jad.2020.09.067" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_janeway2021clinical_jad" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{janeway2021clinical_jad,
+  author = {Megan G Janeway and Xiang Zhao and Max Rosenthaler and Yi Zuo and Kumar Balasubramaniyan and Michael Poulson and Miriam Neufeld and Jeffrey J. Siracuse and Courtney E. Takahashi and Lisa Allee and Tracey Dechert and Peter A Burke and Feng Li and Bindu Kalesan},
+  title = {Clinical diagnostic phenotypes in hospitalizations due to self-inflicted firearm injury},
+  journal = {Journal of Affective Disorders},
+  year = {2021},
+  volume = {278},
+  pages = {172-180},
+  doi = {10.1016/j.jad.2020.09.067}
+}
+</pre></td>
+</tr>
+<tr id="pan2021note_jbes" class="entry">
+	<td>Pan R, Ren T, Guo B, Li F, Li G and Wang H (2021), <i>"A Note on Distributed Quantile Regression by Pilot Sampling and One-Step Updating"</i>, Journal of Business and Economic Statistics.  Vol. In Press
+	<p class="infolinks"> [<a href="javascript:toggleInfo('pan2021note_jbes','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1080/07350015.2021.1961789" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_pan2021note_jbes" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{pan2021note_jbes,
+  author = {Rui Pan and Tunan Ren and Baishan Guo and Feng Li and Guodong Li and Hansheng Wang},
+  title = {A Note on Distributed Quantile Regression by Pilot Sampling and One-Step Updating},
+  journal = {Journal of Business and Economic Statistics},
+  year = {2021},
+  volume = {In Press},
+  doi = {10.1080/07350015.2021.1961789}
+}
+</pre></td>
+</tr>
+<tr id="kang2021deja_jbr" class="entry">
+	<td>Kang Y, Spiliotis E, Petropoulos F, Athiniotis N, Li* F and Assimakopoulos V (2021), <i>"D&eacute;j&agrave; vu: A data-centric forecasting approach through time series cross-similarity"</i>, Journal of Business Research.  Vol. 132(2021), pp. 719-731. Elsevier.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('kang2021deja_jbr','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.jbusres.2020.10.051" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_kang2021deja_jbr" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{kang2021deja_jbr,
+  author = {Kang, Yanfei and Spiliotis, Evangelos and Petropoulos, Fotios and Athiniotis, Nikolaos and Li*, Feng and Assimakopoulos, Vassilios},
+  title = {D&eacute;j&agrave; vu: A data-centric forecasting approach through time series cross-similarity},
+  journal = {Journal of Business Research},
+  publisher = {Elsevier},
+  year = {2021},
+  volume = {132},
+  number = {2021},
+  pages = {719-731},
+  doi = {10.1016/j.jbusres.2020.10.051}
+}
+</pre></td>
+</tr>
+<tr id="zhu2021least_jcgs" class="entry">
+	<td>Zhu X, Li* F and Wang H (2021), <i>"Least-Square Approximation for a Distributed System"</i>, Journal of Computational and Graphical Statistics.  Vol. 30(4), pp. 1004-1018.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('zhu2021least_jcgs','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1080/10618600.2021.1923517" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_zhu2021least_jcgs" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{zhu2021least_jcgs,
+  author = {Zhu, Xuening and Li*, Feng and Wang, Hansheng},
+  title = {Least-Square Approximation for a Distributed System},
+  journal = {Journal of Computational and Graphical Statistics},
+  year = {2021},
+  volume = {30},
+  number = {4},
+  pages = {1004-1018},
+  doi = {10.1080/10618600.2021.1923517}
+}
+</pre></td>
+</tr>
+<tr id="wang2021uncertainty_jors" class="entry">
+	<td>Wang X, Kang Y, Petropoulos F and Li* F (2021), <i>"The uncertainty estimation of feature-based forecast combinations"</i>, Journal of the Operational Research Society.  Vol. In Press
+	<p class="infolinks"> [<a href="javascript:toggleInfo('wang2021uncertainty_jors','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1080/01605682.2021.1880297" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_wang2021uncertainty_jors" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{wang2021uncertainty_jors,
+  author = {Wang, Xiaoqian and Kang, Yanfei and Petropoulos, Fotios and Li*, Feng},
+  title = {The uncertainty estimation of feature-based forecast combinations},
+  journal = {Journal of the Operational Research Society},
+  year = {2021},
+  volume = {In Press},
+  doi = {10.1080/01605682.2021.1880297}
+}
+</pre></td>
+</tr>
+<tr id="li2021distributed_wp" class="entry">
+	<td>Li F, Ma X, Karlsson S and Kang* Y (2021), <i>"Distributed Forecasting with Large Bayesian Vector Auto Regressions"</i>, Working paper.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('li2021distributed_wp','bibtex')">BibTeX</a>]</p>
+	</td>
+</tr>
+<tr id="bib_li2021distributed_wp" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{li2021distributed_wp,
+  author = {Feng Li and Xiaoweng Ma and Sune Karlsson and Yanfei Kang*},
+  title = {Distributed Forecasting with Large Bayesian Vector Auto Regressions},
+  journal = {Working paper},
+  year = {2021}
+}
+</pre></td>
+</tr>
+<tr id="wang2020distributed_wp" class="entry">
+	<td>Wang X, Kang Y, Hyndman RJ and Li* F (2020), <i>"Distributed ARIMA models for ultra-long time series"</i>, arXiv preprint arXiv:2007.09577.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('wang2020distributed_wp','bibtex')">BibTeX</a>]</p>
+	</td>
+</tr>
+<tr id="bib_wang2020distributed_wp" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{wang2020distributed_wp,
+  author = {Wang, Xiaoqian and Kang, Yanfei and Hyndman, Rob J and Li*, Feng},
+  title = {Distributed ARIMA models for ultra-long time series},
+  journal = {arXiv preprint arXiv:2007.09577},
+  year = {2020}
+}
+</pre></td>
+</tr>
+<tr id="li2020forecasting_expert" class="entry">
+	<td>Li# X, Kang# Y and Li^* F (2020), <i>"Forecasting with time series imaging"</i>, Expert Systems with Applications.  Vol. 160, pp. 113680. Elsevier.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('li2020forecasting_expert','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.eswa.2020.113680" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_li2020forecasting_expert" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{li2020forecasting_expert,
+  author = {Li#, Xixi and Kang#, Yanfei and Li^*, Feng},
+  title = {Forecasting with time series imaging},
+  journal = {Expert Systems with Applications},
+  publisher = {Elsevier},
+  year = {2020},
+  volume = {160},
+  pages = {113680},
+  doi = {10.1016/j.eswa.2020.113680}
+}
+</pre></td>
+</tr>
+<tr id="kang2020deja_jbr" class="entry">
+	<td>Kang Y, Spiliotis E, Petropoulos F, Athiniotis N, Li* F and Assimakopoulos V (2020), <i>"D&eacute;j&agrave; vu: A data-centric forecasting approach through time series cross-similarity"</i>, Journal of Business Research.  Elsevier.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('kang2020deja_jbr','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.jbusres.2020.10.051" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_kang2020deja_jbr" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{kang2020deja_jbr,
+  author = {Kang, Yanfei and Spiliotis, Evangelos and Petropoulos, Fotios and Athiniotis, Nikolaos and Li*, Feng and Assimakopoulos, Vassilios},
+  title = {D&eacute;j&agrave; vu: A data-centric forecasting approach through time series cross-similarity},
+  journal = {Journal of Business Research},
+  publisher = {Elsevier},
+  year = {2020},
+  doi = {10.1016/j.jbusres.2020.10.051}
+}
+</pre></td>
+</tr>
+<tr id="kalesan2020intersections_jsr" class="entry">
+	<td>Kalesan B, Zhao S, Poulson M, Neufeld M, Dechert T, Siracuse JJ, Zuo Y and Li F (2020), <i>"Intersections of firearm suicide, drug-related mortality, and economic dependency in rural America"</i>, Journal of Surgical Research.  Vol. 256, pp. 96-102. Elsevier.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('kalesan2020intersections_jsr','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.jss.2020.06.011" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_kalesan2020intersections_jsr" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{kalesan2020intersections_jsr,
+  author = {Kalesan, Bindu and Zhao, Siran and Poulson, Michael and Neufeld, Miriam and Dechert, Tracey and Siracuse, Jeffrey J and Zuo, Yi and Li, Feng},
+  title = {Intersections of firearm suicide, drug-related mortality, and economic dependency in rural America},
+  journal = {Journal of Surgical Research},
+  publisher = {Elsevier},
+  year = {2020},
+  volume = {256},
+  pages = {96--102},
+  doi = {10.1016/j.jss.2020.06.011}
+}
+</pre></td>
+</tr>
+<tr id="kang2020gratis_sam" class="entry">
+	<td>Kang Y, Hyndman RJ and Li* F (2020), <i>"GRATIS: GeneRAting TIme Series with diverse and controllable characteristics"</i>, Statistical Analysis and Data Mining.  Vol. 13, pp. 354-376.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('kang2020gratis_sam','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1002/sam.11461" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_kang2020gratis_sam" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{kang2020gratis_sam,
+  author = {Kang, Yanfei and Hyndman, Rob J and Li*, Feng},
+  title = {GRATIS: GeneRAting TIme Series with diverse and controllable characteristics},
+  journal = {Statistical Analysis and Data Mining},
+  year = {2020},
+  volume = {13},
+  pages = {354--376},
+  doi = {10.1002/sam.11461}
+}
+</pre></td>
+</tr>
+<tr id="maestrini2020fast_wp" class="entry">
+	<td>Maestrini L, Quiroz M and Li* F (2020), <i>"Fast Distributed Inference with Variable Selection"</i>, Working Paper.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('maestrini2020fast_wp','bibtex')">BibTeX</a>]</p>
+	</td>
+</tr>
+<tr id="bib_maestrini2020fast_wp" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{maestrini2020fast_wp,
+  author = {Luca Maestrini and Matias Quiroz and Feng Li*},
+  title = {Fast Distributed Inference with Variable Selection},
+  journal = {Working Paper},
+  year = {2020}
+}
+</pre></td>
+</tr>
+<tr id="li2020fppcn" class="entry">
+	<td>康雁飞 and 李丰 (2020), <i>"预测：方法与实践"</i>  在线出版.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('li2020fppcn','bibtex')">BibTeX</a>] [<a href="https://otexts.com/fppcn/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="bib_li2020fppcn" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@book{li2020fppcn,
+  author = {康雁飞 and 李丰},
+  title = {预测：方法与实践},
+  publisher = {在线出版},
+  year = {2020},
+  url = {https://otexts.com/fppcn/}
+}
+</pre></td>
+</tr>
+<tr id="hao2020bilinear_ced" class="entry">
+	<td>Hao C, Li F and von Rosen D (2020), <i>"Contemporary Experimental Design, Multivariate Analysis and Data Mining"</i>  Springer Nature.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('hao2020bilinear_ced','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1007/978-3-030-46161-4_21" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_hao2020bilinear_ced" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inbook{hao2020bilinear_ced,
+  author = {Hao, Chengcheng and Li, Feng and von Rosen, Dietrich},
+  editor = {Jianqing Fan and Jianxin Pan},
+  title = {Contemporary Experimental Design, Multivariate Analysis and Data Mining},
+  publisher = {Springer Nature},
+  year = {2020},
+  doi = {10.1007/978-3-030-46161-4_21}
+}
+</pre></td>
+</tr>
+<tr id="li2019credit_cef" class="entry">
+	<td>Li F and He* Z (2019), <i>"Credit risk clustering in a business group: which matters more, systematic or idiosyncratic risk?"</i>, Cogent Economics &amp; Finance. , pp. 1632528. Taylor &amp; Francis.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('li2019credit_cef','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1080/23322039.2019.1632528" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_li2019credit_cef" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{li2019credit_cef,
+  author = {Li, Feng and He*, Zhuojing},
+  title = {Credit risk clustering in a business group: which matters more, systematic or idiosyncratic risk?},
+  journal = {Cogent Economics &amp; Finance},
+  publisher = {Taylor &amp; Francis},
+  year = {2019},
+  pages = {1632528},
+  doi = {10.1080/23322039.2019.1632528}
+}
+</pre></td>
+</tr>
+<tr id="bailey2019changes_plosone" class="entry">
+	<td>Bailey HM, Zuo Y, Li F, Min J, Vaddiparti K, Prosperi M, Fagan J, Galea S and Kalesan B (2019), <i>"Changes in patterns of mortality rates and years of life lost due to firearms in the United States, 1999 to 2016: A joinpoint analysis"</i>, PLoS One.  Vol. 14(11) Public Library of Science.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('bailey2019changes_plosone','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1371/journal.pone.0225223" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_bailey2019changes_plosone" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{bailey2019changes_plosone,
+  author = {Bailey, Hannah M and Zuo, Yi and Li, Feng and Min, Jae and Vaddiparti, Krishna and Prosperi, Mattia and Fagan, Jeffrey and Galea, Sandro and Kalesan, Bindu},
+  title = {Changes in patterns of mortality rates and years of life lost due to firearms in the United States, 1999 to 2016: A joinpoint analysis},
+  journal = {PLoS One},
+  publisher = {Public Library of Science},
+  year = {2019},
+  volume = {14},
+  number = {11},
+  doi = {10.1371/journal.pone.0225223}
+}
+</pre></td>
+</tr>
+<tr id="spark-dlsa" class="entry">
+	<td>Li F (2019), <i>"dlsa: Spark API for distributed statistical models"</i>
+	<p class="infolinks"> [<a href="javascript:toggleInfo('spark-dlsa','bibtex')">BibTeX</a>] [<a href="https://github.com/feng-li/dlsa" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="bib_spark-dlsa" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@software{spark-dlsa,
+  author = {Feng Li},
+  title = {dlsa: Spark API for distributed statistical models},
+  year = {2019},
+  url = {https://github.com/feng-li/dlsa}
+}
+</pre></td>
+</tr>
+<tr id="gratis" class="entry">
+	<td>Kang Y and Li F (2019), <i>"gratis: Efficient algorithms for generating time series with diverse and controllable characteristics."</i>
+	<p class="infolinks"> [<a href="javascript:toggleInfo('gratis','bibtex')">BibTeX</a>] [<a href="https://github.com/ykang/gratis" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="bib_gratis" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@software{gratis,
+  author = {Yanfei Kang and Feng Li},
+  title = {gratis: Efficient algorithms for generating time series with diverse and controllable characteristics.},
+  year = {2019},
+  url = {https://github.com/ykang/gratis}
+}
+</pre></td>
+</tr>
+<tr id="pino2018cohort_bmj" class="entry">
+	<td>Pino EC, Zuo Y, De Olivera CM, Mahalingaiah S, Keiser O, Moore LL, Li F, Vasan RS, Corkey BE and Kalesan B (2018), <i>"Cohort profile: The MULTI sTUdy Diabetes rEsearch (MULTITUDE) consortium"</i>, BMJ Open.  Vol. 8(5), pp. e020640. British Medical Journal Publishing Group.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('pino2018cohort_bmj','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1136/bmjopen-2017-020640" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_pino2018cohort_bmj" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{pino2018cohort_bmj,
+  author = {Pino, Elizabeth C and Zuo, Yi and De Olivera, Camila Maciel and Mahalingaiah, Shruthi and Keiser, Olivia and Moore, Lynn L and Li, Feng and Vasan, Ramachandran S and Corkey, Barbara E and Kalesan, Bindu},
+  title = {Cohort profile: The MULTI sTUdy Diabetes rEsearch (MULTITUDE) consortium},
+  journal = {BMJ Open},
+  publisher = {British Medical Journal Publishing Group},
+  year = {2018},
+  volume = {8},
+  number = {5},
+  pages = {e020640},
+  doi = {10.1136/bmjopen-2017-020640}
+}
+</pre></td>
+</tr>
+<tr id="li2018improving_ijf" class="entry">
+	<td>Li F and Kang* Y (2018), <i>"Improving forecasting performance using covariate-dependent copula models"</i>, International Journal of Forecasting.  Vol. 34(3), pp. 456-476. Elsevier.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('li2018improving_ijf','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.ijforecast.2018.01.007" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_li2018improving_ijf" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{li2018improving_ijf,
+  author = {Li, Feng and Kang*, Yanfei},
+  title = {Improving forecasting performance using covariate-dependent copula models},
+  journal = {International Journal of Forecasting},
+  publisher = {Elsevier},
+  year = {2018},
+  volume = {34},
+  number = {3},
+  pages = {456--476},
+  doi = {10.1016/j.ijforecast.2018.01.007}
+}
+</pre></td>
+</tr>
+<tr id="li2016distributedcn" class="entry">
+	<td>李丰 (2016), <i>"大数据分布式计算与案例"</i>  中国人民大学出版社.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('li2016distributedcn','bibtex')">BibTeX</a>] [<a href="https://feng.li/files/distcompbook/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="bib_li2016distributedcn" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@book{li2016distributedcn,
+  author = {李丰},
+  title = {大数据分布式计算与案例},
+  publisher = {中国人民大学出版社},
+  year = {2016},
+  url = {https://feng.li/files/distcompbook/}
+}
+</pre></td>
+</tr>
+<tr id="kang2020statscompcn" class="entry">
+	<td>康雁飞 and 李丰 (2020), <i>"统计计算"</i>  在线出版.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('kang2020statscompcn','bibtex')">BibTeX</a>] [<a href="https://feng.li/files/statscompbook/" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="bib_kang2020statscompcn" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@book{kang2020statscompcn,
+  author = {康雁飞 and 李丰},
+  title = {统计计算},
+  publisher = {在线出版},
+  year = {2020},
+  url = {https://feng.li/files/statscompbook/}
+}
+</pre></td>
+</tr>
+<tr id="li2013efficient_sjs" class="entry">
+	<td>Li* F and Villani M (2013), <i>"Efficient Bayesian Multivariate Surface Regression"</i>, Scandinavian Journal of Statistics.  Vol. 40(4), pp. 706-723.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('li2013efficient_sjs','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1111/sjos.12022" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_li2013efficient_sjs" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{li2013efficient_sjs,
+  author = {Li*, Feng and Villani, Mattias},
+  title = {Efficient Bayesian Multivariate Surface Regression},
+  journal = {Scandinavian Journal of Statistics},
+  year = {2013},
+  volume = {40},
+  number = {4},
+  pages = {706-723},
+  doi = {10.1111/sjos.12022}
+}
+</pre></td>
+</tr>
+<tr id="li2013bayesian" class="entry">
+	<td>Li F (2013), <i>"Bayesian Modeling of Conditional Densities"</i>. Thesis at: Department of Statistics, Stockholm University.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('li2013bayesian','bibtex')">BibTeX</a>] [<a href="http://urn.kb.se/resolve?urn=urn:nbn:se:su:diva-89426" target="_blank">URL</a>]</p>
+	</td>
+</tr>
+<tr id="bib_li2013bayesian" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@phdthesis{li2013bayesian,
+  author = {Li, Feng},
+  title = {Bayesian Modeling of Conditional Densities},
+  school = {Department of Statistics, Stockholm University},
+  year = {2013},
+  note = {ISBN: 978-91-7447-665-1},
+  url = {http://urn.kb.se/resolve?urn=urn:nbn:se:su:diva-89426}
+}
+</pre></td>
+</tr>
+<tr id="li2011modeling_mixtures" class="entry">
+	<td>Li F, Villani M and Kohn R (2011), <i>"Modeling Conditional Densities Using Finite Smooth Mixtures"</i>, In Mixtures: estimation and applications. , pp. 123-144. John Wiley &amp; Sons Inc, Chichester.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('li2011modeling_mixtures','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1002/9781119995678.ch6" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_li2011modeling_mixtures" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@inbook{li2011modeling_mixtures,
+  author = {Li, Feng and Villani, Mattias and Kohn, Robert},
+  editor = {Mengersen, Kerrie and Robert, Christian and Titterington, Mike},
+  title = {Modeling Conditional Densities Using Finite Smooth Mixtures},
+  booktitle = {Mixtures: estimation and applications},
+  publisher = {John Wiley &amp; Sons Inc, Chichester},
+  year = {2011},
+  pages = {123--144},
+  doi = {10.1002/9781119995678.ch6}
+}
+</pre></td>
+</tr>
+<tr id="li2010flexible_jspi" class="entry">
+	<td>Li* F, Villani M and Kohn R (2010), <i>"Flexible modeling of conditional distributions using smooth mixtures of asymmetric student t densities"</i>, Journal of Statistical Planning and Inference.  Vol. 140(12), pp. 3638-3654.
+	<p class="infolinks"> [<a href="javascript:toggleInfo('li2010flexible_jspi','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.jspi.2010.04.031" target="_blank">DOI</a>]</p>
+	</td>
+</tr>
+<tr id="bib_li2010flexible_jspi" class="bibtex noshow">
+<td><b>BibTeX</b>:
+<pre>
+@article{li2010flexible_jspi,
+  author = {Li*, Feng and Villani, Mattias and Kohn, Robert},
+  title = {Flexible modeling of conditional distributions using smooth mixtures of asymmetric student t densities},
+  journal = {Journal of Statistical Planning and Inference},
+  year = {2010},
+  volume = {140},
+  number = {12},
+  pages = {3638--3654},
+  doi = {10.1016/j.jspi.2010.04.031}
+}
+</pre></td>
+</tr>
+</tbody>
+</table>
+<footer>
+ <small>Created by <a href="http://jabref.sourceforge.net">JabRef</a> on 07/05/2022.</small>
+</footer>
+<!-- file generated by JabRef -->
+</body>
+</html>
