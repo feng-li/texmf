@@ -1,2 +1,2 @@
 publications:
-	 /opt/jabref/bin/JabRef -n -o publications-feng.html,listrefs ../publications-feng.bib
+	 /opt/jabref/bin/JabRef -n -o publications-feng.html,mylistrefs ../publications-feng.bib
