@@ -55,8 +55,8 @@ function initSearch() {
 	// set up preferences
 	initPreferences();
 
-        // hilight author name
-        author_hilight();
+	// hilight author name
+	author_highlight();
 
 	// shows the searchfield
 	document.getElementById('quicksearch').style.display = 'block';
@@ -354,10 +354,14 @@ function toggleSettings(){
 	}
 }
 
-function author_hilight(){
+function author_highlight(){
         document.getElementById('qs_table').innerHTML
                 = document.getElementById('qs_table')
                   .innerHTML.replace(/Feng Li/g, "<strong>Feng Li</strong>");
+        document.getElementById('qs_table').innerHTML
+                = document.getElementById('qs_table')
+                  .innerHTML.replace(/Li, Feng/g, "<strong>Li, Feng</strong>");
+
 }
 
 -->
