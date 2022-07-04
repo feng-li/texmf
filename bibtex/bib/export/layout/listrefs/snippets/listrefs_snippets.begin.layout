@@ -1,8 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>JabRef references</title>
-<meta http-equiv="Content-Type" content="text/html; charset=\encoding">
 <script type="text/javascript">
 <!--
 // QuickSearch script for JabRef HTML export
@@ -367,9 +362,9 @@ function author_highlight(){
 -->
 </script>
 <style type="text/css">
-body { background-color: white; font-family: Arial, sans-serif; font-size: 13px; line-height: 1.2; padding: 1em; color: #2E2E2E; width: 50em; margin: auto auto; }
+body { background-color: white; font-size: auto; line-height: auto; padding: 1em; color: auto; width: auto; margin: auto auto; }
 
-form#quicksearch { width: auto; border-style: solid; border-color: gray; border-width: 1px 0px; padding: 0.7em 0.5em; display:none; position:relative; }
+form#quicksearch { width: auto; border-style: solid; border-color: auto; border-width: 1px 0px; padding: 0.7em 0.5em; display:none; position:relative; }
 span#searchstat {padding-left: 1em;}
 
 div#settings { margin-top:0.7em; /* border-bottom: 1px transparent solid; background-color: #efefef; border: 1px grey solid; */ }
@@ -384,23 +379,22 @@ div#settings.hidden {display:none;}
 #showsettings:hover { cursor: pointer; }
 
 .invalidsearch { background-color: red; }
-input[type="button"] { background-color: #efefef; border: 1px #2E2E2E solid;}
+input[type="button"] { background-color: auto; border: 1px #2E2E2E solid;}
 
-li a { color: navy; text-decoration: none; }
 li a:hover  { text-decoration: underline; }
 
 li.noshow { display: none; }
 li div.noshow { display: none;}
-li div.highlight { background-color: #EFEFEF; border-top: 2px #2E2E2E solid; font-weight: bold; }
-li div.abstract, li div.review, li div.bibtex { background-color: #EFEFEF; text-align: justify; }
+li div.highlight { background-color: auto; border-top: 2px #2E2E2E solid; font-weight: bold; }
+li div.abstract, li div.review, li div.bibtex {width: 100%; color: darkblue; background-color: darkgray; text-align: justify; }
 
 li div.bibtex pre { width: 100%; overflow: auto; white-space: pre-wrap;}
 p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 
 .bib {
-    font-size: 12px;
+    font-size: 12pt;
     clear: both;
-    margin: 0;
+    margin: 1em;
     padding: 1em;
     overflow: auto;
 }
@@ -423,8 +417,6 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	tr { page-break-inside: avoid; }
 }
 </style>
-</head>
-<body>
 
 <form action="" id="quicksearch">
 <input type="text" id="qs_field" autocomplete="off" placeholder="Type to search..." /> <input type="button" onclick="clearQS()" value="clear" />
