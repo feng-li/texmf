@@ -1,0 +1,639 @@
+@Article{kang2022forecast,
+  author       = {Kang, Yanfei and Cao, Wei and Petropoulos, Fotios and Li, Feng},
+  title        = {Forecast with Forecasts: Diversity Matters},
+  doi          = {10.1016/j.ejor.2021.10.024},
+  number       = 1,
+  pages        = {180--190},
+  volume       = 31,
+  abstract     = {Forecast combinations have been widely applied in the last few decades
+                  to improve forecasting. Estimating optimal weights that can outperform
+                  simple averages is not always an easy task. In recent years, the idea of
+                  using time series features for forecast combinations has
+                  flourished. Although this idea has been proved to be beneficial in
+                  several forecasting competitions, it may not be practical in many
+                  situations. For example, the task of selecting appropriate features to
+                  build forecasting models is often challenging. Even if there was an
+                  acceptable way to define the features, existing features are estimated
+                  based on the historical patterns, which are likely to change in the
+                  future. Other times, the estimation of the features is infeasible due to
+                  limited historical data. In this work, we suggest a change of focus from
+                  the historical data to the produced forecasts to extract features. We
+                  use out-of-sample forecasts to obtain weights for forecast combinations
+                  by amplifying the diversity of the pool of methods being combined. A
+                  rich set of time series is used to evaluate the performance of the
+                  proposed method. Experimental results show that our diversity-based
+                  forecast combination framework not only simplifies the modeling process
+                  but also achieves superior forecasting performance in terms of both
+                  point forecasts and prediction intervals. The value of our proposition
+                  lies on its simplicity, transparency, and computational efficiency,
+                  elements that are important from both an optimization and a decision
+                  analysis perspective.},
+  author+an    = {1=highlight},
+  url          = {https://arxiv.org/abs/2012.01643},
+  journal      = {European Journal of Operational Research},
+  year         = 2022,
+}
+
+@Article{wang2022distributed,
+  author       = {Wang, Xiaoqian and Kang, Yanfei and Hyndman, Rob J and Li, Feng},
+  title        = {Distributed ARIMA models for ultra-long time series},
+  url          = {https://arxiv.org/abs/2007.09577},
+  doi          = {10.1016/j.ijforecast.2022.05.001},
+  number       = {In Press},
+  abstract     = {Providing forecasts for ultra-long time series plays a vital role in
+                  various activities, such as investment decisions, industrial production
+                  arrangements, and farm management. This paper develops a novel
+                  distributed forecasting framework to tackle challenges associated with
+                  forecasting ultra-long time series by using the industry-standard
+                  MapReduce framework. The proposed model combination approach facilitates
+                  distributed time series forecasting by combining the local estimators of
+                  time series models delivered from worker nodes and minimizing a global
+                  loss function. In this way, instead of unrealistically assuming the data
+                  generating process (DGP) of an ultra-long time series stays invariant,
+                  we make assumptions only on the DGP of subseries spanning shorter time
+                  periods. We investigate the performance of the proposed approach with
+                  AutoRegressive Integrated Moving Average (ARIMA) models using the real
+                  data application as well as numerical simulations. Compared to directly
+                  fitting the whole data with ARIMA models, our approach results in
+                  improved forecasting accuracy and computational efficiency both in point
+                  forecasts and prediction intervals, especially for longer forecast
+                  horizons. Moreover, we explore some potential factors that may affect
+                  the forecasting performance of our approach.},
+  author+an    = {4=highlight},
+  journal      = {International Journal of Forecasting},
+  year         = 2022,
+}
+
+@Article{talagala2022fformpp,
+  author       = {Talagala, Thiyanga S and Li, Feng and Kang, Yanfei},
+  title        = {FFORMPP: Feature-based forecast model performance prediction},
+  doi          = {10.1016/j.ijforecast.2021.07.002},
+  url          = {https://arxiv.org/abs/1908.11500},
+  volume       = 38,
+  number       = 3,
+  pages        = {920--943},
+  abstract     = {This paper introduces a novel meta-learning algorithm for time series
+                  forecast model performance prediction. We model the forecast error as a
+                  function of time series features calculated from historical time series
+                  with an efficient Bayesian multivariate surface regression approach. The
+                  minimum predicted forecast error is then used to identify an individual
+                  model or a combination of models to produce the final forecasts. It is
+                  well known that the performance of most meta-learning models depends on
+                  the representativeness of the reference dataset used for training. In
+                  such circumstances, we augment the reference dataset with a
+                  feature-based time series simulation approach, namely GRATIS, to
+                  generate a rich and representative time series collection. The proposed
+                  framework is tested using the M4 competition data and is compared
+                  against commonly used forecasting approaches. Our approach provides
+                  comparable performance to other model selection and combination
+                  approaches but at a lower computational cost and a higher degree of
+                  interpretability, which is important for supporting decisions. We also
+                  provide useful insights regarding which forecasting models are expected
+                  to work better for particular types of time series, the intrinsic
+                  mechanisms of the meta-learners, and how the forecasting performance is
+                  affected by various factors.},
+  author+an    = {2=highlight},
+  journal      = {International Journal of Forecasting},
+  year         = 2022,
+}
+
+@Article{petropoulos2021forecasting,
+  author       = {Fotios Petropoulos and Daniele Apiletti and Vassilios Assimakopoulos and
+                  Mohamed Zied Babai and Devon K. Barrow and Souhaib Ben Taieb and
+                  Christoph Bergmeir and Ricardo J. Bessa and Jakub Bijak and John
+                  E. Boylan and Jethro Browell and Claudio Carnevale and Jennifer
+                  L. Castle and Pasquale Cirillo and Michael P. Clements and Clara
+                  Cordeiro and Fernando Luiz Cyrino Oliveira and Shari De Baets and
+                  Alexander Dokumentov and Joanne Ellison and Piotr Fiszeder and Philip
+                  Hans Franses and David T. Frazier and Michael Gilliland and M. Sinan
+                  Gönül and Paul Goodwin and Luigi Grossi and Yael Grushka-Cockayne and
+                  Mariangela Guidolin and Massimo Guidolin and Ulrich Gunter and Xiaojia
+                  Guo and Renato Guseo and Nigel Harvey and David F. Hendry and Ross
+                  Hollyman and Tim Januschowski and Jooyoung Jeon and Victor Richmond
+                  R. Jose and Yanfei Kang and Anne B. Koehler and Stephan Kolassa and
+                  Nikolaos Kourentzes and Sonia Leva and Feng Li and Konstantia Litsiou
+                  and Spyros Makridakis and Gael M. Martin and Andrew B. Martinez and
+                  Sheik Meeran and Theodore Modis and Konstantinos Nikolopoulos and Dilek
+                  Önkal and Alessia Paccagnini and Anastasios Panagiotelis and Ioannis
+                  Panapakidis and Jose M. Pavía and Manuela Pedio and Diego J. Pedregal
+                  and Pierre Pinson and Patrícia Ramos and David E. Rapach and J. James
+                  Reade and Bahman Rostami-Tabar and Michał Rubaszek and Georgios
+                  Sermpinis and Han Lin Shang and Evangelos Spiliotis and Aris A. Syntetos
+                  and Priyanga Dilini Talagala and Thiyanga S. Talagala and Len Tashman
+                  and Dimitrios Thomakos and Thordis Thorarinsdottir and Ezio Todini and
+                  Juan Ramón Trapero Arenas and Xiaoqian Wang and Robert L. Winkler and
+                  Alisa Yusupova and Florian Ziel},
+  title        = {Forecasting: theory and practice},
+  doi          = {10.1016/j.ijforecast.2021.11.001},
+  url          = {https://arxiv.org/abs/2012.03854},
+  volume       = 38,
+  number       = 3,
+  pages        = {705--871},
+  abstract     = {Forecasting has always been at the forefront of decision making and
+                  planning. The uncertainty that surrounds the future is both exciting and
+                  challenging, with individuals and organisations seeking to minimise
+                  risks and maximise utilities. The large number of forecasting
+                  applications calls for a diverse set of forecasting methods to tackle
+                  real-life challenges. This article provides a non-systematic review of
+                  the theory and the practice of forecasting. We provide an overview of a
+                  wide range of theoretical, state-of-the-art models, methods, principles,
+                  and approaches to prepare, produce, organise, and evaluate forecasts. We
+                  then demonstrate how such theoretical concepts are applied in a variety
+                  of real-life contexts. We do not claim that this review is an exhaustive
+                  list of methods and applications. However, we wish that our encyclopedic
+                  presentation will offer a point of reference for the rich work that has
+                  been undertaken over the last decades, with some key insights for the
+                  future of forecasting theory and practice. Given its encyclopedic
+                  nature, the intended mode of reading is non-linear. We offer
+                  cross-references to allow the readers to navigate through the various
+                  topics. We complement the theoretical concepts and applications covered
+                  by large lists of free or open-source software implementations and
+                  publicly-available databases.},
+  author+an    = {45=highlight},
+  journal      = {International Journal of Forecasting},
+  year         = 2022,
+}
+
+@Article{li2022bayesian,
+  author       = {Li, Li and Kang, Yanfei and Li, Feng},
+  title        = {Bayesian forecast combination using time-varying features},
+  number       = {In Press},
+  url          = {https://arxiv.org/abs/2108.02082},
+  abstract     = {In this work, we propose a novel framework for density forecast
+                  combination by constructing time-varying weights based on time series
+                  features, which is called Feature-based Bayesian Forecasting Model
+                  Averaging (FEBAMA). Our framework estimates weights in the forecast
+                  combination via Bayesian log predictive scores, in which the optimal
+                  forecasting combination is determined by time series features from
+                  historical information. In particular, we use an automatic Bayesian
+                  variable selection method to add weight to the importance of different
+                  features. To this end, our approach has better interpretability compared
+                  to other black-box forecasting combination schemes. We apply our
+                  framework to stock market data and M3 competition data. Based on our
+                  structure, a simple maximum-a-posteriori scheme outperforms benchmark
+                  methods, and Bayesian variable selection can further enhance the
+                  accuracy for both point and density forecasts.},
+  journal      = {International Journal of Forecasting},
+  year         = 2022,
+}
+
+@Article{li2022improving,
+  author       = {Li, Xixi and Petropoulos, Fotios and Kang, Yanfei},
+  date         = 2022,
+  journal      = {International Journal of Production Research},
+  title        = {Improving forecasting by subsampling seasonal time series},
+  number       = {in press},
+  author+an    = {3=highlight},
+}
+
+@Article{wang2022uncertainty,
+  author       = {Wang, Xiaoqian and Kang, Yanfei and Petropoulos, Fotios and Li, Feng},
+  title        = {The uncertainty estimation of feature-based forecast combinations},
+  doi          = {10.1080/01605682.2021.1880297},
+  number       = 5,
+  pages        = {979--993},
+  url          = {https://arxiv.org/abs/1908.02891},
+  volume       = 73,
+  abstract     = {Forecasting is an indispensable element of operational research (OR) and
+                  an important aid to planning. The accurate estimation of the forecast
+                  uncertainty facilitates several operations management activities,
+                  predominantly in supporting decisions in inventory and supply chain
+                  management and effectively setting safety stocks. In this paper, we
+                  introduce a feature-based framework, which links the relationship
+                  between time series features and the interval forecasting performance
+                  into providing reliable interval forecasts. We propose an optimal
+                  threshold ratio searching algorithm and a new weight determination
+                  mechanism for selecting an appropriate subset of models and assigning
+                  combination weights for each time series tailored to the observed
+                  features. We evaluate our approach using a large set of time series from
+                  the M4 competition. Our experiments show that our approach significantly
+                  outperforms a wide range of benchmark models, both in terms of point
+                  forecasts as well as prediction intervals.},
+  author+an    = {4=highlight},
+  journal      = {Journal of the Operational Research Society},
+  year         = 2022,
+}
+
+@Article{theodorou2021exploring,
+  title        = {Exploring the representativeness of the M5 competition data},
+  journal      = {International Journal of Forecasting},
+  year         = 2021,
+  issn         = {0169-2070},
+  doi          = {10.1016/j.ijforecast.2021.07.006},
+  author       = {Evangelos Theodorou and Shengjie Wang and Yanfei Kang and Evangelos
+                  Spiliotis and Spyros Makridakis and Vassilios Assimakopoulos},
+  keywords     = {Forecasting competitions, M5, Time series visualization, Time series
+                  features, Retail sales forecasting},
+  abstract     = {The main objective of the M5 competition, which focused on forecasting
+                  the hierarchical unit sales of Walmart, was to evaluate the accuracy and
+                  uncertainty of forecasting methods in the field to identify best
+                  practices and highlight their practical implications. However, can the
+                  findings of the M5 competition be generalized and exploited by retail
+                  firms to better support their decisions and operation? This depends on
+                  the extent to which M5 data is sufficiently similar to unit sales data
+                  of retailers operating in different regions selling different product
+                  types and considering different marketing strategies. To answer this
+                  question, we analyze the characteristics of the M5 time series and
+                  compare them with those of two grocery retailers, namely Corporación
+                  Favorita and a major Greek supermarket chain, using feature spaces. Our
+                  results suggest only minor discrepancies between the examined data sets,
+                  supporting the representativeness of the M5 data.},
+  number       = {in press},
+  author+an    = {3=highlight},
+}
+
+@Article{li2021exploring,
+  author       = {Li, Xixi and Bai, Yun and Kang, Yanfei},
+  date         = 2021,
+  journal = {International Journal of Forecasting},
+  title        = {Exploring the social influence of Kaggle virtual community on the M5
+                  competition},
+  number       = {in press},
+  author+an    = {3=highlight},
+}
+
+@Article{kang2021deja,
+  author       = {Kang, Yanfei and Spiliotis, Evangelos and Petropoulos, Fotios and
+                  Athiniotis, Nikolaos and Li, Feng and Assimakopoulos, Vassilios},
+  title        = {D{\'e}j{\`a} vu: A data-centric forecasting approach through time series
+                  cross-similarity},
+  doi          = {10.1016/j.jbusres.2020.10.051},
+  number       = 2021,
+  pages        = {719--731},
+  url          = {https://arxiv.org/abs/1909.00221},
+  volume       = 132,
+  abstract     = {Accurate forecasts are vital for supporting the decisions of modern
+                  companies. Forecasters typically select the most appropriate statistical
+                  model for each time series. However, statistical models usually presume
+                  some data generation process while making strong assumptions about the
+                  errors. In this paper, we present a novel data-centric approach —
+                  ‘forecasting with cross-similarity’, which tackles model uncertainty in
+                  a model-free manner. Existing similarity-based methods focus on
+                  identifying similar patterns within the series, i.e.,
+                  ‘self-similarity’. In contrast, we propose searching for similar
+                  patterns from a reference set, i.e., ‘cross-similarity’. Instead of
+                  extrapolating, the future paths of the similar series are aggregated to
+                  obtain the forecasts of the target series. Building on the
+                  cross-learning concept, our approach allows the application of
+                  similarity-based forecasting on series with limited lengths. We evaluate
+                  the approach using a rich collection of real data and show that it
+                  yields competitive accuracy in both points forecasts and prediction
+                  intervals.},
+  author+an    = {5=highlight},
+  journal      = {Journal of Business Research},
+  year         = 2021,
+}
+
+@Article{bandara2021improving,
+  title        = {Improving the accuracy of global forecasting models using time series
+                  data augmentation},
+  journal      = {Pattern Recognition},
+  volume       = 120,
+  pages        = 108148,
+  year         = 2021,
+  issn         = {0031-3203},
+  doi          = {10.1016/j.patcog.2021.108148},
+  author       = {Kasun Bandara and Hansika Hewamalage and Yuan-Hao Liu and Yanfei Kang
+                  and Christoph Bergmeir},
+  keywords     = {Time series forecasting, Global forecasting models, Data augmentation,
+                  Transfer learning, RNN},
+  abstract     = {Forecasting models that are trained across sets of many time series,
+                  known as Global Forecasting Models (GFM), have shown recently promising
+                  results in forecasting competitions and real-world applications,
+                  outperforming many state-of-the-art univariate forecasting
+                  techniques. In most cases, GFMs are implemented using deep neural
+                  networks, and in particular Recurrent Neural Networks (RNN), which
+                  require a sufficient amount of time series to estimate their numerous
+                  model parameters. However, many time series databases have only a
+                  limited number of time series. In this study, we propose a novel, data
+                  augmentation based forecasting framework that is capable of improving
+                  the baseline accuracy of the GFM models in less data-abundant
+                  settings. We use three time series augmentation techniques: GRATIS,
+                  moving block bootstrap (MBB), and dynamic time warping barycentric
+                  averaging (DBA) to synthetically generate a collection of time
+                  series. The knowledge acquired from these augmented time series is then
+                  transferred to the original dataset using two different approaches: the
+                  pooled approach and the transfer learning approach. When building GFMs,
+                  in the pooled approach, we train a model on the augmented time series
+                  alongside the original time series dataset, whereas in the transfer
+                  learning approach, we adapt a pre-trained model to the new dataset. In
+                  our evaluation on competition and real-world time series datasets, our
+                  proposed variants can significantly improve the baseline accuracy of GFM
+                  models and outperform state-of-the-art univariate forecasting methods.},
+  author+an    = {4=highlight},
+}
+
+@Article{li2020forecasting,
+  author       = {Li, Xixi and Kang, Yanfei and Li, Feng},
+  title        = {Forecasting with time series imaging},
+  doi          = {10.1016/j.eswa.2020.113680},
+  pages        = 113680,
+  url          = {https://arxiv.org/abs/1904.08064},
+  volume       = 160,
+  abstract     = {Feature-based time series representations have attracted substantial
+                  attention in a wide range of time series analysis methods. Recently, the
+                  use of time series features for forecast model averaging has been an
+                  emerging research focus in the forecasting community. Nonetheless, most
+                  of the existing approaches depend on the manual choice of an appropriate
+                  set of features. Exploiting machine learning methods to extract features
+                  from time series automatically becomes crucial in state-of-the-art time
+                  series analysis. In this paper, we introduce an automated approach to
+                  extract time series features based on time series imaging. We first
+                  transform time series into recurrence plots, from which local features
+                  can be extracted using computer vision algorithms. The extracted
+                  features are used for forecast model averaging. Our experiments show
+                  that forecasting based on automatically extracted features, with less
+                  human intervention and a more comprehensive view of the raw time series
+                  data, yields highly comparable performances with the best methods in the
+                  largest forecasting competition dataset (M4) and outperforms the top
+                  methods in the Tourism forecasting competition dataset.},
+  author+an    = {3=highlight},
+  journal      = {Expert Systems with Applications},
+  year         = 2020,
+}
+
+@Article{chen2020probabilistic,
+  title        = {Probabilistic forecasting with temporal convolutional neural network},
+  journal      = {Neurocomputing},
+  volume       = 399,
+  pages        = {491-501},
+  year         = 2020,
+  issn         = {0925-2312},
+  doi          = {10.1016/j.neucom.2020.03.011},
+  author       = {Yitian Chen and Yanfei Kang and Yixiong Chen and Zizhuo Wang},
+  keywords     = {Probabilistic forecasting, Convolutional neural network, Dilated causal
+                  convolution, Demand forecasting, High-dimensional time series},
+  abstract     = {We present a probabilistic forecasting framework based on convolutional
+                  neural network (CNN) for multiple related time series forecasting. The
+                  framework can be applied to estimate probability density under both
+                  parametric and non-parametric settings. More specifically, stacked
+                  residual blocks based on dilated causal convolutional nets are
+                  constructed to capture the temporal dependencies of the series. Combined
+                  with representation learning, our approach is able to learn complex
+                  patterns such as seasonality, holiday effects within and across series,
+                  and to leverage those patterns for more accurate forecasts, especially
+                  when historical data is sparse or unavailable. Extensive empirical
+                  studies are performed on several real-world datasets, including datasets
+                  from JD.com, China’s largest online retailer. The results show that our
+                  framework compares favorably to the state-of-the-art in both point and
+                  probabilistic forecasting.},
+}
+
+@Article{kang2020gratis,
+  author       = {Kang, Yanfei and Hyndman, Rob J and Li, Feng},
+  title        = {{GRATIS}: {GeneRAting TIme Series} with diverse and controllable
+                  characteristics},
+  doi          = {10.1002/sam.11461},
+  issue        = 4,
+  pages        = {354--376},
+  url          = {https://arxiv.org/abs/1903.02787},
+  volume       = 13,
+  abstract     = {The explosion of time series data in recent years has brought a flourish
+                  of new time series analysis methods, for forecasting, clustering,
+                  classification and other tasks. The evaluation of these new methods
+                  requires either collecting or simulating a diverse set of time series
+                  benchmarking data to enable reliable comparisons against alternative
+                  approaches. We propose GeneRAting TIme Series with diverse and
+                  controllable characteristics, named GRATIS, with the use of mixture
+                  autoregressive (MAR) models. We simulate sets of time series using MAR
+                  models and investigate the diversity and coverage of the generated time
+                  series in a time series feature space. By tuning the parameters of the
+                  MAR models, GRATIS is also able to efficiently generate new time series
+                  with controllable features. In general, as a costless surrogate to the
+                  traditional data collection approach, GRATIS can be used as an
+                  evaluation tool for tasks such as time series forecasting and
+                  classification. We illustrate the usefulness of our time series
+                  generation process through a time series forecasting application.},
+  author+an    = {3=highlight},
+  journal      = {Statistical Analysis and Data Mining},
+  year         = 2020,
+}
+
+@Book{kang2020statscompcn,
+  author       = {康雁飞 and 李丰},
+  publisher    = {在线出版},
+  title        = {统计计算},
+  year         = 2020,
+  author+an    = {2=highlight},
+  url          = {https://feng.li/files/statscompbook/}
+}
+
+@Article{li2018improving,
+  author       = {Li, Feng and Kang, Yanfei},
+  title        = {Improving forecasting performance using covariate-dependent copula
+                  models},
+  doi          = {10.1016/j.ijforecast.2018.01.007},
+  number       = 3,
+  pages        = {456--476},
+  url          = {https://arxiv.org/abs/1401.0100},
+  volume       = 34,
+  abstract     = {Copulas provide an attractive approach to the construction of
+                  multivariate distributions with flexible marginal distributions and
+                  different forms of dependences. Of particular importance in many areas
+                  is the possibility of forecasting the tail-dependences explicitly. Most
+                  of the available approaches are only able to estimate tail-dependences
+                  and correlations via nuisance parameters, and cannot be used for either
+                  interpretation or forecasting. We propose a general Bayesian approach
+                  for modeling and forecasting tail-dependences and correlations as
+                  explicit functions of covariates, with the aim of improving the copula
+                  forecasting performance. The proposed covariate-dependent copula model
+                  also allows for Bayesian variable selection from among the covariates of
+                  the marginal models, as well as the copula density. The copulas that we
+                  study include the Joe-Clayton copula, the Clayton copula, the Gumbel
+                  copula and the Student’s -copula. Posterior inference is carried out
+                  using an efficient MCMC simulation method. Our approach is applied to
+                  both simulated data and the S&P 100 and S&P 600 stock indices. The
+                  forecasting performance of the proposed approach is compared with those
+                  of other modeling strategies based on log predictive scores. A
+                  value-at-risk evaluation is also performed for the model comparisons.},
+  author+an    = {1=highlight},
+  journal      = {International Journal of Forecasting},
+  year         = 2018,
+}
+
+@Article{kang2017visualising,
+  title        = {Visualising forecasting algorithm performance using time series instance
+                  spaces},
+  journal      = {International Journal of Forecasting},
+  volume       = 33,
+  number       = 2,
+  pages        = {345-358},
+  year         = 2017,
+  issn         = {0169-2070},
+  doi          = {https://doi.org/10.1016/j.ijforecast.2016.09.004},
+  url          = {https://www.sciencedirect.com/science/article/pii/S0169207016301030},
+  author       = {Yanfei Kang and Rob J. Hyndman and Kate Smith-Miles},
+  keywords     = {M3-Competition, Time series visualisation, Time series generation,
+                  Forecasting algorithm comparison},
+  abstract     = {It is common practice to evaluate the strength of forecasting methods
+                  using collections of well-studied time series datasets, such as the M3
+                  data. The question is, though, how diverse and challenging are these
+                  time series, and do they enable us to study the unique strengths and
+                  weaknesses of different forecasting methods? This paper proposes a
+                  visualisation method for collections of time series that enables a time
+                  series to be represented as a point in a two-dimensional instance
+                  space. The effectiveness of different forecasting methods across this
+                  space is easy to visualise, and the diversity of the time series in an
+                  existing collection can be assessed. Noting that the diversity of the M3
+                  dataset has been questioned, this paper also proposes a method for
+                  generating new time series with controllable characteristics in order to
+                  fill in and spread out the instance space, making our generalisations of
+                  forecasting method performances as robust as possible.}
+}
+
+@Article{kang2015classes,
+  author       = {Kang, Yanfei and Belu\v{s}i\'{c}, Danijel and Smith-Miles, Kate},
+  title        = {Classes of structures in the stable atmospheric boundary layer},
+  journal      = {Quarterly Journal of the Royal Meteorological Society},
+  volume       = 141,
+  number       = 691,
+  pages        = {2057-2069},
+  keywords     = {submeso-scale motions, coherent structures, turbulence intermittency,
+                  detection of events, time series analysis, clustering, FLOSSII},
+  doi          = {10.1002/qj.2501},
+  abstract     = {This article analyses ubiquitous flow structures which affect the
+                  dynamics of stable atmospheric boundary layers. These structures
+                  introduce non-stationarity and intermittency to turbulent mixing, thus
+                  invalidating the usual scaling laws and numerical model
+                  parametrizations, but their characteristics and generating mechanisms
+                  are still generally unknown. Detecting these unknown events from time
+                  series requires techniques that do not assume particular geometries or
+                  amplitudes of the flow structures. We use a recently developed such
+                  method with some modifications to study the night-time structures over a
+                  three-month period during the FLOSSII experiment. The structures cover
+                  about 26\% of the dataset, and can be categorized using clustering into
+                  only three classes with similar characteristics. The largest class,
+                  including about 50\% of the events, contains smooth structures, often
+                  with wave-like shapes, which occur in stronger winds and weak
+                  stability. The second class, including sharper structures with large
+                  kurtosis, is characterized by weaker winds and stronger stability. The
+                  smallest class, including about 20\% of the events, contains
+                  predominantly sharp step-like structures, or microfronts. They occur in
+                  the weakest winds with strong stability. Sharper, and particularly
+                  shallower, structures are related to transient low-level wind maxima
+                  which create inflection points and may affect generation of
+                  turbulence. Furthermore, large wind directional shear, which is another
+                  source of transient inflection points, is generated even by deep
+                  coherent structures when the background wind is weaker than the
+                  structure intensity. These results show that the complexity of
+                  structures can be reduced for the purpose of further analysis using a
+                  proper classification. Mapping common characteristics of such events
+                  leads to their better understanding, which, if combined with similar
+                  analyses of other boundary-layer data, could lead to improving their
+                  effects in numerical models.},
+  year         = 2015,
+  author+an    = {1=highlight},
+}
+
+@Article{kang2014note,
+  author       = {Yanfei Kang and Belu\v{s}i\'{c}, Danijel and Smith-Miles, Kate},
+  date         = 2014,
+  journal      = {Chaos: An Interdisciplinary Journal of Nonlinear Science},
+  title        = {A note on the relationship between turbulent coherent structures and
+                  phase correlation},
+  number       = 2,
+  pages        = 023114,
+  volume       = 24,
+  doi          = {10.1063/1.4875260},
+  abstract     = {Various definitions of coherent structures exist in turbulence research,
+                  but a common assumption is that coherent structures have correlated
+                  spectral phases. As a result, randomization of phases is believed,
+                  generally, to remove coherent structures from the measured data. Here,
+                  we reexamine these assumptions using atmospheric turbulence
+                  measurements. Small-scale coherent structures are detected in the usual
+                  way using the wavelet transform. A considerable percentage of the
+                  detected structures are not phase correlated, although some of them are
+                  clearly organized in space and time. At larger scales, structures have
+                  even higher degree of spatiotemporal coherence but are also associated
+                  with weak phase correlation. A series of specific examples are shown to
+                  demonstrate this. These results warn about the vague terminology and
+                  assumptions around coherent structures, particularly for complex
+                  real-world turbulence.},
+  author+an    = {1=highlight}
+}
+
+@Article{kang2014detecting,
+  author       = {Kang, Yanfei and Belu\v{s}i\'{c}, Danijel and Smith-Miles, Kate},
+  date         = 2014,
+  journal      = {Journal of the Atmospheric Sciences},
+  title        = {Detecting and classifying events in noisy time series},
+  number       = 3,
+  pages        = {1090--1104},
+  volume       = 71,
+  abstract     = {Time series are characterized by a myriad of different shapes and
+                  structures. A number of events that appear in atmospheric time series
+                  result from as yet unidentified physical mechanisms. This is
+                  particularly the case for stable boundary layers, where the usual
+                  statistical turbulence approaches do not work well and increasing
+                  evidence relates the bulk of their dynamics to generally unknown
+                  individual events. This study explores the possibility of extracting and
+                  classifying events from time series without previous knowledge of their
+                  generating mechanisms. The goal is to group large numbers of events in a
+                  useful way that will open a pathway for the detailed study of their
+                  characteristics, and help to gain understanding of events with
+                  previously unknown origin. A two-step method is developed that extracts
+                  events from background fluctuations and groups dynamically similar
+                  events into clusters. The method is tested on artificial time series
+                  with different levels of complexity and on atmospheric turbulence time
+                  series. The results indicate that the method successfully recognizes and
+                  classifies various events of unknown origin and even distinguishes
+                  different physical characteristics based only on a single-variable time
+                  series. The method is simple and highly flexible, and it does not assume
+                  any knowledge about the shape geometries, amplitudes, or underlying
+                  physical mechanisms. Therefore, with proper modifications, it can be
+                  applied to time series from a wider range of research areas.},
+  doi          = "10.1175/JAS-D-13-0182.1",
+  author+an    = {1=highlight},
+}
+
+@InProceedings{kang2013how,
+  author       = {Yanfei Kang and Smith-Miles, Kate and Belu{\v{s}}i\'{c}, Danijel},
+  booktitle    = {2013 IEEE Symposium on Computational Intelligence and Data Mining (CIDM)},
+  date         = {2013},
+  title        = {How to extract meaningful shapes from noisy time-series subsequences?},
+  doi          = {10.1109/CIDM.2013.6597219},
+  organization = {IEEE},
+  pages        = {65--72},
+  abstract     = {A method for extracting and classifying shapes from noisy time series is
+                  proposed. The method consists of two steps. The first step is to perform
+                  a noise test on each subsequence extracted from the series using a
+                  sliding window. All the subsequences recognised as noise are removed
+                  from further analysis, and the shapes are extracted from the remaining
+                  non-noise subsequences. The second step is to cluster these extracted
+                  shapes. Although extracted from subsequences, these shapes form a
+                  non-overlapping set of time series subsequences and are hence amenable
+                  to meaningful clustering. The method is primarily designed for
+                  extracting and classifying shapes from very noisy real-world time
+                  series. Tests using artificial data with different levels of white noise
+                  and the red noise, and the real-world atmospheric turbulence data
+                  naturally characterised by strong red noise show that the method is able
+                  to correctly extract and cluster shapes from artificial data and that it
+                  has great potential for locating shapes in very noisy real-world time
+                  series.},
+  author+an    = {1=highlight},
+}
+
+@InProceedings{kang2012real,
+  author       = {Yanfei Kang},
+  booktitle    = {The 2012 International Joint Conference on Neural Networks ({IJCNN})},
+  date         = {2012},
+  title        = {Real-time change detection in time series based on growing feature quantization},
+  doi          = {10.1109/IJCNN.2012.6252381},
+  organization = {IEEE},
+  pages        = {1--6},
+  abstract     = {An unsupervised time series change detection method based on an
+                  extension of Vector Quantization (VQ) clustering is proposed. The method
+                  clusters the subsequences extracted with a sliding window in feature
+                  space. Changes can be defined as transition of subsequences from one
+                  cluster to another. The method can be used to achieve real time
+                  detection of the change points in a time series. Using data on road
+                  casualties in Great Britain, historical data on Nile river discharges,
+                  MODerate-resolution Imaging Spectroradiometer (MODIS) Normalized
+                  Difference Vegetation Index data and x simulated data. It is shown that
+                  the detected changes coincide with identifiable political, historical,
+                  environmental or simulated events that might have caused these
+                  changes. Further, the online method has the potential for revealing the
+                  insights into the nature of the changes and the transition behaviours of
+                  the system.},
+  author+an    = {1=highlight},
+}
