@@ -6,3 +6,5 @@ fonts/**
 doc/**
 source/**
 ls-R
+tlpkg/**
+**/*.layout
