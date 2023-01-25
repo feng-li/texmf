@@ -17,6 +17,7 @@
   journal      = {International Journal of Forecasting},
   year         = {2023},
   url          = {http://arxiv.org/abs/2205.04216},
+  doi          = {10.1016/j.ijforecast.2022.11.005},
   number       = {In Press},
 }
 
@@ -28,16 +29,17 @@
   year         = {2023},
   number       = {In Press},
   url          = {https://arxiv.org/abs/2204.08283},
+  doi          = {10.1080/00207543.2022.2153941},
 }
 
 @Article{kang2022forecast_ejor,
   author       = {Kang, Yanfei and Cao, Wei and Petropoulos, Fotios and Li, Feng},
   title        = {Forecast with Forecasts: Diversity Matters},
-  doi          = {10.1016/j.ejor.2021.10.024},
+  abstract     = {Forecast combinations have been widely applied in the last few decades to improve forecasting. Estimating optimal weights that can outperform simple averages is not always an easy task. In recent years, the idea of using time series features for forecast combinations has flourished. Although this idea has been proved to be beneficial in several forecasting competitions, it may not be practical in many situations. For example, the task of selecting appropriate features to build forecasting models is often challenging. Even if there was an acceptable way to define the features, existing features are estimated based on the historical patterns, which are likely to change in the future. Other times, the estimation of the features is infeasible due to limited historical data. In this work, we suggest a change of focus from the historical data to the produced forecasts to extract features. We use out-of-sample forecasts to obtain weights for forecast combinations by amplifying the diversity of the pool of methods being combined. A rich set of time series is used to evaluate the performance of the proposed method. Experimental results show that our diversity-based forecast combination framework not only simplifies the modeling process but also achieves superior forecasting performance in terms of both point forecasts and prediction intervals. The value of our proposition lies on its simplicity, transparency, and computational efficiency, elements that are important from both an optimization and a decision analysis perspective.},
   number       = 1,
   pages        = {180--190},
   volume       = 31,
-  abstract     = {Forecast combinations have been widely applied in the last few decades to improve forecasting. Estimating optimal weights that can outperform simple averages is not always an easy task. In recent years, the idea of using time series features for forecast combinations has flourished. Although this idea has been proved to be beneficial in several forecasting competitions, it may not be practical in many situations. For example, the task of selecting appropriate features to build forecasting models is often challenging. Even if there was an acceptable way to define the features, existing features are estimated based on the historical patterns, which are likely to change in the future. Other times, the estimation of the features is infeasible due to limited historical data. In this work, we suggest a change of focus from the historical data to the produced forecasts to extract features. We use out-of-sample forecasts to obtain weights for forecast combinations by amplifying the diversity of the pool of methods being combined. A rich set of time series is used to evaluate the performance of the proposed method. Experimental results show that our diversity-based forecast combination framework not only simplifies the modeling process but also achieves superior forecasting performance in terms of both point forecasts and prediction intervals. The value of our proposition lies on its simplicity, transparency, and computational efficiency, elements that are important from both an optimization and a decision analysis perspective.},
+  doi          = {10.1016/j.ejor.2021.10.024},
   url          = {https://arxiv.org/abs/2012.01643},
   journal      = {European Journal of Operational Research},
   year         = 2022,
@@ -47,11 +49,11 @@
 @Article{wang2022distributed_ijf,
   author       = {Wang, Xiaoqian and Kang, Yanfei and Hyndman, Rob J and Li, Feng},
   title        = {Distributed ARIMA models for ultra-long time series},
+  abstract     = {Providing forecasts for ultra-long time series plays a vital role in various activities, such as investment decisions, industrial production arrangements, and farm management. This paper develops a novel distributed forecasting framework to tackle challenges associated with forecasting ultra-long time series by using the industry-standard MapReduce framework. The proposed model combination approach facilitates distributed time series forecasting by combining the local estimators of time series models delivered from worker nodes and minimizing a global loss function. In this way, instead of unrealistically assuming the data generating process (DGP) of an ultra-long time series stays invariant, we make assumptions only on the DGP of subseries spanning shorter time periods. We investigate the performance of the proposed approach with AutoRegressive Integrated Moving Average (ARIMA) models using the real data application as well as numerical simulations. Compared to directly fitting the whole data with ARIMA models, our approach results in improved forecasting accuracy and computational efficiency both in point forecasts and prediction intervals, especially for longer forecast horizons. Moreover, we explore some potential factors that may affect the forecasting performance of our approach.},
+  journal      = {International Journal of Forecasting},
   url          = {https://arxiv.org/abs/2007.09577},
   doi          = {10.1016/j.ijforecast.2022.05.001},
   number       = {In Press},
-  abstract     = {Providing forecasts for ultra-long time series plays a vital role in various activities, such as investment decisions, industrial production arrangements, and farm management. This paper develops a novel distributed forecasting framework to tackle challenges associated with forecasting ultra-long time series by using the industry-standard MapReduce framework. The proposed model combination approach facilitates distributed time series forecasting by combining the local estimators of time series models delivered from worker nodes and minimizing a global loss function. In this way, instead of unrealistically assuming the data generating process (DGP) of an ultra-long time series stays invariant, we make assumptions only on the DGP of subseries spanning shorter time periods. We investigate the performance of the proposed approach with AutoRegressive Integrated Moving Average (ARIMA) models using the real data application as well as numerical simulations. Compared to directly fitting the whole data with ARIMA models, our approach results in improved forecasting accuracy and computational efficiency both in point forecasts and prediction intervals, especially for longer forecast horizons. Moreover, we explore some potential factors that may affect the forecasting performance of our approach.},
-  journal      = {International Journal of Forecasting},
   year         = 2022,
   addendum     = {(通讯作者)}
 }
@@ -70,31 +72,7 @@
 }
 
 @Article{petropoulos2021forecasting_ijf,
-  author       = {Fotios Petropoulos and Daniele Apiletti and Vassilios Assimakopoulos and
-                  Mohamed Zied Babai and Devon K. Barrow and Souhaib Ben Taieb and
-                  Christoph Bergmeir and Ricardo J. Bessa and Jakub Bijak and John
-                  E. Boylan and Jethro Browell and Claudio Carnevale and Jennifer
-                  L. Castle and Pasquale Cirillo and Michael P. Clements and Clara
-                  Cordeiro and Fernando Luiz Cyrino Oliveira and Shari De Baets and
-                  Alexander Dokumentov and Joanne Ellison and Piotr Fiszeder and Philip
-                  Hans Franses and David T. Frazier and Michael Gilliland and M. Sinan
-                  Gönül and Paul Goodwin and Luigi Grossi and Yael Grushka-Cockayne and
-                  Mariangela Guidolin and Massimo Guidolin and Ulrich Gunter and Xiaojia
-                  Guo and Renato Guseo and Nigel Harvey and David F. Hendry and Ross
-                  Hollyman and Tim Januschowski and Jooyoung Jeon and Victor Richmond
-                  R. Jose and Yanfei Kang and Anne B. Koehler and Stephan Kolassa and
-                  Nikolaos Kourentzes and Sonia Leva and Feng Li and Konstantia Litsiou
-                  and Spyros Makridakis and Gael M. Martin and Andrew B. Martinez and
-                  Sheik Meeran and Theodore Modis and Konstantinos Nikolopoulos and Dilek
-                  Önkal and Alessia Paccagnini and Anastasios Panagiotelis and Ioannis
-                  Panapakidis and Jose M. Pavía and Manuela Pedio and Diego J. Pedregal
-                  and Pierre Pinson and Patrícia Ramos and David E. Rapach and J. James
-                  Reade and Bahman Rostami-Tabar and Michał Rubaszek and Georgios
-                  Sermpinis and Han Lin Shang and Evangelos Spiliotis and Aris A. Syntetos
-                  and Priyanga Dilini Talagala and Thiyanga S. Talagala and Len Tashman
-                  and Dimitrios Thomakos and Thordis Thorarinsdottir and Ezio Todini and
-                  Juan Ramón Trapero Arenas and Xiaoqian Wang and Robert L. Winkler and
-                  Alisa Yusupova and Florian Ziel},
+  author = {Fotios Petropoulos and Daniele Apiletti and Vassilios Assimakopoulos and Mohamed Zied Babai and Devon K. Barrow and Souhaib Ben Taieb and Christoph Bergmeir and Ricardo J. Bessa and Jakub Bijak and John E. Boylan and Jethro Browell and Claudio Carnevale and Jennifer L. Castle and Pasquale Cirillo and Michael P. Clements and Clara Cordeiro and Fernando Luiz Cyrino Oliveira and Shari De Baets and Alexander Dokumentov and Joanne Ellison and Piotr Fiszeder and Philip Hans Franses and David T. Frazier and Michael Gilliland and M. Sinan Gönül and Paul Goodwin and Luigi Grossi and Yael Grushka-Cockayne and Mariangela Guidolin and Massimo Guidolin and Ulrich Gunter and Xiaojia Guo and Renato Guseo and Nigel Harvey and David F. Hendry and Ross Hollyman and Tim Januschowski and Jooyoung Jeon and Victor Richmond R. Jose and Yanfei Kang and Anne B. Koehler and Stephan Kolassa and Nikolaos Kourentzes and Sonia Leva and Feng Li and Konstantia Litsiou and Spyros Makridakis and Gael M. Martin and Andrew B. Martinez and Sheik Meeran and Theodore Modis and Konstantinos Nikolopoulos and Dilek Önkal and Alessia Paccagnini and Anastasios Panagiotelis and Ioannis Panapakidis and Jose M. Pavía and Manuela Pedio and Diego J. Pedregal and Pierre Pinson and Patrícia Ramos and David E. Rapach and J. James Reade and Bahman Rostami-Tabar and Michał Rubaszek and Georgios Sermpinis and Han Lin Shang and Evangelos Spiliotis and Aris A. Syntetos and Priyanga Dilini Talagala and Thiyanga S. Talagala and Len Tashman and Dimitrios Thomakos and Thordis Thorarinsdottir and Ezio Todini and Juan Ramón Trapero Arenas and Xiaoqian Wang and Robert L. Winkler and Alisa Yusupova and Florian Ziel},
   title        = {Forecasting: theory and practice},
   doi          = {10.1016/j.ijforecast.2021.11.001},
   url          = {https://arxiv.org/abs/2012.03854},
