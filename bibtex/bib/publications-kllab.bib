@@ -1,70 +1,64 @@
-@Article{kang2022forecast,
+@Article{zhang2023optimal_ejor,
+  author       = {Bohan Zhang and Yanfei Kang and Anastasios Panagiotelis and Feng Li},
+  title        = {Optimal reconciliation with immutable forecasts},
+  abstract     = {The practical importance of coherent forecasts in hierarchical forecasting has inspired many studies on forecast reconciliation. Under this approach, base forecasts are produced for every series in the hierarchy and are subsequently adjusted to be coherent in a second reconciliation step. Reconciliation methods have been shown to improve forecast accuracy but will generally adjust the base forecast of every series. However, in an operational context, it is sometimes necessary or beneficial to keep forecasts of some variables unchanged after forecast reconciliation. In this paper, we formulate a reconciliation methodology that keeps forecasts of a pre-specified subset of variables unchanged or “immutable”. In contrast to existing approaches, these immutable forecasts need not all come from the same level of a hierarchy, and our method can also be applied to grouped hierarchies. We prove that our approach preserves unbiasedness in base forecasts. Our method can also account for correlations between base forecasting errors and ensure the non-negativity of forecasts. We also perform empirical experiments, including an application to a large-scale online retailer’s sales, to assess our proposed methodology’s impacts.},
+  journal      = {European Journal of Operational Research},
+  year         = {2023},
+  number       = {In Press},
+  url          = {http://arxiv.org/abs/2204.09231},
+  doi          = {10.1016/j.ejor.2022.11.035},
+  addendum     = {(通讯作者)}
+}
+
+@Article{wang2023forecast_ijf,
+  author       = {Xiaoqian Wang and Rob J Hyndman and Feng Li and Yanfei Kang},
+  title        = {Forecast combinations: an over 50-year review},
+  abstract     = {Forecast combinations have flourished remarkably in the forecasting community and, in recent years, have become part of the mainstream of forecasting research and activities. Combining multiple forecasts produced from single (target) series is now widely used to improve accuracy through the integration of information gleaned from different sources, thereby mitigating the risk of identifying a single "best" forecast. Combination schemes have evolved from simple combination methods without estimation, to sophisticated methods involving time-varying weights, nonlinear combinations, correlations among components, and cross-learning. They include combining point forecasts and combining probabilistic forecasts. This paper provides an up-to-date review of the extensive literature on forecast combinations, together with reference to available open-source software implementations. We discuss the potential and limitations of various methods and highlight how these ideas have developed over time. Some important issues concerning the utility of forecast combinations are also surveyed. Finally, we conclude with current research gaps and potential insights for future research.},
+  journal      = {International Journal of Forecasting},
+  year         = {2023},
+  url          = {http://arxiv.org/abs/2205.04216},
+  doi          = {10.1016/j.ijforecast.2022.11.005},
+  number       = {In Press},
+}
+
+@Article{li2023feature_ijpr,
+  author       = {Li Li and Yanfei Kang and Fotios Petropoulos and Feng Li},
+  title        = {Feature-based intermittent demand forecast combinations: accuracy and inventory implications},
+  abstract     = {Intermittent demand forecasting is a ubiquitous and challenging problem in production systems and supply chain management. In recent years, there has been a growing focus on developing forecasting approaches for intermittent demand from academic and practical perspectives. However, limited attention has been given to forecast combination methods, which have achieved competitive performance in forecasting fast-moving time series. The current study aims to examine the empirical outcomes of some existing forecast combination methods and propose a generalized feature-based framework for intermittent demand forecasting. The proposed framework has been shown to improve the accuracy of point and quantile forecasts based on two real data sets. Further, some analysis of features, forecasting pools and computational efficiency is also provided. The findings indicate the intelligibility and flexibility of the proposed approach in intermittent demand forecasting and offer insights regarding inventory decisions.},
+  journal      = {International Journal of Production Research},
+  year         = {2023},
+  number       = {In Press},
+  url          = {https://arxiv.org/abs/2204.08283},
+  doi          = {10.1080/00207543.2022.2153941},
+}
+
+@Article{kang2022forecast_ejor,
   author       = {Kang, Yanfei and Cao, Wei and Petropoulos, Fotios and Li, Feng},
   title        = {Forecast with Forecasts: Diversity Matters},
-  doi          = {10.1016/j.ejor.2021.10.024},
+  abstract     = {Forecast combinations have been widely applied in the last few decades to improve forecasting. Estimating optimal weights that can outperform simple averages is not always an easy task. In recent years, the idea of using time series features for forecast combinations has flourished. Although this idea has been proved to be beneficial in several forecasting competitions, it may not be practical in many situations. For example, the task of selecting appropriate features to build forecasting models is often challenging. Even if there was an acceptable way to define the features, existing features are estimated based on the historical patterns, which are likely to change in the future. Other times, the estimation of the features is infeasible due to limited historical data. In this work, we suggest a change of focus from the historical data to the produced forecasts to extract features. We use out-of-sample forecasts to obtain weights for forecast combinations by amplifying the diversity of the pool of methods being combined. A rich set of time series is used to evaluate the performance of the proposed method. Experimental results show that our diversity-based forecast combination framework not only simplifies the modeling process but also achieves superior forecasting performance in terms of both point forecasts and prediction intervals. The value of our proposition lies on its simplicity, transparency, and computational efficiency, elements that are important from both an optimization and a decision analysis perspective.},
   number       = 1,
   pages        = {180--190},
   volume       = 31,
-  abstract     = {Forecast combinations have been widely applied in the last few decades
-                  to improve forecasting. Estimating optimal weights that can outperform
-                  simple averages is not always an easy task. In recent years, the idea of
-                  using time series features for forecast combinations has
-                  flourished. Although this idea has been proved to be beneficial in
-                  several forecasting competitions, it may not be practical in many
-                  situations. For example, the task of selecting appropriate features to
-                  build forecasting models is often challenging. Even if there was an
-                  acceptable way to define the features, existing features are estimated
-                  based on the historical patterns, which are likely to change in the
-                  future. Other times, the estimation of the features is infeasible due to
-                  limited historical data. In this work, we suggest a change of focus from
-                  the historical data to the produced forecasts to extract features. We
-                  use out-of-sample forecasts to obtain weights for forecast combinations
-                  by amplifying the diversity of the pool of methods being combined. A
-                  rich set of time series is used to evaluate the performance of the
-                  proposed method. Experimental results show that our diversity-based
-                  forecast combination framework not only simplifies the modeling process
-                  but also achieves superior forecasting performance in terms of both
-                  point forecasts and prediction intervals. The value of our proposition
-                  lies on its simplicity, transparency, and computational efficiency,
-                  elements that are important from both an optimization and a decision
-                  analysis perspective.},
-  author+an    = {1=highlight},
+  doi          = {10.1016/j.ejor.2021.10.024},
   url          = {https://arxiv.org/abs/2012.01643},
   journal      = {European Journal of Operational Research},
   year         = 2022,
+  addendum     = {(通讯作者)}
 }
 
-@Article{wang2022distributed,
+@Article{wang2022distributed_ijf,
   author       = {Wang, Xiaoqian and Kang, Yanfei and Hyndman, Rob J and Li, Feng},
   title        = {Distributed ARIMA models for ultra-long time series},
+  abstract     = {Providing forecasts for ultra-long time series plays a vital role in various activities, such as investment decisions, industrial production arrangements, and farm management. This paper develops a novel distributed forecasting framework to tackle challenges associated with forecasting ultra-long time series by using the industry-standard MapReduce framework. The proposed model combination approach facilitates distributed time series forecasting by combining the local estimators of time series models delivered from worker nodes and minimizing a global loss function. In this way, instead of unrealistically assuming the data generating process (DGP) of an ultra-long time series stays invariant, we make assumptions only on the DGP of subseries spanning shorter time periods. We investigate the performance of the proposed approach with AutoRegressive Integrated Moving Average (ARIMA) models using the real data application as well as numerical simulations. Compared to directly fitting the whole data with ARIMA models, our approach results in improved forecasting accuracy and computational efficiency both in point forecasts and prediction intervals, especially for longer forecast horizons. Moreover, we explore some potential factors that may affect the forecasting performance of our approach.},
+  journal      = {International Journal of Forecasting},
   url          = {https://arxiv.org/abs/2007.09577},
   doi          = {10.1016/j.ijforecast.2022.05.001},
   number       = {In Press},
-  abstract     = {Providing forecasts for ultra-long time series plays a vital role in
-                  various activities, such as investment decisions, industrial production
-                  arrangements, and farm management. This paper develops a novel
-                  distributed forecasting framework to tackle challenges associated with
-                  forecasting ultra-long time series by using the industry-standard
-                  MapReduce framework. The proposed model combination approach facilitates
-                  distributed time series forecasting by combining the local estimators of
-                  time series models delivered from worker nodes and minimizing a global
-                  loss function. In this way, instead of unrealistically assuming the data
-                  generating process (DGP) of an ultra-long time series stays invariant,
-                  we make assumptions only on the DGP of subseries spanning shorter time
-                  periods. We investigate the performance of the proposed approach with
-                  AutoRegressive Integrated Moving Average (ARIMA) models using the real
-                  data application as well as numerical simulations. Compared to directly
-                  fitting the whole data with ARIMA models, our approach results in
-                  improved forecasting accuracy and computational efficiency both in point
-                  forecasts and prediction intervals, especially for longer forecast
-                  horizons. Moreover, we explore some potential factors that may affect
-                  the forecasting performance of our approach.},
-  author+an    = {4=highlight},
-  journal      = {International Journal of Forecasting},
   year         = 2022,
+  addendum     = {(通讯作者)}
 }
 
-@Article{talagala2022fformpp,
+@Article{talagala2022fformpp_ijf,
   author       = {Talagala, Thiyanga S and Li, Feng and Kang, Yanfei},
   title        = {FFORMPP: Feature-based forecast model performance prediction},
   doi          = {10.1016/j.ijforecast.2021.07.002},
@@ -72,109 +66,34 @@
   volume       = 38,
   number       = 3,
   pages        = {920--943},
-  abstract     = {This paper introduces a novel meta-learning algorithm for time series
-                  forecast model performance prediction. We model the forecast error as a
-                  function of time series features calculated from historical time series
-                  with an efficient Bayesian multivariate surface regression approach. The
-                  minimum predicted forecast error is then used to identify an individual
-                  model or a combination of models to produce the final forecasts. It is
-                  well known that the performance of most meta-learning models depends on
-                  the representativeness of the reference dataset used for training. In
-                  such circumstances, we augment the reference dataset with a
-                  feature-based time series simulation approach, namely GRATIS, to
-                  generate a rich and representative time series collection. The proposed
-                  framework is tested using the M4 competition data and is compared
-                  against commonly used forecasting approaches. Our approach provides
-                  comparable performance to other model selection and combination
-                  approaches but at a lower computational cost and a higher degree of
-                  interpretability, which is important for supporting decisions. We also
-                  provide useful insights regarding which forecasting models are expected
-                  to work better for particular types of time series, the intrinsic
-                  mechanisms of the meta-learners, and how the forecasting performance is
-                  affected by various factors.},
-  author+an    = {2=highlight},
+  abstract     = {This paper introduces a novel meta-learning algorithm for time series forecast model performance prediction. We model the forecast error as a function of time series features calculated from historical time series with an efficient Bayesian multivariate surface regression approach. The minimum predicted forecast error is then used to identify an individual model or a combination of models to produce the final forecasts. It is well known that the performance of most meta-learning models depends on the representativeness of the reference dataset used for training. In such circumstances, we augment the reference dataset with a feature-based time series simulation approach, namely GRATIS, to generate a rich and representative time series collection. The proposed framework is tested using the M4 competition data and is compared against commonly used forecasting approaches. Our approach provides comparable performance to other model selection and combination approaches but at a lower computational cost and a higher degree of interpretability, which is important for supporting decisions. We also provide useful insights regarding which forecasting models are expected to work better for particular types of time series, the intrinsic mechanisms of the meta-learners, and how the forecasting performance is affected by various factors.},
   journal      = {International Journal of Forecasting},
-  year         = 2022,
+  year         = 2022
 }
 
-@Article{petropoulos2021forecasting,
-  author       = {Fotios Petropoulos and Daniele Apiletti and Vassilios Assimakopoulos and
-                  Mohamed Zied Babai and Devon K. Barrow and Souhaib Ben Taieb and
-                  Christoph Bergmeir and Ricardo J. Bessa and Jakub Bijak and John
-                  E. Boylan and Jethro Browell and Claudio Carnevale and Jennifer
-                  L. Castle and Pasquale Cirillo and Michael P. Clements and Clara
-                  Cordeiro and Fernando Luiz Cyrino Oliveira and Shari De Baets and
-                  Alexander Dokumentov and Joanne Ellison and Piotr Fiszeder and Philip
-                  Hans Franses and David T. Frazier and Michael Gilliland and M. Sinan
-                  Gönül and Paul Goodwin and Luigi Grossi and Yael Grushka-Cockayne and
-                  Mariangela Guidolin and Massimo Guidolin and Ulrich Gunter and Xiaojia
-                  Guo and Renato Guseo and Nigel Harvey and David F. Hendry and Ross
-                  Hollyman and Tim Januschowski and Jooyoung Jeon and Victor Richmond
-                  R. Jose and Yanfei Kang and Anne B. Koehler and Stephan Kolassa and
-                  Nikolaos Kourentzes and Sonia Leva and Feng Li and Konstantia Litsiou
-                  and Spyros Makridakis and Gael M. Martin and Andrew B. Martinez and
-                  Sheik Meeran and Theodore Modis and Konstantinos Nikolopoulos and Dilek
-                  Önkal and Alessia Paccagnini and Anastasios Panagiotelis and Ioannis
-                  Panapakidis and Jose M. Pavía and Manuela Pedio and Diego J. Pedregal
-                  and Pierre Pinson and Patrícia Ramos and David E. Rapach and J. James
-                  Reade and Bahman Rostami-Tabar and Michał Rubaszek and Georgios
-                  Sermpinis and Han Lin Shang and Evangelos Spiliotis and Aris A. Syntetos
-                  and Priyanga Dilini Talagala and Thiyanga S. Talagala and Len Tashman
-                  and Dimitrios Thomakos and Thordis Thorarinsdottir and Ezio Todini and
-                  Juan Ramón Trapero Arenas and Xiaoqian Wang and Robert L. Winkler and
-                  Alisa Yusupova and Florian Ziel},
+@Article{petropoulos2021forecasting_ijf,
+  author = {Fotios Petropoulos and Daniele Apiletti and Vassilios Assimakopoulos and Mohamed Zied Babai and Devon K. Barrow and Souhaib Ben Taieb and Christoph Bergmeir and Ricardo J. Bessa and Jakub Bijak and John E. Boylan and Jethro Browell and Claudio Carnevale and Jennifer L. Castle and Pasquale Cirillo and Michael P. Clements and Clara Cordeiro and Fernando Luiz Cyrino Oliveira and Shari De Baets and Alexander Dokumentov and Joanne Ellison and Piotr Fiszeder and Philip Hans Franses and David T. Frazier and Michael Gilliland and M. Sinan Gönül and Paul Goodwin and Luigi Grossi and Yael Grushka-Cockayne and Mariangela Guidolin and Massimo Guidolin and Ulrich Gunter and Xiaojia Guo and Renato Guseo and Nigel Harvey and David F. Hendry and Ross Hollyman and Tim Januschowski and Jooyoung Jeon and Victor Richmond R. Jose and Yanfei Kang and Anne B. Koehler and Stephan Kolassa and Nikolaos Kourentzes and Sonia Leva and Feng Li and Konstantia Litsiou and Spyros Makridakis and Gael M. Martin and Andrew B. Martinez and Sheik Meeran and Theodore Modis and Konstantinos Nikolopoulos and Dilek Önkal and Alessia Paccagnini and Anastasios Panagiotelis and Ioannis Panapakidis and Jose M. Pavía and Manuela Pedio and Diego J. Pedregal and Pierre Pinson and Patrícia Ramos and David E. Rapach and J. James Reade and Bahman Rostami-Tabar and Michał Rubaszek and Georgios Sermpinis and Han Lin Shang and Evangelos Spiliotis and Aris A. Syntetos and Priyanga Dilini Talagala and Thiyanga S. Talagala and Len Tashman and Dimitrios Thomakos and Thordis Thorarinsdottir and Ezio Todini and Juan Ramón Trapero Arenas and Xiaoqian Wang and Robert L. Winkler and Alisa Yusupova and Florian Ziel},
   title        = {Forecasting: theory and practice},
   doi          = {10.1016/j.ijforecast.2021.11.001},
   url          = {https://arxiv.org/abs/2012.03854},
   volume       = 38,
   number       = 3,
   pages        = {705--871},
-  abstract     = {Forecasting has always been at the forefront of decision making and
-                  planning. The uncertainty that surrounds the future is both exciting and
-                  challenging, with individuals and organisations seeking to minimise
-                  risks and maximise utilities. The large number of forecasting
-                  applications calls for a diverse set of forecasting methods to tackle
-                  real-life challenges. This article provides a non-systematic review of
-                  the theory and the practice of forecasting. We provide an overview of a
-                  wide range of theoretical, state-of-the-art models, methods, principles,
-                  and approaches to prepare, produce, organise, and evaluate forecasts. We
-                  then demonstrate how such theoretical concepts are applied in a variety
-                  of real-life contexts. We do not claim that this review is an exhaustive
-                  list of methods and applications. However, we wish that our encyclopedic
-                  presentation will offer a point of reference for the rich work that has
-                  been undertaken over the last decades, with some key insights for the
-                  future of forecasting theory and practice. Given its encyclopedic
-                  nature, the intended mode of reading is non-linear. We offer
-                  cross-references to allow the readers to navigate through the various
-                  topics. We complement the theoretical concepts and applications covered
-                  by large lists of free or open-source software implementations and
-                  publicly-available databases.},
-  author+an    = {45=highlight},
+  abstract     = {Forecasting has always been at the forefront of decision making and planning. The uncertainty that surrounds the future is both exciting and challenging, with individuals and organisations seeking to minimise risks and maximise utilities. The large number of forecasting applications calls for a diverse set of forecasting methods to tackle real-life challenges. This article provides a non-systematic review of the theory and the practice of forecasting. We provide an overview of a wide range of theoretical, state-of-the-art models, methods, principles, and approaches to prepare, produce, organise, and evaluate forecasts. We then demonstrate how such theoretical concepts are applied in a variety of real-life contexts. We do not claim that this review is an exhaustive list of methods and applications. However, we wish that our encyclopedic presentation will offer a point of reference for the rich work that has been undertaken over the last decades, with some key insights for the future of forecasting theory and practice. Given its encyclopedic nature, the intended mode of reading is non-linear. We offer cross-references to allow the readers to navigate through the various topics. We complement the theoretical concepts and applications covered by large lists of free or open-source software implementations and publicly-available databases.},
   journal      = {International Journal of Forecasting},
-  year         = 2022,
+  year         = 2022
 }
 
-@Article{li2022bayesian,
+@Article{li2022bayesian_ijf,
   author       = {Li, Li and Kang, Yanfei and Li, Feng},
   title        = {Bayesian forecast combination using time-varying features},
   number       = {In Press},
   url          = {https://arxiv.org/abs/2108.02082},
-  abstract     = {In this work, we propose a novel framework for density forecast
-                  combination by constructing time-varying weights based on time series
-                  features, which is called Feature-based Bayesian Forecasting Model
-                  Averaging (FEBAMA). Our framework estimates weights in the forecast
-                  combination via Bayesian log predictive scores, in which the optimal
-                  forecasting combination is determined by time series features from
-                  historical information. In particular, we use an automatic Bayesian
-                  variable selection method to add weight to the importance of different
-                  features. To this end, our approach has better interpretability compared
-                  to other black-box forecasting combination schemes. We apply our
-                  framework to stock market data and M3 competition data. Based on our
-                  structure, a simple maximum-a-posteriori scheme outperforms benchmark
-                  methods, and Bayesian variable selection can further enhance the
-                  accuracy for both point and density forecasts.},
+  doi          = {10.1016/j.ijforecast.2022.06.002},
+  abstract     = {In this work, we propose a novel framework for density forecast combination by constructing time-varying weights based on time series features, which is called Feature-based Bayesian Forecasting Model Averaging (FEBAMA). Our framework estimates weights in the forecast combination via Bayesian log predictive scores, in which the optimal forecasting combination is determined by time series features from historical information. In particular, we use an automatic Bayesian variable selection method to add weight to the importance of different features. To this end, our approach has better interpretability compared to other black-box forecasting combination schemes. We apply our framework to stock market data and M3 competition data. Based on our structure, a simple maximum-a-posteriori scheme outperforms benchmark methods, and Bayesian variable selection can further enhance the accuracy for both point and density forecasts.},
   journal      = {International Journal of Forecasting},
   year         = 2022,
+  addendum     = {(通讯作者)}
 }
 
 @Article{anderer2022forecasting_ijf,
@@ -183,64 +102,30 @@
                   forecasts},
   doi          = {10.1016/j.ijforecast.2021.12.015},
   url          = {https://arxiv.org/abs/2103.08250},
-  number       = {In Press},
-  abstract     = {Hierarchical forecasting with intermittent time series is a challenge in
-                  both research and empirical studies. Extensive research focuses on
-                  improving the accuracy of each hierarchy, especially the intermittent
-                  time series at bottom levels. Then, hierarchical reconciliation can be
-                  used to improve the overall performance further. In this paper, we
-                  present a hierarchical-forecasting-with-alignment approach that treats
-                  the bottom-level forecasts as mutable to ensure higher forecasting
-                  accuracy on the upper levels of the hierarchy. We employ a pure deep
-                  learning forecasting approach, N-BEATS, for continuous time series at
-                  the top levels, and a widely used tree-based algorithm, LightGBM, for
-                  intermittent time series at the bottom level. The
-                  hierarchical-forecasting-with-alignment approach is a simple yet
-                  effective variant of the bottom-up method, accounting for biases that
-                  are difficult to observe at the bottom level. It allows suboptimal
-                  forecasts at the lower level to retain a higher overall performance. The
-                  approach in this empirical study was developed by the first author
-                  during the M5 Accuracy competition, ranking second place. The method is
-                  also business orientated and can be used to facilitate strategic
-                  business planning.},
-  author+an    = {2=highlight},
+  volume       = {38},
+  number       = {4},
+  pages        = {1405--1414},
+  abstract     = {Hierarchical forecasting with intermittent time series is a challenge in both research and empirical studies. Extensive research focuses on improving the accuracy of each hierarchy, especially the intermittent time series at bottom levels. Then, hierarchical reconciliation can be used to improve the overall performance further. In this paper, we present a hierarchical-forecasting-with-alignment approach that treats the bottom-level forecasts as mutable to ensure higher forecasting accuracy on the upper levels of the hierarchy. We employ a pure deep learning forecasting approach, N-BEATS, for continuous time series at the top levels, and a widely used tree-based algorithm, LightGBM, for intermittent time series at the bottom level. The hierarchical-forecasting-with-alignment approach is a simple yet effective variant of the bottom-up method, accounting for biases that are difficult to observe at the bottom level. It allows suboptimal forecasts at the lower level to retain a higher overall performance. The approach in this empirical study was developed by the first author during the M5 Accuracy competition, ranking second place. The method is also business orientated and can be used to facilitate strategic business planning.},
   journal      = {International Journal of Forecasting},
+  year         = 2022,
+  addendum     = {(通讯作者)}
+}
+
+@Article{pan2022note_jbes,
+  author       = {Rui Pan and Tunan Ren and Baishan Guo and Feng Li and Guodong Li and
+                  Hansheng Wang},
+  title        = {A Note on Distributed Quantile Regression by Pilot Sampling and One-Step
+                  Updating},
+  doi          = {10.1080/07350015.2021.1961789},
+  volume       = {40},
+  number       = {4},
+  pages        = {1691--1700},
+  abstract     = {Quantile regression is a method of fundamental importance. How to efficiently conduct quantile regression for a large dataset on a distributed system is of great importance. We show that the popularly used one-shot estimation is statistically inefficient if data are not randomly distributed across different workers. To fix the problem, a novel one-step estimation method is developed with the following nice properties. First, the algorithm is communication efficient. That is the communication cost demanded is practically acceptable. Second, the resulting estimator is statistically efficient. That is its asymptotic covariance is the same as that of the global estimator. Third, the estimator is robust against data distribution. That is its consistency is guaranteed even if data are not randomly distributed across different workers. Numerical experiments are provided to corroborate our findings. A real example is also presented for illustration.},
+  journal      = {Journal of Business and Economic Statistics},
   year         = 2022,
 }
 
-@Article{li2022improving,
-  author       = {Li, Xixi and Petropoulos, Fotios and Kang, Yanfei},
-  date         = 2022,
-  journal      = {International Journal of Production Research},
-  title        = {Improving forecasting by subsampling seasonal time series},
-  abstract     = {Time series forecasting plays an increasingly important role in modern
-                  business decisions. In today's data-rich environment, people often aim
-                  to choose the optimal forecasting model for their data. However,
-                  identifying the optimal model requires professional knowledge and
-                  experience, making accurate forecasting a challenging task. To mitigate
-                  the importance of model selection, we propose a simple and reliable
-                  algorithm to improve the forecasting performance. Specifically, we
-                  construct multiple time series with different sub-seasons from the
-                  original time series. These derived series highlight different
-                  sub-seasonal patterns of the original series, making it possible for the
-                  forecasting methods to capture diverse patterns and components of the
-                  data. Subsequently, we produce forecasts for these multiple series
-                  separately with classical statistical models (ETS or ARIMA). Finally,
-                  the forecasts are combined. We evaluate our approach on widely used
-                  forecasting competition data sets (M1, M3, and M4) in terms of both
-                  point forecasts and prediction intervals. We observe performance
-                  improvements compared with the benchmarks. Our approach is particularly
-                  suitable and robust for the data with higher frequency. To demonstrate
-                  the practical value of our proposition, we showcase the performance
-                  improvements from our approach on hourly load data that exhibit multiple
-                  seasonal patterns.},
-  doi          = {10.1080/00207543.2021.2022800},
-  url          = {https://arxiv.org/abs/2101.00827},
-  number       = {In Press},
-  author+an    = {3=highlight},
-}
-
-@Article{wang2022uncertainty,
+@Article{wang2022uncertainty_jors,
   author       = {Wang, Xiaoqian and Kang, Yanfei and Petropoulos, Fotios and Li, Feng},
   title        = {The uncertainty estimation of feature-based forecast combinations},
   doi          = {10.1080/01605682.2021.1880297},
@@ -248,24 +133,10 @@
   pages        = {979--993},
   url          = {https://arxiv.org/abs/1908.02891},
   volume       = 73,
-  abstract     = {Forecasting is an indispensable element of operational research (OR) and
-                  an important aid to planning. The accurate estimation of the forecast
-                  uncertainty facilitates several operations management activities,
-                  predominantly in supporting decisions in inventory and supply chain
-                  management and effectively setting safety stocks. In this paper, we
-                  introduce a feature-based framework, which links the relationship
-                  between time series features and the interval forecasting performance
-                  into providing reliable interval forecasts. We propose an optimal
-                  threshold ratio searching algorithm and a new weight determination
-                  mechanism for selecting an appropriate subset of models and assigning
-                  combination weights for each time series tailored to the observed
-                  features. We evaluate our approach using a large set of time series from
-                  the M4 competition. Our experiments show that our approach significantly
-                  outperforms a wide range of benchmark models, both in terms of point
-                  forecasts as well as prediction intervals.},
-  author+an    = {4=highlight},
+  abstract     = {Forecasting is an indispensable element of operational research (OR) and an important aid to planning. The accurate estimation of the forecast uncertainty facilitates several operations management activities, predominantly in supporting decisions in inventory and supply chain management and effectively setting safety stocks. In this paper, we introduce a feature-based framework, which links the relationship between time series features and the interval forecasting performance into providing reliable interval forecasts. We propose an optimal threshold ratio searching algorithm and a new weight determination mechanism for selecting an appropriate subset of models and assigning combination weights for each time series tailored to the observed features. We evaluate our approach using a large set of time series from the M4 competition. Our experiments show that our approach significantly outperforms a wide range of benchmark models, both in terms of point forecasts as well as prediction intervals.},
   journal      = {Journal of the Operational Research Society},
   year         = 2022,
+  addendum     = {(通讯作者)}
 }
 
 @article{wang2022escalator_safety,
@@ -276,31 +147,258 @@
   pages        = 105850,
   year         = 2022,
   issn         = {0925-7535},
-  doi          = {https://doi.org/10.1016/j.ssci.2022.105850},
-  author       = {Zhiru Wang and Yu Pang and Mingxin Gan and Martin Skitmore and Feng Li},
+  doi          = {10.1016/j.ssci.2022.105850},
+  author       = {Wang, Zhiru and Pang, Yu and Gan, Mingxin and Skitmore, Martin and Li, Feng},
   keywords     = {Subway station, Escalator incident, System-Theoretical Process Analysis
                   (STPA), Accident prediction, Lasso-Logistic Regression model},
-  abstract     = {The semi-open character with high passenger flow in Metro Rail Transport
-                  Stations (MRTS) makes safety management of human-electromechanical
-                  interaction escalator systems more complex. Safety management should not
-                  consider only single failures, but also the complex interactions in the
-                  system. This study applies task driven behavior theory and system theory
-                  to reveal a generic framework of the MRTS escalator accident mechanism
-                  and uses Lasso-Logistic Regression (LLR) for escalator injury
-                  prediction. Escalator accidents in the Beijing MRTS are used as a case
-                  study to estimate the applicability of the methodologies. The main
-                  results affirm that the application of System-Theoretical Process
-                  Analysis (STPA) and Task Driven Accident Process Analysis (TDAPA) to the
-                  generic escalator accident mechanism reveals non-failure state task
-                  driven passenger behaviors and constraints on safety that are not
-                  addressed in previous studies. The results also confirm that LLR is able
-                  to predict escalator accidents where there is a relatively large number
-                  of variables with limited observations. Additionally, increasing the
-                  amount of data improves the prediction accuracy for all three types of
-                  injuries in the case study, suggesting the LLR model has good
-                  extrapolation ability. The results can be applied in MRTS as instruments
-                  for both escalator accident investigation and accident prevention.}
+  abstract     = {The semi-open character with high passenger flow in Metro Rail Transport Stations (MRTS) makes safety management of human-electromechanical interaction escalator systems more complex. Safety management should not consider only single failures, but also the complex interactions in the system. This study applies task driven behavior theory and system theory to reveal a generic framework of the MRTS escalator accident mechanism and uses Lasso-Logistic Regression (LLR) for escalator injury prediction. Escalator accidents in the Beijing MRTS are used as a case study to estimate the applicability of the methodologies. The main results affirm that the application of System-Theoretical Process Analysis (STPA) and Task Driven Accident Process Analysis (TDAPA) to the generic escalator accident mechanism reveals non-failure state task driven passenger behaviors and constraints on safety that are not addressed in previous studies. The results also confirm that LLR is able to predict escalator accidents where there is a relatively large number of variables with limited observations. Additionally, increasing the amount of data improves the prediction accuracy for all three types of injuries in the case study, suggesting the LLR model has good extrapolation ability. The results can be applied in MRTS as instruments for both escalator accident investigation and accident prevention.},
+  addendum     = {(通讯作者)}
 }
+
+@Article{janeway2021clinical_jad,
+  author       = {Megan G Janeway and Xiang Zhao and Max Rosenthaler and Yi Zuo and Kumar
+                  Balasubramaniyan and Michael Poulson and Miriam Neufeld and Jeffrey
+                  J. Siracuse and Courtney E. Takahashi and Lisa Allee and Tracey Dechert
+                  and Peter A Burke and Feng Li and Bindu Kalesan},
+  title        = {Clinical diagnostic phenotypes in hospitalizations due to self-inflicted
+                  firearm injury},
+  doi          = {10.1016/j.jad.2020.09.067},
+  pages        = {172--180},
+  volume       = 278,
+  abstract     = {Hospitalized self-inflicted firearm injuries have not been extensively studied, particularly regarding clinical diagnoses at the index admission. The objective of this study was to discover the diagnostic phenotypes (DPs) or clusters of hospitalized self-inflicted firearm injuries. Using Nationwide Inpatient Sample data in the US from 1993 to 2014, we used International Classification of Diseases, Ninth Revision codes to identify self-inflicted firearm injuries among those ≥18 years of age. The 25 most frequent diagnostic codes were used to compute a dissimilarity matrix and the optimal number of clusters. We used hierarchical clustering to identify the main DPs. The overall cohort included 14072 hospitalizations, with self-inflicted firearm injuries occurring mainly in those between 16 to 45 years of age, black, with co-occurring tobacco and alcohol use, and mental illness. Out of the three identified DPs, DP1 was the largest (n=10,110), and included most common diagnoses similar to overall cohort, including major depressive disorders (27.7\%), hypertension (16.8\%), acute post hemorrhagic anemia (16.7\%), tobacco (15.7\%) and alcohol use (12.6\%). DP2 (n=3,725) was not characterized by any of the top 25 ICD-9 diagnoses codes, and included children and peripartum women. DP3, the smallest phenotype (n=237), had high prevalence of depression similar to DP1, and defined by fewer fatal injuries of chest and abdomen. There were three distinct diagnostic phenotypes in hospitalizations due to self-inflicted firearm injuries. Further research is needed to determine how DPs can be used to tailor clinical care and prevention efforts.},
+  journal      = {Journal of Affective Disorders},
+  year         = 2021,
+}
+
+@Article{kang2021deja_jbr,
+  author       = {Kang, Yanfei and Spiliotis, Evangelos and Petropoulos, Fotios and
+                  Athiniotis, Nikolaos and Li, Feng and Assimakopoulos, Vassilios},
+  title        = {D{\'e}j{\`a} vu: A data-centric forecasting approach through time series
+                  cross-similarity},
+  doi          = {10.1016/j.jbusres.2020.10.051},
+  number       = 2021,
+  pages        = {719--731},
+  url          = {https://arxiv.org/abs/1909.00221},
+  volume       = 132,
+  abstract     = {Accurate forecasts are vital for supporting the decisions of modern companies. Forecasters typically select the most appropriate statistical model for each time series. However, statistical models usually presume some data generation process while making strong assumptions about the errors. In this paper, we present a novel data-centric approach — ‘forecasting with cross-similarity’, which tackles model uncertainty in a model-free manner. Existing similarity-based methods focus on identifying similar patterns within the series, i.e., ‘self-similarity’. In contrast, we propose searching for similar patterns from a reference set, i.e., ‘cross-similarity’. Instead of extrapolating, the future paths of the similar series are aggregated to obtain the forecasts of the target series. Building on the cross-learning concept, our approach allows the application of similarity-based forecasting on series with limited lengths. We evaluate the approach using a rich collection of real data and show that it yields competitive accuracy in both points forecasts and prediction intervals.},
+  journal      = {Journal of Business Research},
+  year         = 2021,
+  addendum     = {(通讯作者)}
+}
+
+@Article{zhu2021least_jcgs,
+  author       = {Zhu, Xuening and Li, Feng and Wang, Hansheng},
+  title        = {Least-Square Approximation for a Distributed System},
+  doi          = {10.1080/10618600.2021.1923517},
+  number       = 4,
+  pages        = {1004--1018},
+  url          = {https://arxiv.org/abs/1908.04904},
+  volume       = 30,
+  abstract     = {In this work, we develop a distributed least-square approximation (DLSA) method that is able to solve a large family of regression problems (e.g., linear regression, logistic regression, and Cox’s model) on a distributed system. By approximating the local objective function using a local quadratic form, we are able to obtain a combined estimator by taking a weighted average of local estimators. The resulting estimator is proved to be statistically as efficient as the global estimator. Moreover, it requires only one round of communication. We further conduct a shrinkage estimation based on the DLSA estimation using an adaptive Lasso approach. The solution can be easily obtained by using the LARS algorithm on the master node. It is theoretically shown that the resulting estimator possesses the oracle property and is selection consistent by using a newly designed distributed Bayesian information criterion. The finite sample performance and computational efficiency are further illustrated by an extensive numerical study and an airline dataset. The airline dataset is 52 GB in size. The entire methodology has been implemented in Python for a de-facto standard Spark system. The proposed DLSA algorithm on the Spark system takes 26 min to obtain a logistic regression estimator, which is more efficient and memory friendly than conventional methods. Supplementary materials for this article are available online.},
+  journal      = {Journal of Computational and Graphical Statistics},
+  year         = 2021,
+  addendum     = {(通讯作者)}
+}
+
+@Article{li2020forecasting_eswa,
+  author       = {Li, Xixi and Kang, Yanfei and Li, Feng},
+  title        = {Forecasting with time series imaging},
+  doi          = {10.1016/j.eswa.2020.113680},
+  pages        = 113680,
+  url          = {https://arxiv.org/abs/1904.08064},
+  volume       = 160,
+  abstract     = {Feature-based time series representations have attracted substantial attention in a wide range of time series analysis methods. Recently, the use of time series features for forecast model averaging has been an emerging research focus in the forecasting community. Nonetheless, most of the existing approaches depend on the manual choice of an appropriate set of features. Exploiting machine learning methods to extract features from time series automatically becomes crucial in state-of-the-art time series analysis. In this paper, we introduce an automated approach to extract time series features based on time series imaging. We first transform time series into recurrence plots, from which local features can be extracted using computer vision algorithms. The extracted features are used for forecast model averaging. Our experiments show that forecasting based on automatically extracted features, with less human intervention and a more comprehensive view of the raw time series data, yields highly comparable performances with the best methods in the largest forecasting competition dataset (M4) and outperforms the top methods in the Tourism forecasting competition dataset.},
+  journal      = {Expert Systems with Applications},
+  year         = 2020,
+  addendum     = {(通讯作者)}
+}
+
+@Article{kalesan2020intersections_jsr,
+  author       = {Kalesan, Bindu and Zhao, Siran and Poulson, Michael and Neufeld, Miriam
+                  and Dechert, Tracey and Siracuse, Jeffrey J and Zuo, Yi and Li, Feng},
+  title        = {Intersections of firearm suicide, drug-related mortality, and economic
+                  dependency in rural America},
+  doi          = {10.1016/j.jss.2020.06.011},
+  pages        = {96--102},
+  volume       = 256,
+  abstract     = {Rural counties in the United States have higher firearm suicide rates and opioid overdoses than urban counties. We sought to determine whether rural counties can be grouped based on these “diseases of despair.”  Age-adjusted firearm suicide death rates per 100,000; drug-related death rates per 100,000; homicide rate per 100,000, opioid prescribing rate, \%black, \%Native American, and \%veteran population, median home price, violent crime rates per 100,000, primary economic dependency (nonspecialized, farming, mining, manufacturing, government, and recreation), and economic variables (low education, low employment, retirement destination, persistent poverty, and persistent child poverty) were obtained for all rural counties and evaluated with hierarchical clustering using complete linkage. We identified five distinct rural county clusters. The firearm suicide rates in the clusters were 5.9, 6.8, 6.4, 8.5, and 3.8 per 100,000, respectively. The counties in cluster 1 were poor, mining dependent, with population loss, cluster 2 were nonspecialized economies, with high opioid prescription rates, cluster 3 were manufacturing and government economies with moderate unemployment, cluster 4 were recreational economies with substantial veterans and Native American populations, high median home price, drug death rates, opioid prescribing, and violent crime, and cluster 5 were farming economies, with high population loss, low median home price, low rates of drug mortality, opioid prescribing, and violent crime. Cluster 4 counties were spatially adjacent to urban counties. More than 300 counties currently face a disproportionate burden of diseases of despair. Interventions to reduce firearm suicides should be community-based and include programs to reduce other diseases of despair.},
+  journal      = {Journal of Surgical Research},
+  year         = 2020,
+}
+
+@Article{kang2020gratis_sam,
+  author       = {Kang, Yanfei and Hyndman, Rob J and Li, Feng},
+  title        = {{GRATIS}: {GeneRAting TIme Series} with diverse and controllable
+                  characteristics},
+  doi          = {10.1002/sam.11461},
+  number       = 4,
+  pages        = {354--376},
+  url          = {https://arxiv.org/abs/1903.02787},
+  volume       = 13,
+  abstract     = {The explosion of time series data in recent years has brought a flourish of new time series analysis methods, for forecasting, clustering, classification and other tasks. The evaluation of these new methods requires either collecting or simulating a diverse set of time series benchmarking data to enable reliable comparisons against alternative approaches. We propose GeneRAting TIme Series with diverse and controllable characteristics, named GRATIS, with the use of mixture autoregressive (MAR) models. We simulate sets of time series using MAR models and investigate the diversity and coverage of the generated time series in a time series feature space. By tuning the parameters of the MAR models, GRATIS is also able to efficiently generate new time series with controllable features. In general, as a costless surrogate to the traditional data collection approach, GRATIS can be used as an evaluation tool for tasks such as time series forecasting and classification. We illustrate the usefulness of our time series generation process through a time series forecasting application.},
+  journal      = {Statistical Analysis and Data Mining},
+  year         = 2020,
+  addendum     = {(通讯作者)}
+}
+
+@Book{kang2020statscompcn,
+  author       = {康雁飞 and 李丰},
+  publisher    = {在线出版},
+  title        = {统计计算},
+  year         = 2020,
+  url          = {https://feng.li/files/statscompbook/}
+}
+
+@Book{li2020fppcn,
+  author       = {康雁飞 and 李丰},
+  publisher    = {在线出版},
+  title        = {预测：方法与实践},
+  year         = 2020,
+  url          = {https://otexts.com/fppcn/},
+}
+
+@InBook{hao2020bilinear_ced,
+  author       = {Hao, Chengcheng and Li, Feng and von Rosen, Dietrich},
+  booktitle    = {Contemporary Experimental Design, Multivariate Analysis and Data Mining},
+  title        = {A Bilinear Reduced Rank Model},
+  doi          = {10.1007/978-3-030-46161-4_21},
+  editor       = {Jianqing Fan and Jianxin Pan},
+  publisher    = {Springer Nature},
+  abstract     = {This article considers a bilinear model that includes two different latent effects. The first effect has a direct influence on the response variable, whereas the second latent effect is assumed to first influence other latent variables, which in turn affect the response variable. In this article, latent variables are modelled via rank restrictions on unknown mean parameters and the models which are used are often referred to as reduced rank regression models. This article presents a likelihood-based approach that results in explicit estimators. In our model, the latent variables act as covariates that we know exist, but their direct influence is unknown and will therefore not be considered in detail. One example is if we observe hundreds of weather variables, but we cannot say which or how these variables affect plant growth.},
+  year         = 2020,
+}
+
+@Article{li2019credit_cef,
+  author       = {Li, Feng and He, Zhuojing},
+  title        = {Credit risk clustering in a business group: which matters more,
+                  systematic or idiosyncratic risk?},
+  doi          = {10.1080/23322039.2019.1632528},
+  pages        = 1632528,
+  url          = {http://dx.doi.org/10.2139/ssrn.3182925},
+  abstract     = {Understanding how defaults correlate across firms is a persistent concern in risk management. In this paper, we apply covariate-dependent copula models to assess the dynamic nature of credit risk dependence, which we define as “credit risk clustering”. We also study the driving forces of the credit risk clustering in CEC business group in China. Our empirical analysis shows that the credit risk clustering varies over time and exhibits different patterns across firm pairs in a business group. We also investigate the impacts of systematic and idiosyncratic factors on credit risk clustering. We find that the impacts of the money supply and the short-term interest rates are positive, whereas the impacts of exchange rates are negative. The roles of the CPI on credit risk clustering are ambiguous. Idiosyncratic factors are vital for predicting credit risk clustering. From a policy perspective, our results not only strengthen the results of previous research but also provide a possible approach to model and predict the extreme co-movement of credit risk in business groups with financial indicators.},
+  journal      = {Cogent Economics \& Finance},
+  year         = 2019,
+  addendum     = {(第一作者)}
+}
+
+@Article{bailey2019changes_plosone,
+  author       = {Bailey, Hannah M and Zuo, Yi and Li, Feng and Min, Jae and Vaddiparti,
+                  Krishna and Prosperi, Mattia and Fagan, Jeffrey and Galea, Sandro and
+                  Kalesan, Bindu},
+  title        = {Changes in patterns of mortality rates and years of life lost due to
+                  firearms in the United States, 1999 to 2016: A joinpoint analysis},
+  doi          = {10.1371/journal.pone.0225223},
+  number       = 11,
+  volume       = 14,
+  abstract     = {Firearm-related death rates and years of potential life lost (YPLL) vary widely between population subgroups and states. However, changes or inflections in temporal trends within subgroups and states are not fully documented. We assessed temporal patterns and inflections in the rates of firearm deaths and \%YPLL due to firearms for overall and by sex, age, race/ethnicity, intent, and states in the United States between 1999 and 2016. We extracted age-adjusted firearm mortality and YPLL rates per 100,000, and \%YPLL from 1999 to 2016 by using the WONDER (Wide-ranging Online Data for Epidemiologic Research) database. We used Joinpoint Regression to assess temporal trends, the inflection points, and annual percentage change (APC) from 1999 to 2016. National firearm mortality rates were 10.3 and 11.8 per 100,000 in 1999 and 2016, with two distinct segments; a plateau until 2014 followed by an increase of APC = 7.2\% (95\% CI 3.1, 11.4). YPLL rates were from 304.7 and 338.2 in 1999 and 2016 with a steady APC increase in \%YPLL of 0.65\% (95\% CI 0.43, 0.87) from 1999 to an inflection point in 2014, followed by a larger APC in \%YPLL of 5.1\% (95\% CI 0.1, 10.4). The upward trend in firearm mortality and YPLL rates starting in 2014 was observed in subgroups of male, non-Hispanic blacks, Hispanic whites and for firearm assaults. The inflection points for firearm mortality and YPLL rates also varied across states. Within the United States, firearm mortality rates and YPLL remained constant between 1999 and 2014 and has been increasing subsequently. There was, however, an increase in firearm mortality rates in several subgroups and individual states earlier than 2014.},
+  journal      = {PLoS One},
+  year         = 2019,
+}
+
+@Article{pino2018cohort_bmj,
+  author       = {Pino, Elizabeth C and Zuo, Yi and De Olivera, Camila Maciel and
+                  Mahalingaiah, Shruthi and Keiser, Olivia and Moore, Lynn L and Li, Feng
+                  and Vasan, Ramachandran S and Corkey, Barbara E and Kalesan, Bindu},
+  title        = {Cohort profile: The MULTI sTUdy Diabetes rEsearch (MULTITUDE)
+                  consortium},
+  doi          = {10.1136/bmjopen-2017-020640},
+  number       = 5,
+  pages        = {e020640},
+  volume       = 8,
+  abstract     = {Globally, the age-standardised prevalence of type 2 diabetes mellitus (T2DM) has nearly doubled from 1980 to 2014, rising from 4.7 to 8.5 with an estimated 422 million adults living with the chronic disease. The MULTI sTUdy Diabetes rEsearch (MULTITUDE) consortium was recently established to harmonise data from 17 independent cohort studies and clinical trials and to facilitate a better understanding of the determinants, risk factors and outcomes associated with T2DM. Participants Participants range in age from 3 to 88 years at baseline, including both individuals with and without T2DM. MULTITUDE is an individual-level pooled database of demographics, comorbidities, relevant medications, clinical laboratory values, cardiac health measures, and T2DM-associated events and outcomes across 45 US states and the District of Columbia. Findings to date Among the 135 156 ongoing participants included in the consortium, almost 25\% (33 421) were diagnosed with T2DM at baseline. The average age of the participants was 54.3\%, while the average age of participants with diabetes was 64.2\%. Men (55.3\%) and women (44.6\%) were almost equally represented across the consortium. Non-whites accounted for 31.6 of the total participants and 40\% of those diagnosed with T2DM. Fewer individuals with diabetes reported being regular smokers than their non-diabetic counterparts (40.3\% vs 47.4\%). Over 85\% of those with diabetes were reported as either overweight or obese at baseline, compared with 60.7\% of those without T2DM. We observed differences in all-cause mortality, overall and by T2DM status, between cohorts. Given the wide variation in demographics and all-cause mortality in the cohorts, MULTITUDE consortium will be a unique resource for conducting research to determine: differences in the incidence and progression of T2DM; sequence of events or biomarkers prior to T2DM diagnosis; disease progression from T2DM to disease-related outcomes, complications and premature mortality; and to assess race/ethnicity differences in the above associations.},
+  journal      = {{BMJ} Open},
+  year         = 2018
+}
+
+@Article{li2018improving_ijf,
+  author       = {Li, Feng and Kang, Yanfei},
+  title        = {Improving forecasting performance using covariate-dependent copula
+                  models},
+  doi          = {10.1016/j.ijforecast.2018.01.007},
+  number       = 3,
+  pages        = {456--476},
+  url          = {https://arxiv.org/abs/1401.0100},
+  volume       = 34,
+  abstract     = {Copulas provide an attractive approach to the construction of multivariate distributions with flexible marginal distributions and different forms of dependences. Of particular importance in many areas is the possibility of forecasting the tail-dependences explicitly. Most of the available approaches are only able to estimate tail-dependences and correlations via nuisance parameters, and cannot be used for either interpretation or forecasting. We propose a general Bayesian approach for modeling and forecasting tail-dependences and correlations as explicit functions of covariates, with the aim of improving the copula forecasting performance. The proposed covariate-dependent copula model also allows for Bayesian variable selection from among the covariates of the marginal models, as well as the copula density. The copulas that we study include the Joe-Clayton copula, the Clayton copula, the Gumbel copula and the Student’s -copula. Posterior inference is carried out using an efficient MCMC simulation method. Our approach is applied to both simulated data and the S&P 100 and S&P 600 stock indices. The forecasting performance of the proposed approach is compared with those of other modeling strategies based on log predictive scores. A value-at-risk evaluation is also performed for the model comparisons.},
+  journal      = {International Journal of Forecasting},
+  year         = 2018,
+  addendum     = {(第一作者)}
+}
+
+@Book{li2016distributedcn,
+  author       = {李丰},
+  publisher    = {中国人民大学出版社},
+  title        = {大数据分布式计算与案例},
+  year         = 2016,
+  isbn         = 9787300230276,
+  url          = {https://feng.li/files/distcompbook/}
+}
+
+@Article{li2013efficient_sjs,
+  author       = {Li, Feng and Villani, Mattias},
+  title        = {Efficient {B}ayesian Multivariate Surface Regression},
+  doi          = {10.1111/sjos.12022},
+  number       = 4,
+  pages        = {706--723},
+  url          = {https://arxiv.org/abs/1110.3689},
+  volume       = 40,
+  abstract     = {Methods for choosing a fixed set of knot locations in additive spline models are fairly well established in the statistical literature. The curse of dimensionality makes it nontrivial to extend these methods to nonadditive surface models, especially when there are more than a couple of covariates. We propose a multivariate Gaussian surface regression model that combines both additive splines and interactive splines, and a highly efficient Markov chain Monte Carlo algorithm that updates all the knot locations jointly. We use shrinkage prior to avoid overfitting with different estimated shrinkage factors for the additive and surface part of the model, and also different shrinkage parameters for the different response variables. Simulated data and an application to firm leverage data show that the approach is computationally efficient, and that allowing for freely estimated knot locations can offer a substantial improvement in out-of-sample predictive performance.},
+  journal      = {Scandinavian Journal of Statistics},
+  year         = 2013,
+  addendum     = {(第一作者)}
+}
+
+@PhdThesis{li2013bayesian,
+  author       = {Feng Li},
+  title        = {Bayesian Modeling of Conditional Densities},
+  note         = {ISBN: 978-91-7447-665-1},
+  url          = {http://urn.kb.se/resolve?urn=urn:nbn:se:su:diva-89426},
+  abstract     = {This thesis develops models and associated Bayesian inference methods for flexible univariate and multivariate conditional density estimation. The models are flexible in the sense that they can capture widely differing shapes of the data. The estimation methods are specifically designed to achieve flexibility while still avoiding overfitting. The models are flexible both for a given covariate value, but also across covariate space. A key contribution of this thesis is that it provides general approaches of density estimation with highly efficient Markov chain Monte Carlo methods. The methods are illustrated on several challenging non-linear and non-normal datasets. In the first paper, a general model is proposed for flexibly estimating the density of a continuous response variable conditional on a possibly high-dimensional set of covariates. The model is a finite mixture of asymmetric student-t densities with covariate-dependent mixture weights. The four parameters of the components, the mean, degrees of freedom, scale and skewness, are all modeled as functions of the covariates. The second paper explores how well a smooth mixture of symmetric components can capture skewed data. Simulations and applications on real data show that including covariate-dependent skewness in the components can lead to substantially improved performance on skewed data, often using a much smaller number of components. We also introduce smooth mixtures of gamma and log-normal components to model positively-valued response variables. In the third paper we propose a multivariate Gaussian surface regression model that combines both additive splines and interactive splines, and a highly efficient MCMC algorithm that updates all the multi-dimensional knot locations jointly. We use shrinkage priors to avoid overfitting with different estimated shrinkage factors for the additive and surface part of the model, and also different shrinkage parameters for the different response variables. In the last paper we present a general Bayesian approach for directly modeling dependencies between variables as function of explanatory variables in a flexible copula context. In particular, the Joe-Clayton copula is extended to have covariate-dependent tail dependence and correlations. Posterior inference is carried out using a novel and efficient simulation method. The appendix of the thesis documents the computational implementation details.},
+  school       = {Department of Statistics, Stockholm University},
+  year         = 2013,
+  addendum     = {(第一作者)}
+}
+
+@InBook{li2011modeling_mixtures,
+  author       = {Li, Feng and Villani, Mattias and Kohn, Robert},
+  booktitle    = {Mixtures: estimation and applications},
+  title        = {Modeling Conditional Densities Using Finite Smooth Mixtures},
+  doi          = {10.1002/9781119995678.ch6},
+  editor       = {Mengersen, Kerrie and Robert, Christian and Titterington, Mike},
+  pages        = {123--144},
+  publisher    = {John Wiley \& Sons Inc, Chichester},
+  url          = {http://dx.doi.org/10.2139/ssrn.1711194},
+  abstract     = {Smooth mixtures, i.e. mixture models with covariate-dependent mixing weights, are very useful flexible models for conditional densities. Previous work shows that using too simple mixture components for modeling heteroscedastic and/or heavy tailed data can give a poor fit, even with a large number of components. This paper explores how well a smooth mixture of symmetric components can capture skewed data. Simulations and applications on real data show that including covariate-dependent skewness in the components can lead to substantially improved performance on skewed data, often using a much smaller number of components. Furthermore, variable selection is effective in removing unnecessary covariates in the skewness, which means that there is little loss in allowing for skewness in the components when the data are actually symmetric. We also introduce smooth mixtures of gamma and log-normal components to model positively-valued response variables.},
+  year         = 2011
+}
+
+@Article{li2010flexible_jspi,
+  author       = {Li, Feng and Villani, Mattias and Kohn, Robert},
+  title        = {Flexible modeling of conditional distributions using smooth mixtures of
+                  asymmetric student t densities},
+  doi          = {10.1016/j.jspi.2010.04.031},
+  number       = 12,
+  pages        = {3638--3654},
+  url          = {http://dx.doi.org/10.2139/ssrn.1551195},
+  volume       = {140},
+  abstract     = {A general model is proposed for flexibly estimating the density of a continuous response variable conditional on a possibly high-dimensional set of covariates. The model is a finite mixture of asymmetric student t densities with covariate-dependent mixture weights. The four parameters of the components, the mean, degrees of freedom, scale and skewness, are all modeled as functions of the covariates. Inference is Bayesian and the computation is carried out using Markov chain Monte Carlo simulation. To enable model parsimony, a variable selection prior is used in each set of covariates and among the covariates in the mixing weights. The model is used to analyze the distribution of daily stock market returns, and shown to more accurately forecast the distribution of returns than other widely used models for financial data.},
+  journal      = {Journal of Statistical Planning and Inference},
+  year         = 2010,
+  addendum     = {(第一作者)}
+}
+
+@Article{li2022improving,
+  author       = {Li, Xixi and Petropoulos, Fotios and Kang, Yanfei},
+  date         = 2022,
+  journal      = {International Journal of Production Research},
+  title        = {Improving forecasting by subsampling seasonal time series},
+  abstract     = {Time series forecasting plays an increasingly important role in modern business decisions. In today's data-rich environment, people often aim to choose the optimal forecasting model for their data. However, identifying the optimal model requires professional knowledge and experience, making accurate forecasting a challenging task. To mitigate the importance of model selection, we propose a simple and reliable algorithm to improve the forecasting performance. Specifically, we construct multiple time series with different sub-seasons from the original time series. These derived series highlight different sub-seasonal patterns of the original series, making it possible for the forecasting methods to capture diverse patterns and components of the data. Subsequently, we produce forecasts for these multiple series separately with classical statistical models (ETS or ARIMA). Finally, the forecasts are combined. We evaluate our approach on widely used forecasting competition data sets (M1, M3, and M4) in terms of both point forecasts and prediction intervals. We observe performance improvements compared with the benchmarks. Our approach is particularly suitable and robust for the data with higher frequency. To demonstrate the practical value of our proposition, we showcase the performance improvements from our approach on hourly load data that exhibit multiple seasonal patterns.},
+  doi          = {10.1080/00207543.2021.2022800},
+  url          = {https://arxiv.org/abs/2101.00827},
+  number       = {In Press},
+}
+
+
 
 @Article{theodorou2021exploring,
   title        = {Exploring the representativeness of the M5 competition data},
@@ -313,20 +411,7 @@
                   Spiliotis and Spyros Makridakis and Vassilios Assimakopoulos},
   keywords     = {Forecasting competitions, M5, Time series visualization, Time series
                   features, Retail sales forecasting},
-  abstract     = {The main objective of the M5 competition, which focused on forecasting
-                  the hierarchical unit sales of Walmart, was to evaluate the accuracy and
-                  uncertainty of forecasting methods in the field to identify best
-                  practices and highlight their practical implications. However, can the
-                  findings of the M5 competition be generalized and exploited by retail
-                  firms to better support their decisions and operation? This depends on
-                  the extent to which M5 data is sufficiently similar to unit sales data
-                  of retailers operating in different regions selling different product
-                  types and considering different marketing strategies. To answer this
-                  question, we analyze the characteristics of the M5 time series and
-                  compare them with those of two grocery retailers, namely Corporación
-                  Favorita and a major Greek supermarket chain, using feature spaces. Our
-                  results suggest only minor discrepancies between the examined data sets,
-                  supporting the representativeness of the M5 data.},
+  abstract     = {The main objective of the M5 competition, which focused on forecasting the hierarchical unit sales of Walmart, was to evaluate the accuracy and uncertainty of forecasting methods in the field to identify best practices and highlight their practical implications. However, can the findings of the M5 competition be generalized and exploited by retail firms to better support their decisions and operation? This depends on the extent to which M5 data is sufficiently similar to unit sales data of retailers operating in different regions selling different product types and considering different marketing strategies. To answer this question, we analyze the characteristics of the M5 time series and compare them with those of two grocery retailers, namely Corporación Favorita and a major Greek supermarket chain, using feature spaces. Our results suggest only minor discrepancies between the examined data sets, supporting the representativeness of the M5 data.},
   number       = {In Press},
   author+an    = {3=highlight},
 }
@@ -342,155 +427,11 @@
   author       = {Xixi Li and Yun Bai and Yanfei Kang},
   keywords     = {Forecasting competition, M5, Virtual community, Social influence, Topic
                   modeling, Social network analysis},
-  abstract     = {One of the most significant differences of M5 over previous forecasting
-                  competitions is that it was held on Kaggle, an online platform for data
-                  scientists and machine learning practitioners. Kaggle provides a
-                  gathering place, or virtual community, for web users who are interested
-                  in the M5 competition. Users can share code, models, features, and loss
-                  functions through online notebooks and discussion forums. Here, we study
-                  the social influence of this virtual community on user behavior in the
-                  M5 competition. We first research the content of the M5 virtual
-                  community by topic modeling and trend analysis. Further, we perform
-                  social media analysis to identify the potential relationship network of
-                  the virtual community. We study the roles and characteristics of some
-                  key participants who promoted the diffusion of information within the M5
-                  virtual community. Overall, this study provides in-depth insights into
-                  the mechanism of the virtual community’s influence on the participants
-                  and has potential implications for future online competitions.},
+  abstract     = {One of the most significant differences of M5 over previous forecasting competitions is that it was held on Kaggle, an online platform for data scientists and machine learning practitioners. Kaggle provides a gathering place, or virtual community, for web users who are interested in the M5 competition. Users can share code, models, features, and loss functions through online notebooks and discussion forums. Here, we study the social influence of this virtual community on user behavior in the M5 competition. We first research the content of the M5 virtual community by topic modeling and trend analysis. Further, we perform social media analysis to identify the potential relationship network of the virtual community. We study the roles and characteristics of some key participants who promoted the diffusion of information within the M5 virtual community. Overall, this study provides in-depth insights into the mechanism of the virtual community’s influence on the participants and has potential implications for future online competitions.},
   number       = {In Press},
-  author+an    = {3=highlight},
 }
 
-@Article{janeway2021clinical,
-  author       = {Megan G Janeway and Xiang Zhao and Max Rosenthaler and Yi Zuo and Kumar
-                  Balasubramaniyan and Michael Poulson and Miriam Neufeld and Jeffrey
-                  J. Siracuse and Courtney E. Takahashi and Lisa Allee and Tracey Dechert
-                  and Peter A Burke and Feng Li and Bindu Kalesan},
-  title        = {Clinical diagnostic phenotypes in hospitalizations due to self-inflicted
-                  firearm injury},
-  doi          = {10.1016/j.jad.2020.09.067},
-  pages        = {172--180},
-  volume       = 278,
-  abstract     = {Hospitalized self-inflicted firearm injuries have not been extensively
-                  studied, particularly regarding clinical diagnoses at the index
-                  admission. The objective of this study was to discover the diagnostic
-                  phenotypes (DPs) or clusters of hospitalized self-inflicted firearm
-                  injuries. Using Nationwide Inpatient Sample data in the US from 1993 to
-                  2014, we used International Classification of Diseases, Ninth Revision
-                  codes to identify self-inflicted firearm injuries among those ≥18 years
-                  of age. The 25 most frequent diagnostic codes were used to compute a
-                  dissimilarity matrix and the optimal number of clusters. We used
-                  hierarchical clustering to identify the main DPs. The overall cohort
-                  included 14072 hospitalizations, with self-inflicted firearm injuries
-                  occurring mainly in those between 16 to 45 years of age, black, with
-                  co-occurring tobacco and alcohol use, and mental illness. Out of the
-                  three identified DPs, DP1 was the largest (n=10,110), and included most
-                  common diagnoses similar to overall cohort, including major depressive
-                  disorders (27.7\%), hypertension (16.8\%), acute post hemorrhagic anemia
-                  (16.7\%), tobacco (15.7\%) and alcohol use (12.6\%). DP2 (n=3,725) was
-                  not characterized by any of the top 25 ICD-9 diagnoses codes, and
-                  included children and peripartum women. DP3, the smallest phenotype
-                  (n=237), had high prevalence of depression similar to DP1, and defined
-                  by fewer fatal injuries of chest and abdomen. There were three distinct
-                  diagnostic phenotypes in hospitalizations due to self-inflicted firearm
-                  injuries. Further research is needed to determine how DPs can be used to
-                  tailor clinical care and prevention efforts.},
-  author+an    = {13=highlight},
-  journal      = {Journal of Affective Disorders},
-  year         = 2021,
-}
 
-@Article{pan2021note_jbes,
-  author       = {Rui Pan and Tunan Ren and Baishan Guo and Feng Li and Guodong Li and
-                  Hansheng Wang},
-  title        = {A Note on Distributed Quantile Regression by Pilot Sampling and One-Step
-                  Updating},
-  doi          = {10.1080/07350015.2021.1961789},
-  number       = {In Press},
-  abstract     = {Quantile regression is a method of fundamental importance. How to
-                  efficiently conduct quantile regression for a large dataset on a
-                  distributed system is of great importance. We show that the popularly
-                  used one-shot estimation is statistically inefficient if data are not
-                  randomly distributed across different workers. To fix the problem, a
-                  novel one-step estimation method is developed with the following nice
-                  properties. First, the algorithm is communication efficient. That is the
-                  communication cost demanded is practically acceptable. Second, the
-                  resulting estimator is statistically efficient. That is its asymptotic
-                  covariance is the same as that of the global estimator. Third, the
-                  estimator is robust against data distribution. That is its consistency
-                  is guaranteed even if data are not randomly distributed across different
-                  workers. Numerical experiments are provided to corroborate our
-                  findings. A real example is also presented for illustration.},
-  author+an    = {4=highlight},
-  journal      = {Journal of Business and Economic Statistics},
-  year         = 2021,
-}
-
-@Article{kang2021deja_jbr,
-  author       = {Kang, Yanfei and Spiliotis, Evangelos and Petropoulos, Fotios and
-                  Athiniotis, Nikolaos and Li, Feng and Assimakopoulos, Vassilios},
-  title        = {D{\'e}j{\`a} vu: A data-centric forecasting approach through time series
-                  cross-similarity},
-  doi          = {10.1016/j.jbusres.2020.10.051},
-  number       = 2021,
-  pages        = {719--731},
-  url          = {https://arxiv.org/abs/1909.00221},
-  volume       = 132,
-  abstract     = {Accurate forecasts are vital for supporting the decisions of modern
-                  companies. Forecasters typically select the most appropriate statistical
-                  model for each time series. However, statistical models usually presume
-                  some data generation process while making strong assumptions about the
-                  errors. In this paper, we present a novel data-centric approach —
-                  ‘forecasting with cross-similarity’, which tackles model uncertainty in
-                  a model-free manner. Existing similarity-based methods focus on
-                  identifying similar patterns within the series, i.e.,
-                  ‘self-similarity’. In contrast, we propose searching for similar
-                  patterns from a reference set, i.e., ‘cross-similarity’. Instead of
-                  extrapolating, the future paths of the similar series are aggregated to
-                  obtain the forecasts of the target series. Building on the
-                  cross-learning concept, our approach allows the application of
-                  similarity-based forecasting on series with limited lengths. We evaluate
-                  the approach using a rich collection of real data and show that it
-                  yields competitive accuracy in both points forecasts and prediction
-                  intervals.},
-  author+an    = {5=highlight},
-  journal      = {Journal of Business Research},
-  year         = 2021,
-}
-
-@Article{zhu2021least_jcgs,
-  author       = {Zhu, Xuening and Li, Feng and Wang, Hansheng},
-  title        = {Least-Square Approximation for a Distributed System},
-  doi          = {10.1080/10618600.2021.1923517},
-  number       = 4,
-  pages        = {1004--1018},
-  url          = {https://arxiv.org/abs/1908.04904},
-  volume       = 30,
-  abstract     = {In this work, we develop a distributed least-square approximation (DLSA)
-                  method that is able to solve a large family of regression problems
-                  (e.g., linear regression, logistic regression, and Cox’s model) on a
-                  distributed system. By approximating the local objective function using
-                  a local quadratic form, we are able to obtain a combined estimator by
-                  taking a weighted average of local estimators. The resulting estimator
-                  is proved to be statistically as efficient as the global
-                  estimator. Moreover, it requires only one round of communication. We
-                  further conduct a shrinkage estimation based on the DLSA estimation
-                  using an adaptive Lasso approach. The solution can be easily obtained by
-                  using the LARS algorithm on the master node. It is theoretically shown
-                  that the resulting estimator possesses the oracle property and is
-                  selection consistent by using a newly designed distributed Bayesian
-                  information criterion. The finite sample performance and computational
-                  efficiency are further illustrated by an extensive numerical study and
-                  an airline dataset. The airline dataset is 52 GB in size. The entire
-                  methodology has been implemented in Python for a de-facto standard Spark
-                  system. The proposed DLSA algorithm on the Spark system takes 26 min to
-                  obtain a logistic regression estimator, which is more efficient and
-                  memory friendly than conventional methods. Supplementary materials for
-                  this article are available online.},
-  author+an    = {2=highlight},
-  journal      = {Journal of Computational and Graphical Statistics},
-  year         = 2021,
-}
 
 @Article{bandara2021improving,
   title        = {Improving the accuracy of global forecasting models using time series
@@ -505,100 +446,9 @@
                   and Christoph Bergmeir},
   keywords     = {Time series forecasting, Global forecasting models, Data augmentation,
                   Transfer learning, RNN},
-  abstract     = {Forecasting models that are trained across sets of many time series,
-                  known as Global Forecasting Models (GFM), have shown recently promising
-                  results in forecasting competitions and real-world applications,
-                  outperforming many state-of-the-art univariate forecasting
-                  techniques. In most cases, GFMs are implemented using deep neural
-                  networks, and in particular Recurrent Neural Networks (RNN), which
-                  require a sufficient amount of time series to estimate their numerous
-                  model parameters. However, many time series databases have only a
-                  limited number of time series. In this study, we propose a novel, data
-                  augmentation based forecasting framework that is capable of improving
-                  the baseline accuracy of the GFM models in less data-abundant
-                  settings. We use three time series augmentation techniques: GRATIS,
-                  moving block bootstrap (MBB), and dynamic time warping barycentric
-                  averaging (DBA) to synthetically generate a collection of time
-                  series. The knowledge acquired from these augmented time series is then
-                  transferred to the original dataset using two different approaches: the
-                  pooled approach and the transfer learning approach. When building GFMs,
-                  in the pooled approach, we train a model on the augmented time series
-                  alongside the original time series dataset, whereas in the transfer
-                  learning approach, we adapt a pre-trained model to the new dataset. In
-                  our evaluation on competition and real-world time series datasets, our
-                  proposed variants can significantly improve the baseline accuracy of GFM
-                  models and outperform state-of-the-art univariate forecasting methods.},
-  author+an    = {4=highlight},
+  abstract     = {Forecasting models that are trained across sets of many time series, known as Global Forecasting Models (GFM), have shown recently promising results in forecasting competitions and real-world applications, outperforming many state-of-the-art univariate forecasting techniques. In most cases, GFMs are implemented using deep neural networks, and in particular Recurrent Neural Networks (RNN), which require a sufficient amount of time series to estimate their numerous model parameters. However, many time series databases have only a limited number of time series. In this study, we propose a novel, data augmentation based forecasting framework that is capable of improving the baseline accuracy of the GFM models in less data-abundant settings. We use three time series augmentation techniques: GRATIS, moving block bootstrap (MBB), and dynamic time warping barycentric averaging (DBA) to synthetically generate a collection of time series. The knowledge acquired from these augmented time series is then transferred to the original dataset using two different approaches: the pooled approach and the transfer learning approach. When building GFMs, in the pooled approach, we train a model on the augmented time series alongside the original time series dataset, whereas in the transfer learning approach, we adapt a pre-trained model to the new dataset. In our evaluation on competition and real-world time series datasets, our proposed variants can significantly improve the baseline accuracy of GFM models and outperform state-of-the-art univariate forecasting methods.},
 }
 
-@Article{li2020forecasting,
-  author       = {Li, Xixi and Kang, Yanfei and Li, Feng},
-  title        = {Forecasting with time series imaging},
-  doi          = {10.1016/j.eswa.2020.113680},
-  pages        = 113680,
-  url          = {https://arxiv.org/abs/1904.08064},
-  volume       = 160,
-  abstract     = {Feature-based time series representations have attracted substantial
-                  attention in a wide range of time series analysis methods. Recently, the
-                  use of time series features for forecast model averaging has been an
-                  emerging research focus in the forecasting community. Nonetheless, most
-                  of the existing approaches depend on the manual choice of an appropriate
-                  set of features. Exploiting machine learning methods to extract features
-                  from time series automatically becomes crucial in state-of-the-art time
-                  series analysis. In this paper, we introduce an automated approach to
-                  extract time series features based on time series imaging. We first
-                  transform time series into recurrence plots, from which local features
-                  can be extracted using computer vision algorithms. The extracted
-                  features are used for forecast model averaging. Our experiments show
-                  that forecasting based on automatically extracted features, with less
-                  human intervention and a more comprehensive view of the raw time series
-                  data, yields highly comparable performances with the best methods in the
-                  largest forecasting competition dataset (M4) and outperforms the top
-                  methods in the Tourism forecasting competition dataset.},
-  author+an    = {3=highlight},
-  journal      = {Expert Systems with Applications},
-  year         = 2020,
-}
-
-@Article{kalesan2020intersections_jsr,
-  author       = {Kalesan, Bindu and Zhao, Siran and Poulson, Michael and Neufeld, Miriam
-                  and Dechert, Tracey and Siracuse, Jeffrey J and Zuo, Yi and Li, Feng},
-  title        = {Intersections of firearm suicide, drug-related mortality, and economic
-                  dependency in rural America},
-  doi          = {10.1016/j.jss.2020.06.011},
-  pages        = {96--102},
-  volume       = 256,
-  abstract     = {Rural counties in the United States have higher firearm suicide rates
-                  and opioid overdoses than urban counties. We sought to determine whether
-                  rural counties can be grouped based on these “diseases of despair.”
-                  Age-adjusted firearm suicide death rates per 100,000; drug-related death
-                  rates per 100,000; homicide rate per 100,000, opioid prescribing rate,
-                  \%black, \%Native American, and \%veteran population, median home price,
-                  violent crime rates per 100,000, primary economic dependency
-                  (nonspecialized, farming, mining, manufacturing, government, and
-                  recreation), and economic variables (low education, low employment,
-                  retirement destination, persistent poverty, and persistent child
-                  poverty) were obtained for all rural counties and evaluated with
-                  hierarchical clustering using complete linkage. We identified five
-                  distinct rural county clusters. The firearm suicide rates in the
-                  clusters were 5.9, 6.8, 6.4, 8.5, and 3.8 per 100,000, respectively. The
-                  counties in cluster 1 were poor, mining dependent, with population loss,
-                  cluster 2 were nonspecialized economies, with high opioid prescription
-                  rates, cluster 3 were manufacturing and government economies with
-                  moderate unemployment, cluster 4 were recreational economies with
-                  substantial veterans and Native American populations, high median home
-                  price, drug death rates, opioid prescribing, and violent crime, and
-                  cluster 5 were farming economies, with high population loss, low median
-                  home price, low rates of drug mortality, opioid prescribing, and violent
-                  crime. Cluster 4 counties were spatially adjacent to urban
-                  counties. More than 300 counties currently face a disproportionate
-                  burden of diseases of despair. Interventions to reduce firearm suicides
-                  should be community-based and include programs to reduce other diseases
-                  of despair.},
-  author+an    = {8=highlight},
-  journal      = {Journal of Surgical Research},
-  year         = 2020,
-}
 
 @Article{chen2020probabilistic,
   title        = {Probabilistic forecasting with temporal convolutional neural network},
@@ -611,238 +461,9 @@
   author       = {Yitian Chen and Yanfei Kang and Yixiong Chen and Zizhuo Wang},
   keywords     = {Probabilistic forecasting, Convolutional neural network, Dilated causal
                   convolution, Demand forecasting, High-dimensional time series},
-  abstract     = {We present a probabilistic forecasting framework based on convolutional
-                  neural network (CNN) for multiple related time series forecasting. The
-                  framework can be applied to estimate probability density under both
-                  parametric and non-parametric settings. More specifically, stacked
-                  residual blocks based on dilated causal convolutional nets are
-                  constructed to capture the temporal dependencies of the series. Combined
-                  with representation learning, our approach is able to learn complex
-                  patterns such as seasonality, holiday effects within and across series,
-                  and to leverage those patterns for more accurate forecasts, especially
-                  when historical data is sparse or unavailable. Extensive empirical
-                  studies are performed on several real-world datasets, including datasets
-                  from JD.com, China’s largest online retailer. The results show that our
-                  framework compares favorably to the state-of-the-art in both point and
-                  probabilistic forecasting.},
+  abstract     = {We present a probabilistic forecasting framework based on convolutional neural network (CNN) for multiple related time series forecasting. The framework can be applied to estimate probability density under both parametric and non-parametric settings. More specifically, stacked residual blocks based on dilated causal convolutional nets are constructed to capture the temporal dependencies of the series. Combined with representation learning, our approach is able to learn complex patterns such as seasonality, holiday effects within and across series, and to leverage those patterns for more accurate forecasts, especially when historical data is sparse or unavailable. Extensive empirical studies are performed on several real-world datasets, including datasets from JD.com, China’s largest online retailer. The results show that our framework compares favorably to the state-of-the-art in both point and probabilistic forecasting.},
 }
 
-@Article{kang2020gratis,
-  author       = {Kang, Yanfei and Hyndman, Rob J and Li, Feng},
-  title        = {{GRATIS}: {GeneRAting TIme Series} with diverse and controllable
-                  characteristics},
-  doi          = {10.1002/sam.11461},
-  issue        = 4,
-  pages        = {354--376},
-  url          = {https://arxiv.org/abs/1903.02787},
-  volume       = 13,
-  abstract     = {The explosion of time series data in recent years has brought a flourish
-                  of new time series analysis methods, for forecasting, clustering,
-                  classification and other tasks. The evaluation of these new methods
-                  requires either collecting or simulating a diverse set of time series
-                  benchmarking data to enable reliable comparisons against alternative
-                  approaches. We propose GeneRAting TIme Series with diverse and
-                  controllable characteristics, named GRATIS, with the use of mixture
-                  autoregressive (MAR) models. We simulate sets of time series using MAR
-                  models and investigate the diversity and coverage of the generated time
-                  series in a time series feature space. By tuning the parameters of the
-                  MAR models, GRATIS is also able to efficiently generate new time series
-                  with controllable features. In general, as a costless surrogate to the
-                  traditional data collection approach, GRATIS can be used as an
-                  evaluation tool for tasks such as time series forecasting and
-                  classification. We illustrate the usefulness of our time series
-                  generation process through a time series forecasting application.},
-  author+an    = {3=highlight},
-  journal      = {Statistical Analysis and Data Mining},
-  year         = 2020,
-}
-
-@Book{kang2020statscompcn,
-  author       = {康雁飞 and 李丰},
-  publisher    = {在线出版},
-  title        = {统计计算},
-  year         = 2020,
-  author+an    = {2=highlight},
-  url          = {https://feng.li/files/statscompbook/}
-}
-
-@Book{li2020fppcn,
-  author       = {康雁飞 and 李丰},
-  publisher    = {在线出版},
-  title        = {预测：方法与实践},
-  year         = 2020,
-  author+an    = {2=highlight},
-  url          = {https://otexts.com/fppcn/},
-}
-
-@InBook{hao2020bilinear_ced,
-  author       = {Hao, Chengcheng and Li, Feng and von Rosen, Dietrich},
-  booktitle    = {Contemporary Experimental Design, Multivariate Analysis and Data Mining},
-  title        = {A Bilinear Reduced Rank Model},
-  doi          = {10.1007/978-3-030-46161-4_21},
-  editor       = {Jianqing Fan and Jianxin Pan},
-  publisher    = {Springer Nature},
-  abstract     = {This article considers a bilinear model that includes two different
-                  latent effects. The first effect has a direct influence on the response
-                  variable, whereas the second latent effect is assumed to first influence
-                  other latent variables, which in turn affect the response variable. In
-                  this article, latent variables are modelled via rank restrictions on
-                  unknown mean parameters and the models which are used are often referred
-                  to as reduced rank regression models. This article presents a
-                  likelihood-based approach that results in explicit estimators. In our
-                  model, the latent variables act as covariates that we know exist, but
-                  their direct influence is unknown and will therefore not be considered
-                  in detail. One example is if we observe hundreds of weather variables,
-                  but we cannot say which or how these variables affect plant growth.},
-  author+an    = {2=highlight},
-  year         = 2020,
-}
-
-@Article{li2019credit_cef,
-  author       = {Li, Feng and He, Zhuojing},
-  title        = {Credit risk clustering in a business group: which matters more,
-                  systematic or idiosyncratic risk?},
-  doi          = {10.1080/23322039.2019.1632528},
-  pages        = 1632528,
-  url          = {http://dx.doi.org/10.2139/ssrn.3182925},
-  abstract     = {Understanding how defaults correlate across firms is a persistent
-                  concern in risk management. In this paper, we apply covariate-dependent
-                  copula models to assess the dynamic nature of credit risk dependence,
-                  which we define as “credit risk clustering”. We also study the driving
-                  forces of the credit risk clustering in CEC business group in China. Our
-                  empirical analysis shows that the credit risk clustering varies over
-                  time and exhibits different patterns across firm pairs in a business
-                  group. We also investigate the impacts of systematic and idiosyncratic
-                  factors on credit risk clustering. We find that the impacts of the money
-                  supply and the short-term interest rates are positive, whereas the
-                  impacts of exchange rates are negative. The roles of the CPI on credit
-                  risk clustering are ambiguous. Idiosyncratic factors are vital for
-                  predicting credit risk clustering. From a policy perspective, our
-                  results not only strengthen the results of previous research but also
-                  provide a possible approach to model and predict the extreme co-movement
-                  of credit risk in business groups with financial indicators.},
-  author+an    = {1=highlight},
-  journal      = {Cogent Economics \& Finance},
-  year         = 2019,
-}
-
-@Article{bailey2019changes_plosone,
-  author       = {Bailey, Hannah M and Zuo, Yi and Li, Feng and Min, Jae and Vaddiparti,
-                  Krishna and Prosperi, Mattia and Fagan, Jeffrey and Galea, Sandro and
-                  Kalesan, Bindu},
-  title        = {Changes in patterns of mortality rates and years of life lost due to
-                  firearms in the United States, 1999 to 2016: A joinpoint analysis},
-  doi          = {10.1371/journal.pone.0225223},
-  number       = 11,
-  volume       = 14,
-  abstract     = {Firearm-related death rates and years of potential life lost (YPLL) vary
-                  widely between population subgroups and states. However, changes or
-                  inflections in temporal trends within subgroups and states are not fully
-                  documented. We assessed temporal patterns and inflections in the rates
-                  of firearm deaths and \%YPLL due to firearms for overall and by sex,
-                  age, race/ethnicity, intent, and states in the United States between
-                  1999 and 2016. We extracted age-adjusted firearm mortality and YPLL
-                  rates per 100,000, and \%YPLL from 1999 to 2016 by using the WONDER
-                  (Wide-ranging Online Data for Epidemiologic Research) database. We used
-                  Joinpoint Regression to assess temporal trends, the inflection points,
-                  and annual percentage change (APC) from 1999 to 2016. National firearm
-                  mortality rates were 10.3 and 11.8 per 100,000 in 1999 and 2016, with
-                  two distinct segments; a plateau until 2014 followed by an increase of
-                  APC = 7.2\% (95\% CI 3.1, 11.4). YPLL rates were from 304.7 and 338.2 in
-                  1999 and 2016 with a steady APC increase in \%YPLL of 0.65\% (95\% CI
-                  0.43, 0.87) from 1999 to an inflection point in 2014, followed by a
-                  larger APC in \%YPLL of 5.1\% (95\% CI 0.1, 10.4). The upward trend in
-                  firearm mortality and YPLL rates starting in 2014 was observed in
-                  subgroups of male, non-Hispanic blacks, Hispanic whites and for firearm
-                  assaults. The inflection points for firearm mortality and YPLL rates
-                  also varied across states. Within the United States, firearm mortality
-                  rates and YPLL remained constant between 1999 and 2014 and has been
-                  increasing subsequently. There was, however, an increase in firearm
-                  mortality rates in several subgroups and individual states earlier than
-                  2014.},
-  author+an    = {3=highlight},
-  journal      = {PLoS One},
-  year         = 2019,
-}
-
-@Article{pino2018cohort_bmj,
-  author       = {Pino, Elizabeth C and Zuo, Yi and De Olivera, Camila Maciel and
-                  Mahalingaiah, Shruthi and Keiser, Olivia and Moore, Lynn L and Li, Feng
-                  and Vasan, Ramachandran S and Corkey, Barbara E and Kalesan, Bindu},
-  title        = {Cohort profile: The MULTI sTUdy Diabetes rEsearch (MULTITUDE)
-                  consortium},
-  doi          = {10.1136/bmjopen-2017-020640},
-  number       = 5,
-  pages        = {e020640},
-  volume       = 8,
-  abstract     = {Globally, the age-standardised prevalence of type 2 diabetes mellitus
-                  (T2DM) has nearly doubled from 1980 to 2014, rising from 4.7 to 8.5 with
-                  an estimated 422 million adults living with the chronic disease. The
-                  MULTI sTUdy Diabetes rEsearch (MULTITUDE) consortium was recently
-                  established to harmonise data from 17 independent cohort studies and
-                  clinical trials and to facilitate a better understanding of the
-                  determinants, risk factors and outcomes associated with
-                  T2DM. Participants Participants range in age from 3 to 88 years at
-                  baseline, including both individuals with and without T2DM. MULTITUDE is
-                  an individual-level pooled database of demographics, comorbidities,
-                  relevant medications, clinical laboratory values, cardiac health
-                  measures, and T2DM-associated events and outcomes across 45 US states
-                  and the District of Columbia. Findings to date Among the 135 156 ongoing
-                  participants included in the consortium, almost 25\% (33 421) were
-                  diagnosed with T2DM at baseline. The average age of the participants was
-                  54.3\%, while the average age of participants with diabetes was
-                  64.2\%. Men (55.3\%) and women (44.6\%) were almost equally represented
-                  across the consortium. Non-whites accounted for 31.6 of the total
-                  participants and 40\% of those diagnosed with T2DM. Fewer individuals
-                  with diabetes reported being regular smokers than their non-diabetic
-                  counterparts (40.3\% vs 47.4\%). Over 85\% of those with diabetes were
-                  reported as either overweight or obese at baseline, compared with 60.7\%
-                  of those without T2DM. We observed differences in all-cause mortality,
-                  overall and by T2DM status, between cohorts. Given the wide variation in
-                  demographics and all-cause mortality in the cohorts, MULTITUDE
-                  consortium will be a unique resource for conducting research to
-                  determine: differences in the incidence and progression of T2DM;
-                  sequence of events or biomarkers prior to T2DM diagnosis; disease
-                  progression from T2DM to disease-related outcomes, complications and
-                  premature mortality; and to assess race/ethnicity differences in the
-                  above associations.},
-  author+an    = {7=highlight},
-  journal      = {{BMJ} Open},
-  year         = 2018,
-}
-
-@Article{li2018improving_ijf,
-  author       = {Li, Feng and Kang, Yanfei},
-  title        = {Improving forecasting performance using covariate-dependent copula
-                  models},
-  doi          = {10.1016/j.ijforecast.2018.01.007},
-  number       = 3,
-  pages        = {456--476},
-  url          = {https://arxiv.org/abs/1401.0100},
-  volume       = 34,
-  abstract     = {Copulas provide an attractive approach to the construction of
-                  multivariate distributions with flexible marginal distributions and
-                  different forms of dependences. Of particular importance in many areas
-                  is the possibility of forecasting the tail-dependences explicitly. Most
-                  of the available approaches are only able to estimate tail-dependences
-                  and correlations via nuisance parameters, and cannot be used for either
-                  interpretation or forecasting. We propose a general Bayesian approach
-                  for modeling and forecasting tail-dependences and correlations as
-                  explicit functions of covariates, with the aim of improving the copula
-                  forecasting performance. The proposed covariate-dependent copula model
-                  also allows for Bayesian variable selection from among the covariates of
-                  the marginal models, as well as the copula density. The copulas that we
-                  study include the Joe-Clayton copula, the Clayton copula, the Gumbel
-                  copula and the Student’s -copula. Posterior inference is carried out
-                  using an efficient MCMC simulation method. Our approach is applied to
-                  both simulated data and the S&P 100 and S&P 600 stock indices. The
-                  forecasting performance of the proposed approach is compared with those
-                  of other modeling strategies based on log predictive scores. A
-                  value-at-risk evaluation is also performed for the model comparisons.},
-  author+an    = {1=highlight},
-  journal      = {International Journal of Forecasting},
-  year         = 2018,
-}
 
 @Article{kang2017visualising,
   title        = {Visualising forecasting algorithm performance using time series instance
@@ -858,31 +479,9 @@
   author       = {Yanfei Kang and Rob J. Hyndman and Kate Smith-Miles},
   keywords     = {M3-Competition, Time series visualisation, Time series generation,
                   Forecasting algorithm comparison},
-  abstract     = {It is common practice to evaluate the strength of forecasting methods
-                  using collections of well-studied time series datasets, such as the M3
-                  data. The question is, though, how diverse and challenging are these
-                  time series, and do they enable us to study the unique strengths and
-                  weaknesses of different forecasting methods? This paper proposes a
-                  visualisation method for collections of time series that enables a time
-                  series to be represented as a point in a two-dimensional instance
-                  space. The effectiveness of different forecasting methods across this
-                  space is easy to visualise, and the diversity of the time series in an
-                  existing collection can be assessed. Noting that the diversity of the M3
-                  dataset has been questioned, this paper also proposes a method for
-                  generating new time series with controllable characteristics in order to
-                  fill in and spread out the instance space, making our generalisations of
-                  forecasting method performances as robust as possible.}
+  abstract     = {It is common practice to evaluate the strength of forecasting methods using collections of well-studied time series datasets, such as the M3 data. The question is, though, how diverse and challenging are these time series, and do they enable us to study the unique strengths and weaknesses of different forecasting methods? This paper proposes a visualisation method for collections of time series that enables a time series to be represented as a point in a two-dimensional instance space. The effectiveness of different forecasting methods across this space is easy to visualise, and the diversity of the time series in an existing collection can be assessed. Noting that the diversity of the M3 dataset has been questioned, this paper also proposes a method for generating new time series with controllable characteristics in order to fill in and spread out the instance space, making our generalisations of forecasting method performances as robust as possible.}
 }
 
-@Book{li2016distributedcn,
-  author       = {李丰},
-  publisher    = {中国人民大学出版社},
-  title        = {大数据分布式计算与案例},
-  year         = 2016,
-  isbn         = 9787300230276,
-  author+an    = {1=highlight},
-  url          = {https://feng.li/files/distcompbook/}
-}
 
 @Article{kang2015classes,
   author       = {Kang, Yanfei and Belu\v{s}i\'{c}, Danijel and Smith-Miles, Kate},
@@ -894,36 +493,7 @@
   keywords     = {submeso-scale motions, coherent structures, turbulence intermittency,
                   detection of events, time series analysis, clustering, FLOSSII},
   doi          = {10.1002/qj.2501},
-  abstract     = {This article analyses ubiquitous flow structures which affect the
-                  dynamics of stable atmospheric boundary layers. These structures
-                  introduce non-stationarity and intermittency to turbulent mixing, thus
-                  invalidating the usual scaling laws and numerical model
-                  parametrizations, but their characteristics and generating mechanisms
-                  are still generally unknown. Detecting these unknown events from time
-                  series requires techniques that do not assume particular geometries or
-                  amplitudes of the flow structures. We use a recently developed such
-                  method with some modifications to study the night-time structures over a
-                  three-month period during the FLOSSII experiment. The structures cover
-                  about 26\% of the dataset, and can be categorized using clustering into
-                  only three classes with similar characteristics. The largest class,
-                  including about 50\% of the events, contains smooth structures, often
-                  with wave-like shapes, which occur in stronger winds and weak
-                  stability. The second class, including sharper structures with large
-                  kurtosis, is characterized by weaker winds and stronger stability. The
-                  smallest class, including about 20\% of the events, contains
-                  predominantly sharp step-like structures, or microfronts. They occur in
-                  the weakest winds with strong stability. Sharper, and particularly
-                  shallower, structures are related to transient low-level wind maxima
-                  which create inflection points and may affect generation of
-                  turbulence. Furthermore, large wind directional shear, which is another
-                  source of transient inflection points, is generated even by deep
-                  coherent structures when the background wind is weaker than the
-                  structure intensity. These results show that the complexity of
-                  structures can be reduced for the purpose of further analysis using a
-                  proper classification. Mapping common characteristics of such events
-                  leads to their better understanding, which, if combined with similar
-                  analyses of other boundary-layer data, could lead to improving their
-                  effects in numerical models.},
+  abstract     = {This article analyses ubiquitous flow structures which affect the dynamics of stable atmospheric boundary layers. These structures introduce non-stationarity and intermittency to turbulent mixing, thus invalidating the usual scaling laws and numerical model parametrizations, but their characteristics and generating mechanisms are still generally unknown. Detecting these unknown events from time series requires techniques that do not assume particular geometries or amplitudes of the flow structures. We use a recently developed such method with some modifications to study the night-time structures over a three-month period during the FLOSSII experiment. The structures cover about 26\% of the dataset, and can be categorized using clustering into only three classes with similar characteristics. The largest class, including about 50\% of the events, contains smooth structures, often with wave-like shapes, which occur in stronger winds and weak stability. The second class, including sharper structures with large kurtosis, is characterized by weaker winds and stronger stability. The smallest class, including about 20\% of the events, contains predominantly sharp step-like structures, or microfronts. They occur in the weakest winds with strong stability. Sharper, and particularly shallower, structures are related to transient low-level wind maxima which create inflection points and may affect generation of turbulence. Furthermore, large wind directional shear, which is another source of transient inflection points, is generated even by deep coherent structures when the background wind is weaker than the structure intensity. These results show that the complexity of structures can be reduced for the purpose of further analysis using a proper classification. Mapping common characteristics of such events leads to their better understanding, which, if combined with similar analyses of other boundary-layer data, could lead to improving their effects in numerical models.},
   year         = 2015,
   author+an    = {1=highlight},
 }
@@ -938,21 +508,7 @@
   pages        = 023114,
   volume       = 24,
   doi          = {10.1063/1.4875260},
-  abstract     = {Various definitions of coherent structures exist in turbulence research,
-                  but a common assumption is that coherent structures have correlated
-                  spectral phases. As a result, randomization of phases is believed,
-                  generally, to remove coherent structures from the measured data. Here,
-                  we reexamine these assumptions using atmospheric turbulence
-                  measurements. Small-scale coherent structures are detected in the usual
-                  way using the wavelet transform. A considerable percentage of the
-                  detected structures are not phase correlated, although some of them are
-                  clearly organized in space and time. At larger scales, structures have
-                  even higher degree of spatiotemporal coherence but are also associated
-                  with weak phase correlation. A series of specific examples are shown to
-                  demonstrate this. These results warn about the vague terminology and
-                  assumptions around coherent structures, particularly for complex
-                  real-world turbulence.},
-  author+an    = {1=highlight}
+  abstract     = {Various definitions of coherent structures exist in turbulence research, but a common assumption is that coherent structures have correlated spectral phases. As a result, randomization of phases is believed, generally, to remove coherent structures from the measured data. Here, we reexamine these assumptions using atmospheric turbulence measurements. Small-scale coherent structures are detected in the usual way using the wavelet transform. A considerable percentage of the detected structures are not phase correlated, although some of them are clearly organized in space and time. At larger scales, structures have even higher degree of spatiotemporal coherence but are also associated with weak phase correlation. A series of specific examples are shown to demonstrate this. These results warn about the vague terminology and assumptions around coherent structures, particularly for complex real-world turbulence.},
 }
 
 @Article{kang2014detecting,
@@ -963,105 +519,10 @@
   number       = 3,
   pages        = {1090--1104},
   volume       = 71,
-  abstract     = {Time series are characterized by a myriad of different shapes and
-                  structures. A number of events that appear in atmospheric time series
-                  result from as yet unidentified physical mechanisms. This is
-                  particularly the case for stable boundary layers, where the usual
-                  statistical turbulence approaches do not work well and increasing
-                  evidence relates the bulk of their dynamics to generally unknown
-                  individual events. This study explores the possibility of extracting and
-                  classifying events from time series without previous knowledge of their
-                  generating mechanisms. The goal is to group large numbers of events in a
-                  useful way that will open a pathway for the detailed study of their
-                  characteristics, and help to gain understanding of events with
-                  previously unknown origin. A two-step method is developed that extracts
-                  events from background fluctuations and groups dynamically similar
-                  events into clusters. The method is tested on artificial time series
-                  with different levels of complexity and on atmospheric turbulence time
-                  series. The results indicate that the method successfully recognizes and
-                  classifies various events of unknown origin and even distinguishes
-                  different physical characteristics based only on a single-variable time
-                  series. The method is simple and highly flexible, and it does not assume
-                  any knowledge about the shape geometries, amplitudes, or underlying
-                  physical mechanisms. Therefore, with proper modifications, it can be
-                  applied to time series from a wider range of research areas.},
-  doi          = "10.1175/JAS-D-13-0182.1",
-  author+an    = {1=highlight},
+  abstract     = {Time series are characterized by a myriad of different shapes and structures. A number of events that appear in atmospheric time series result from as yet unidentified physical mechanisms. This is particularly the case for stable boundary layers, where the usual statistical turbulence approaches do not work well and increasing evidence relates the bulk of their dynamics to generally unknown individual events. This study explores the possibility of extracting and classifying events from time series without previous knowledge of their generating mechanisms. The goal is to group large numbers of events in a useful way that will open a pathway for the detailed study of their characteristics, and help to gain understanding of events with previously unknown origin. A two-step method is developed that extracts events from background fluctuations and groups dynamically similar events into clusters. The method is tested on artificial time series with different levels of complexity and on atmospheric turbulence time series. The results indicate that the method successfully recognizes and classifies various events of unknown origin and even distinguishes different physical characteristics based only on a single-variable time series. The method is simple and highly flexible, and it does not assume any knowledge about the shape geometries, amplitudes, or underlying physical mechanisms. Therefore, with proper modifications, it can be applied to time series from a wider range of research areas.},
+  doi = {10.1175/JAS-D-13-0182.1},
 }
 
-@Article{li2013efficient_sjs,
-  author       = {Li, Feng and Villani, Mattias},
-  title        = {Efficient {B}ayesian Multivariate Surface Regression},
-  doi          = {10.1111/sjos.12022},
-  number       = 4,
-  pages        = {706--723},
-  url          = {https://arxiv.org/abs/1110.3689},
-  volume       = 40,
-  abstract     = {Methods for choosing a fixed set of knot locations in additive spline
-                  models are fairly well established in the statistical literature. The
-                  curse of dimensionality makes it nontrivial to extend these methods to
-                  nonadditive surface models, especially when there are more than a couple
-                  of covariates. We propose a multivariate Gaussian surface regression
-                  model that combines both additive splines and interactive splines, and a
-                  highly efficient Markov chain Monte Carlo algorithm that updates all the
-                  knot locations jointly. We use shrinkage prior to avoid overfitting with
-                  different estimated shrinkage factors for the additive and surface part
-                  of the model, and also different shrinkage parameters for the different
-                  response variables. Simulated data and an application to firm leverage
-                  data show that the approach is computationally efficient, and that
-                  allowing for freely estimated knot locations can offer a substantial
-                  improvement in out-of-sample predictive performance.},
-  author+an    = {1=highlight},
-  journal      = {Scandinavian Journal of Statistics},
-  year         = 2013,
-}
-
-@PhdThesis{li2013bayesian,
-  author       = {Li, Feng},
-  title        = {Bayesian Modeling of Conditional Densities},
-  note         = {ISBN: 978-91-7447-665-1},
-  url          = {http://urn.kb.se/resolve?urn=urn:nbn:se:su:diva-89426},
-  abstract     = {This thesis develops models and associated Bayesian inference methods
-                  for flexible univariate and multivariate conditional density
-                  estimation. The models are flexible in the sense that they can capture
-                  widely differing shapes of the data. The estimation methods are
-                  specifically designed to achieve flexibility while still avoiding
-                  overfitting. The models are flexible both for a given covariate value,
-                  but also across covariate space. A key contribution of this thesis is
-                  that it provides general approaches of density estimation with highly
-                  efficient Markov chain Monte Carlo methods. The methods are illustrated
-                  on several challenging non-linear and non-normal datasets. In the first
-                  paper, a general model is proposed for flexibly estimating the density
-                  of a continuous response variable conditional on a possibly
-                  high-dimensional set of covariates. The model is a finite mixture of
-                  asymmetric student-t densities with covariate-dependent mixture
-                  weights. The four parameters of the components, the mean, degrees of
-                  freedom, scale and skewness, are all modeled as functions of the
-                  covariates. The second paper explores how well a smooth mixture of
-                  symmetric components can capture skewed data. Simulations and
-                  applications on real data show that including covariate-dependent
-                  skewness in the components can lead to substantially improved
-                  performance on skewed data, often using a much smaller number of
-                  components. We also introduce smooth mixtures of gamma and log-normal
-                  components to model positively-valued response variables. In the third
-                  paper we propose a multivariate Gaussian surface regression model that
-                  combines both additive splines and interactive splines, and a highly
-                  efficient MCMC algorithm that updates all the multi-dimensional knot
-                  locations jointly. We use shrinkage priors to avoid overfitting with
-                  different estimated shrinkage factors for the additive and surface part
-                  of the model, and also different shrinkage parameters for the different
-                  response variables. In the last paper we present a general Bayesian
-                  approach for directly modeling dependencies between variables as
-                  function of explanatory variables in a flexible copula context. In
-                  particular, the Joe-Clayton copula is extended to have
-                  covariate-dependent tail dependence and correlations. Posterior
-                  inference is carried out using a novel and efficient simulation
-                  method. The appendix of the thesis documents the computational
-                  implementation details.},
-  author+an    = {1=highlight},
-  school       = {Department of Statistics, Stockholm University},
-  year         = 2013,
-}
 
 @InProceedings{kang2013how,
   author       = {Yanfei Kang and Smith-Miles, Kate and Belu{\v{s}}i\'{c}, Danijel},
@@ -1071,23 +532,7 @@
   doi          = {10.1109/CIDM.2013.6597219},
   organization = {IEEE},
   pages        = {65--72},
-  abstract     = {A method for extracting and classifying shapes from noisy time series is
-                  proposed. The method consists of two steps. The first step is to perform
-                  a noise test on each subsequence extracted from the series using a
-                  sliding window. All the subsequences recognised as noise are removed
-                  from further analysis, and the shapes are extracted from the remaining
-                  non-noise subsequences. The second step is to cluster these extracted
-                  shapes. Although extracted from subsequences, these shapes form a
-                  non-overlapping set of time series subsequences and are hence amenable
-                  to meaningful clustering. The method is primarily designed for
-                  extracting and classifying shapes from very noisy real-world time
-                  series. Tests using artificial data with different levels of white noise
-                  and the red noise, and the real-world atmospheric turbulence data
-                  naturally characterised by strong red noise show that the method is able
-                  to correctly extract and cluster shapes from artificial data and that it
-                  has great potential for locating shapes in very noisy real-world time
-                  series.},
-  author+an    = {1=highlight},
+  abstract     = {A method for extracting and classifying shapes from noisy time series is proposed. The method consists of two steps. The first step is to perform a noise test on each subsequence extracted from the series using a sliding window. All the subsequences recognised as noise are removed from further analysis, and the shapes are extracted from the remaining non-noise subsequences. The second step is to cluster these extracted shapes. Although extracted from subsequences, these shapes form a non-overlapping set of time series subsequences and are hence amenable to meaningful clustering. The method is primarily designed for extracting and classifying shapes from very noisy real-world time series. Tests using artificial data with different levels of white noise and the red noise, and the real-world atmospheric turbulence data naturally characterised by strong red noise show that the method is able to correctly extract and cluster shapes from artificial data and that it has great potential for locating shapes in very noisy real-world time series.},
 }
 
 @InProceedings{kang2012real,
@@ -1098,75 +543,7 @@
   doi          = {10.1109/IJCNN.2012.6252381},
   organization = {IEEE},
   pages        = {1--6},
-  abstract     = {An unsupervised time series change detection method based on an
-                  extension of Vector Quantization (VQ) clustering is proposed. The method
-                  clusters the subsequences extracted with a sliding window in feature
-                  space. Changes can be defined as transition of subsequences from one
-                  cluster to another. The method can be used to achieve real time
-                  detection of the change points in a time series. Using data on road
-                  casualties in Great Britain, historical data on Nile river discharges,
-                  MODerate-resolution Imaging Spectroradiometer (MODIS) Normalized
-                  Difference Vegetation Index data and x simulated data. It is shown that
-                  the detected changes coincide with identifiable political, historical,
-                  environmental or simulated events that might have caused these
-                  changes. Further, the online method has the potential for revealing the
-                  insights into the nature of the changes and the transition behaviours of
-                  the system.},
-  author+an    = {1=highlight},
-}
-
-@InBook{li2011modeling_mixtures,
-  author       = {Li, Feng and Villani, Mattias and Kohn, Robert},
-  booktitle    = {Mixtures: estimation and applications},
-  title        = {Modeling Conditional Densities Using Finite Smooth Mixtures},
-  doi          = {10.1002/9781119995678.ch6},
-  editor       = {Mengersen, Kerrie and Robert, Christian and Titterington, Mike},
-  pages        = {123--144},
-  publisher    = {John Wiley \& Sons Inc, Chichester},
-  url          = {http://dx.doi.org/10.2139/ssrn.1711194},
-  abstract     = {Smooth mixtures, i.e. mixture models with covariate-dependent mixing
-                  weights, are very useful flexible models for conditional
-                  densities. Previous work shows that using too simple mixture components
-                  for modeling heteroscedastic and/or heavy tailed data can give a poor
-                  fit, even with a large number of components. This paper explores how
-                  well a smooth mixture of symmetric components can capture skewed
-                  data. Simulations and applications on real data show that including
-                  covariate-dependent skewness in the components can lead to substantially
-                  improved performance on skewed data, often using a much smaller number
-                  of components. Furthermore, variable selection is effective in removing
-                  unnecessary covariates in the skewness, which means that there is little
-                  loss in allowing for skewness in the components when the data are
-                  actually symmetric. We also introduce smooth mixtures of gamma and
-                  log-normal components to model positively-valued response variables.},
-  author+an    = {1=highlight},
-  timestamp    = {2013.02.06},
-  year         = 2011,
-}
-
-@Article{li2010flexible_jspi,
-  author       = {Li, Feng and Villani, Mattias and Kohn, Robert},
-  title        = {Flexible modeling of conditional distributions using smooth mixtures of
-                  asymmetric student t densities},
-  doi          = {10.1016/j.jspi.2010.04.031},
-  number       = 12,
-  pages        = {3638--3654},
-  url          = {http://dx.doi.org/10.2139/ssrn.1551195},
-  volume       = 140,
-  abstract     = {A general model is proposed for flexibly estimating the density of a
-                  continuous response variable conditional on a possibly high-dimensional
-                  set of covariates. The model is a finite mixture of asymmetric student t
-                  densities with covariate-dependent mixture weights. The four parameters
-                  of the components, the mean, degrees of freedom, scale and skewness, are
-                  all modeled as functions of the covariates. Inference is Bayesian and
-                  the computation is carried out using Markov chain Monte Carlo
-                  simulation. To enable model parsimony, a variable selection prior is
-                  used in each set of covariates and among the covariates in the mixing
-                  weights. The model is used to analyze the distribution of daily stock
-                  market returns, and shown to more accurately forecast the distribution
-                  of returns than other widely used models for financial data.},
-  author+an    = {1=highlight},
-  journal      = {Journal of Statistical Planning and Inference},
-  year         = 2010,
+  abstract     = {An unsupervised time series change detection method based on an extension of Vector Quantization (VQ) clustering is proposed. The method clusters the subsequences extracted with a sliding window in feature space. Changes can be defined as transition of subsequences from one cluster to another. The method can be used to achieve real time detection of the change points in a time series. Using data on road casualties in Great Britain, historical data on Nile river discharges, MODerate-resolution Imaging Spectroradiometer (MODIS) Normalized Difference Vegetation Index data and x simulated data. It is shown that the detected changes coincide with identifiable political, historical, environmental or simulated events that might have caused these changes. Further, the online method has the potential for revealing the insights into the nature of the changes and the transition behaviours of the system.},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
