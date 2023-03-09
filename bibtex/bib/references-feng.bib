@@ -7,8 +7,7 @@
   pages        = {1632-1653},
   year         = 2021,
   issn         = {0169-2070},
-  doi          = {https://doi.org/10.1016/j.ijforecast.2021.03.004},
-  url          = {https://www.sciencedirect.com/science/article/pii/S0169207021000558},
+  doi          = {10.1016/j.ijforecast.2021.03.004},
   author       = {Pablo Montero-Manso and Rob J. Hyndman},
   keywords     = {Time series, Forecasting, Generalization, Global, Local, Cross-learning,
                   Pooled regression},
@@ -32,7 +31,6 @@
 @Article{maestrini2020fast_wp,
   author       = {Luca Maestrini and Matias Quiroz and Feng Li},
   title        = {Fast Distributed Inference with Variable Selection},
-  author+an    = {3=highlight},
   journal      = {Working Paper},
   year         = 2020,
 }
@@ -83,13 +81,17 @@
 }
 
 @Article{anderer2022forecasting,
-  author       = {Matthias Anderer and Feng Li$^{*}$},
+  author       = {Matthias Anderer and Feng Li},
+  title        = {Hierarchical forecasting with a top-down alignment of independent level
+                  forecasts},
+  doi          = {10.1016/j.ijforecast.2021.12.015},
+  url          = {https://arxiv.org/abs/2103.08250},
+  volume       = {38},
+  number       = {4},
+  pages        = {1405--1414},
+  abstract     = {Hierarchical forecasting with intermittent time series is a challenge in both research and empirical studies. Extensive research focuses on improving the accuracy of each hierarchy, especially the intermittent time series at bottom levels. Then, hierarchical reconciliation can be used to improve the overall performance further. In this paper, we present a hierarchical-forecasting-with-alignment approach that treats the bottom-level forecasts as mutable to ensure higher forecasting accuracy on the upper levels of the hierarchy. We employ a pure deep learning forecasting approach, N-BEATS, for continuous time series at the top levels, and a widely used tree-based algorithm, LightGBM, for intermittent time series at the bottom level. The hierarchical-forecasting-with-alignment approach is a simple yet effective variant of the bottom-up method, accounting for biases that are difficult to observe at the bottom level. It allows suboptimal forecasts at the lower level to retain a higher overall performance. The approach in this empirical study was developed by the first author during the M5 Accuracy competition, ranking second place. The method is also business orientated and can be used to facilitate strategic business planning.},
   journal      = {International Journal of Forecasting},
-  title        = {Forecasting reconciliation with a top-down alignment of independent
-                  level forecasts},
   year         = 2022,
-  volume       = {In Press},
-  author+an    = {2=highlight},
 }
 
 @Article{li2022improving,
@@ -100,6 +102,19 @@
   pages        = {1--17},
   publisher    = {Taylor \& Francis},
 }
+
+
+@Article{li2023feature,
+  author       = {Li Li and Yanfei Kang and Fotios Petropoulos and Feng Li},
+  title        = {Feature-based intermittent demand forecast combinations: accuracy and inventory implications},
+  abstract     = {Intermittent demand forecasting is a ubiquitous and challenging problem in production systems and supply chain management. In recent years, there has been a growing focus on developing forecasting approaches for intermittent demand from academic and practical perspectives. However, limited attention has been given to forecast combination methods, which have achieved competitive performance in forecasting fast-moving time series. The current study aims to examine the empirical outcomes of some existing forecast combination methods and propose a generalized feature-based framework for intermittent demand forecasting. The proposed framework has been shown to improve the accuracy of point and quantile forecasts based on two real data sets. Further, some analysis of features, forecasting pools and computational efficiency is also provided. The findings indicate the intelligibility and flexibility of the proposed approach in intermittent demand forecasting and offer insights regarding inventory decisions.},
+  journal      = {International Journal of Production Research},
+  year         = {2023},
+  number       = {In Press},
+  url          = {https://arxiv.org/abs/2204.08283},
+  doi          = {10.1080/00207543.2022.2153941},
+}
+
 
 @Article{petropoulos2021forecastinga,
   author       = {Petropoulos, Fotios and Apiletti, Daniele and Assimakopoulos, Vassilios
@@ -141,7 +156,6 @@
   url          = {https://arxiv.org/abs/2007.09577},
   doi          = {10.1016/j.ijforecast.2022.05.001},
   number       = {In Press},
-  author+an    = {4=highlight},
   journal      = {International Journal of Forecasting},
   year         = 2022,
 }
@@ -161,6 +175,24 @@
   doi          = {10.2139/ssrn.3792565},
 }
 
+
+@article{makridakis2022m5,
+title = {The M5 competition: Background, organization, and implementation},
+journal = {International Journal of Forecasting},
+volume = {38},
+number = {4},
+pages = {1325-1336},
+year = {2022},
+note = {Special Issue: M5 competition},
+issn = {0169-2070},
+doi = {https://doi.org/10.1016/j.ijforecast.2021.07.007},
+url = {https://www.sciencedirect.com/science/article/pii/S0169207021001187},
+author = {Spyros Makridakis and Evangelos Spiliotis and Vassilios Assimakopoulos},
+keywords = {Forecasting competitions, M competitions, Accuracy, Uncertainty, Time series, Retail sales forecasting},
+abstract = {The M5 competition follows the previous four M competitions, whose purpose is to learn from empirical evidence how to improve forecasting performance and advance the theory and practice of forecasting. M5 focused on a retail sales forecasting application with the objective to produce the most accurate point forecasts for 42,840 time series that represent the hierarchical unit sales of the largest retail company in the world, Walmart, as well as to provide the most accurate estimates of the uncertainty of these forecasts. Hence, the competition consisted of two parallel challenges, namely the Accuracy and Uncertainty forecasting competitions. M5 extended the results of the previous M competitions by: (a) significantly expanding the number of participating methods, especially those in the category of machine learning; (b) evaluating the performance of the uncertainty distribution along with point forecast accuracy; (c) including exogenous/explanatory variables in addition to the time series data; (d) using grouped, correlated time series; and (e) focusing on series that display intermittency. This paper describes the background, organization, and implementations of the competition, and it presents the data used and their characteristics. Consequently, it serves as introductory material to the results of the two forecasting challenges to facilitate their understanding.}
+}
+
+
 @Article{theodorou2021exploring,
   author       = {Theodorou, Evangelos and Wang, Shengjie and Kang, Yanfei and Spiliotis,
                   Evangelos and Makridakis, Spyros and Assimakopoulos, Vassilios},
@@ -174,7 +206,6 @@
   journal      = {arXiv:2103.11129 [stat]},
   title        = {Properties of Point Forecast Reconciliation Approaches},
   year         = 2021,
-  month        = mar,
   archiveprefix= {arXiv},
   eprint       = {2103.11129},
   eprinttype   = {arxiv},
@@ -211,7 +242,6 @@
   journal      = {European Journal of Operational Research},
   title        = {Forecast with Forecasts: Diversity Matters},
   year         = 2021,
-  author+an    = {4=highlight},
   doi          = {10.1016/j.ejor.2021.10.024},
 }
 
@@ -221,7 +251,6 @@
   title        = {Understanding Forecast Reconciliation},
   year         = 2021,
   issn         = {0377-2217},
-  month        = oct,
   number       = 1,
   pages        = {149--160},
   volume       = 294,
@@ -282,7 +311,6 @@
                   Correction},
   year         = 2021,
   issn         = {0169-2070},
-  month        = jan,
   number       = 1,
   pages        = {343--359},
   volume       = 37,
@@ -300,7 +328,6 @@
   title        = {Dimensionality Reduction in Forecasting with Temporal Hierarchies},
   year         = 2021,
   issn         = {0169-2070},
-  month        = jan,
   number       = 3,
   pages        = {1127--1146},
   volume       = 37,
@@ -308,7 +335,7 @@
 }
 
 
-@article{makridakis2022m5,
+@article{makridakis2022m5accuracy,
   title        = {M5 accuracy competition: Results, findings, and conclusions},
   journal      = {International Journal of Forecasting},
   year         = 2022,
@@ -344,7 +371,6 @@
   title        = {Stochastic {{Coherency}} in {{Forecast Reconciliation}}},
   year         = 2021,
   issn         = {0925-5273},
-  month        = jul,
   pages        = 108221,
   volume       = 240,
   doi          = {10.1016/j.ijpe.2021.108221},
@@ -382,7 +408,6 @@
   number       = 2021,
   pages        = {719--731},
   volume       = 132,
-  author+an    = {5=highlight},
   journal      = {Journal of Business Research},
   year         = 2021,
 }
@@ -404,7 +429,6 @@
   title        = {Fast Forecast Reconciliation Using Linear Models},
   year         = 2021,
   issn         = {1061-8600},
-  month        = jun,
   number       = {ja},
   pages        = {1--35},
   volume       = 0,
@@ -424,14 +448,16 @@
   publisher    = {Elsevier},
 }
 
-@Article{wang2021uncertainty,
+@Article{wang2022uncertainty,
   author       = {Wang, Xiaoqian and Kang, Yanfei and Petropoulos, Fotios and Li, Feng},
-  journal      = {Journal of the Operational Research Society},
   title        = {The uncertainty estimation of feature-based forecast combinations},
-  year         = 2021,
-  author+an    = {4=highlight},
   doi          = {10.1080/01605682.2021.1880297},
-  keywords     = {nsfc2015},
+  number       = 5,
+  pages        = {979--993},
+  url          = {https://arxiv.org/abs/1908.02891},
+  volume       = 73,
+  journal      = {Journal of the Operational Research Society},
+  year         = 2022,
 }
 
 @Article{ma2021distributed,
@@ -446,7 +472,6 @@
   journal      = {Working paper},
   title        = {Distributed Forecasting with Large {Bayesian} Vector Auto Regressions},
   year         = 2021,
-  author+an    = {1=highlight},
 }
 
 @Manual{oharawild2021feasts,
@@ -483,7 +508,6 @@
   journal      = {arXiv},
   title        = {{For2For}: Learning to forecast from forecasts},
   year         = 2020,
-  month        = jan,
   volume       = {2001.04601},
   arxivid      = {2001.04601},
   primaryclass = {stat.ML},
@@ -516,7 +540,6 @@
   editor    = {Zhi-Hua Zhou},
   pages     = {4653--4660},
   year      = {2021},
-  month     = {8},
   note      = {Survey Track},
   doi       = {10.24963/ijcai.2021/631},
 }
@@ -542,7 +565,6 @@
   journal      = {Computational Statistics {\&}amp$\mathsemicolon$ Data Analysis},
   title        = {Quantile regression in big data: A divide and conquer based strategy},
   year         = 2020,
-  month        = {apr},
   pages        = 106892,
   volume       = 144,
   abstract     = {Quantile regression, which analyzes the conditional distribution of
@@ -585,7 +607,6 @@
                   decentralized supply chains},
   year         = 2020,
   issn         = {0377-2217},
-  month        = dec,
   number       = 2,
   pages        = {511--527},
   volume       = 287,
@@ -642,7 +663,6 @@
   title        = {Forecasting Swiss exports using Bayesian forecast reconciliation},
   year         = 2020,
   issn         = {0377-2217},
-  month        = oct,
   doi          = {10.1016/j.ejor.2020.09.046},
 }
 
@@ -652,7 +672,6 @@
   title        = {Using judgment to select and adjust forecasts from statistical models},
   year         = 2020,
   issn         = {0377-2217},
-  month        = aug,
   number       = 3,
   pages        = {882--895},
   volume       = 284,
@@ -666,7 +685,6 @@
   year         = 2020,
   pages        = 113680,
   volume       = 160,
-  author+an    = {3=highlight},
   doi          = {10.1016/j.eswa.2020.113680},
   publisher    = {Elsevier},
 }
@@ -905,7 +923,6 @@
   title        = {Real-time macroeconomic forecasting with a heteroscedastic inversion
                   copula},
   year         = 2020,
-  month        = {feb},
   number       = 2,
   pages        = {470--486},
   volume       = 38,
@@ -983,7 +1000,6 @@
   year         = 2020,
   pages        = {96--102},
   volume       = 256,
-  author+an    = {8=highlight},
   doi          = {10.1016/j.jss.2020.06.011},
   publisher    = {Elsevier},
 }
@@ -1010,14 +1026,13 @@
   publisher    = {Taylor \& Francis},
 }
 
-@Article{bentaieb2020hierarchical,
+@Article{bentaieb2021hierarchical,
   author       = {Ben Taieb, Souhaib and Taylor, James W. and Hyndman, Rob J.},
   journal      = {Journal of the American Statistical Association},
   title        = {Hierarchical {{Probabilistic Forecasting}} of {{Electricity Demand With
                   Smart Meter Data}}},
-  year         = 2020,
+  year         = 2021,
   issn         = {0162-1459},
-  month        = mar,
   number       = 533,
   pages        = {27--43},
   volume       = 116,
@@ -1027,13 +1042,12 @@
 }
 
 @Article{chen2020probabilistic,
-  author       = {Chen, Yitian and Kang{$^{*}$}, Yanfei and Chen, Yixiong and Wang,
+  author       = {Chen, Yitian and Kang, Yanfei and Chen, Yixiong and Wang,
                   Zizhuo},
   journal      = {Neurocomputing},
   title        = {Probabilistic forecasting with temporal convolutional neural network},
   year         = 2020,
   issn         = {0925-2312},
-  author+an    = {2=highlight},
   doi          = {10.1016/j.neucom.2020.03.011},
 }
 
@@ -1045,7 +1059,6 @@
   year         = 2020,
   pages        = {354--376},
   volume       = 13,
-  author+an    = {3=highlight},
   doi          = {10.1002/sam.11461},
   issue        = 4,
 }
@@ -1056,7 +1069,6 @@
   title        = {Optimal Non-Negative Forecast Reconciliation},
   year         = 2020,
   issn         = {1573-1375},
-  month        = sep,
   number       = 5,
   pages        = {1167--1182},
   volume       = 30,
@@ -1078,7 +1090,6 @@
   journal      = {Working Paper},
   title        = {Fast Distributed Inference with Variable Selection},
   year         = 2020,
-  author+an    = {3=highlight},
 }
 
 @Manual{kang2020gratisa,
@@ -1158,7 +1169,6 @@
   title        = {Cross-Temporal Coherent Forecasts for {{Australian}} Tourism},
   year         = 2019,
   issn         = {0160-7383},
-  month        = mar,
   pages        = {393--409},
   volume       = 75,
   doi          = {10.1016/j.annals.2019.02.001},
@@ -1229,7 +1239,6 @@
                   systematic or idiosyncratic risk?},
   year         = 2019,
   pages        = 1632528,
-  author+an    = {1=highlight},
   doi          = {10.1080/23322039.2019.1632528},
   keywords     = {nsfc2015},
   publisher    = {Taylor \& Francis},
@@ -1253,7 +1262,6 @@
   title        = {Quantifying the Advantages of Forward Orthogonal Deviations for Long
                   Time Series},
   year         = 2019,
-  month        = {jul},
   number       = 2,
   pages        = {653--672},
   volume       = 55,
@@ -1295,7 +1303,6 @@
   title        = {Deep learning for time series classification: a review},
   year         = 2019,
   issn         = {1573-756X},
-  month        = {Mar},
   day          = 02,
   doi          = {10.1007/s10618-019-00619-1},
 }
@@ -1333,7 +1340,6 @@
                   and electric load},
   year         = 2019,
   issn         = {0377-2217},
-  month        = may,
   doi          = {10.1016/j.ejor.2019.05.020},
 }
 
@@ -1753,7 +1759,6 @@
   title        = {Improving the Forecasting Performance of Temporal Hierarchies},
   year         = 2019,
   issn         = {1932-6203},
-  month        = oct,
   number       = 10,
   pages        = {e0223422},
   volume       = 14,
@@ -1774,7 +1779,6 @@
   year         = 2019,
   number       = 11,
   volume       = 14,
-  author+an    = {3=highlight},
   doi          = {10.1371/journal.pone.0225223},
   keywords     = {nsfc2015},
   publisher    = {Public Library of Science},
@@ -1884,7 +1888,6 @@
 
 @Software{li2019dlsa,
   author    = {Feng Li},
-  author+an = {1=highlight},
   date      = {2019},
   title     = {dlsa: Spark API for distributed statistical models},
   url       = {https://github.com/feng-li/dlsa},
@@ -1893,7 +1896,6 @@
 
 @Software{spark-dlsa,
   author    = {Feng Li},
-  author+an = {1=highlight},
   date      = {2019},
   title     = {dlsa: Spark API for distributed statistical models},
   url       = {https://github.com/feng-li/dlsa},
@@ -1909,9 +1911,8 @@
   url          = {https://CRAN.R-project.org/package=stochvol},
 }
 
-@Software{gratis,
+@Software{gratis2019,
   author    = {Yanfei Kang and Feng Li},
-  author+an = {2=highlight},
   date      = {2019},
   title     = {gratis: Efficient algorithms for generating time series with diverse and controllable characteristics.},
   url       = {https://github.com/ykang/gratis},
@@ -1920,7 +1921,6 @@
 
 @Software{kang2019gratis,
   author    = {Yanfei Kang and Feng Li},
-  author+an = {2=highlight},
   date      = {2019},
   title     = {gratis: Efficient algorithms for generating time series with diverse and controllable characteristics.},
   url       = {https://github.com/ykang/gratis},
@@ -1972,7 +1972,6 @@
                   Unbiasedness Conditions}}},
   year         = 2019,
   address      = {{New York, NY, USA}},
-  month        = jul,
   pages        = {1337--1347},
   publisher    = {{Association for Computing Machinery}},
   series       = {{{KDD}} '19},
@@ -2025,7 +2024,6 @@
   number       = 5,
   pages        = {e020640},
   volume       = 8,
-  author+an    = {7=highlight},
   doi          = {10.1136/bmjopen-2017-020640},
   keywords     = {nsfc2015},
   publisher    = {British Medical Journal Publishing Group},
@@ -2077,7 +2075,6 @@
                   approach},
   year         = 2018,
   issn         = {0377-2217},
-  month        = may,
   number       = 1,
   pages        = {250--263},
   volume       = 267,
@@ -2106,7 +2103,6 @@
                   forecasting work?},
   year         = 2018,
   issn         = {0377-2217},
-  month        = feb,
 }
 
 @Article{han2018new,
@@ -2203,7 +2199,7 @@
 }
 
 @Article{li2018improvinga,
-  author       = {Li, Feng and Kang{$^{*}$}, Yanfei},
+  author       = {Li, Feng and Kang, Yanfei},
   journal      = {International Journal of Forecasting},
   title        = {Improving forecasting performance using covariate-dependent copula
                   models},
@@ -2211,7 +2207,6 @@
   number       = 3,
   pages        = {456--476},
   volume       = 34,
-  author+an    = {2=highlight},
   publisher    = {Elsevier},
 }
 
@@ -2224,7 +2219,6 @@
   number       = 3,
   pages        = {456--476},
   volume       = 34,
-  author+an    = {1=highlight},
   doi          = {10.1016/j.ijforecast.2018.01.007},
   keywords     = {nsfc2015},
   publisher    = {Elsevier},
@@ -2640,7 +2634,6 @@
                   Michael and Zhu, Yan and Gharghabi, Shaghayegh and Ratanamahatana,
                   Chotirat Ann and Yanping and Hu, Bing and Begum, Nurjahan and Bagnall,
                   Anthony and Mueen, Abdullah and Batista, Gustavo},
-  month        = {October},
   note         = {\url{https://www.cs.ucr.edu/~eamonn/time_series_data_2018/}},
   title        = {The UCR Time Series Classification Archive},
   year         = 2018,
@@ -2651,7 +2644,6 @@
                   Michael and Zhu, Yan and Gharghabi, Shaghayegh and Ratanamahatana,
                   Chotirat Ann and Yanping and Hu, Bing and Begum, Nurjahan and Bagnall,
                   Anthony and Mueen, Abdullah and Batista, Gustavo},
-  month        = {October},
   note         = {\url{https://www.cs.ucr.edu/~eamonn/time_series_data_2018/}},
   title        = {The UCR Time Series Classification Archive},
   year         = 2018,
@@ -2714,7 +2706,6 @@
   title        = {{A Dual-Stage Attention-Based Recurrent Neural Network for Time Series
                   Prediction}},
   year         = 2017,
-  month        = Apr,
   pages        = {arXiv:1704.02971},
   adsnote      = {Provided by the SAO/NASA Astrophysics Data System},
   adsurl       = {https://ui.adsabs.harvard.edu/\#abs/2017arXiv170402971Q},
@@ -2731,7 +2722,6 @@
   title        = {{Residual LSTM: Design of a Deep Recurrent Architecture for Distant
                   Speech Recognition}},
   year         = 2017,
-  month        = Jan,
   pages        = {arXiv:1701.03360},
   adsnote      = {Provided by the SAO/NASA Astrophysics Data System},
   adsurl       = {https://ui.adsabs.harvard.edu/\#abs/2017arXiv170103360K},
@@ -2750,7 +2740,6 @@
   journal      = {arXiv e-prints},
   title        = {{Dilated Recurrent Neural Networks}},
   year         = 2017,
-  month        = Oct,
   pages        = {arXiv:1710.02224},
   adsnote      = {Provided by the SAO/NASA Astrophysics Data System},
   adsurl       = {https://ui.adsabs.harvard.edu/\#abs/2017arXiv171002224C},
@@ -2882,7 +2871,6 @@
   title        = {Supply chain forecasting when information is not shared},
   year         = 2017,
   issn         = {0377-2217},
-  month        = aug,
   number       = 3,
   pages        = {984--994},
   volume       = 260,
@@ -3180,7 +3168,6 @@
   title        = {Reconciling Solar Forecasts: Geographical Hierarchy},
   year         = 2017,
   issn         = {0038-092X},
-  month        = apr,
   pages        = {276--286},
   volume       = 146,
   doi          = {10.1016/j.solener.2017.02.010},
@@ -3397,7 +3384,6 @@
   title        = {Sparse and Smooth Adjustments for Coherent Forecasts in Temporal
                   Aggregation of Time Series},
   year         = 2017,
-  month        = feb,
   pages        = {16--26},
   publisher    = {{PMLR}},
   volume       = 55,
@@ -3420,7 +3406,6 @@
                   and ICT solutions towards energy cost reduction: An action plan to
                   optimally schedule the operation of heating and electricity systems}},
   year         = 2016,
-  month        = {jul},
   pages        = {1-6},
   doi          = {10.1109/IISA.2016.7785358},
   isbn         = {978-1-5090-3429-1},
@@ -3436,7 +3421,6 @@
   title        = {{OPTIMUS decision support tools: Transforming multidisciplinary data to
                   energy management action plans}},
   year         = 2016,
-  month        = {jul},
   pages        = {1-5},
   doi          = {10.1109/IISA.2016.7785359},
   isbn         = {978-1-5090-3429-1},
@@ -3472,7 +3456,6 @@
                   Time Series},
   year         = 2016,
   issn         = {0167-9473},
-  month        = may,
   pages        = {16--32},
   volume       = 97,
   doi          = {10.1016/j.csda.2015.11.007},
@@ -3883,7 +3866,6 @@
   title        = {Predicting the Direction of Stock Market Index Movement Using an
                   Optimized Artificial Neural Network Model},
   year         = 2016,
-  month        = 05,
   number       = 5,
   pages        = {1-11},
   volume       = 11,
@@ -3992,13 +3974,12 @@
   year         = 2016,
 }
 
-@Book{李丰2016大数据分布式计算与案例,
+@Book{li2016distributedcn,
   author       = {李丰},
   publisher    = {中国人民大学出版社},
   title        = {大数据分布式计算与案例},
   year         = 2016,
   isbn         = 9787300230276,
-  author+an    = {1=highlight},
   keywords     = {nsfc2015},
 }
 
@@ -4334,7 +4315,6 @@
   journal      = {arXiv e-prints},
   title        = {{Deep Residual Learning for Image Recognition}},
   year         = 2015,
-  month        = Dec,
   pages        = {arXiv:1512.03385},
   adsnote      = {Provided by the SAO/NASA Astrophysics Data System},
   adsurl       = {https://ui.adsabs.harvard.edu/\#abs/2015arXiv151203385H},
@@ -4373,15 +4353,14 @@
   publisher    = {Oxford University Press},
 }
 
-@Article{kang*2015detection,
-  author       = {Yanfei Kang{$^{*}$}},
+@Article{kang2015detection,
+  author       = {Yanfei Kang},
   journal      = {Bulletin of the Australian Mathematical Society},
   title        = {Detection, Classification and Analysis of Events in Turbulence Time
                   Series},
   year         = 2015,
   pages        = {521-522},
   volume       = 91,
-  author+an    = {1=highlight},
   issue        = 3,
 }
 
@@ -4553,7 +4532,6 @@
   title        = {Determinants of the banking spread in the Brazilian economy: The role of
                   micro and macroeconomic factors},
   year         = 2015,
-  month        = {nov},
   pages        = {29--39},
   volume       = 40,
   doi          = {10.1016/j.iref.2015.02.003},
@@ -4976,7 +4954,6 @@
   title        = {Exploiting big data in time series forecasting: A cross-sectional
                   approach},
   year         = 2015,
-  month        = {Oct},
   pages        = {1-10},
   issn         = {null},
 }
@@ -5093,7 +5070,6 @@
   number       = 2,
   pages        = 023114,
   volume       = 24,
-  author+an    = {1=highlight},
 }
 
 @Article{xu2014carry,
@@ -5136,7 +5112,6 @@
   journal      = {Computers \& Geosciences},
   title        = {psd: Adaptive, sine multitaper power spectral density estimation for R},
   year         = 2014,
-  month        = {February},
   pages        = {1-8},
   volume       = 63,
   doi          = {10.1016/j.cageo.2013.09.015},
@@ -5250,7 +5225,6 @@
   title        = {Highly comparative feature-based time-series classification},
   year         = 2014,
   issn         = {1041-4347},
-  month        = {Dec},
   number       = 12,
   pages        = {3026--3037},
   volume       = 26,
@@ -5623,13 +5597,6 @@
                   newton-type method},
   year         = 2014,
   pages        = {1000--1008},
-}
-
-@Article{rstudio2014shiny,
-  author       = {{RStudio and Inc.}},
-  title        = {{shiny: Web Application Framework for R, R package version 0.10.2.2,
-                  http://CRAN.R-project.org/package=shiny}},
-  year         = 2014,
 }
 
 @Article{razavian2014cnn,
@@ -6239,7 +6206,6 @@
   title        = {{Extremal dependence of copulas: A tail density approach}},
   year         = 2013,
   issn         = {0047-259X},
-  month        = feb,
   pages        = {99--111},
   volume       = 114,
   doi          = {10.1016/j.jmva.2012.07.005},
@@ -6256,7 +6222,6 @@
                   distributions}},
   year         = 2013,
   issn         = {0047-259X},
-  month        = mar,
   pages        = {481--495},
   volume       = 115,
   doi          = {10.1016/j.jmva.2012.11.007},
@@ -6351,7 +6316,6 @@
   title        = {Weighted-permutation entropy: A complexity measure for time series
                   incorporating amplitude information},
   year         = 2013,
-  month        = {Feb},
   pages        = 022911,
   volume       = 87,
   issue        = 2,
@@ -6378,7 +6342,6 @@
   number       = 4,
   pages        = {706-723},
   volume       = 40,
-  author+an    = {1=highlight},
   doi          = {10.1111/sjos.12022},
   owner        = {fli},
   timestamp    = {2013.02.06},
@@ -6539,7 +6502,6 @@
   title        = {Bayesian Modeling of Conditional Densities},
   year         = 2013,
   note         = {ISBN: 978-91-7447-665-1},
-  author+an    = {1=highlight},
   url          = {http://urn.kb.se/resolve?urn=urn:nbn:se:su:diva-89426},
 }
 
@@ -6550,8 +6512,8 @@
   year         = 2013,
 }
 
-@InProceedings{kang*2013how,
-  author       = {Yanfei Kang{$^{*}$} and Smith-Miles, Kate and Belu{\v{s}}i\'{c},
+@InProceedings{kang2013how,
+  author       = {Yanfei Kang and Smith-Miles, Kate and Belu{\v{s}}i\'{c},
                   Danijel},
   booktitle    = {Proceedings of the 2013 IEEE Symposium on Computational Intelligence and
                   Data Mining (CIDM)},
@@ -6559,7 +6521,6 @@
   year         = 2013,
   organization = {IEEE},
   pages        = {65--72},
-  author+an    = {1=highlight},
 }
 
 @Book{hosmerjr2013applied,
@@ -6931,7 +6892,6 @@
   title        = {Toward Automatic Time-Series Forecasting Using Neural Networks},
   year         = 2012,
   issn         = {2162-2388},
-  month        = {July},
   number       = 7,
   pages        = {1028-1039},
   volume       = 23,
@@ -7058,7 +7018,6 @@
                   Approximation}},
   year         = 2012,
   issn         = {1061-8600},
-  month        = jul,
   number       = 3,
   pages        = {797--820},
   volume       = 21,
@@ -7072,7 +7031,6 @@
                   Challenges}},
   year         = 2012,
   issn         = {1061-8600},
-  month        = oct,
   number       = 4,
   pages        = {825--839},
   volume       = 21,
@@ -7179,7 +7137,6 @@
   title        = {{Retrieval Failure Contributes to Gist-Based False Recognition.}},
   year         = 2012,
   issn         = {1096-0821},
-  month        = jan,
   number       = 1,
   pages        = {68--78},
   volume       = 66,
@@ -7195,7 +7152,6 @@
   title        = {{Beyond simplified pair-copula constructions}},
   year         = 2012,
   issn         = {0047-259X},
-  month        = sep,
   pages        = {74--90},
   volume       = 110,
   doi          = {10.1016/j.jmva.2012.02.001},
@@ -7532,8 +7488,8 @@
   year         = 2012,
 }
 
-@InProceedings{kang*2012real,
-  author       = {Yanfei Kang{$^{*}$}},
+@InProceedings{kang2012real,
+  author       = {Yanfei Kang},
   booktitle    = {Proceedings of the 2012 International Joint Conference on Neural
                   Networks ({IJCNN})},
   title        = {Real-time change detection in time series based on growing feature
@@ -7541,7 +7497,6 @@
   year         = 2012,
   organization = {IEEE},
   pages        = {1--6},
-  author+an    = {1=highlight},
 }
 
 @Book{horn2012matrix,
@@ -7753,7 +7708,6 @@
                   cell carcinoma of oropharynx.}},
   year         = 2011,
   issn         = {1097-0142},
-  month        = aug,
   pages        = {1--7},
   doi          = {10.1002/cncr.26423},
   owner        = {fli},
@@ -7769,7 +7723,6 @@
                   method in a physically active population.}},
   year         = 2011,
   issn         = {1873-2933},
-  month        = oct,
   doi          = {10.1016/j.clinbiochem.2011.09.012},
   owner        = {fli},
   pmid         = 21986592,
@@ -7795,7 +7748,6 @@
                   functions}},
   year         = 2011,
   issn         = {0167-9473},
-  month        = apr,
   number       = 4,
   pages        = {1509--1520},
   volume       = 55,
@@ -7812,7 +7764,6 @@
   title        = {Optimal Combination Forecasts for Hierarchical Time Series},
   year         = 2011,
   issn         = {0167-9473},
-  month        = sep,
   number       = 9,
   pages        = {2579--2589},
   volume       = 55,
@@ -7836,7 +7787,6 @@
                   experimental investigation.}},
   year         = 2011,
   issn         = {1520-6394},
-  month        = oct,
   number       = 10,
   pages        = {924--931},
   volume       = 28,
@@ -7873,7 +7823,6 @@
   title        = {{OR} in healthcare: A {E}uropean perspective},
   year         = 2011,
   issn         = {0377-2217},
-  month        = jul,
   number       = 2,
   pages        = {223--234},
   volume       = 212,
@@ -8010,7 +7959,6 @@
                   dependence in S\&P500 and VIX}},
   year         = 2011,
   issn         = {0378-4266},
-  month        = sep,
   number       = 9,
   pages        = {2374--2387},
   volume       = 35,
@@ -8027,7 +7975,6 @@
                   FDA.}},
   year         = 2011,
   issn         = {1520-5711},
-  month        = sep,
   number       = 5,
   pages        = {871--87},
   volume       = 21,
@@ -8043,7 +7990,6 @@
   title        = {{Bayesian Inference in Structural Second-Price Common Value Auctions}},
   year         = 2011,
   issn         = {0735-0015},
-  month        = jul,
   number       = 3,
   pages        = {382--396},
   volume       = 29,
@@ -8056,7 +8002,6 @@
   title        = {{Nonparametric Regression on a Graph}},
   year         = 2011,
   issn         = {1061-8600},
-  month        = mar,
   pages        = {1--16},
   doi          = {10.1198/jcgs.2011.09203},
 }
@@ -8068,7 +8013,6 @@
                   Based Estimation}},
   year         = 2011,
   issn         = {1061-8600},
-  month        = sep,
   number       = 3,
   pages        = {616--635},
   volume       = 20,
@@ -8083,7 +8027,6 @@
   title        = {{A B-Spline Based Semiparametric Nonlinear Mixed Effects Model}},
   year         = 2011,
   issn         = {1061-8600},
-  month        = mar,
   number       = 2,
   pages        = {1--18},
   volume       = 19104,
@@ -8142,7 +8085,6 @@
   title        = {{Tail order and intermediate tail dependence of multivariate copulas}},
   year         = 2011,
   issn         = {0047-259X},
-  month        = nov,
   number       = 10,
   pages        = {1454--1471},
   volume       = 102,
@@ -8180,7 +8122,6 @@
   title        = {{Nonparametric {Bayes} Stochastically Ordered Latent Class Models}},
   year         = 2011,
   issn         = {0162-1459},
-  month        = aug,
   number       = 495,
   pages        = {1--11},
   volume       = 106,
@@ -8218,7 +8159,6 @@
                   Stratification Framework}},
   year         = 2011,
   issn         = {0162-1459},
-  month        = jun,
   number       = 494,
   pages        = {469--479},
   volume       = 106,
@@ -8333,7 +8273,6 @@
   title        = {{Matrix calculus for axially symmetric polarized beam.}},
   year         = 2011,
   issn         = {1094-4087},
-  month        = jun,
   number       = 13,
   pages        = {12815--24},
   volume       = 19,
@@ -9413,7 +9352,6 @@
   number       = 12,
   pages        = {3638--3654},
   volume       = 140,
-  author+an    = {1=highlight},
   doi          = {10.1016/j.jspi.2010.04.031},
   owner        = {fli},
   timestamp    = {2013.02.06},
@@ -16630,7 +16568,6 @@
   journal      = {International Journal of Production Economics},
   title        = {On the bias of intermittent demand estimates},
   year         = 2001,
-  month        = {May},
   number       = {1-3},
   pages        = {457-466},
   volume       = 71,
@@ -17078,17 +17015,6 @@
   pages        = {190--204},
   volume       = 120,
   publisher    = {Elsevier},
-}
-
-@article{heffernan2000directory,
-  title        = {A directory of coefficients of tail dependence},
-  author       = {Heffernan, Janet E},
-  journal      = {Extremes},
-  volume       = 3,
-  number       = 3,
-  pages        = {279--290},
-  year         = 2000,
-  publisher    = {Springer}
 }
 
 @Article{heffernan2000directory,
@@ -18343,7 +18269,6 @@
   title        = {{Modelling Dependence within Joint Tail Regions}},
   year         = 1997,
   issn         = {1369-7412},
-  month        = may,
   number       = 2,
   pages        = {475--499},
   volume       = 59,
@@ -18770,7 +18695,6 @@
   journal      = {National Institute Economic Review},
   title        = {The Performance of National Institute Economic Forecasts},
   year         = 1996,
-  month        = may,
   number       = 1,
   pages        = {55--62},
   volume       = 156,
@@ -18820,7 +18744,6 @@
   title        = {{Flexible smoothing with B -splines and penalties}},
   year         = 1996,
   issn         = {0883-4237},
-  month        = may,
   number       = 2,
   pages        = {89--121},
   volume       = 11,
@@ -21267,7 +21190,6 @@
   title        = {{Optimization by Simulated Annealing.}},
   year         = 1983,
   issn         = {1095-9203},
-  month        = may,
   number       = 4598,
   pages        = {671--680},
   volume       = 220,
