@@ -19299,6 +19299,7 @@
   url = {http://urn.kb.se/resolve?urn=urn:nbn:se:su:diva-89426},
   urldate = {2022-11-11},
   abstract = {This thesis develops models and associated Bayesian inference methods for flexible univariate and multivariate conditional density estimation. The models are flexible in the sense that they can capture widely differing shapes of the data. The estimation methods are specifically designed to achieve flexibility while still avoiding overfitting. The models are flexible both for a given covariate value, but also across covariate space. A key contribution of this thesis is that it provides general approaches of density estimation with highly efficient Markov chain Monte Carlo methods. The methods are illustrated on several challenging non-linear and non-normal datasets. In the first paper, a general model is proposed for flexibly estimating the density of a continuous response variable conditional on a possibly high-dimensional set of covariates. The model is a finite mixture of asymmetric student-t densities with covariate-dependent mixture weights. The four parameters of the components, the mean, degrees of freedom, scale and skewness, are all modeled as functions of the covariates. The second paper explores how well a smooth mixture of symmetric components can capture skewed data. Simulations and applications on real data show that including covariate-dependent skewness in the components can lead to substantially improved performance on skewed data, often using a much smaller number of components. We also introduce smooth mixtures of gamma and log-normal components to model positively-valued response variables. In the third paper we propose a multivariate Gaussian surface regression model that combines both additive splines and interactive splines, and a highly efficient MCMC algorithm that updates all the multi-dimensional knot locations jointly. We use shrinkage priors to avoid overfitting with different estimated shrinkage factors for the additive and surface part of the model, and also different shrinkage parameters for the different response variables. In the last paper we present a general Bayesian approach for directly modeling dependencies between variables as function of explanatory variables in a flexible copula context. In particular, the Joe-Clayton copula is extended to have covariate-dependent tail dependence and correlations. Posterior inference is carried out using a novel and efficient simulation method. The appendix of the thesis documents the computational implementation details.},
+  isbn = {978-91-7447-665-1},
   language = {eng},
   file = {/home/fli/carbon/Papers/zotero-files/2013/Li_2013_Bayesian Modeling of Conditional Densities.pdf}
 }
@@ -19594,21 +19595,6 @@
   file = {/home/fli/carbon/Papers/zotero-files/2021/Li_Li_Jin_Kosorok_2021_Multithreshold change plane model.pdf}
 }
 
-@article{li2022bayesian,
-  title = {Bayesian Forecast Combination Using Time-Varying Features},
-  author = {Li, Li and Kang, Yanfei and Li, Feng},
-  date = {2022},
-  journaltitle = {International Journal of Forecasting},
-  doi = {10.1016/j.ijforecast.2022.06.002},
-  url = {https://arxiv.org/abs/2108.02082},
-  abstract = {In this work, we propose a novel framework for density forecast combination by constructing time-varying weights based on time series features, which is called Feature-based Bayesian Forecasting Model Averaging (FEBAMA). Our framework estimates weights in the forecast combination via Bayesian log predictive scores, in which the optimal forecasting combination is determined by time series features from historical information. In particular, we use an automatic Bayesian variable selection method to add weight to the importance of different features. To this end, our approach has better interpretability compared to other black-box forecasting combination schemes. We apply our framework to stock market data and M3 competition data. Based on our structure, a simple maximum-a-posteriori scheme outperforms benchmark methods, and Bayesian variable selection can further enhance the accuracy for both point and density forecasts.},
-  issue = {In Press},
-  language = {en},
-  keywords = {.Publications 💫},
-  annotation = {(通讯作者)},
-  file = {/home/fli/carbon/Papers/zotero-files/2022/Li_Kang_Li_2022_Bayesian forecast combination using time-varying features.pdf}
-}
-
 @article{li2022improving,
   title = {Improving Forecasting by Subsampling Seasonal Time Series},
   author = {Li, Xixi and Petropoulos, Fotios and Kang, Yanfei},
@@ -19655,6 +19641,26 @@
   language = {en},
   keywords = {Bayesian,causal inference,design,ignorability,potential outcomes,propensity score},
   file = {/home/fli/carbon/Papers/zotero-files/2023/Li_Ding_Mealli_2023_Bayesian causal inference.pdf}
+}
+
+@article{li2023bayesian,
+  title = {Bayesian Forecast Combination Using Time-Varying Features},
+  author = {Li, Li and Kang, Yanfei and Li, Feng},
+  date = {2023-07-01},
+  journaltitle = {International Journal of Forecasting},
+  shortjournal = {International Journal of Forecasting},
+  volume = {39},
+  number = {3},
+  pages = {1287--1302},
+  issn = {0169-2070},
+  doi = {10.1016/j.ijforecast.2022.06.002},
+  url = {https://www.sciencedirect.com/science/article/pii/S0169207022000930},
+  urldate = {2023-06-21},
+  abstract = {In this work, we propose a novel framework for density forecast combination by constructing time-varying weights based on time-varying features. Our framework estimates weights in the forecast combination via Bayesian log predictive scores, in which the optimal forecast combination is determined by time series features from historical information. In particular, we use an automatic Bayesian variable selection method to identify the importance of different features. To this end, our approach has better interpretability compared to other black-box forecasting combination schemes. We apply our framework to stock market data and M3 competition data. Based on our structure, a simple maximum-a-posteriori scheme outperforms benchmark methods, and Bayesian variable selection can further enhance the accuracy for both point forecasts and density forecasts.},
+  language = {en},
+  keywords = {Bayesian density forecasting,Forecast combination,Interpretability,Log predictive score,Time-varying features},
+  annotation = {(通讯作者)},
+  file = {/home/fli/carbon/Papers/zotero-files/2023/Li_Kang_Li_2023_Bayesian forecast combination using time-varying features.pdf;/home/fli/carbon/Papers/zotero-files/2023/Li_Kang_Li_2023_Bayesian forecast combination using time-varying features2.pdf}
 }
 
 @online{li2023distributed,
@@ -24836,11 +24842,18 @@
   doi = {10.1007/s00357-018-9248-z}
 }
 
-@book{pearl2000causality,
-  title = {Causality: Models, Reasoning, and Inference},
-  author = {Pearl, J.},
-  date = {2000},
-  publisher = {New York: Cambridge University Press},
+@book{pearl2009causality,
+  title = {Causality: Models, Reasoning and Inference},
+  shorttitle = {Causality},
+  author = {Pearl, Judea},
+  date = {2009-09-14},
+  edition = {2nd edition},
+  publisher = {Cambridge University Press},
+  location = {Cambridge, U.K. ; New York},
+  abstract = {Written by one of the preeminent researchers in the field, this book provides a comprehensive exposition of modern analysis of causation. It shows how causality has grown from a nebulous concept into a mathematical theory with significant applications in the fields of statistics, artificial intelligence, economics, philosophy, cognitive science, and the health and social sciences. Judea Pearl presents and unifies the probabilistic, manipulative, counterfactual, and structural approaches to causation and devises simple mathematical tools for studying the relationships between causal connections and statistical associations. The book will open the way for including causal analysis in the standard curricula of statistics, artificial intelligence, business, epidemiology, social sciences, and economics. Students in these fields will find natural models, simple inferential procedures, and precise mathematical definitions of causal concepts that traditional texts have evaded or made unduly complicated. The first edition of Causality has led to a paradigmatic change in the way that causality is treated in statistics, philosophy, computer science, social science, and economics. Cited in more than 5,000 scientific publications, it continues to liberate scientists from the traditional molds of statistical thinking. In this revised edition, Judea Pearl elucidates thorny issues, answers readers’ questions, and offers a panoramic view of recent advances in this field of research. Causality will be of interests to students and professionals in a wide variety of fields. Anyone who wishes to elucidate meaningful relationships from data, predict effects of actions and policies, assess explanations of reported events, or form theories of causal understanding and causal speech will find this book stimulating and invaluable.},
+  isbn = {978-0-521-89560-6},
+  language = {en},
+  pagetotal = {484},
   file = {/home/fli/carbon/Papers/zotero-files/2000/Pearl_2000_Causality.pdf}
 }
 
@@ -27008,6 +27021,18 @@
   file = {/home/fli/carbon/Papers/zotero-files/2006/2006_Bayesian Statistics and Marketing.pdf}
 }
 
+@article{rossi2021forecasting,
+  title = {Forecasting in the Presence of Instabilities: How We Know Whether Models Predict Well and How to Improve Them},
+  shorttitle = {Forecasting in the Presence of Instabilities},
+  author = {Rossi, Barbara},
+  date = {2021},
+  journaltitle = {Journal of Economic Literature},
+  volume = {59},
+  number = {4},
+  pages = {1135--90},
+  language = {en}
+}
+
 @article{rossini2007simple,
   title = {Simple Parallel Statistical Computing in R},
   author = {Rossini, a. J and Tierney, Luke and Li, Na},
@@ -27712,7 +27737,7 @@
   volume = {36},
   pages = {765--804},
   publisher = {Association for Computing Machinery},
-  location = {New York, NY, USA},
+  location = {New York, USA},
   url = {https://doi.org/10.1145/3501714.3501755},
   urldate = {2023-05-30},
   isbn = {978-1-4503-9586-1},
@@ -32703,22 +32728,22 @@
   file = {/home/fli/carbon/Papers/zotero-files/2021/Wang_Srivastava_2021_Divide-and-Conquer Bayesian Inference in Hidden Markov Models.pdf}
 }
 
-@article{wang2022distributed,
-  title = {Distributed ARIMA Models for Ultra-Long Time Series},
-  author = {Wang, Xiaoqian and Kang, Yanfei and Hyndman, Rob J. and Li, Feng},
-  date = {2022-06-22},
-  journaltitle = {International Journal of Forecasting},
-  shortjournal = {International Journal of Forecasting},
-  issn = {0169-2070},
-  doi = {10.1016/j.ijforecast.2022.05.001},
-  url = {https://www.sciencedirect.com/science/article/pii/S0169207022000619},
-  urldate = {2022-11-11},
-  abstract = {Providing forecasts for ultra-long time series plays a vital role in various activities, such as investment decisions, industrial production arrangements, and farm management. This paper develops a novel distributed forecasting framework to tackle the challenges of forecasting ultra-long time series using the industry-standard MapReduce framework. The proposed model combination approach retains the local time dependency. It utilizes a straightforward splitting across samples to facilitate distributed forecasting by combining the local estimators of time series models delivered from worker nodes and minimizing a global loss function. Instead of unrealistically assuming the data generating process (DGP) of an ultra-long time series stays invariant, we only make assumptions on the DGP of subseries spanning shorter time periods. We investigate the performance of the proposed approach with AutoRegressive Integrated Moving Average (ARIMA) models using the real data application as well as numerical simulations. Our approach improves forecasting accuracy and computational efficiency in point forecasts and prediction intervals, especially for longer forecast horizons, compared to directly fitting the whole data with ARIMA models. Moreover, we explore some potential factors that may affect the forecasting performance of our approach.},
-  issue = {In Press},
+@online{wang2022another,
+  title = {Another Look at Forecast Trimming for Combinations: Robustness, Accuracy and Diversity},
+  shorttitle = {Another Look at Forecast Trimming for Combinations},
+  author = {Wang, Xiaoqian and Kang, Yanfei and Li, Feng},
+  date = {2022-07-30},
+  eprint = {2208.00139},
+  eprinttype = {arxiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2208.00139},
+  url = {http://arxiv.org/abs/2208.00139},
+  urldate = {2023-06-13},
+  abstract = {Forecast combination is widely recognized as a preferred strategy over forecast selection due to its ability to mitigate the uncertainty associated with identifying a single "best" forecast. Nonetheless, sophisticated combinations are often empirically dominated by simple averaging, which is commonly attributed to the weight estimation error. The issue becomes more problematic when dealing with a forecast pool containing a large number of individual forecasts. In this paper, we propose a new forecast trimming algorithm to identify an optimal subset from the original forecast pool for forecast combination tasks. In contrast to existing approaches, our proposed algorithm simultaneously takes into account the robustness, accuracy and diversity issues of the forecast pool, rather than isolating each one of these issues. We also develop five forecast trimming algorithms as benchmarks, including one trimming-free algorithm and several trimming algorithms that isolate each one of the three key issues. Experimental results show that our algorithm achieves superior forecasting performance in general in terms of both point forecasts and prediction intervals. Nevertheless, we argue that diversity does not always have to be addressed in forecast trimming. Based on the results, we offer some practical guidelines on the selection of forecast trimming algorithms for a target series.},
   language = {en},
-  keywords = {.Publications 💫,ARIMA models,Distributed forecasting,Least squares approximation,MapReduce,Ultra-long time series},
-  annotation = {(通讯作者)},
-  file = {/home/fli/carbon/Papers/zotero-files/2022/Wang_Kang_Hyndman_Li_2022_Distributed ARIMA models for ultra-long time series2.pdf}
+  pubstate = {preprint},
+  keywords = {Statistics - Applications,Statistics - Computation,Statistics - Methodology},
+  file = {/home/fli/carbon/Papers/zotero-files/2022/Wang_Kang_Li_2022_Another look at forecast trimming for combinations.pdf}
 }
 
 @article{wang2022escalator,
@@ -32788,6 +32813,43 @@
   keywords = {.Publications 💫,forecast combination,Forecasting,nsfc2015,prediction intervals,time series features,uncertainty estimation},
   annotation = {(通讯作者)},
   file = {/home/fli/carbon/Papers/zotero-files/2022/Wang_Kang_Petropoulos_Li_2022_The uncertainty estimation of feature-based forecast combinations3.pdf}
+}
+
+@online{wang2023combining,
+  title = {Combining Probabilistic Forecasts of Intermittent Demand},
+  author = {Wang, Shengjie and Kang, Yanfei and Petropoulos, Fotios and Li, Feng},
+  date = {2023-04-28},
+  eprint = {2304.03092},
+  eprinttype = {arxiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2304.03092},
+  url = {http://arxiv.org/abs/2304.03092},
+  urldate = {2023-06-13},
+  abstract = {In recent decades, new methods and approaches have been developed for forecasting intermittent demand series. However, the majority of research has focused on point forecasting, with little exploration into probabilistic intermittent demand forecasting. This is despite the fact that probabilistic forecasting is crucial for effective decision-making under uncertainty and inventory management. Additionally, most literature on this topic has focused solely on forecasting performance and has overlooked the inventory implications, which are directly relevant to intermittent demand. To address these gaps, this study aims to construct probabilistic forecasting combinations for intermittent demand while considering both forecasting accuracy and inventory control utility in obtaining combinations and evaluating forecasts. Our empirical findings demonstrate that combinations perform better than individual approaches for forecasting intermittent demand, but there is a trade-off between forecasting and inventory performance.},
+  language = {en},
+  pubstate = {preprint},
+  keywords = {Statistics - Applications},
+  file = {/home/fli/carbon/Papers/zotero-files/2023/Wang_Kang_Petropoulos_Li_2023_Combining Probabilistic Forecasts of Intermittent Demand.pdf}
+}
+
+@article{wang2023distributed,
+  title = {Distributed ARIMA Models for Ultra-Long Time Series},
+  author = {Wang, Xiaoqian and Kang, Yanfei and Hyndman, Rob J. and Li, Feng},
+  date = {2023-07-01},
+  journaltitle = {International Journal of Forecasting},
+  shortjournal = {International Journal of Forecasting},
+  volume = {39},
+  number = {3},
+  pages = {1163--1184},
+  issn = {0169-2070},
+  doi = {10.1016/j.ijforecast.2022.05.001},
+  url = {https://www.sciencedirect.com/science/article/pii/S0169207022000619},
+  urldate = {2023-06-21},
+  abstract = {Providing forecasts for ultra-long time series plays a vital role in various activities, such as investment decisions, industrial production arrangements, and farm management. This paper develops a novel distributed forecasting framework to tackle the challenges of forecasting ultra-long time series using the industry-standard MapReduce framework. The proposed model combination approach retains the local time dependency. It utilizes a straightforward splitting across samples to facilitate distributed forecasting by combining the local estimators of time series models delivered from worker nodes and minimizing a global loss function. Instead of unrealistically assuming the data generating process (DGP) of an ultra-long time series stays invariant, we only make assumptions on the DGP of subseries spanning shorter time periods. We investigate the performance of the proposed approach with AutoRegressive Integrated Moving Average (ARIMA) models using the real data application as well as numerical simulations. Our approach improves forecasting accuracy and computational efficiency in point forecasts and prediction intervals, especially for longer forecast horizons, compared to directly fitting the whole data with ARIMA models. Moreover, we explore some potential factors that may affect the forecasting performance of our approach.},
+  language = {en},
+  keywords = {ARIMA models,Distributed forecasting,Least squares approximation,MapReduce,Ultra-long time series},
+  annotation = {(通讯作者)},
+  file = {/home/fli/carbon/Papers/zotero-files/2023/Wang_Kang_Hyndman_Li_2023_Distributed ARIMA models for ultra-long time series.pdf;/home/fli/carbon/Papers/zotero-files/2023/Wang_Kang_Hyndman_Li_2023_Distributed ARIMA models for ultra-long time series2.pdf}
 }
 
 @article{wangefficient,
@@ -33431,6 +33493,19 @@
   isbn = {0-691-01049-8},
   owner = {fli},
   timestamp = {2013.02.06}
+}
+
+@book{wooldridge2010econometric,
+  title = {Econometric Analysis of Cross Section and Panel Data, Second Edition},
+  author = {Wooldridge, Jeffrey M.},
+  date = {2010-10-01},
+  edition = {second edition},
+  publisher = {The MIT Press},
+  location = {Cambridge, Mass},
+  abstract = {The second edition of a comprehensive state-of-the-art graduate level text on microeconometric methods, substantially revised and updated.The second edition of this acclaimed graduate text provides a unified treatment of two methods used in contemporary econometric research, cross section and data panel methods. By focusing on assumptions that can be given behavioral content, the book maintains an appropriate level of rigor while emphasizing intuitive thinking. The analysis covers both linear and nonlinear models, including models with dynamics and/or individual heterogeneity. In addition to general estimation frameworks (particular methods of moments and maximum likelihood), specific linear and nonlinear methods are covered in detail, including probit and logit models and their multivariate, Tobit models, models for count data, censored and missing data schemes, causal (or treatment) effects, and duration analysis.Econometric Analysis of Cross Section and Panel Data was the first graduate econometrics text to focus on microeconomic data structures, allowing assumptions to be separated into population and sampling assumptions. This second edition has been substantially updated and revised. Improvements include a broader class of models for missing data problems; more detailed treatment of cluster problems, an important topic for empirical researchers; expanded discussion of "generalized instrumental variables" (GIV) estimation; new coverage (based on the author's own recent research) of inverse probability weighting; a more complete framework for estimating treatment effects with panel data, and a firmly established link between econometric approaches to nonlinear panel data and the "generalized estimating equation" literature popular in statistics and other fields. New attention is given to explaining when particular econometric methods can be applied; the goal is not only to tell readers what does work, but why certain "obvious" procedures do not. The numerous included exercises, both theoretical and computer-based, allow the reader to extend methods covered in the text and discover new insights.},
+  isbn = {978-0-262-23258-6},
+  language = {en},
+  pagetotal = {1096}
 }
 
 @book{wooldridge2019introductorya,
@@ -34287,6 +34362,23 @@
   number = {4},
   pages = {047102},
   doi = {10.1103/PhysRevE.74.047102}
+}
+
+@online{yiu2023semiparametric,
+  title = {Semiparametric Posterior Corrections},
+  author = {Yiu, Andrew and Fong, Edwin and Holmes, Chris and Rousseau, Judith},
+  date = {2023-06-09},
+  eprint = {2306.06059},
+  eprinttype = {arxiv},
+  eprintclass = {math, stat},
+  doi = {10.48550/arXiv.2306.06059},
+  url = {http://arxiv.org/abs/2306.06059},
+  urldate = {2023-06-19},
+  abstract = {We present a new approach to semiparametric inference using corrected posterior distributions. The method allows us to leverage the adaptivity, regularization and predictive power of nonparametric Bayesian procedures to estimate low-dimensional functionals of interest without being restricted by the holistic Bayesian formalism. Starting from a conventional nonparametric posterior, we target the functional of interest by transforming the entire distribution with a Bayesian bootstrap correction. We provide conditions for the resulting \$\textbackslash textit\{one-step posterior\}\$ to possess calibrated frequentist properties and specialize the results for several canonical examples: the integrated squared density, the mean of a missing-at-random outcome, and the average causal treatment effect on the treated. The procedure is computationally attractive, requiring only a simple, efficient post-processing step that can be attached onto any arbitrary posterior sampling algorithm. Using the ACIC 2016 causal data analysis competition, we illustrate that our approach can outperform the existing state-of-the-art through the propagation of Bayesian uncertainty.},
+  language = {en},
+  pubstate = {preprint},
+  keywords = {Mathematics - Statistics Theory,Statistics - Methodology},
+  file = {/home/fli/carbon/Papers/zotero-files/2023/Yiu_Fong_Holmes_Rousseau_2023_Semiparametric posterior corrections.pdf}
 }
 
 @online{yoon2022robust,
@@ -35173,6 +35265,23 @@
   urldate = {2022-10-11},
   abstract = {Advances in information technology have led to extremely large datasets that are often kept in different storage centers. Existing statistical methods must be adapted to overcome the resulting computational obstacles while retaining statistical validity and efficiency. In this situation, the split-and-conquer strategy is among the most effective solutions to many statistical problems, including quantile processes, regression analysis, principal eigenspaces, and exponential families. This paper applies this strategy to develop a distributed learning procedure of finite Gaussian mixtures. We recommend a reduction strategy and invent an effective majorization-minimization algorithm. The new estimator is consistent and retains root-n consistency under some general conditions. Experiments based on simulated and real-world datasets show that the proposed estimator has comparable statistical performance with the global estimator based on the full dataset, if the latter is feasible. It can even outperform the global estimator for the purpose of clustering if the model assumption does not fully match the real-world data. It also has better statistical and computational performance than some existing split-and-conquer approaches.},
   file = {/home/fli/carbon/Papers/zotero-files/2022/Zhang_Chen_2022_Distributed Learning of Finite Gaussian Mixtures.pdf}
+}
+
+@online{zhang2023discrete,
+  title = {Discrete Forecast Reconciliation},
+  author = {Zhang, Bohan and Panagiotelis, Anastasios and Li, Feng and Kang, Yanfei},
+  date = {2023-06-02},
+  eprint = {2305.18809},
+  eprinttype = {arxiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2305.18809},
+  url = {http://arxiv.org/abs/2305.18809},
+  urldate = {2023-06-13},
+  abstract = {While forecast reconciliation has seen great success for real valued data, the method has not yet been comprehensively extended to the discrete case. This paper defines and develops a formal discrete forecast reconciliation framework based on optimising scoring rules using quadratic programming. The proposed framework produces coherent joint probabilistic forecasts for count hierarchical time series. Two discrete reconciliation algorithms are proposed and compared to generalisations of the top-down and bottom-up approaches to count data. Two simulation experiments and two empirical examples are conducted to validate that the proposed reconciliation algorithms improve forecast accuracy. The empirical applications are to forecast criminal offences in Washington D.C. and the exceedance of thresholds in age-specific mortality rates in Australia. Compared to the top-down and bottom-up approaches, the proposed framework shows superior performance in both simulations and empirical studies.},
+  language = {en},
+  pubstate = {preprint},
+  keywords = {Statistics - Methodology},
+  file = {/home/fli/carbon/Papers/zotero-files/2023/Zhang_Panagiotelis_Li_Kang_2023_Discrete forecast reconciliation.pdf}
 }
 
 @article{zhang2023optimal,
