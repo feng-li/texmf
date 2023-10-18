@@ -63,23 +63,6 @@
   doi = {10.1080/07350015.2013.844155}
 }
 
-@report{AastveitKA2018EvolutionForecast,
-  title = {The Evolution of Forecast Density Combinations in Economics},
-  author = {Aastveit, Knut Are and Mitchell, James and Ravazzolo, Francesco and Van Dijk, Herman K},
-  date = {2018},
-  institution = {Tinbergen Institute Discussion Paper}
-}
-
-@misc{AastveitKA2019EvolutionForecast,
-  title = {The Evolution of Forecast Density Combinations in Economics},
-  author = {Aastveit, Knut Are and Mitchell, James and Ravazzolo, Francesco and van Dijk, Herman K},
-  options = {useprefix=true},
-  date = {2019-04},
-  doi = {10.1093/acrefore/9780190625979.013.381},
-  language = {en},
-  organization = {Oxford University Press}
-}
-
 @inproceedings{AbavisaniM2022GRACECGeneralized,
   title = {GRACE-C: Generalized Rate Agnostic Causal Estimation via Constraints},
   shorttitle = {GRACE-C},
@@ -5849,14 +5832,6 @@
   date = {2015}
 }
 
-@book{ChangW2019ShinyWeb,
-  title = {Shiny: Web Application Framework for R},
-  author = {Chang, Winston and Cheng, Joe and Allaire, J. J. and Xie, Yihui and McPherson, Jonathan},
-  date = {2019},
-  volume = {9},
-  url = {https://CRAN.R-project.org/package=shiny}
-}
-
 @article{ChangX2011GeneralizationBounds,
   title = {Generalization Bounds of Regularization Algorithms Derived Simultaneously through Hypothesis Space Complexity, Algorithmic Stability and Data Quality},
   author = {Chang, Xiangyu and Xu, Zongben and Zou, Bin and Zhang, Hai},
@@ -7723,6 +7698,40 @@
   pages = {355--362},
   publisher = {Springer},
   doi = {10.1007/s11222-006-9391-y}
+}
+
+@inproceedings{CoraniG2021ProbabilisticReconciliation,
+  title = {Probabilistic Reconciliation of~Hierarchical Forecast via Bayes’ Rule},
+  booktitle = {Machine Learning and Knowledge Discovery in Databases},
+  author = {Corani, Giorgio and Azzimonti, Dario and Augusto, João P. S. C. and Zaffalon, Marco},
+  editor = {Hutter, Frank and Kersting, Kristian and Lijffijt, Jefrey and Valera, Isabel},
+  date = {2021},
+  series = {Lecture Notes in Computer Science},
+  pages = {211--226},
+  publisher = {Springer International Publishing},
+  location = {Cham},
+  doi = {10.1007/978-3-030-67664-3_13},
+  abstract = {We present a novel approach for reconciling hierarchical forecasts, based on Bayes’ rule. We define a prior distribution for the bottom time series of the hierarchy, based on the bottom base forecasts. Then we update their distribution via Bayes’ rule, based on the base forecasts for the upper time series. Under the Gaussian assumption, we derive the updating in closed-form. We derive two algorithms, which differ as for the assumed independencies. We discuss their relation with the MinT reconciliation algorithm and with the Kalman filter, and we compare them experimentally.},
+  isbn = {978-3-030-67664-3},
+  language = {en},
+  keywords = {Bayes’ rule,Hierarchical forecasting,Linear-Gaussian model,Reconciliation},
+  file = {/home/fli/carbon/Papers/zotero-files/2021/Corani_Azzimonti_Augusto_Zaffalon_2021_Probabilistic Reconciliation of Hierarchical Forecast via Bayes’ Rule.pdf}
+}
+
+@article{CoraniG2023ProbabilisticReconciliation,
+  title = {Probabilistic Reconciliation of Count Time Series},
+  author = {Corani, Giorgio and Azzimonti, Dario and Rubattu, Nicolò},
+  date = {2023-06-14},
+  journaltitle = {International Journal of Forecasting},
+  shortjournal = {International Journal of Forecasting},
+  issn = {0169-2070},
+  doi = {10.1016/j.ijforecast.2023.04.003},
+  url = {https://www.sciencedirect.com/science/article/pii/S0169207023000390},
+  urldate = {2023-10-17},
+  abstract = {Forecast reconciliation is an important research topic. Yet, there is currently neither a formal framework nor a practical method for the probabilistic reconciliation of count time series. This paper proposes a definition of coherency and reconciled probabilistic forecast, which applies to real-valued and count variables, and a novel method for probabilistic reconciliation. It is based on a generalization of Bayes’ rule and can reconcile real-value and count variables. When applied to count variables, it yields a reconciled probability mass function. Our experiments with the temporal reconciliation of count variables show a major forecast improvement compared to the probabilistic Gaussian reconciliation.},
+  language = {en},
+  keywords = {Bayes rule,Count time series,Forecast reconciliation,Probabilistic reconciliation,Virtual evidence},
+  file = {/home/fli/carbon/Papers/zotero-files/2023/Corani_Azzimonti_Rubattu_2023_Probabilistic reconciliation of count time series.pdf}
 }
 
 @article{CorizzoR2020ScalableAutoEncoders,
@@ -13139,30 +13148,16 @@
   pages = {1901--1910}
 }
 
-@online{GastingerJ2021StudyEnsemble,
-  title = {A Study on Ensemble Learning for Time Series Forecasting and the Need for Meta-Learning},
-  author = {Gastinger, Julia and Nicolas, Sébastien and Stepić, Dušica and Schmidt, Mischa and Schülke, Anett},
-  date = {2021-04-23},
-  eprint = {2104.11475},
-  eprinttype = {arxiv},
-  eprintclass = {cs},
-  url = {http://arxiv.org/abs/2104.11475},
-  urldate = {2022-09-28},
-  abstract = {The contribution of this work is twofold: (1) We introduce a collection of ensemble methods for time series forecasting to combine predictions from base models. We demonstrate insights on the power of ensemble learning for forecasting, showing experiment results on about 16000 openly available datasets, from M4, M5, M3 competitions, as well as FRED (Federal Reserve Economic Data) datasets. Whereas experiments show that ensembles provide a benefit on forecasting results, there is no clear winning ensemble strategy (plus hyperparameter configuration). Thus, in addition, (2), we propose a meta-learning step to choose, for each dataset, the most appropriate ensemble method and their hyperparameter configuration to run based on dataset meta-features.},
-  language = {en},
-  pubstate = {preprint},
-  keywords = {Computer Science - Machine Learning},
-  file = {/home/fli/carbon/Papers/zotero-files/2021/Gastinger_Nicolas_Stepić_Schmidt_Schülke_2021_A study on Ensemble Learning for Time Series Forecasting and the need for.pdf}
-}
-
-@inproceedings{GastingerJ2021StudyEnsemblea,
+@inproceedings{GastingerJ2021StudyEnsemble,
   title = {A Study on Ensemble Learning for Time Series Forecasting and the Need for Meta-Learning},
   booktitle = {2021 International Joint Conference on Neural Networks (IJCNN)},
   author = {Gastinger, Julia and Nicolas, Sébastien and Stepić, Dušica and Schmidt, Mischa and Schülke, Anett},
   date = {2021},
   pages = {1--8},
   doi = {10.1109/IJCNN52387.2021.9533378},
-  language = {en}
+  language = {en},
+  keywords = {Computer Science - Machine Learning},
+  file = {/home/fli/carbon/Papers/zotero-files/2021/Gastinger_Nicolas_Stepić_Schmidt_Schülke_2021_A study on Ensemble Learning for Time Series Forecasting and the need for.pdf}
 }
 
 @article{GazalS2012AccuracyVariational,
@@ -13198,7 +13193,7 @@
   language = {en},
   pmcid = {PMC7820390},
   keywords = {Aged,{Aged, 80 and over},Blindness,Cataract,Eye Diseases,Female,Forecasting,Glaucoma,Global Burden of Disease,Global Health,Humans,Macular Degeneration,Male,Middle Aged,Presbyopia,{Vision, Low},Visual Acuity},
-  file = {/home/fli/carbon/Papers/zotero-files/2021/GBD 2019 Blindness and Vision Impairment Collaborators_Vision Loss Expert Group of the Global Burden of Disease Study_2021_Trends in prevalence of blindness and distance and near vision impairment over.pdf}
+  file = {/home/fli/carbon/Papers/zotero-files/2021/GBD 2019 Blindness and Vision Impairment Collaborators_Vision Loss Expert Group of the Global Burden of Disease Study_2021_Trends in prevalence of blindness and distance and near vision impairment over.pdf;/home/fli/carbon/Papers/zotero-files/2021/GBD 2019 Blindness and Vision Impairment Collaborators_Vision Loss Expert Group of the Global Burden of Disease Study_2021_Trends in prevalence of blindness and distance and near vision impairment over2.pdf}
 }
 
 @article{GBD2019DiseasesandInjuriesCollaborators2020GlobalBurden,
@@ -17551,15 +17546,6 @@
   version = {0.0.1}
 }
 
-@manual{HyndmanRJ2019TsfeaturesTime,
-  type = {manual},
-  title = {{{tsfeatures}}: Time Series Feature Extraction},
-  author = {Hyndman, Rob J and Kang, Yanfei and Montero-Manso, Pablo and Talagala, Thiyanga S and Wang, Earo and Yang, Yangzhuoran and O'Hara-Wild, Mitchell and Ben Taieb, Souhaib and Hanqing, Cao and Lake, D K and Laptev, Nikolay and Moorman, J R},
-  date = {2019},
-  url = {https://CRAN.R-project.org/package=tsfeatures},
-  language = {en}
-}
-
 @article{HyndmanRJ2020BriefHistory,
   title = {A Brief History of Forecasting Competitions},
   author = {Hyndman, Rob J},
@@ -19589,15 +19575,6 @@
   url = {http://www.sciencedirect.com/science/article/pii/S0169809512001342}
 }
 
-@inproceedings{ke2017lightgbm,
-  title = {LightGBM: A Highly Efficient Gradient Boosting Decision Tree},
-  booktitle = {Advances in Neural Information Processing Systems},
-  author = {Ke, Guolin and Meng, Qi and Finley, Thomas and Wang, Taifeng and Chen, Wei and Ma, Weidong and Ye, Qiwei and Liu, Tie-Yan},
-  date = {2017},
-  pages = {3146--3154},
-  language = {en}
-}
-
 @article{KearnsB2013GoodPractice,
   title = {Good Practice Guidelines for the Use of Statistical Regression Models in Economic Evaluations},
   author = {Kearns, Ben and Ara, Roberta and Wailoo, Allan and Manca, Andrea and Alava, Monica Hernández and Abrams, Keith and Campbell, Mike},
@@ -19615,11 +19592,11 @@
   file = {/home/fli/carbon/Papers/zotero-files/2013/Kearns_Ara_Wailoo et al_2013_Good Practice Guidelines for the use of Statistical Regression Models in.pdf}
 }
 
-@article{KeG2017LightGBMHighly,
+@inproceedings{KeG2017LightGBMHighly,
   title = {LightGBM: A Highly Efficient Gradient Boosting Decision Tree},
+  booktitle = {Advances in Neural Information Processing Systems},
   author = {Ke, Guolin and Meng, Qi and Finley, Thomas and Wang, Taifeng and Chen, Wei and Ma, Weidong and Ye, Qiwei and Liu, Tie-Yan},
   date = {2017},
-  journaltitle = {Advances in neural information processing systems},
   pages = {3146--3154},
   abstract = {Gradient Boosting Decision Tree (GBDT) is a popular machine learning algorithm, and has quite a few effective implementations such as XGBoost and pGBRT. Although many engineering optimizations have been adopted in these implementations, the efficiency and scalability are still unsatisfactory when the feature dimension is high and data size is large. A major reason is that for each feature, they need to scan all the data instances to estimate the information gain of all possible split points, which is very time consuming. To tackle this problem, we propose two novel techniques: Gradient-based One-Side Sampling (GOSS) and Exclusive Feature Bundling (EFB). With GOSS, we exclude a significant proportion of data instances with small gradients, and only use the rest to estimate the information gain. We prove that, since the data instances with larger gradients play a more important role in the computation of information gain, GOSS can obtain quite accurate estimation of the information gain with a much smaller data size. With EFB, we bundle mutually exclusive features (i.e., they rarely take nonzero values simultaneously), to reduce the number of features. We prove that finding the optimal bundling of exclusive features is NP-hard, but a greedy algorithm can achieve quite good approximation ratio (and thus can effectively reduce the number of features without hurting the accuracy of split point determination by much). We call our new GBDT implementation with GOSS and EFB LightGBM. Our experiments on multiple public datasets show that, LightGBM speeds up the training process of conventional GBDT by up to over 20 times while achieving almost the same accuracy.},
   language = {en},
@@ -24371,25 +24348,7 @@
   abstract = {In this paper, we propose a machine learning approach for forecasting hierarchical time series. When dealing with hierarchical time series, apart from generating accurate forecasts, one needs to select a suitable method for producing reconciled forecasts. Forecast reconciliation is the process of adjusting forecasts to make them coherent across the hierarchy. In literature, coherence is often enforced by using a post-processing technique on the base forecasts produced by suitable time series forecasting methods. On the contrary, our idea is to use a deep neural network to directly produce accurate and reconciled forecasts. We exploit the ability of a deep neural network to extract information capturing the structure of the hierarchy. We impose the reconciliation at training time by minimizing a customized loss function. In many practical applications, besides time series data, hierarchical time series include explanatory variables that are beneficial for increasing the forecasting accuracy. Exploiting this further information, our approach links the relationship between time series features extracted at any level of the hierarchy and the explanatory variables into an end-to-end neural network providing accurate and reconciled point forecasts. The effectiveness of the approach is validated on three real-world datasets, where our method outperforms state-of-the-art competitors in hierarchical forecasting.},
   language = {en},
   keywords = {Deep neural network,Forecast,Hierarchical time series,Machine learning},
-  file = {/home/fli/carbon/Papers/zotero-files/2021/Mancuso_Piccialli_Sudoso_2021_A machine learning approach for forecasting hierarchical time series.pdf}
-}
-
-@article{MancusoP2021MachineLearninga,
-  title = {A Machine Learning Approach for Forecasting Hierarchical Time Series},
-  author = {Mancuso, Paolo and Piccialli, Veronica and Sudoso, Antonio M.},
-  date = {2021-11-15},
-  journaltitle = {Expert Systems with Applications},
-  shortjournal = {Expert Systems with Applications},
-  volume = {182},
-  pages = {115102},
-  issn = {0957-4174},
-  doi = {10.1016/j.eswa.2021.115102},
-  url = {https://www.sciencedirect.com/science/article/pii/S0957417421005431},
-  urldate = {2023-10-09},
-  abstract = {In this paper, we propose a machine learning approach for forecasting hierarchical time series. When dealing with hierarchical time series, apart from generating accurate forecasts, one needs to select a suitable method for producing reconciled forecasts. Forecast reconciliation is the process of adjusting forecasts to make them coherent across the hierarchy. In literature, coherence is often enforced by using a post-processing technique on the base forecasts produced by suitable time series forecasting methods. On the contrary, our idea is to use a deep neural network to directly produce accurate and reconciled forecasts. We exploit the ability of a deep neural network to extract information capturing the structure of the hierarchy. We impose the reconciliation at training time by minimizing a customized loss function. In many practical applications, besides time series data, hierarchical time series include explanatory variables that are beneficial for increasing the forecasting accuracy. Exploiting this further information, our approach links the relationship between time series features extracted at any level of the hierarchy and the explanatory variables into an end-to-end neural network providing accurate and reconciled point forecasts. The effectiveness of the approach is validated on three real-world datasets, where our method outperforms state-of-the-art competitors in hierarchical forecasting.},
-  language = {en},
-  keywords = {Deep neural network,Forecast,Hierarchical time series,Machine learning},
-  file = {/home/fli/carbon/Papers/zotero-files/2021/Mancuso_Piccialli_Sudoso_2021_A machine learning approach for forecasting hierarchical time series2.pdf}
+  file = {/home/fli/carbon/Papers/zotero-files/2021/Mancuso_Piccialli_Sudoso_2021_A machine learning approach for forecasting hierarchical time series.pdf;/home/fli/carbon/Papers/zotero-files/2021/Mancuso_Piccialli_Sudoso_2021_A machine learning approach for forecasting hierarchical time series2.pdf}
 }
 
 @online{MandtS2018StochasticGradient,
@@ -25777,26 +25736,6 @@
   language = {en}
 }
 
-@article{Montero-MansoP2018M4metalearning,
-  title = {M4metalearning},
-  author = {Montero-Manso, Pablo and Talagala, Thiyanga S. and Hyndman, Rob and Athanasopoulos, George},
-  date = {2018},
-  journaltitle = {GitHub repository},
-  publisher = {GitHub},
-  url = {https://github.com/robjhyndman/M4metalearning}
-}
-
-@book{Montero-MansoP2018M4metalearningMetalearning,
-  title = {M4metalearning: Metalearning Tools For Time Series Forecasting},
-  author = {Montero-Manso, Pablo},
-  date = {2018},
-  issn = {0040-1706},
-  doi = {10.2307/1270024},
-  url = {https://github.com/robjhyndman/M4metalearning},
-  owner = {fli},
-  timestamp = {2013.02.06}
-}
-
 @manual{Montero-MansoP2019M4metalearningMetalearning,
   type = {manual},
   title = {M4metalearning: Metalearning Tools For Time Series Forecasting},
@@ -26227,6 +26166,26 @@
   pagetotal = {1067},
   keywords = {Machine learning,Probabilities},
   file = {/home/fli/carbon/Papers/zotero-files/2012/Murphy_2012_Machine learning.pdf}
+}
+
+@article{MurrayCJL2020GlobalBurden,
+  title = {Global Burden of 87 Risk Factors in 204 Countries and Territories, 1990–2019: A Systematic Analysis for the Global Burden of Disease Study 2019},
+  shorttitle = {Global Burden of 87 Risk Factors in 204 Countries and Territories, 1990–2019},
+  author = {Murray, Christopher J L and Aravkin, Aleksandr Y and Zheng, Peng and Abbafati, Cristiana and Abbas, Kaja M and Abbasi-Kangevari, Mohsen and Abd-Allah, Foad and Abdelalim, Ahmed and Abdollahi, Mohammad and Abdollahpour, Ibrahim and Abegaz, Kedir Hussein and Abolhassani, Hassan and Aboyans, Victor and Abreu, Lucas Guimarães and Abrigo, Michael R M and Abualhasan, Ahmed and Abu-Raddad, Laith Jamal and Abushouk, Abdelrahman I and Adabi, Maryam and Adekanmbi, Victor and Adeoye, Abiodun Moshood and Adetokunboh, Olatunji O and Adham, Davoud and Advani, Shailesh M and Agarwal, Gina and Aghamir, Seyed Mohammad Kazem and Agrawal, Anurag and Ahmad, Tauseef and Ahmadi, Keivan and Ahmadi, Mehdi and Ahmadieh, Hamid and Ahmed, Muktar Beshir and Akalu, Temesgen Yihunie and Akinyemi, Rufus Olusola and Akinyemiju, Tomi and Akombi, Blessing and Akunna, Chisom Joyqueenet and Alahdab, Fares and Al-Aly, Ziyad and Alam, Khurshid and Alam, Samiah and Alam, Tahiya and Alanezi, Fahad Mashhour and Alanzi, Turki M and wassihun Alemu, Biresaw and Alhabib, Khalid F and Ali, Muhammad and Ali, Saqib and Alicandro, Gianfranco and Alinia, Cyrus and Alipour, Vahid and Alizade, Hesam and Aljunid, Syed Mohamed and Alla, François and Allebeck, Peter and Almasi-Hashiani, Amir and Al-Mekhlafi, Hesham M and Alonso, Jordi and Altirkawi, Khalid A and Amini-Rarani, Mostafa and Amiri, Fatemeh and Amugsi, Dickson A and Ancuceanu, Robert and Anderlini, Deanna and Anderson, Jason A and Andrei, Catalina Liliana and Andrei, Tudorel and Angus, Colin and Anjomshoa, Mina and Ansari, Fereshteh and Ansari-Moghaddam, Alireza and Antonazzo, Ippazio Cosimo and Antonio, Carl Abelardo T and Antony, Catherine M and Antriyandarti, Ernoiz and Anvari, Davood and Anwer, Razique and Appiah, Seth Christopher Yaw and Arabloo, Jalal and Arab-Zozani, Morteza and Ariani, Filippo and Armoon, Bahram and Ärnlöv, Johan and Arzani, Afsaneh and Asadi-Aliabadi, Mehran and Asadi-Pooya, Ali A and Ashbaugh, Charlie and Assmus, Michael and Atafar, Zahra and Atnafu, Desta Debalkie and Atout, Maha Moh'd Wahbi and Ausloos, Floriane and Ausloos, Marcel and Ayala Quintanilla, Beatriz Paulina and Ayano, Getinet and Ayanore, Martin Amogre and Azari, Samad and Azarian, Ghasem and Azene, Zelalem Nigussie and Badawi, Alaa and Badiye, Ashish D and Bahrami, Mohammad Amin and Bakhshaei, Mohammad Hossein and Bakhtiari, Ahad and Bakkannavar, Shankar M and Baldasseroni, Alberto and Ball, Kylie and Ballew, Shoshana H and Balzi, Daniela and Banach, Maciej and Banerjee, Srikanta K and Bante, Agegnehu Bante and Baraki, Adhanom Gebreegziabher and Barker-Collo, Suzanne Lyn and Bärnighausen, Till Winfried and Barrero, Lope H and Barthelemy, Celine M and Barua, Lingkan and Basu, Sanjay and Baune, Bernhard T and Bayati, Mohsen and Becker, Jacob S and Bedi, Neeraj and Beghi, Ettore and Béjot, Yannick and Bell, Michellr L and Bennitt, Fiona B and Bensenor, Isabela M and Berhe, Kidanemaryam and Berman, Adam E and Bhagavathula, Akshaya Srikanth and Bhageerathy, Reshmi and Bhala, Neeraj and Bhandari, Dinesh and Bhattacharyya, Krittika and Bhutta, Zulfiqar A and Bijani, Ali and Bikbov, Boris and Bin Sayeed, Muhammad Shahdaat and Biondi, Antonio and Birihane, Binyam Minuye and Bisignano, Catherine and Biswas, Raaj Kishore and Bitew, Helen and Bohlouli, Somayeh and Bohluli, Mehdi and Boon-Dooley, Alexandra S and Borges, Guilherme and Borzì, Antonio Maria and Borzouei, Shiva and Bosetti, Cristina and Boufous, Soufiane and Braithwaite, Dejana and Breitborde, Nicholas J K and Breitner, Susanne and Brenner, Hermann and Briant, Paul Svitil and Briko, Andrey Nikolaevich and Briko, Nikolay Ivanovich and Britton, Gabrielle B and Bryazka, Dana and Bumgarner, Blair R and Burkart, Katrin and Burnett, Richard Thomas and Burugina Nagaraja, Sharath and Butt, Zahid A and Caetano dos Santos, Florentino Luciano and Cahill, Leah E and Cámera, Luis LA Alberto and Campos-Nonato, Ismael R and Cárdenas, Rosario and Carreras, Giulia and Carrero, Juan J and Carvalho, Felix and Castaldelli-Maia, Joao Mauricio and Castañeda-Orjuela, Carlos A and Castelpietra, Giulio and Castro, Franz and Causey, Kate and Cederroth, Christopher R and Cercy, Kelly M and Cerin, Ester and Chandan, Joht Singh and Chang, Kai-Lan and Charlson, Fiona J and Chattu, Vijay Kumar and Chaturvedi, Sarika and Cherbuin, Nicolas and Chimed-Ochir, Odgerel and Cho, Daniel Youngwhan and Choi, Jee-Young Jasmine and Christensen, Hanne and Chu, Dinh-Toi and Chung, Michael T and Chung, Sheng-Chia and Cicuttini, Flavia M and Ciobanu, Liliana G and Cirillo, Massimo and Classen, Thomas Khaled Dwayne and Cohen, Aaron J and Compton, Kelly and Cooper, Owen R and Costa, Vera Marisa and Cousin, Ewerton and Cowden, Richard G and Cross, Di H and Cruz, Jessica A and Dahlawi, Saad M A and Damasceno, Albertino Antonio Moura and Damiani, Giovanni and Dandona, Lalit and Dandona, Rakhi and Dangel, William James and Danielsson, Anna-Karin and Dargan, Paul I and Darwesh, Aso Mohammad and Daryani, Ahmad and Das, Jai K and Das Gupta, Rajat and das Neves, José and Dávila-Cervantes, Claudio Alberto and Davitoiu, Dragos Virgil and De Leo, Diego and Degenhardt, Louisa and DeLang, Marissa and Dellavalle, Robert Paul and Demeke, Feleke Mekonnen and Demoz, Gebre Teklemariam and Demsie, Desalegn Getnet and Denova-Gutiérrez, Edgar and Dervenis, Nikolaos and Dhungana, Govinda Prasad and Dianatinasab, Mostafa and Dias da Silva, Diana and Diaz, Daniel and Dibaji Forooshani, Zahra Sadat and Djalalinia, Shirin and Do, Hoa Thi and Dokova, Klara and Dorostkar, Fariba and Doshmangir, Leila and Driscoll, Tim Robert and Duncan, Bruce B and Duraes, Andre Rodrigues and Eagan, Arielle Wilder and Edvardsson, David and El Nahas, Nevine and El Sayed, Iman and El Tantawi, Maha and Elbarazi, Iffat and Elgendy, Islam Y and El-Jaafary, Shaimaa I and Elyazar, Iqbal RF and Emmons-Bell, Sophia and Erskine, Holly E and Eskandarieh, Sharareh and Esmaeilnejad, Saman and Esteghamati, Alireza and Estep, Kara and Etemadi, Arash and Etisso, Atkilt Esaiyas and Fanzo, Jessica and Farahmand, Mohammad and Fareed, Mohammad and Faridnia, Roghiyeh and Farioli, Andrea and Faro, Andre and Faruque, Mithila and Farzadfar, Farshad and Fattahi, Nazir and Fazlzadeh, Mehdi and Feigin, Valery L and Feldman, Rachel and Fereshtehnejad, Seyed-Mohammad and Fernandes, Eduarda and Ferrara, Giannina and Ferrari, Alize J and Ferreira, Manuela L and Filip, Irina and Fischer, Florian and Fisher, James L and Flor, Luisa Sorio and Foigt, Nataliya A and Folayan, Morenike Oluwatoyin and Fomenkov, Artem Alekseevich and Force, Lisa M and Foroutan, Masoud and Franklin, Richard Charles and Freitas, Marisa and Fu, Weijia and Fukumoto, Takeshi and Furtado, João M and Gad, Mohamed M and Gakidou, Emmanuela and Gallus, Silvano and Garcia-Basteiro, Alberto L and Gardner, William M and Geberemariyam, Biniyam Sahiledengle and Gebreslassie, Assefa Ayalew Ayalew Ayalew and Geremew, Abraham and Gershberg Hayoon, Anna and Gething, Peter W and Ghadimi, Maryam and Ghadiri, Keyghobad and Ghaffarifar, Fatemeh and Ghafourifard, Mansour and Ghamari, Farhad and Ghashghaee, Ahmad and Ghiasvand, Hesam and Ghith, Nermin and Gholamian, Asadollah and Ghosh, Rakesh and Gill, Paramjit Singh and Ginindza, Themba G G and Giussani, Giorgia and Gnedovskaya, Elena V and Goharinezhad, Salime and Gopalani, Sameer Vali and Gorini, Giuseppe and Goudarzi, Houman and Goulart, Alessandra C and Greaves, Felix and Grivna, Michal and Grosso, Giuseppe and Gubari, Mohammed Ibrahim Mohialdeen and Gugnani, Harish Chander and Guimarães, Rafael Alves and Guled, Rashid Abdi and Guo, Gaorui and Guo, Yuming and Gupta, Rajeev and Gupta, Tarun and Haddock, Beatrix and Hafezi-Nejad, Nima and Hafiz, Abdul and Haj-Mirzaian, Arvin and Haj-Mirzaian, Arya and Hall, Brian J and Halvaei, Iman and Hamadeh, Randah R and Hamidi, Samer and Hammer, Melanie S and Hankey, Graeme J and Haririan, Hamidreza and Haro, Josep Maria and Hasaballah, Ahmed I and Hasan, Md Mehedi and Hasanpoor, Edris and Hashi, Abdiwahab and Hassanipour, Soheil and Hassankhani, Hadi and Havmoeller, Rasmus J and Hay, Simon I and Hayat, Khezar and Heidari, Golnaz and Heidari-Soureshjani, Reza and Henrikson, Hannah J and Herbert, Molly E and Herteliu, Claudiu and Heydarpour, Fatemeh and Hird, Thomas R and Hoek, Hans W and Holla, Ramesh and Hoogar, Praveen and Hosgood, H Dean and Hossain, Naznin and Hosseini, Mostafa and Hosseinzadeh, Mehdi and Hostiuc, Mihaela and Hostiuc, Sorin and Househ, Mowafa and Hsairi, Mohamed and Hsieh, Vivian Chia-rong and Hu, Guoqing and Hu, Kejia and Huda, Tanvir M and Humayun, Ayesha and Huynh, Chantal K and Hwang, Bing-Fang and Iannucci, Vincent C and Ibitoye, Segun Emmanuel and Ikeda, Nayu and Ikuta, Kevin S and Ilesanmi, Olayinka Stephen and Ilic, Irena M and Ilic, Milena D and Inbaraj, Leeberk Raja and Ippolito, Helen and Iqbal, Usman and Irvani, Seyed Sina Naghibi and Irvine, Caleb Mackay Salpeter and Islam, M Mofizul and Islam, Sheikh Mohammed Shariful and Iso, Hiroyasu and Ivers, Rebecca Q and Iwu, Chidozie C D and Iwu, Chinwe Juliana and Iyamu, Ihoghosa Osamuyi and Jaafari, Jalil and Jacobsen, Kathryn H and Jafari, Hussain and Jafarinia, Morteza and Jahani, Mohammad Ali and Jakovljevic, Mihajlo and Jalilian, Farzad and James, Spencer L and Janjani, Hosna and Javaheri, Tahereh and Javidnia, Javad and Jeemon, Panniyammakal and Jenabi, Ensiyeh and Jha, Ravi Prakash and Jha, Vivekanand and Ji, John S and Johansson, Lars and John, Oommen and John-Akinola, Yetunde O and Johnson, Catherine Owens and Jonas, Jost B and Joukar, Farahnaz and Jozwiak, Jacek Jerzy and Jürisson, Mikk and Kabir, Ali and Kabir, Zubair and Kalani, Hamed and Kalani, Rizwan and Kalankesh, Leila R and Kalhor, Rohollah and Kanchan, Tanuj and Kapoor, Neeti and Karami Matin, Behzad and Karch, André and Karim, Mohd Anisul and Kassa, Getachew Mullu and Katikireddi, Srinivasa Vittal and Kayode, Gbenga A and Kazemi Karyani, Ali and Keiyoro, Peter Njenga and Keller, Cathleen and Kemmer, Laura and Kendrick, Parkes J and Khalid, Nauman and Khammarnia, Mohammad and Khan, Ejaz Ahmad and Khan, Maseer and Khatab, Khaled and Khater, Mona M and Khatib, Mahalaqua Nazli and Khayamzadeh, Maryam and Khazaei, Salman and Kieling, Christian and Kim, Yun Jin and Kimokoti, Ruth W and Kisa, Adnan and Kisa, Sezer and Kivimäki, Mika and Knibbs, Luke D and Knudsen, Ann Kristin Skrindo and Kocarnik, Jonathan M and Kochhar, Sonali and Kopec, Jacek A and Korshunov, Vladimir Andreevich and Koul, Parvaiz A and Koyanagi, Ai and Kraemer, Moritz U G and Krishan, Kewal and Krohn, Kris J and Kromhout, Hans and Kuate Defo, Barthelemy and Kumar, G Anil and Kumar, Vivek and Kurmi, Om P and Kusuma, Dian and La Vecchia, Carlo and Lacey, Ben and Lal, Dharmesh Kumar and Lalloo, Ratilal and Lallukka, Tea and Lami, Faris Hasan and Landires, Iván and Lang, Justin J and Langan, Sinéad M and Larsson, Anders O and Lasrado, Savita and Lauriola, Paolo and Lazarus, Jeffrey V and Lee, Paul H and Lee, Shaun Wen Huey and LeGrand, Kate E and Leigh, James and Leonardi, Matilde and Lescinsky, Haley and Leung, Janni and Levi, Miriam and Li, Shanshan and Lim, Lee-Ling and Linn, Shai and Liu, Shiwei and Liu, Simin and Liu, Yang and Lo, Justin and Lopez, Alan D and Lopez, Jaifred Christian F and Lopukhov, Platon D and Lorkowski, Stefan and Lotufo, Paulo A and Lu, Alton and Lugo, Alessandra and Maddison, Emilie R and Mahasha, Phetole Walter and Mahdavi, Mokhtar Mahdavi and Mahmoudi, Morteza and Majeed, Azeem and Maleki, Afshin and Maleki, Shokofeh and Malekzadeh, Reza and Malta, Deborah Carvalho and Mamun, Abdullah A and Manda, Ana Laura and Manguerra, Helena and Mansour-Ghanaei, Fariborz and Mansouri, Borhan and Mansournia, Mohammad Ali and Mantilla Herrera, Ana M and Maravilla, Joemer C and Marks, Ashley and Martin, Randall V and Martini, Santi and Martins-Melo, Francisco Rogerlândio and Masaka, Anthony and Masoumi, Seyedeh Zahra and Mathur, Manu Raj and Matsushita, Kunihiro and Maulik, Pallab K and McAlinden, Colm and McGrath, John J and McKee, Martin and Mehndiratta, Man Mohan and Mehri, Fereshteh and Mehta, Kala M and Memish, Ziad A and Mendoza, Walter and Menezes, Ritesh G and Mengesha, Endalkachew Worku and Mereke, Alibek and Mereta, Seid Tiku and Meretoja, Atte and Meretoja, Tuomo J and Mestrovic, Tomislav and Miazgowski, Bartosz and Miazgowski, Tomasz and Michalek, Irmina Maria and Miller, Ted R and Mills, Edward J and Mini, GK and Miri, Mohammad and Mirica, Andreea and Mirrakhimov, Erkin M and Mirzaei, Hamed and Mirzaei, Maryam and Mirzaei, Roya and Mirzaei-Alavijeh, Mehdi and Misganaw, Awoke Temesgen and Mithra, Prasanna and Moazen, Babak and Mohammad, Dara K and Mohammad, Yousef and Mohammad Gholi Mezerji, Naser and Mohammadian-Hafshejani, Abdollah and Mohammadifard, Noushin and Mohammadpourhodki, Reza and Mohammed, Ammas Siraj and Mohammed, Hussen and Mohammed, Jemal Abdu and Mohammed, Shafiu and Mokdad, Ali H and Molokhia, Mariam and Monasta, Lorenzo and Mooney, Meghan D and Moradi, Ghobad and Moradi, Masoud and Moradi-Lakeh, Maziar and Moradzadeh, Rahmatollah and Moraga, Paula and Morawska, Lidia and Morgado-da-Costa, Joana and Morrison, Shane Douglas and Mosapour, Abbas and Mosser, Jonathan F and Mouodi, Simin and Mousavi, Seyyed Meysam and Mousavi Khaneghah, Amin and Mueller, Ulrich Otto and Mukhopadhyay, Satinath and Mullany, Erin C and Musa, Kamarul Imran and Muthupandian, Saravanan and Nabhan, Ashraf F and Naderi, Mehdi and Nagarajan, Ahamarshan Jayaraman and Nagel, Gabriele and Naghavi, Mohsen and Naghshtabrizi, Behshad and Naimzada, Mukhammad David and Najafi, Farid and Nangia, Vinay and Nansseu, Jobert Richie and Naserbakht, Morteza and Nayak, Vinod C and Negoi, Ionut and Ngunjiri, Josephine W and Nguyen, Cuong Tat and Nguyen, Huong Lan Thi and Nguyen, Minh and Nigatu, Yeshambel T and Nikbakhsh, Rajan and Nixon, Molly R and Nnaji, Chukwudi A and Nomura, Shuhei and Norrving, Bo and Noubiap, Jean Jacques and Nowak, Christoph and Nunez-Samudio, Virginia and Oţoiu, Adrian and Oancea, Bogdan and Odell, Christopher M and Ogbo, Felix Akpojene and Oh, In-Hwan and Okunga, Emmanuel Wandera and Oladnabi, Morteza and Olagunju, Andrew T and Olusanya, Bolajoko Olubukunola and Olusanya, Jacob Olusegun and Omer, Muktar Omer and Ong, Kanyin L and Onwujekwe, Obinna E and Orpana, Heather M and Ortiz, Alberto and Osarenotor, Osayomwanbo and Osei, Frank B and Ostroff, Samuel M and Otstavnov, Nikita and Otstavnov, Stanislav S and Øverland, Simon and Owolabi, Mayowa O and P a, Mahesh and Padubidri, Jagadish Rao and Palladino, Raffaele and Panda-Jonas, Songhomitra and Pandey, Anamika and Parry, Charles D H and Pasovic, Maja and Pasupula, Deepak Kumar and Patel, Sangram Kishor and Pathak, Mona and Patten, Scott B and Patton, George C and Pazoki Toroudi, Hamidreza and Peden, Amy E and Pennini, Alyssa and Pepito, Veincent Christian Filipino and Peprah, Emmanuel K and Pereira, David M and Pesudovs, Konrad and Pham, Hai Quang and Phillips, Michael R and Piccinelli, Cristiano and Pilz, Tessa M and Piradov, Michael A and Pirsaheb, Meghdad and Plass, Dietrich and Polinder, Suzanne and Polkinghorne, Kevan R and Pond, Constance Dimity and Postma, Maarten J and Pourjafar, Hadi and Pourmalek, Farshad and Poznańska, Anna and Prada, Sergio I and Prakash, V and Pribadi, Dimas Ria Angga and Pupillo, Elisabetta and Quazi Syed, Zahiruddin and Rabiee, Mohammad and Rabiee, Navid and Radfar, Amir and Rafiee, Ata and Raggi, Alberto and Rahman, Muhammad Aziz and Rajabpour-Sanati, Ali and Rajati, Fatemeh and Rakovac, Ivo and Ram, Pradhum and Ramezanzadeh, Kiana and Ranabhat, Chhabi Lal and Rao, Puja C and Rao, Sowmya J and Rashedi, Vahid and Rathi, Priya and Rawaf, David Laith and Rawaf, Salman and Rawal, Lal and Rawassizadeh, Reza and Rawat, Ramu and Razo, Christian and Redford, Sofia Boston and Reiner, Robert C and Reitsma, Marissa Bettay and Remuzzi, Giuseppe and Renjith, Vishnu and Renzaho, Andre M N and Resnikoff, Serge and Rezaei, Negar and Rezaei, Nima and Rezapour, Aziz and Rhinehart, Phoebe-Anne and Riahi, Seyed Mohammad and Ribeiro, Daniel Cury and Ribeiro, Daniela and Rickard, Jennifer and Rivera, Juan A and Roberts, Nicholas L S and Rodríguez-Ramírez, Sonia and Roever, Leonardo and Ronfani, Luca and Room, Robin and Roshandel, Gholamreza and Roth, Gregory A and Rothenbacher, Dietrich and Rubagotti, Enrico and Rwegerera, Godfrey M and Sabour, Siamak and Sachdev, Perminder S and Saddik, Basema and Sadeghi, Ehsan and Sadeghi, Masoumeh and Saeedi, Reza and Saeedi Moghaddam, Sahar and Safari, Yahya and Safi, Sare and Safiri, Saeid and Sagar, Rajesh and Sahebkar, Amirhossein and Sajadi, S Mohammad and Salam, Nasir and Salamati, Payman and Salem, Hosni and Salem, Marwa R Rashad and Salimzadeh, Hamideh and Salman, Omar Mukhtar and Salomon, Joshua A and Samad, Zainab and Samadi Kafil, Hossein and Sambala, Evanson Zondani and Samy, Abdallah M and Sanabria, Juan and Sánchez-Pimienta, Tania G and Santomauro, Damian Francesco and Santos, Itamar S and Santos, João Vasco and Santric-Milicevic, Milena M and Saraswathy, Sivan Yegnanarayana Iyer and Sarmiento-Suárez, Rodrigo and Sarrafzadegan, Nizal and Sartorius, Benn and Sarveazad, Arash and Sathian, Brijesh and Sathish, Thirunavukkarasu and Sattin, Davide and Saxena, Sonia and Schaeffer, Lauren E and Schiavolin, Silvia and Schlaich, Markus P and Schmidt, Maria Inês and Schutte, Aletta Elisabeth and Schwebel, David C and Schwendicke, Falk and Senbeta, Anbissa Muleta and Senthilkumaran, Subramanian and Sepanlou, Sadaf G and Serdar, Berrin and Serre, Marc L and Shadid, Jamileh and Shafaat, Omid and Shahabi, Saeed and Shaheen, Amira A and Shaikh, Masood Ali and Shalash, Ali S and Shams-Beyranvand, Mehran and Shamsizadeh, Morteza and Sharafi, Kiomars and Sheikh, Aziz and Sheikhtaheri, Abbas and Shibuya, Kenji and Shield, Kevin David and Shigematsu, Mika and Shin, Jae Il and Shin, Min-Jeong and Shiri, Rahman and Shirkoohi, Reza and Shuval, Kerem and Siabani, Soraya and Sierpinski, Radoslaw and Sigfusdottir, Inga Dora and Sigurvinsdottir, Rannveig and Silva, João Pedro and Simpson, Kyle E and Singh, Jasvinder A and Singh, Pushpendra and Skiadaresi, Eirini and Skou, Søren T and Skryabin, Valentin Yurievich and Smith, Emma U R and Soheili, Amin and Soltani, Shahin and Soofi, Moslem and Sorensen, Reed J D and Soriano, Joan B and Sorrie, Muluken Bekele and Soshnikov, Sergey and Soyiri, Ireneous N and Spencer, Cory N and Spotin, Adel and Sreeramareddy, Chandrashekhar T and Srinivasan, Vinay and Stanaway, Jeffrey D and Stein, Caroline and Stein, Dan J and Steiner, Caitlyn and Stockfelt, Leo and Stokes, Mark A and Straif, Kurt and Stubbs, Jacob L and Sufiyan, Mu'awiyyah Babale and Suleria, Hafiz Ansar Rasul and Suliankatchi Abdulkader, Rizwan and Sulo, Gerhard and Sultan, Iyad and Szumowski, Łukasz and Tabarés-Seisdedos, Rafael and Tabb, Karen M and Tabuchi, Takahiro and Taherkhani, Amir and Tajdini, Masih and Takahashi, Ken and Takala, Jukka S and Tamiru, Animut Tagele and Taveira, Nuno and Tehrani-Banihashemi, Arash and Temsah, Mohamad-Hani and Tesema, Getayeneh Antehunegn and Tessema, Zemenu Tadesse and Thurston, George D and Titova, Mariya Vladimirovna and Tohidinik, Hamid Reza and Tonelli, Marcello and Topor-Madry, Roman and Topouzis, Fotis and Torre, Anna E and Touvier, Mathilde and Tovani-Palone, Marcos Roberto Roberto and Tran, Bach Xuan and Travillian, Ravensara and Tsatsakis, Aristidis and Tudor Car, Lorainne and Tyrovolas, Stefanos and Uddin, Riaz and Umeokonkwo, Chukwuma David and Unnikrishnan, Bhaskaran and Upadhyay, Era and Vacante, Marco and Valdez, Pascual R and van Donkelaar, Aaron and Vasankari, Tommi Juhani and Vasseghian, Yasser and Veisani, Yousef and Venketasubramanian, Narayanaswamy and Violante, Francesco S and Vlassov, Vasily and Vollset, Stein Emil and Vos, Theo and Vukovic, Rade and Waheed, Yasir and Wallin, Mitchell Taylor and Wang, Yafeng and Wang, Yuan-Pang and Watson, Alexandrea and Wei, Jingkai and Wei, Melissa Y Wei and Weintraub, Robert G and Weiss, Jordan and Werdecker, Andrea and West, J Jason and Westerman, Ronny and Whisnant, Joanna L and Whiteford, Harvey A and Wiens, Kirsten E and Wolfe, Charles D A and Wozniak, Sarah S and Wu, Ai-Min and Wu, Junjie and Wulf Hanson, Sarah and Xu, Gelin and Xu, Rixing and Yadgir, Simon and Yahyazadeh Jabbari, Seyed Hossein and Yamagishi, Kazumasa and Yaminfirooz, Mousa and Yano, Yuichiro and Yaya, Sanni and Yazdi-Feyzabadi, Vahid and Yeheyis, Tomas Y and Yilgwan, Christopher Sabo and Yilma, Mekdes Tigistu and Yip, Paul and Yonemoto, Naohiro and Younis, Mustafa Z and Younker, Theodore Patrick and Yousefi, Bahman and Yousefi, Zabihollah and Yousefinezhadi, Taraneh and Yousuf, Abdilahi Yousuf and Yu, Chuanhua and Yusefzadeh, Hasan and Zahirian Moghadam, Telma and Zamani, Mohammad and Zamanian, Maryam and Zandian, Hamed and Zastrozhin, Mikhail Sergeevich and Zhang, Yunquan and Zhang, Zhi-Jiang and Zhao, Jeff T and Zhao, Xiu-Ju George and Zhao, Yingxi and Zhou, Maigeng and Ziapour, Arash and Zimsen, Stephanie R M and Brauer, Michael and Afshin, Ashkan and Lim, Stephen S},
+  options = {useprefix=true},
+  date = {2020-10-17},
+  journaltitle = {The Lancet},
+  shortjournal = {The Lancet},
+  volume = {396},
+  number = {10258},
+  pages = {1223--1249},
+  issn = {0140-6736},
+  doi = {10.1016/S0140-6736(20)30752-2},
+  url = {https://www.sciencedirect.com/science/article/pii/S0140673620307522},
+  urldate = {2023-10-16},
+  abstract = {Background Rigorous analysis of levels and trends in exposure to leading risk factors and quantification of their effect on human health are important to identify where public health is making progress and in which cases current efforts are inadequate. The Global Burden of Diseases, Injuries, and Risk Factors Study (GBD) 2019 provides a standardised and comprehensive assessment of the magnitude of risk factor exposure, relative risk, and attributable burden of disease. Methods GBD 2019 estimated attributable mortality, years of life lost (YLLs), years of life lived with disability (YLDs), and disability-adjusted life-years (DALYs) for 87 risk factors and combinations of risk factors, at the global level, regionally, and for 204 countries and territories. GBD uses a hierarchical list of risk factors so that specific risk factors (eg, sodium intake), and related aggregates (eg, diet quality), are both evaluated. This method has six analytical steps. (1) We included 560 risk–outcome pairs that met criteria for convincing or probable evidence on the basis of research studies. 12 risk–outcome pairs included in GBD 2017 no longer met inclusion criteria and 47 risk–outcome pairs for risks already included in GBD 2017 were added based on new evidence. (2) Relative risks were estimated as a function of exposure based on published systematic reviews, 81 systematic reviews done for GBD 2019, and meta-regression. (3) Levels of exposure in each age-sex-location-year included in the study were estimated based on all available data sources using spatiotemporal Gaussian process regression, DisMod-MR 2.1, a Bayesian meta-regression method, or alternative methods. (4) We determined, from published trials or cohort studies, the level of exposure associated with minimum risk, called the theoretical minimum risk exposure level. (5) Attributable deaths, YLLs, YLDs, and DALYs were computed by multiplying population attributable fractions (PAFs) by the relevant outcome quantity for each age-sex-location-year. (6) PAFs and attributable burden for combinations of risk factors were estimated taking into account mediation of different risk factors through other risk factors. Across all six analytical steps, 30\hphantom{,}652 distinct data sources were used in the analysis. Uncertainty in each step of the analysis was propagated into the final estimates of attributable burden. Exposure levels for dichotomous, polytomous, and continuous risk factors were summarised with use of the summary exposure value to facilitate comparisons over time, across location, and across risks. Because the entire time series from 1990 to 2019 has been re-estimated with use of consistent data and methods, these results supersede previously published GBD estimates of attributable burden. Findings The largest declines in risk exposure from 2010 to 2019 were among a set of risks that are strongly linked to social and economic development, including household air pollution; unsafe water, sanitation, and handwashing; and child growth failure. Global declines also occurred for tobacco smoking and lead exposure. The largest increases in risk exposure were for ambient particulate matter pollution, drug use, high fasting plasma glucose, and high body-mass index. In 2019, the leading Level 2 risk factor globally for attributable deaths was high systolic blood pressure, which accounted for 10·8 million (95\% uncertainty interval [UI] 9·51–12·1) deaths (19·2\% [16·9–21·3] of all deaths in 2019), followed by tobacco (smoked, second-hand, and chewing), which accounted for 8·71 million (8·12–9·31) deaths (15·4\% [14·6–16·2] of all deaths in 2019). The leading Level 2 risk factor for attributable DALYs globally in 2019 was child and maternal malnutrition, which largely affects health in the youngest age groups and accounted for 295 million (253–350) DALYs (11·6\% [10·3–13·1] of all global DALYs that year). The risk factor burden varied considerably in 2019 between age groups and locations. Among children aged 0–9 years, the three leading detailed risk factors for attributable DALYs were all related to malnutrition. Iron deficiency was the leading risk factor for those aged 10–24 years, alcohol use for those aged 25–49 years, and high systolic blood pressure for those aged 50–74 years and 75 years and older. Interpretation Overall, the record for reducing exposure to harmful risks over the past three decades is poor. Success with reducing smoking and lead exposure through regulatory policy might point the way for a stronger role for public policy on other risks in addition to continued efforts to provide information on risk factor harm to the general public. Funding Bill \& Melinda Gates Foundation.},
+  language = {en},
+  file = {/home/fli/carbon/Papers/zotero-files/2020/Murray_Aravkin_Zheng et al_2020_Global burden of 87 risk factors in 204 countries and territories, 1990–2019.pdf}
 }
 
 @article{MurrayJS2013BayesianGaussian,
@@ -27422,13 +27381,6 @@
   language = {en}
 }
 
-@book{OHara-WildM2021FeastsFeature,
-  title = {Feasts: Feature Extraction and Statistics for Time Series},
-  author = {O'Hara-Wild, Mitchell and Hyndman, Rob and Wang, Earo},
-  date = {2021},
-  url = {https://CRAN.R-project.org/package=feasts}
-}
-
 @manual{OHara-WildM2021FeastsFeaturea,
   type = {manual},
   title = {Feasts: Feature Extraction and Statistics for Time Series},
@@ -27744,15 +27696,6 @@
   journaltitle = {Mason, OH and Andover, UK}
 }
 
-@misc{OreshkinBN2019NBEATSNeural,
-  title = {N-BEATS: Neural Basis Expansion Analysis for Interpretable Time Series Forecasting},
-  author = {Oreshkin, Boris N and Carpov, Dmitri and Chapados, Nicolas and Bengio, Yoshua},
-  date = {2019},
-  doi = {10.48550/ARXIV.1905.10437},
-  language = {en},
-  organization = {arXiv}
-}
-
 @inproceedings{OreshkinBN2020NBEATSNeural,
   title = {N-BEATS: Neural Basis Expansion Analysis for Interpretable Time Series Forecasting},
   shorttitle = {N-BEATS},
@@ -28058,23 +28001,6 @@
   keywords = {Elliptical distributions,Forecast reconciliation,High-dimensional time series,Projections,Scoring rules}
 }
 
-@article{PanagiotelisA2022ProbabilisticForecast,
-  title = {Probabilistic Forecast Reconciliation: Properties, Evaluation and Score Optimisation},
-  shorttitle = {Probabilistic Forecast Reconciliation},
-  author = {Panagiotelis, Anastasios and Gamakumara, Puwasala and Athanasopoulos, George and Hyndman, Rob J.},
-  date = {2022-07},
-  journaltitle = {European Journal of Operational Research},
-  shortjournal = {European Journal of Operational Research},
-  pages = {S0377221722006087},
-  issn = {03772217},
-  doi = {10.1016/j.ejor.2022.07.040},
-  url = {https://linkinghub.elsevier.com/retrieve/pii/S0377221722006087},
-  urldate = {2022-09-29},
-  abstract = {We develop a framework for prediction of multivariate data that follow some known linear constraints, such as the example where some variables are aggregates of others. This is particularly common when forecasting time series (predicting the future), but also arises in other types of prediction. For point prediction, an increasingly popular technique is reconciliation, whereby predictions are made for all series (so-called ‘base’ predictions) and subsequently adjusted to ensure coherence with the constraints. This paper extends reconciliation from the setting of point prediction to probabilistic prediction. A novel definition of reconciliation is developed and used to construct densities and draw samples from a reconciled probabilistic prediction. In the elliptical case, it is proven that the true predictive distribution can be recovered from reconciliation even when the location and scale matrix of the base prediction are chosen arbitrarily. To find reconciliation weights, an objective function based on scoring rules is optimised. The energy and variogram scores are considered since the log score is improper in the context of comparing unreconciled to reconciled predictions, a result also proved in this paper. To account for the stochastic nature of the energy and variogram scores, optimisation is achieved using stochastic gradient descent. This method is shown to improve base predictions in simulation studies and in an empirical application, particularly when the base prediction models are severely misspecified. When misspecification is not too severe, extending popular reconciliation methods for point prediction can result in a similar performance to score optimisation via stochastic gradient descent. The methods described here are implemented in the ProbReco package for R.},
-  language = {en},
-  file = {/home/fli/carbon/Papers/zotero-files/2022/Panagiotelis_Gamakumara_Athanasopoulos_Hyndman_2022_Probabilistic forecast reconciliation.pdf}
-}
-
 @article{PanagiotelisA2023ProbabilisticForecast,
   title = {Probabilistic Forecast Reconciliation: Properties, Evaluation and Score Optimisation},
   shorttitle = {Probabilistic Forecast Reconciliation},
@@ -28092,7 +28018,7 @@
   abstract = {We develop a framework for forecasting multivariate data that follow known linear constraints. This is particularly common in forecasting where some variables are aggregates of others, commonly referred to as hierarchical time series, but also arises in other prediction settings. For point forecasting, an increasingly popular technique is reconciliation, whereby forecasts are made for all series (so-called base forecasts) and subsequently adjusted to cohere with the constraints. We extend reconciliation from point forecasting to probabilistic forecasting. A novel definition of reconciliation is developed and used to construct densities and draw samples from a reconciled probabilistic forecast. In the elliptical case, we prove that true predictive distributions can be recovered using reconciliation even when the location and scale of base predictions are chosen arbitrarily. Reconciliation weights are estimated to optimise energy or variogram score. The log score is not considered since it is improper when comparing unreconciled to reconciled forecasts, a result also proved in this paper. Due to randomness in the objective function, optimisation uses stochastic gradient descent. This method improves upon base forecasts in simulated and empirical data, particularly when the base forecasting models are severely misspecified. For milder misspecification, extending popular reconciliation methods for point forecasting results in similar performance to score optimisation.},
   language = {en},
   keywords = {Forecasting,Hierarchical time series,Scoring rules,Stochastic gradient descent},
-  file = {/home/fli/carbon/Papers/zotero-files/2023/Panagiotelis_Gamakumara_Athanasopoulos_Hyndman_2023_Probabilistic forecast reconciliation.pdf}
+  file = {/home/fli/carbon/Papers/zotero-files/2022/Panagiotelis_Gamakumara_Athanasopoulos_Hyndman_2022_Probabilistic forecast reconciliation.pdf;/home/fli/carbon/Papers/zotero-files/2023/Panagiotelis_Gamakumara_Athanasopoulos_Hyndman_2023_Probabilistic forecast reconciliation.pdf}
 }
 
 @article{PangHao2001Xinandiqujingjifazhanyujinrongyunhangdeguanlianxingfenxi,
@@ -28186,25 +28112,7 @@
   abstract = {A comprehensive understanding of the behaviours of the various geophysical processes and an effective evaluation of time series (else referred to as “stochastic”) simulation models require, among others, detailed investigations across temporal scales. In this work, we propose a novel and detailed methodological framework for advancing and enriching such investigations in a hydroclimatic context. This specific framework is primarily based on a new feature compilation for multi-scale hydroclimatic analyses, and can facilitate largely interpretable feature investigations and comparisons in terms of temporal dependence, temporal variation, “forecastability”, lumpiness, stability, nonlinearity (and linearity), trends, spikiness, curvature and seasonality. Multifaceted characterizations are herein obtained by computing the values of the proposed feature compilation across nine temporal resolutions (i.e., the 1-day, 2-day, 3-day, 7-day, 0.5-month, 1-month, 2-month, 3-month and 6-month ones) and three hydroclimatic time series types (i.e., temperature, precipitation and streamflow) for 34-year-long time series records originating from 511 geographical locations across the contiguous United States. Based on the acquired information and knowledge, similarities and differences between the examined time series types with respect to the evolution patterns characterizing their feature values with increasing (or decreasing) temporal resolution are identified. Moreover, the computed features are used as inputs to unsupervised random forests for detecting any meaningful clusters between the examined hydroclimatic time series. This clustering plays an illustrative role within this research, as it facilitates the identification of spatial patterns (with them consisting an important scientific target in hydroclimatic research) and their cross-scale comparison. We find that these specific patterns are largely analogous across temporal resolutions for the examined continental-scale region. We also apply explainable machine learning to compare the features with respect to their usefulness in clustering the time series at the various temporal resolutions. These latter investigations play a vital role within the proposed methodological framework, as they allow interpretation of hydroclimatic similarity at the various temporal resolutions. For most of the features, this usefulness can vary to a notable degree across temporal resolutions and time series types, thereby implying the need for conducting multifaceted time series characterizations for the study of hydroclimatic similarity.},
   language = {en},
   keywords = {Clustering,Explainable machine learning,Multi-scale analysis,Precipitation,Streamflow,Temperature},
-  file = {/home/fli/carbon/Papers/zotero-files/2023/Papacharalampous_Tyralis_Markonis_Hanel_2023_Hydroclimatic time series features at multiple time scales.pdf}
-}
-
-@article{PapacharalampousG2023HydroclimaticTimea,
-  title = {Hydroclimatic Time Series Features at Multiple Time Scales},
-  author = {Papacharalampous, Georgia and Tyralis, Hristos and Markonis, Yannis and Hanel, Martin},
-  date = {2023-03-01},
-  journaltitle = {Journal of Hydrology},
-  shortjournal = {Journal of Hydrology},
-  volume = {618},
-  pages = {129160},
-  issn = {0022-1694},
-  doi = {10.1016/j.jhydrol.2023.129160},
-  url = {https://www.sciencedirect.com/science/article/pii/S0022169423001026},
-  urldate = {2023-09-14},
-  abstract = {A comprehensive understanding of the behaviours of the various geophysical processes and an effective evaluation of time series (else referred to as “stochastic”) simulation models require, among others, detailed investigations across temporal scales. In this work, we propose a novel and detailed methodological framework for advancing and enriching such investigations in a hydroclimatic context. This specific framework is primarily based on a new feature compilation for multi-scale hydroclimatic analyses, and can facilitate largely interpretable feature investigations and comparisons in terms of temporal dependence, temporal variation, “forecastability”, lumpiness, stability, nonlinearity (and linearity), trends, spikiness, curvature and seasonality. Multifaceted characterizations are herein obtained by computing the values of the proposed feature compilation across nine temporal resolutions (i.e., the 1-day, 2-day, 3-day, 7-day, 0.5-month, 1-month, 2-month, 3-month and 6-month ones) and three hydroclimatic time series types (i.e., temperature, precipitation and streamflow) for 34-year-long time series records originating from 511 geographical locations across the contiguous United States. Based on the acquired information and knowledge, similarities and differences between the examined time series types with respect to the evolution patterns characterizing their feature values with increasing (or decreasing) temporal resolution are identified. Moreover, the computed features are used as inputs to unsupervised random forests for detecting any meaningful clusters between the examined hydroclimatic time series. This clustering plays an illustrative role within this research, as it facilitates the identification of spatial patterns (with them consisting an important scientific target in hydroclimatic research) and their cross-scale comparison. We find that these specific patterns are largely analogous across temporal resolutions for the examined continental-scale region. We also apply explainable machine learning to compare the features with respect to their usefulness in clustering the time series at the various temporal resolutions. These latter investigations play a vital role within the proposed methodological framework, as they allow interpretation of hydroclimatic similarity at the various temporal resolutions. For most of the features, this usefulness can vary to a notable degree across temporal resolutions and time series types, thereby implying the need for conducting multifaceted time series characterizations for the study of hydroclimatic similarity.},
-  language = {en},
-  keywords = {Clustering,Explainable machine learning,Multi-scale analysis,Precipitation,Streamflow,Temperature},
-  file = {/home/fli/carbon/Papers/zotero-files/2023/Papacharalampous_Tyralis_Markonis_Hanel_2023_Hydroclimatic time series features at multiple time scales2.pdf;/home/fli/carbon/Papers/zotero-files/2023/Papacharalampous_Tyralis_Markonis_Hanel_2023_Hydroclimatic time series features at multiple time scales3.pdf}
+  file = {/home/fli/carbon/Papers/zotero-files/2023/Papacharalampous_Tyralis_Markonis_Hanel_2023_Hydroclimatic time series features at multiple time scales.pdf;/home/fli/carbon/Papers/zotero-files/2023/Papacharalampous_Tyralis_Markonis_Hanel_2023_Hydroclimatic time series features at multiple time scales3.pdf}
 }
 
 @online{PapadogeorgouG2021SoftTensor,
@@ -30196,28 +30104,6 @@
   doi = {10.1109/CVPRW.2014.131}
 }
 
-@book{RCoreTeam2018LanguageEnvironment,
-  title = {R: A Language and Environment for Statistical Computing},
-  author = {{R Core Team}},
-  date = {2018},
-  publisher = {R Foundation for Statistical Computing},
-  location = {Vienna, Austria},
-  url = {https://www.R-project.org/},
-  organization = {R Foundation for Statistical Computing}
-}
-
-@article{RDevelopmentCoreTeam2008LanguageEnvironment,
-  title = {R: A Language and Environment for Statistical Computing, R Foundation for Statistical Computing, Vienna, Austria. ISBN 3-900051-07-0, {{http://www.R-project.org}}},
-  author = {{R Development Core Team}},
-  date = {2008}
-}
-
-@misc{RDevelopmentCoreTeam2012RLanguage,
-  title = {\{R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna, Austria. ISBN 3-900051-07-0\},{{http://www.R-project.org}}},
-  author = {{R Development Core Team}},
-  date = {2012}
-}
-
 @article{re2003swiss,
   title = {Swiss Re Obtains USD 400 Million of Extreme Mortality Risk Coverage—Its First Life Securitization},
   author = {{Swiss Re}},
@@ -31120,12 +31006,6 @@
   owner = {fli},
   timestamp = {2013.02.06},
   file = {/home/fli/carbon/Papers/zotero-files/2011/Rousseau_Mengersen_2011_Asymptotic behaviour of the posterior distribution in overfitted mixture models.pdf}
-}
-
-@article{RStudioandInc.2014ShinyWeb,
-  title = {Shiny: Web Application Framework for R, R Package Version 0.10.2.2, {{http://CRAN.R-project.org/package=shiny}}},
-  author = {{RStudio and Inc.}},
-  date = {2014}
 }
 
 @article{RueEtAl2009,
@@ -34280,14 +34160,6 @@
   language = {en}
 }
 
-@misc{SuilinA20171stPlace,
-  title = {1st Place Solution of Kaggle Web Traffic Time Series Forecasting},
-  author = {Suilin, Artur},
-  date = {2017},
-  url = {https://github.com/Arturus/kaggle-web-traffic},
-  language = {en}
-}
-
 @article{SuL2010ProfileQuasimaximum,
   title = {Profile Quasi-Maximum Likelihood Estimation of Spatial Autoregressive Models},
   author = {Su, L. and Jin, S.},
@@ -34712,27 +34584,6 @@
   pages = {1--28},
   publisher = {Taylor \& Francis},
   issue = {In press}
-}
-
-@report{TalagalaTS2018MetalearningHow,
-  type = {Working paper},
-  title = {Meta-Learning How to Forecast Time Series},
-  author = {Talagala, Thiyanga S and Hyndman, Rob J and Athanasopoulos, George},
-  date = {2018},
-  number = {6/18},
-  pages = {18},
-  institution = {Monash University, Department of Econometrics and Business Statistics}
-}
-
-@article{TalagalaTS2018MetalearningHowa,
-  title = {Meta-Learning How to Forecast Time Series},
-  author = {Talagala, Thiyanga S and Hyndman, Rob J and Athanasopoulos, George},
-  date = {2018},
-  journaltitle = {Monash Econometrics and Business Statistics Working Papers},
-  volume = {6},
-  pages = {18},
-  publisher = {Monash University, Department of Econometrics and Business Statistics},
-  language = {en}
 }
 
 @article{TalagalaTS2022FFORMPPFeaturebased,
@@ -36073,16 +35924,6 @@
   doi = {10.1007/s11009-007-9067-x}
 }
 
-@incollection{van2015game,
-  title = {Game-Theoretically Optimal Reconciliation of Contemporaneous Hierarchical Time Series Forecasts},
-  booktitle = {Modeling and Stochastic Learning for Forecasting in High Dimensions},
-  author = {Van Erven, Tim and Cugliari, Jairo},
-  date = {2015},
-  pages = {297--317},
-  publisher = {Springer},
-  language = {en}
-}
-
 @article{vandeGeerS2014AsymptoticallyOptimal,
   title = {On Asymptotically Optimal Confidence Regions and Tests for High-Dimensional Models},
   author = {van de Geer, Sara and Bühlmann, Peter and Ritov, Ya’acov and Dezeure, Ruben},
@@ -36169,7 +36010,7 @@
   doi = {10.1016/j.socnet.2008.10.003}
 }
 
-@inproceedings{vanErvenT2015GameTheoreticallyOptimal,
+@incollection{vanErvenT2015GameTheoreticallyOptimal,
   title = {Game-Theoretically Optimal Reconciliation of Contemporaneous Hierarchical Time Series Forecasts},
   booktitle = {Modeling and Stochastic Learning for Forecasting in High Dimensions},
   author = {van Erven, Tim and Cugliari, Jairo},
@@ -36180,7 +36021,6 @@
   pages = {297--317},
   publisher = {Springer International Publishing},
   location = {Cham},
-  doi = {10.1007/978-3-319-18732-7_15},
   isbn = {978-3-319-18732-7},
   language = {en}
 }
@@ -39018,18 +38858,6 @@
   language = {zh\_CN},
   keywords = {地区生产总值,季度GDP,新冠疫情,生产,需求},
   annotation = {2 citations(CNKI)[10-1-2022]}
-}
-
-@article{XuZ2010Regularization,
-  title = {\textsubscript{1/2} Regularization},
-  author = {Xu, Zongben and Zhang, Hai and Wang, Yao and Chang, Xiangyu and Liang, Yong},
-  date = {2010},
-  journaltitle = {SCIENCE CHINA Information Sciences},
-  volume = {53},
-  number = {6},
-  pages = {1159--1169},
-  publisher = {Springer},
-  language = {en}
 }
 
 @article{XuZ2012RegularizationThresholding,
