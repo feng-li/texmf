@@ -1,0 +1,33 @@
+<li>
+  <div id="\format{\bibtexkey}" data-reftype="\bibtextype" class="bibitem">\begin{author}\format[Authors(FirsFirst,FullName),HTMLChars]{\author}\end{author} (\year), <i>"\format[HTMLChars]{\title}"</i>\begin{journal}, <strong>\format[HTMLChars]{\journal}</strong>.\end{journal}\begin{booktitle}, In <strong>\format[HTMLChars]{\booktitle}</strong>.\end{booktitle}\begin{howpublished}, \howpublished.\end{howpublished}\begin{school}. Thesis at: <strong>\format[HTMLChars]{\school}</strong>.\end{school}\begin{address} \format[HTMLChars]{\address}\end{address}\begin{month}, \format[HTMLChars]{\month}, \year.\end{month} \begin{volume} Vol. \volume\end{volume}\begin{number}(\format[FormatPagesForHTML]{\number})\end{number}\begin{pages}, pp. \format[FormatPagesForHTML]{\pages}.\end{pages}\begin{publisher} \format[HTMLChars]{\publisher}.\end{publisher}
+  <p class="infolinks">\begin{abstract}[<a href="javascript:toggleInfo('\format{\bibtexkey}','abstract')">Abstract</a>]\end{abstract}\begin{review} [<a href="javascript:toggleInfo('\format{\bibtexkey}','review')">Review</a>] \end{review} [<a href="javascript:toggleInfo('\format{\bibtexkey}','bibtex')">BibTeX</a>]\begin{doi} [<a href="\format[DOICheck]{\doi}" target="_blank">DOI</a>]\end{doi}\begin{url} [<a href="\format{\url}" target="_blank">Preprint</a>]\end{url}</p>
+  </div>
+\begin{abstract}
+<div id="abs_\format{\bibtexkey}" class="abstract noshow">
+	<strong>Abstract</strong>: \format[HTMLChars]{\abstract}
+</div>\end{abstract}\begin{review}
+<div id="rev_\format{\bibtexkey}" class="review noshow">
+	<td><strong>Review</strong>: \format[HTMLChars]{\review}</td>
+</div>\end{review}
+<div id="bib_\format{\bibtexkey}" class="bibtex noshow">
+<strong>BibTeX</strong>:
+<pre class="bib">
+@\format[ToLowerCase]{\bibtextype}{\bibtexkey,\begin{author}
+  author = {\format[HTMLChars]{\author}}\end{author}\begin{editor},
+  editor = {\format[HTMLChars]{\editor}}\end{editor}\begin{title},
+  title = {\format[HTMLChars]{\title}}\end{title}\begin{booktitle},
+  booktitle = {\format[HTMLChars]{\booktitle}}\end{booktitle}\begin{journal},
+  journal = {\format[HTMLChars]{\journal}}\end{journal}\begin{publisher},
+  publisher = {\format[HTMLChars]{\publisher}}\end{publisher}\begin{school},
+  school = {\format[HTMLChars]{\school}}\end{school}\begin{year},
+  year = {\format[HTMLChars]{\year}}\end{year}\begin{volume},
+  volume = {\format[HTMLChars]{\volume}}\end{volume}\begin{number},
+  number = {\format[HTMLChars]{\number}}\end{number}\begin{pages},
+  pages = {\format[HTMLChars]{\pages}}\end{pages}\begin{edition},
+  edition = {\format[HTMLChars]{\edition}}\end{edition}\begin{note},
+  note = {\format[HTMLChars]{\note}}\end{note}\begin{url},
+  url = {\format[HTMLChars]{\url}}\end{url}\begin{doi},
+  doi = {\format[DOIStrip]{\doi}}\end{doi}
+}
+</pre></div>
+</li>
