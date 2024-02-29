@@ -960,6 +960,22 @@
   pages = {120--127}
 }
 
+@article{AlvesLC2024VariationalBayesian,
+  title = {Variational Bayesian Lasso for Spline Regression},
+  author = {Alves, Larissa C. and Dias, Ronaldo and Migon, Helio S.},
+  date = {2024-02-24},
+  journaltitle = {Computational Statistics},
+  shortjournal = {Comput Stat},
+  issn = {1613-9658},
+  doi = {10.1007/s00180-024-01470-9},
+  url = {https://doi.org/10.1007/s00180-024-01470-9},
+  urldate = {2024-02-27},
+  abstract = {This work presents a new scalable automatic Bayesian Lasso methodology with variational inference for non-parametric splines regression that can capture the non-linear relationship between a response variable and predictor variables. Note that under non-parametric point of view the regression curve is assumed to lie in a infinite dimension space. Regression splines use a finite approximation of this infinite space, representing the regression function by a linear combination of basis functions. The crucial point of the approach is determining the appropriate number of bases or equivalently number of knots, avoiding over-fitting/under-fitting. A decision-theoretic approach was devised for knot selection. Comprehensive simulation studies were conducted in challenging scenarios to compare alternative criteria for knot selection, thereby ensuring the efficacy of the proposed algorithms. Additionally, the performance of the proposed method was assessed using real-world datasets. The novel procedure demonstrated good performance in capturing the underlying data structure by selecting the appropriate number of knots/basis.},
+  language = {en},
+  keywords = {Evidence lower bound,Knots selection,Mean field posterior approximation,Variational inference},
+  file = {/home/fli/.zotero/zotero-data/storage/SUASD2YN/Alves et al. - 2024 - Variational Bayesian Lasso for spline regression.pdf}
+}
+
 @article{AmihudY2002IlliquidityStock,
   title = {Illiquidity and Stock Returns: Cross-Section and Time-Series Effects},
   author = {Amihud, Yakov},
@@ -4786,7 +4802,7 @@
   urldate = {2022-09-28},
   abstract = {This paper proposes a three-step approach to forecasting time series of electricity consumption at different levels of household aggregation. These series are linked by hierarchical constraints—global consumption is the sum of regional consumption, for example. First, benchmark forecasts are generated for all series using generalized additive models. Second, for each series, the aggregation algorithm ML-Poly, introduced by Gaillard, Stoltz, and van Erven in 2014, finds an optimal linear combination of the benchmarks. Finally, the forecasts are projected onto a coherent subspace to ensure that the final forecasts satisfy the hierarchical constraints. By minimizing a regret criterion, we show that the aggregation and projection steps improve the root mean square error of the forecasts. Our approach is tested on household electricity consumption data; experimental results suggest that successive aggregation and projection steps improve the benchmark forecasts at different levels of household aggregation.},
   language = {en},
-  file = {/home/fli/carbon/Papers/zotero-files/2022/Brégère_Huard_2022_Online hierarchical forecasting for power consumption data.pdf}
+  file = {/home/fli/.zotero/zotero-data/storage/8E2TPLPV/Brégère and Huard - 2022 - Online hierarchical forecasting for power consumption data.pdf;/home/fli/carbon/Papers/zotero-files/2022/Brégère_Huard_2022_Online hierarchical forecasting for power consumption data.pdf}
 }
 
 @article{BrehenyP2011CoordinateDescent,
@@ -17413,6 +17429,23 @@
   timestamp = {2013.07.22}
 }
 
+@online{HihatM2024MultivariateOnline,
+  title = {Multivariate Online Linear Regression for Hierarchical Forecasting},
+  author = {Hihat, Massil and Garrigos, Guillaume and Fermanian, Adeline and Bussy, Simon},
+  date = {2024-02-22},
+  eprint = {2402.14578},
+  eprinttype = {arxiv},
+  eprintclass = {cs, math, stat},
+  doi = {10.48550/arXiv.2402.14578},
+  url = {http://arxiv.org/abs/2402.14578},
+  urldate = {2024-02-29},
+  abstract = {In this paper, we consider a deterministic online linear regression model where we allow the responses to be multivariate. To address this problem, we introduce MultiVAW, a method that extends the well-known Vovk-Azoury-Warmuth algorithm to the multivariate setting, and show that it also enjoys logarithmic regret in time. We apply our results to the online hierarchical forecasting problem and recover an algorithm from this literature as a special case, allowing us to relax the hypotheses usually made for its analysis.},
+  pubstate = {preprint},
+  version = {1},
+  keywords = {Computer Science - Machine Learning,Mathematics - Optimization and Control,Statistics - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/7JWVTTDP/Hihat et al. - 2024 - Multivariate Online Linear Regression for Hierarchical Forecasting.pdf}
+}
+
 @article{HilalS2011HedgingBlack,
   title = {Hedging the Black Swan: Conditional Heteroskedasticity and Tail Dependence in S\&P500 and VIX},
   author = {Hilal, Sawsan and Poon, Ser-Huang and Tawn, Jonathan},
@@ -29261,6 +29294,22 @@
   doi = {10.1002/jae.2575},
   copyright = {http://creativecommons.org/licenses/by/4.0/},
   language = {en}
+}
+
+@online{OrabonaF2023ModernIntroduction,
+  title = {A Modern Introduction to Online Learning},
+  author = {Orabona, Francesco},
+  date = {2023-05-27},
+  eprint = {1912.13213},
+  eprinttype = {arxiv},
+  eprintclass = {cs, math, stat},
+  doi = {10.48550/arXiv.1912.13213},
+  url = {http://arxiv.org/abs/1912.13213},
+  urldate = {2024-02-29},
+  abstract = {In this monograph, I introduce the basic concepts of Online Learning through a modern view of Online Convex Optimization. Here, online learning refers to the framework of regret minimization under worst-case assumptions. I present first-order and second-order algorithms for online learning with convex losses, in Euclidean and non-Euclidean settings. All the algorithms are clearly presented as instantiation of Online Mirror Descent or Follow-The-Regularized-Leader and their variants. Particular attention is given to the issue of tuning the parameters of the algorithms and learning in unbounded domains, through adaptive and parameter-free online learning algorithms. Non-convex losses are dealt through convex surrogate losses and through randomization. The bandit setting is also briefly discussed, touching on the problem of adversarial and stochastic multi-armed bandits. These notes do not require prior knowledge of convex analysis and all the required mathematical tools are rigorously explained. Moreover, all the included proofs have been carefully chosen to be as simple and as short as possible.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Machine Learning,Mathematics - Optimization and Control,Statistics - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/MXHU8XDA/Orabona - 2023 - A Modern Introduction to Online Learning.pdf}
 }
 
 @book{OrdJK2012PrinciplesBusiness,
