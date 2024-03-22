@@ -19666,12 +19666,19 @@
 
 @article{JiangR2021SmoothingQuantile,
   title = {Smoothing Quantile Regression for a Distributed System},
-  author = {Jiang, Rong},
-  date = {2021},
-  pages = {16},
+  author = {Jiang, Rong and Yu, Keming},
+  date = {2021-11-27},
+  journaltitle = {Neurocomputing},
+  shortjournal = {Neurocomputing},
+  volume = {466},
+  pages = {311--326},
+  issn = {0925-2312},
+  doi = {10.1016/j.neucom.2021.08.101},
+  url = {https://www.sciencedirect.com/science/article/pii/S0925231221012984},
+  urldate = {2024-03-22},
   abstract = {Quantile regression has become a popular alternative to least squares regression for providing a comprehensive description of the response distribution, and robustness against heavy-tailed error distributions. However, the nonsmooth quantile loss poses new challenges to distributed estimation in both computation and theoretical development. To address this challenge, we use a convolution-type smoothing approach and its Taylor expression to transform the nondifferentiable quantile loss function into a convex quadratic loss function, which admits a fast and scalable algorithm to perform optimization under massive and high-dimensional data. The proposed distributed estimators are both computationally and communication efficient. Moreover, only the gradient information is communicated at each iteration. Theoretically, we show that, after a certain number of iterations, the resulting estimator is statistically as efficient as the global estimator without any restriction on the number of machines. Both simulations and data analysis are conducted to illustrate the finite sample performance of the proposed methods.},
-  language = {en},
-  file = {/home/fli/carbon/Papers/zotero-files/2021/Jiang_2021_Smoothing quantile regression for a distributed system.pdf}
+  keywords = {Distributed estimator,High-dimensional data,Massive data,Quantile regression},
+  file = {/home/fli/.zotero/zotero-data/storage/RGPLNXSZ/Jiang and Yu - 2021 - Smoothing quantile regression for a distributed system.pdf}
 }
 
 @article{JiangW1999ApproximationRate,
@@ -22374,20 +22381,21 @@
   file = {/home/fli/carbon/Papers/zotero-files/2019/Kreuzer_Czado_2019_Bayesian inference for dynamic vine copulas in higher dimensions.pdf}
 }
 
-@online{KreuzerA2019BayesianInferencea,
+@article{KreuzerA2021BayesianInference,
   title = {Bayesian Inference for a Single Factor Copula Stochastic Volatility Model Using Hamiltonian Monte Carlo},
   author = {Kreuzer, Alexander and Czado, Claudia},
-  date = {2019-07-19},
-  eprint = {1808.08624},
-  eprinttype = {arxiv},
-  eprintclass = {stat},
-  url = {http://arxiv.org/abs/1808.08624},
-  urldate = {2022-09-29},
-  abstract = {Single factor models are used in finance to model the joint behaviour of stocks. The dependence is commonly modeled with a multivariate normal distribution. Krupskii and Joe (2013) provide a copula based extension. This single factor copula requires the specification of bivariate linking copulas. Resulting joint models can accommodate symmetric or asymmetric tail dependence. For modeling multivariate time series we propose a single factor copula model together with stochastic volatility margins. For this model we develop joint Bayesian inference using Hamiltonian Monte Carlo (HMC) within Gibbs sampling. The Bayesian approach allows for high dimensional parameter spaces as they are present here in addition to uncertainty quantification through credible intervals. Furthermore we avoid the two step approach for margins and dependence in copula models as followed by Schamberger et al (2017). In a first simulation study the performance of HMC is compared to the Markov Chain Monte Carlo (MCMC) approach developed by Schamberger et al (2017) for the copula part. It is shown that HMC considerably outperforms this approach in terms of effective sample size, MSE and observed coverage probabilities. In a second simulation study satisfactory small sample performance is seen for the full HMC within Gibbs procedure. The approach is illustrated for a portfolio of financial assets with respect to one day ahead value at risk forecasts. We provide comparison to a two step estimation procedure of the proposed model and to relevant benchmark models: a model with dynamic linear models for the margins and a single factor copula for the dependence proposed by Schamberger et al (2017) and a multivariate factor stochastic volatility model proposed by Kastner et al (2017). Our proposed approach shows superior performance.},
-  language = {en},
-  pubstate = {preprint},
-  keywords = {Statistics - Computation},
-  file = {/home/fli/carbon/Papers/zotero-files/2019/Kreuzer_Czado_2019_Bayesian inference for a single factor copula stochastic volatility model using.pdf}
+  date = {2021-07-01},
+  journaltitle = {Econometrics and Statistics},
+  shortjournal = {Econometrics and Statistics},
+  volume = {19},
+  pages = {130--150},
+  issn = {2452-3062},
+  doi = {10.1016/j.ecosta.2020.12.001},
+  url = {https://www.sciencedirect.com/science/article/pii/S2452306221000010},
+  urldate = {2024-03-22},
+  abstract = {For modeling multivariate financial time series a single factor copula model with stochastic volatility margins is proposed. It generalizes single factor models based on the multivariate normal distribution by allowing for symmetric and asymmetric tail dependence. A joint Bayesian approach using Hamiltonian Monte Carlo (HMC) within Gibbs sampling is developed. Thus, the information loss caused by the two-step approach for margins and dependence is avoided. Further, the Bayesian approach is tractable in high dimensional parameter spaces in addition to uncertainty quantification through credible intervals. By introducing indicators for different copula families the copula families are selected automatically in the Bayesian framework. In a first simulation study the performance of HMC for the copula part is compared to a procedure based on adaptive rejection Metropolis sampling within Gibbs sampling. It is shown that HMC considerably outperforms this alternative approach in terms of effective sample size per minute. In a second simulation study satisfactory performance is seen for the full HMC within Gibbs procedure. The approach is illustrated for a portfolio of financial assets with respect to one-day ahead value at risk forecasts. Comparison to a two-step estimation procedure and to relevant benchmark models, such as a multivariate factor stochastic volatility model, shows superior performance of the proposed approach.},
+  keywords = {Factor copula,Hamiltonian Monte Carlo,Stochastic volatility model,Value at risk},
+  file = {/home/fli/.zotero/zotero-data/storage/9EEK7VFD/Kreuzer and Czado - 2021 - Bayesian inference for a single factor copula stochastic volatility model using Hamiltonian Monte Ca.pdf}
 }
 
 @article{KrishnamachariB2004DistributedBayesian,
