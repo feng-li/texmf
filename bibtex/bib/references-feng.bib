@@ -24825,6 +24825,25 @@
   file = {/home/fli/carbon/Papers/zotero-files/2022/Lin_Li_2022_Double Spike Dirichlet Priors for Structured Weighting.pdf}
 }
 
+@inproceedings{LinJ2023MAPModelagnostic,
+  title = {MAP: A Model-Agnostic Pretraining Framework for Click-through Rate Prediction},
+  shorttitle = {MAP},
+  booktitle = {Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  author = {Lin, Jianghao and Qu, Yanru and Guo, Wei and Dai, Xinyi and Tang, Ruiming and Yu, Yong and Zhang, Weinan},
+  date = {2023-08-04},
+  series = {KDD '23},
+  pages = {1384--1395},
+  publisher = {Association for Computing Machinery},
+  location = {New York, NY, USA},
+  doi = {10.1145/3580305.3599422},
+  url = {https://dl.acm.org/doi/10.1145/3580305.3599422},
+  urldate = {2024-04-17},
+  abstract = {With the widespread application of online advertising systems, click-through rate (CTR) prediction has received more and more attention and research. The most prominent features of CTR prediction are its multi-field categorical data format, and vast and daily-growing data volume (e.g., billions of user click logs). The large capacity of neural models helps digest such massive amounts of data under the supervised learning paradigm, yet they fail to utilize the substantial data to its full potential, since click signals are not sufficient enough for the model to learn capable representations of features and instances. The self-supervised learning paradigm provides a more promising pretrain-finetune solution to better exploit the large amount of user click logs and learn more robust and effective representations. However, current works on this line are still preliminary and rudimentary, leaving self-supervised learning for CTR prediction still an open question. To this end, we propose a Model-agnostic Pretraining (MAP) framework that applies feature corruption and recovery on multi-field categorical data, and more specifically, we derive two practical algorithms: masked feature prediction (MFP) and replaced feature detection (RFD). MFP digs into feature interactions within each instance through masking and predicting a small portion of input features, and we also introduce Noise Contrastive Estimation (NCE) to handle large feature spaces. RFD further turns MFP into a binary classification mode through replacing and detecting changes in input features, making it even simpler and more effective for CTR pretraining. Our extensive experiments on two real-world million-level datasets (i.e., Avazu, Criteo) demonstrate the advantages of these two methods over several strong baselines, and achieve new state-of-the-art in terms of both performance and efficiency for CTR prediction.},
+  isbn = {9798400701030},
+  keywords = {ctr prediction,model pretraining,self-supervised learning},
+  file = {/home/fli/.zotero/zotero-data/storage/LTKGUZM5/Lin et al. - 2023 - MAP A Model-agnostic Pretraining Framework for Click-through Rate Prediction.pdf}
+}
+
 @article{LinkWA2012ThinningChains,
   title = {On Thinning of Chains in MCMC},
   author = {Link, William A and Eaton, Mitchell J},
@@ -43347,6 +43366,24 @@
   file = {/home/fli/carbon/Papers/zotero-files/undefined/Zhou_Wang_Feng_Non-crossing quantile regression for deep reinforcement learning.pdf}
 }
 
+@inproceedings{ZhouG2018DeepInterest,
+  title = {Deep Interest Network for Click-Through Rate Prediction},
+  booktitle = {Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
+  author = {Zhou, Guorui and Zhu, Xiaoqiang and Song, Chenru and Fan, Ying and Zhu, Han and Ma, Xiao and Yan, Yanghui and Jin, Junqi and Li, Han and Gai, Kun},
+  date = {2018-07-19},
+  series = {KDD '18},
+  pages = {1059--1068},
+  publisher = {Association for Computing Machinery},
+  location = {New York, NY, USA},
+  doi = {10.1145/3219819.3219823},
+  url = {https://dl.acm.org/doi/10.1145/3219819.3219823},
+  urldate = {2024-04-17},
+  abstract = {Click-through rate prediction is an essential task in industrial applications, such as online advertising. Recently deep learning based models have been proposed, which follow a similar Embedding\&MLP paradigm. In these methods large scale sparse input features are first mapped into low dimensional embedding vectors, and then transformed into fixed-length vectors in a group-wise manner, finally concatenated together to fed into a multilayer perceptron (MLP) to learn the nonlinear relations among features. In this way, user features are compressed into a fixed-length representation vector, in regardless of what candidate ads are. The use of fixed-length vector will be a bottleneck, which brings difficulty for Embedding\&MLP methods to capture user's diverse interests effectively from rich historical behaviors. In this paper, we propose a novel model: Deep Interest Network (DIN) which tackles this challenge by designing a local activation unit to adaptively learn the representation of user interests from historical behaviors with respect to a certain ad. This representation vector varies over different ads, improving the expressive ability of model greatly. Besides, we develop two techniques: mini-batch aware regularization and data adaptive activation function which can help training industrial deep networks with hundreds of millions of parameters. Experiments on two public datasets as well as an Alibaba real production dataset with over 2 billion samples demonstrate the effectiveness of proposed approaches, which achieve superior performance compared with state-of-the-art methods. DIN now has been successfully deployed in the online display advertising system in Alibaba, serving the main traffic.},
+  isbn = {978-1-4503-5552-0},
+  keywords = {click-through rate prediction,display advertising,e-commerce},
+  file = {/home/fli/.zotero/zotero-data/storage/IVC7KALU/Zhou et al. - 2018 - Deep Interest Network for Click-Through Rate Prediction.pdf}
+}
+
 @article{ZhouGMixedHamiltonian,
   title = {Mixed Hamiltonian Monte Carlo for Mixed Discrete and Continuous Variables},
   author = {Zhou, Guangyao},
@@ -43588,6 +43625,25 @@
   date = {2018},
   journaltitle = {Journal of Econometrics},
   volume = {To appear}
+}
+
+@article{ZhuX2020GroupedNetwork,
+  title = {Grouped Network Vector Autoregression},
+  author = {Zhu, Xuening and Pan, Rui},
+  date = {2020},
+  journaltitle = {Statistica Sinica},
+  volume = {30},
+  number = {3},
+  eprint = {26968936},
+  eprinttype = {jstor},
+  pages = {1437--1462},
+  publisher = {Institute of Statistical Science, Academia Sinica},
+  issn = {1017-0405},
+  doi = {10.5705/ss.202017.0533},
+  url = {https://www.jstor.org/stable/26968936},
+  urldate = {2024-04-18},
+  abstract = {Time series analyses are often used to model a continuous response for all individuals at equally spaced time points. With the rapid advance of social network sites, network data are becoming increasingly available. The network vector autoregression (NAR) model incorporates the network information among individuals. The response of each individual can be explained by its lagged value, the average of its neighbors, and a set of node-specific covariates. However, all individuals are assumed to be homogeneous because they share the same autoregression coefficients. To express individual heterogeneity, we develop a grouped NAR (GNAR) model. Individuals in a network can be classified into different groups characterized by sets of parameters. The strict stationarity of the GNAR model is established. Two estimation procedures are developed, as well as the asymptotic properties of the proposed model. Numerical studies are conducted to evaluate the finite-sample performance of our proposed methodology. Lastly, two real-data examples are presented, based on studies on user posting behavior on the Sina Weibo platform and on air pollution patterns (especially PM2.5) in mainland China, respectively.},
+  file = {/home/fli/.zotero/zotero-data/storage/2LFDSUPQ/Zhu and Pan - 2020 - Grouped Network Vector Autoregression.pdf}
 }
 
 @article{ZhuX2021LeastSquareApproximation,
