@@ -1832,7 +1832,7 @@
   urldate = {2023-09-06},
   abstract = {We propose generalized random forests, a method for nonparametric statistical estimation based on random forests (Breiman [Mach. Learn. 45 (2001) 5–32]) that can be used to fit any quantity of interest identified as the solution to a set of local moment equations. Following the literature on local maximum likelihood estimation, our method considers a weighted set of nearby training examples; however, instead of using classical kernel weighting functions that are prone to a strong curse of dimensionality, we use an adaptive weighting function derived from a forest designed to express heterogeneity in the specified quantity of interest. We propose a flexible, computationally efficient algorithm for growing generalized random forests, develop a large sample theory for our method showing that our estimates are consistent and asymptotically Gaussian and provide an estimator for their asymptotic variance that enables valid confidence intervals. We use our approach to develop new methods for three statistical tasks: nonparametric quantile regression, conditional average partial effect estimation and heterogeneous treatment effect estimation via instrumental variables. A software implementation, grf for R and C++, is available from CRAN.},
   language = {en},
-  keywords = {62G05,Asymptotic theory,Causal inference,instrumental variable},
+  keywords = {Asymptotic theory,Causal inference,instrumental variable},
   file = {/home/fli/carbon/Papers/zotero-files/2019/Athey_Tibshirani_Wager_2019_Generalized random forests.pdf}
 }
 
@@ -2135,7 +2135,7 @@
   doi = {10.1371/journal.pone.0225223},
   abstract = {Background Firearm-related death rates and years of potential life lost (YPLL) vary widely between population subgroups and states. However, changes or inflections in temporal trends within subgroups and states are not fully documented. We assessed temporal patterns and inflections in the rates of firearm deaths and \%YPLL due to firearms for overall and by sex, age, race/ethnicity, intent, and states in the United States between 1999 and 2016. Methods We extracted age-adjusted firearm mortality and YPLL rates per 100,000, and \%YPLL from 1999 to 2016 by using the WONDER (Wide-ranging Online Data for Epidemiologic Research) database. We used Joinpoint Regression to assess temporal trends, the inflection points, and annual percentage change (APC) from 1999 to 2016. Results National firearm mortality rates were 10.3 and 11.8 per 100,000 in 1999 and 2016, with two distinct segments; a plateau until 2014 followed by an increase of APC = 7.2\% (95\% CI 3.1, 11.4). YPLL rates were from 304.7 and 338.2 in 1999 and 2016 with a steady APC increase in \%YPLL of 0.65\% (95\% CI 0.43, 0.87) from 1999 to an inflection point in 2014, followed by a larger APC in \%YPLL of 5.1\% (95\% CI 0.1, 10.4). The upward trend in firearm mortality and YPLL rates starting in 2014 was observed in subgroups of male, non-Hispanic blacks, Hispanic whites and for firearm assaults. The inflection points for firearm mortality and YPLL rates also varied across states. Conclusions Within the United States, firearm mortality rates and YPLL remained constant between 1999 and 2014 and has been increasing subsequently. There was, however, an increase in firearm mortality rates in several subgroups and individual states earlier than 2014.},
   language = {en},
-  keywords = {.Publications 💫,Age groups,Antigen-presenting cells,Death rates,Firearms,Hispanic people,Homicide,nsfc2015,Statistical methods,United States},
+  keywords = {Age groups,Antigen-presenting cells,Death rates,Firearms,Hispanic people,Homicide,nsfc2015,Statistical methods,United States},
   file = {/home/fli/carbon/Papers/zotero-files/2019/Bailey_Zuo_Li et al_2019_Changes in patterns of mortality rates and years of life lost due to firearms.pdf}
 }
 
@@ -5460,6 +5460,7 @@
   urldate = {2022-09-29},
   abstract = {This article proposes a distributed Markov chain Monte Carlo (MCMC) algorithm for estimating Bayesian hierarchical models when the number of cross-sectional units is very large and the objects of interest are the unit-level parameters. The two-stage algorithm is asymptotically exact, retains the flexibility of a standard MCMC algorithm, and is easy to implement. The algorithm constructs an estimator of the posterior predictive distribution of the unit-level parameters in the first stage, and uses the estimator as the prior distribution in the second stage for the unit-level draws. Both stages are embarrassingly parallel. The algorithm is demonstrated with simulated data from a hierarchical logit model and is shown to be faster and more efficient (in effective sample size generated per unit of computing) than a single machine algorithm by at least an order of magnitude. For a relatively small number of observations per crosssectional unit, the algorithm is both faster and has better mixing properties than the standard hybrid Gibbs sampler. We illustrate our approach with data on 1,100,000 donors to a charitable organization, and simulations with up to 100 million units.},
   language = {en},
+  keywords = {🌟🌟🌟},
   file = {/home/fli/carbon/Papers/zotero-files/2017/Bumbaca_Misra_Rossi_2017_Distributed Markov Chain Monte Carlo for Bayesian Hierarchical Models.pdf}
 }
 
@@ -7748,6 +7749,23 @@
   file = {/home/fli/carbon/Papers/zotero-files/2010/Chib_Ramamurthy_2010_Tailored randomized block MCMC methods with application to DSGE models.pdf}
 }
 
+@online{ChinA2024MCMCUsing,
+  title = {MCMC Using \$\textbackslash textit\{bouncy\}\$ Hamiltonian Dynamics: A Unifying Framework for Hamiltonian Monte Carlo and Piecewise Deterministic Markov Process Samplers},
+  shorttitle = {MCMC Using \$\textbackslash textit\{bouncy\}\$ Hamiltonian Dynamics},
+  author = {Chin, Andrew and Nishimura, Akihiko},
+  date = {2024-05-13},
+  eprint = {2405.08290},
+  eprinttype = {arxiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2405.08290},
+  url = {http://arxiv.org/abs/2405.08290},
+  urldate = {2024-05-23},
+  abstract = {Piecewise-deterministic Markov process (PDMP) samplers constitute a state of the art Markov chain Monte Carlo (MCMC) paradigm in Bayesian computation, with examples including the zig-zag and bouncy particle sampler (BPS). Recent work on the zig-zag has indicated its connection to Hamiltonian Monte Carlo, a version of the Metropolis algorithm that exploits Hamiltonian dynamics. Here we establish that, in fact, the connection between the paradigms extends far beyond the specific instance. The key lies in (1) the fact that any time-reversible deterministic dynamics provides a valid Metropolis proposal and (2) how PDMPs' characteristic velocity changes constitute an alternative to the usual acceptance-rejection. We turn this observation into a rigorous framework for constructing rejection-free Metropolis proposals based on bouncy Hamiltonian dynamics which simultaneously possess Hamiltonian-like properties and generate discontinuous trajectories similar in appearance to PDMPs. When combined with periodic refreshment of the inertia, the dynamics converge strongly to PDMP equivalents in the limit of increasingly frequent refreshment. We demonstrate the practical implications of this new paradigm, with a sampler based on a bouncy Hamiltonian dynamics closely related to the BPS. The resulting sampler exhibits competitive performance on challenging real-data posteriors involving tens of thousands of parameters.},
+  pubstate = {preprint},
+  keywords = {Statistics - Computation,Statistics - Methodology},
+  file = {/home/fli/.zotero/zotero-data/storage/6AK3MIEX/Chin and Nishimura - 2024 - MCMC using $textit bouncy $ Hamiltonian dynamics A unifying framework for Hamiltonian Monte Carlo.pdf}
+}
+
 @article{ChipmanH2010BARTBayesian,
   title = {BART: Bayesian Additive Regression Trees},
   author = {a. Chipman, Hugh and George, Edward I. and McCulloch, Robert E.},
@@ -8143,7 +8161,7 @@
   abstract = {This paper reviews the growing field of Bayesian prediction. Bayes point and interval prediction are defined and exemplified and situated in statistical prediction more generally. Then, four general approaches to Bayes prediction are defined and we turn to predictor selection. This can be done predictively or non-predictively and predictors can be based on single models or multiple models. We call these latter cases unitary predictors and model average predictors, respectively. Then we turn to the most recent aspect of prediction to emerge, namely prediction in the context of large observational data sets and discuss three further classes of techniques. We conclude with a summary and statement of several current open problems.},
   language = {en},
   pubstate = {preprint},
-  keywords = {62-02,Statistics - Methodology},
+  keywords = {Statistics - Methodology},
   file = {/home/fli/carbon/Papers/zotero-files/2023/Clarke_Yao_2023_A Cheat Sheet for Bayesian Prediction.pdf}
 }
 
@@ -10783,6 +10801,25 @@
   doi = {10.1016/j.ijforecast.2018.09.007},
   url = {http://www.sciencedirect.com/science/article/pii/S0169207018301778},
   file = {/home/fli/.zotero/zotero-data/storage/SGUREZZR/Dimoulkas et al. - 2018 - Neural networks for GEFCom2017 probabilistic load forecasting.pdf}
+}
+
+@article{DingL2023CLERAUnified,
+  title = {CLERA: A Unified Model for Joint Cognitive Load and Eye Region Analysis in the Wild},
+  shorttitle = {CLERA},
+  author = {Ding, Li and Terwilliger, Jack and Parab, Aishni and Wang, Meng and Fridman, Lex and Mehler, Bruce and Reimer, Bryan},
+  date = {2023-09-25},
+  journaltitle = {ACM Transactions on Computer-Human Interaction},
+  shortjournal = {ACM Trans. Comput.-Hum. Interact.},
+  volume = {30},
+  number = {6},
+  pages = {84:1--84:23},
+  issn = {1073-0516},
+  doi = {10.1145/3603622},
+  url = {https://doi.org/10.1145/3603622},
+  urldate = {2024-05-23},
+  abstract = {Non-intrusive, real-time analysis of the dynamics of the eye region allows us to monitor humans’ visual attention allocation and estimate their mental state during the performance of real-world tasks, which can potentially benefit a wide range of human-computer interaction (HCI) applications. While commercial eye-tracking devices have been frequently employed, the difficulty of customizing these devices places unnecessary constraints on the exploration of more efficient, end-to-end models of eye dynamics. In this work, we propose CLERA, a unified model for Cognitive Load and Eye Region Analysis, which achieves precise keypoint detection and spatiotemporal tracking in a joint-learning framework. Our method demonstrates significant efficiency and outperforms prior work on tasks including cognitive load estimation, eye landmark detection, and blink estimation. We also introduce a large-scale dataset of 30 k human faces with joint pupil, eye-openness, and landmark annotation, which aims at supporting future HCI research on human factors and eye-related analysis.},
+  keywords = {cognitive load estimation,computer vision,driver monitoring systems,Human-centered computing,machine learning,pupil detection},
+  file = {/home/fli/.zotero/zotero-data/storage/V4YR7WH7/Ding et al. - 2023 - CLERA A Unified Model for Joint Cognitive Load and Eye Region Analysis in the Wild.pdf}
 }
 
 @online{DinhV2017ProbabilisticPath,
@@ -16851,21 +16888,20 @@
   file = {/home/fli/carbon/Papers/zotero-files/2003/Gulam Razul_Fitzgerald_Andrieu_2003_Bayesian model selection and parameter estimation of nuclear emission spectra.pdf}
 }
 
-@online{GunawanD2023CorrelatedParticle,
-  title = {The Correlated Particle Hybrid Sampler for State Space Models},
+@article{GunawanD2024ParticleMCMC,
+  title = {Particle MCMC and the Correlated Particle Hybrid Sampler for State Space Models},
   author = {Gunawan, David and Carter, Chris and Kohn, Robert},
-  date = {2023-07-01},
-  eprint = {1804.04359},
-  eprinttype = {arxiv},
-  eprintclass = {stat},
-  doi = {10.48550/arXiv.1804.04359},
-  url = {http://arxiv.org/abs/1804.04359},
-  urldate = {2024-04-02},
-  abstract = {Particle Markov Chain Monte Carlo (PMCMC) is a general computational approach to Bayesian inference for general state space models. Our article scales up PMCMC in terms of the number of observations and parameters by generating the parameters that are highly correlated with the states \textbackslash lq integrated out\textbackslash rq\{\} in a pseudo marginal step; the rest of the parameters are generated conditional on the states. The novel contribution of our article is to make the pseudo-marginal step much more efficient by positively correlating the numerator and denominator in the Metropolis-Hastings acceptance probability. This is done in a novel way by expressing the target density of the PMCMC in terms of the basic uniform or normal random numbers used in the sequential Monte Carlo algorithm instead of the standard way in terms of state particles. We also show that the new sampler combines and generalizes two separate particle MCMC approaches: particle Gibbs and the correlated pseudo marginal Metropolis-Hastings. We investigate the performance of the hybrid sampler empirically by applying it to univariate and multivariate stochastic volatility models having both a large number of parameters and a large number of latent states and show that it is much more efficient than competing PMCMC methods.},
-  pubstate = {preprint},
-  version = {4},
-  keywords = {Statistics - Methodology},
-  file = {/home/fli/.zotero/zotero-data/storage/AGM4ZGAI/Gunawan et al. - 2023 - The Correlated Particle Hybrid Sampler for State Space Models.pdf}
+  date = {2024-05-21},
+  journaltitle = {Journal of Econometrics},
+  shortjournal = {Journal of Econometrics},
+  pages = {105731},
+  issn = {0304-4076},
+  doi = {10.1016/j.jeconom.2024.105731},
+  url = {https://www.sciencedirect.com/science/article/pii/S0304407624000770},
+  urldate = {2024-05-23},
+  abstract = {Particle Markov Chain Monte Carlo (PMCMC) is a powerful approach to Bayesian computation for general state space models. Our article enables PMCMC to handle a larger number of observations and parameters compared to previous approaches by generating the parameters that are highly correlated with the states in a pseudo-marginal step(s) with the states ‘integrated out’; the rest of the parameters are generated conditional on the states. We make the pseudo-marginal step much more efficient than previous approaches by positively correlating the numerator and denominator in the Metropolis–Hastings acceptance probability in a novel way by expressing the target density of the PMCMC in terms of the basic uniform or normal random numbers used in the sequential Monte Carlo algorithm, instead of the standard way which expresses the target density in terms of the state particles. We also show that the new sampler combines and generalizes two separate particle MCMC approaches: particle Gibbs and the correlated pseudo-marginal Metropolis–Hastings. We investigate the performance of this hybrid sampler empirically by applying it to univariate and multivariate stochastic volatility models having both a large number of parameters and a large number of latent states and show that it is much more efficient than competing PMCMC methods. An online supplement to the article and computer code are available online.},
+  keywords = {Correlated pseudo-marginal Metropolis–Hastings,Factor stochastic volatility model,Particle Gibbs sampler},
+  file = {/home/fli/.zotero/zotero-data/storage/N7HVVHDS/Gunawan et al. - 2024 - Particle MCMC and the correlated particle hybrid sampler for state space models.pdf}
 }
 
 @online{GunhanBK2022MetaStanPackage,
@@ -17300,7 +17336,6 @@
   doi = {10.1007/978-3-030-46161-4_21},
   url = {https://doi.org/10.1007/978-3-030-46161-4_21},
   abstract = {This article considers a bilinear model that includes two different latent effects. The first effect has a direct influence on the response variable, whereas the second latent effect is assumed to first influence other latent variables, which in turn affect the response variable. In this article, latent variables are modelled via rank restrictions on unknown mean parameters and the models which are used are often referred to as reduced rank regression models. This article presents a likelihood-based approach that results in explicit estimators. In our model, the latent variables act as covariates that we know exist, but their direct influence is unknown and will therefore not be considered in detail. One example is if we observe hundreds of weather variables, but we cannot say which or how these variables affect plant growth.},
-  keywords = {.Publications 💫},
   file = {/home/fli/carbon/Papers/zotero-files/2020/Hao_Li_von Rosen_2020_A Bilinear Reduced Rank Model.pdf}
 }
 
@@ -19451,6 +19486,25 @@
   file = {/home/fli/carbon/Papers/zotero-files/2006/Hyndman_Koehler_2006_Another look at measures of forecast accuracy.pdf}
 }
 
+@article{HyndmanRJ2007RobustForecasting,
+  title = {Robust Forecasting of Mortality and Fertility Rates: A Functional Data Approach},
+  shorttitle = {Robust Forecasting of Mortality and Fertility Rates},
+  author = {Hyndman, Rob J. and Shahid Ullah, Md.},
+  date = {2007-06-15},
+  journaltitle = {Computational Statistics \& Data Analysis},
+  shortjournal = {Computational Statistics \& Data Analysis},
+  volume = {51},
+  number = {10},
+  pages = {4942--4956},
+  issn = {0167-9473},
+  doi = {10.1016/j.csda.2006.07.028},
+  url = {https://www.sciencedirect.com/science/article/pii/S0167947306002453},
+  urldate = {2024-05-27},
+  abstract = {A new method is proposed for forecasting age-specific mortality and fertility rates observed over time. This approach allows for smooth functions of age, is robust for outlying years due to wars and epidemics, and provides a modelling framework that is easily adapted to allow for constraints and other information. Ideas from functional data analysis, nonparametric smoothing and robust statistics are combined to form a methodology that is widely applicable to any functional time series data observed discretely and possibly with error. The model is a generalization of the Lee–Carter (LC) model commonly used in mortality and fertility forecasting. The methodology is applied to French mortality data and Australian fertility data, and the forecasts obtained are shown to be superior to those from the LC method and several of its variants.},
+  keywords = {Fertility forecasting,Functional data,Mortality forecasting,Nonparametric smoothing,Principal components,Robustness},
+  file = {/home/fli/.zotero/zotero-data/storage/D7YRFIGH/Hyndman and Shahid Ullah - 2007 - Robust forecasting of mortality and fertility rates A functional data approach.pdf;/home/fli/.zotero/zotero-data/storage/S9DD48JS/Hyndman and Shahid Ullah - 2007 - Robust forecasting of mortality and fertility rates A functional data approach.pdf}
+}
+
 @article{HyndmanRJ2008AutomaticTime,
   title = {Automatic Time Series Forecasting: The Forecast Package for R},
   author = {Hyndman, Rob J. and Khandakar, Yeasmin},
@@ -19960,7 +20014,6 @@
   pages = {172--180},
   doi = {10.1016/j.jad.2020.09.067},
   abstract = {Hospitalized self-inflicted firearm injuries have not been extensively studied, particularly regarding clinical diagnoses at the index admission. The objective of this study was to discover the diagnostic phenotypes (DPs) or clusters of hospitalized self-inflicted firearm injuries. Using Nationwide Inpatient Sample data in the US from 1993 to 2014, we used International Classification of Diseases, Ninth Revision codes to identify self-inflicted firearm injuries among those ≥18 years of age. The 25 most frequent diagnostic codes were used to compute a dissimilarity matrix and the optimal number of clusters. We used hierarchical clustering to identify the main DPs. The overall cohort included 14072 hospitalizations, with self-inflicted firearm injuries occurring mainly in those between 16 to 45 years of age, black, with co-occurring tobacco and alcohol use, and mental illness. Out of the three identified DPs, DP1 was the largest (n=10,110), and included most common diagnoses similar to overall cohort, including major depressive disorders (27.7\%), hypertension (16.8\%), acute post hemorrhagic anemia (16.7\%), tobacco (15.7\%) and alcohol use (12.6\%). DP2 (n=3,725) was not characterized by any of the top 25 ICD-9 diagnoses codes, and included children and peripartum women. DP3, the smallest phenotype (n=237), had high prevalence of depression similar to DP1, and defined by fewer fatal injuries of chest and abdomen. There were three distinct diagnostic phenotypes in hospitalizations due to self-inflicted firearm injuries. Further research is needed to determine how DPs can be used to tailor clinical care and prevention efforts.},
-  keywords = {.Publications 💫},
   file = {/home/fli/carbon/Papers/zotero-files/2021/Janeway_Zhao_Rosenthaler et al_2021_Clinical diagnostic phenotypes in hospitalizations due to self-inflicted.pdf}
 }
 
@@ -21113,7 +21166,6 @@
   pages = {96--102},
   publisher = {Elsevier},
   doi = {10.1016/j.jss.2020.06.011},
-  keywords = {.Publications 💫},
   file = {/home/fli/carbon/Papers/zotero-files/2020/Kalesan_Zhao_Poulson et al_2020_Intersections of firearm suicide, drug-related mortality, and economic.pdf}
 }
 
@@ -21230,7 +21282,7 @@
   date = {2020},
   publisher = {在线出版},
   url = {https://otexts.com/fppcn/},
-  keywords = {.Publications 💫,nsfc2015}
+  keywords = {nsfc2015}
 }
 
 @book{kang2020statcompcn,
@@ -21238,8 +21290,7 @@
   author = {{康雁飞} and {李丰}},
   date = {2020},
   publisher = {在线出版},
-  url = {https://feng.li/files/statscompbook/},
-  keywords = {.Publications 💫}
+  url = {https://feng.li/files/statscompbook/}
 }
 
 @article{KangH1986UnstableWeights,
@@ -21384,7 +21435,7 @@
   urldate = {2022-11-11},
   abstract = {The explosion of time series data in recent years has brought a flourish of new time series analysis methods, for forecasting, clustering, classification and other tasks. The evaluation of these new methods requires either collecting or simulating a diverse set of time series benchmarking data to enable reliable comparisons against alternative approaches. We propose GeneRAting TIme Series with diverse and controllable characteristics, named GRATIS, with the use of mixture autoregressive (MAR) models. We simulate sets of time series using MAR models and investigate the diversity and coverage of the generated time series in a time series feature space. By tuning the parameters of the MAR models, GRATIS is also able to efficiently generate new time series with controllable features. In general, as a costless surrogate to the traditional data collection approach, GRATIS can be used as an evaluation tool for tasks such as time series forecasting and classification. We illustrate the usefulness of our time series generation process through a time series forecasting application.},
   language = {en},
-  keywords = {.Publications 💫,mixture autoregressive models,simulation,time series features,time series forecasting,time series generation},
+  keywords = {mixture autoregressive models,simulation,time series features,time series forecasting,time series generation},
   file = {/home/fli/carbon/Papers/zotero-files/2020/Kang_Hyndman_Li_2020_GRATIS2.pdf;/home/fli/carbon/Papers/zotero-files/2020/Kang_Hyndman_Li_2020_GRATIS3.pdf}
 }
 
@@ -21409,7 +21460,7 @@
   url = {https://arxiv.org/abs/1909.00221},
   abstract = {Accurate forecasts are vital for supporting the decisions of modern companies. Forecasters typically select the most appropriate statistical model for each time series. However, statistical models usually presume some data generation process while making strong assumptions about the errors. In this paper, we present a novel data-centric approach — ‘forecasting with cross-similarity’, which tackles model uncertainty in a model-free manner. Existing similarity-based methods focus on identifying similar patterns within the series, i.e., ‘self-similarity’. In contrast, we propose searching for similar patterns from a reference set, i.e., ‘cross-similarity’. Instead of extrapolating, the future paths of the similar series are aggregated to obtain the forecasts of the target series. Building on the cross-learning concept, our approach allows the application of similarity-based forecasting on series with limited lengths. We evaluate the approach using a rich collection of real data and show that it yields competitive accuracy in both points forecasts and prediction intervals.},
   language = {en},
-  keywords = {.Publications 💫,Dynamic time warping,Empirical evaluation,Forecasting,M competitions,Time series similarity},
+  keywords = {Dynamic time warping,Empirical evaluation,Forecasting,M competitions,Time series similarity},
   annotation = {(IF 11.3, JCR Q1)},
   file = {/home/fli/carbon/Papers/zotero-files/2021/Kang_Spiliotis_Petropoulos et al_2021_Deja vu.pdf}
 }
@@ -21430,7 +21481,7 @@
   urldate = {2022-10-01},
   abstract = {Forecast combinations have been widely applied in the last few decades to improve forecasting. Estimating optimal weights that can outperform simple averages is not always an easy task. In recent years, the idea of using time series features for forecast combinations has flourished. Although this idea has been proved to be beneficial in several forecasting competitions, it may not be practical in many situations. For example, the task of selecting appropriate features to build forecasting models is often challenging. Even if there was an acceptable way to define the features, existing features are estimated based on the historical patterns, which are likely to change in the future. Other times, the estimation of the features is infeasible due to limited historical data. In this work, we suggest a change of focus from the historical data to the produced forecasts to extract features. We use out-of-sample forecasts to obtain weights for forecast combinations by amplifying the diversity of the pool of methods being combined. A rich set of time series is used to evaluate the performance of the proposed method. Experimental results show that our diversity-based forecast combination framework not only simplifies the modeling process but also achieves superior forecasting performance in terms of both point forecasts and prediction intervals. The value of our proposition lies on its simplicity, transparency, and computational efficiency, elements that are important from both an optimization and a decision analysis perspective.},
   language = {en},
-  keywords = {.Publications 💫,Empirical evaluation,Empirical Evaluation,Forecast combination,Forecast Combination,Forecast diversity,Forecast Diversity,Forecasting,Prediction intervals,Prediction Intervals},
+  keywords = {Empirical evaluation,Empirical Evaluation,Forecast combination,Forecast Combination,Forecast diversity,Forecast Diversity,Forecasting,Prediction intervals,Prediction Intervals},
   annotation = {(IF 6.4, JCR Q1)},
   file = {/home/fli/carbon/Papers/zotero-files/2022/Kang_Cao_Petropoulos_Li_2022_Forecast with forecasts.pdf}
 }
@@ -22029,6 +22080,23 @@
   language = {en},
   keywords = {Changepoint analysis,GOMOS,Hindcast time series,Penalized likelihood,Significant wave height},
   file = {/home/fli/carbon/Papers/zotero-files/2010/Killick_Eckley_Ewans_Jonathan_2010_Detection of changes in variance of oceanographic time-series using changepoint.pdf}
+}
+
+@online{KimA2024FinancialStatement,
+  type = {SSRN Scholarly Paper},
+  title = {Financial Statement Analysis with Large Language Models},
+  author = {Kim, Alex and Muhn, Maximilian and Nikolaev, Valeri V.},
+  date = {2024-05-20},
+  number = {4835311},
+  location = {Rochester, NY},
+  doi = {10.2139/ssrn.4835311},
+  url = {https://papers.ssrn.com/abstract=4835311},
+  urldate = {2024-05-23},
+  abstract = {We investigate whether an LLM can successfully perform financial statement analysis in a way similar to a professional human analyst. We provide standardized and anonymous financial statements to GPT4 and instruct the model to analyze them to determine the direction of future earnings. Even without any narrative or industry-specific information, the LLM outperforms financial analysts in its ability to predict earnings changes. The LLM exhibits a relative advantage over human analysts in situations when the analysts tend to struggle. Furthermore, we find that the prediction accuracy of the LLM is on par with the performance of a narrowly trained state-of-the-art ML model. LLM prediction does not stem from its training memory. Instead, we find that the LLM generates useful narrative insights about a company's future performance. Lastly, our trading strategies based on GPT's predictions yield a higher Sharpe ratio and alphas than strategies based on other models. Taken together, our results suggest that LLMs may take a central role in decision-making.},
+  language = {en},
+  pubstate = {preprint},
+  keywords = {analysts,asset pricing,chain-of-thought,direction of earnings changes,earnings,financial statement analysis,GPT4,large language models,neural network},
+  file = {/home/fli/.zotero/zotero-data/storage/8SY94ZGQ/Kim et al. - 2024 - Financial Statement Analysis with Large Language Models.pdf}
 }
 
 @online{KimB2023DynamicAdditive,
@@ -22951,7 +23019,7 @@
   abstract = {This article considers a stable vector autoregressive (VAR) model and investigates return predictability in a Bayesian context. The bivariate VAR system comprises asset returns and a further prediction variable, such as the dividend-price ratio, and allows pinning down the question of return predictability to the value of one particular model parameter. We develop a new shrinkage type prior for this parameter and compare our Bayesian approach to ordinary least squares estimation and to the reduced-bias estimator proposed in Amihud and Hurvich (2004. “Predictive Regressions: A Reduced-Bias Estimation Method.” Journal of Financial and Quantitative Analysis 39: 813–41). A simulation study shows that the Bayesian approach dominates the reduced-bias estimator in terms of observed size (false positive) and power (false negative). We apply our methodology to a system comprising annual CRSP value-weighted returns running, respectively, from 1926 to 2004 and from 1953 to 2021, and the logarithmic dividend-price ratio. For the first sample, the Bayesian approach supports the hypothesis of no return predictability, while for the second data set weak evidence for predictability is observed. Then, instead of the dividend-price ratio, some prediction variables proposed in Welch and Goyal (2008. “A Comprehensive Look at the Empirical Performance of Equity Premium Prediction.” Review of Financial Studies 21: 1455–508) are used. Also with these prediction variables, only weak evidence for return predictability is supported by Bayesian testing. These results are corroborated with an out-of-sample forecasting analysis.},
   language = {en},
   keywords = {Bayes Factor,Bayesian control function approach,return predictability,shrinkage priors,VAR},
-  file = {/home/fli/.zotero/zotero-data/storage/Q87WJG4Y/Koval et al. - 2023 - Bayesian Reconciliation of Return Predictability.pdf}
+  file = {/home/fli/.zotero/zotero-data/storage/IQUBJLGI/Koval et al. - 2023 - Bayesian Reconciliation of Return Predictability.pdf;/home/fli/.zotero/zotero-data/storage/Q87WJG4Y/Koval et al. - 2023 - Bayesian Reconciliation of Return Predictability.pdf}
 }
 
 @article{KraftH2009AssetAllocation,
@@ -23774,18 +23842,6 @@
   file = {/home/fli/carbon/Papers/zotero-files/1989/Ledolter_1989_The effect of additive outliers on the forecasts from ARIMA models.pdf}
 }
 
-@article{lee1992modeling,
-  title = {Modeling and Forecasting US Mortality},
-  author = {Lee, Ronald D and Carter, Lawrence R},
-  date = {1992},
-  journaltitle = {Journal of the American Statistical Association},
-  volume = {87},
-  number = {419},
-  pages = {659--671},
-  publisher = {Taylor \& Francis Group},
-  language = {en}
-}
-
 @article{lee2001evaluating,
   title = {Evaluating the Performance of the Lee-Carter Method for Forecasting Mortality},
   author = {Lee, Ronald and Miller, Timothy},
@@ -23970,6 +24026,24 @@
   pages = {21--47},
   doi = {10.1016/S0378-8733(01)00049-1},
   file = {/home/fli/.zotero/zotero-data/storage/PT88BDTC/Leenders - 2002 - Modeling social influence through network autocorrelation constructing the weight matrix.pdf}
+}
+
+@article{LeeRD1992ModelingForecasting,
+  title = {Modeling and Forecasting U.S. Mortality},
+  author = {Lee, Ronald D. and Carter, Lawrence R.},
+  date = {1992-09-01},
+  journaltitle = {Journal of the American Statistical Association},
+  volume = {87},
+  number = {419},
+  pages = {659--671},
+  publisher = {Taylor \& Francis},
+  issn = {0162-1459},
+  doi = {10.1080/01621459.1992.10475265},
+  url = {https://doi.org/10.1080/01621459.1992.10475265},
+  urldate = {2024-05-27},
+  abstract = {Time series methods are used to make long-run forecasts, with confidence intervals, of age-specific mortality in the United States from 1990 to 2065. First, the logs of the age-specific death rates are modeled as a linear function of an unobserved period-specific intensity index, with parameters depending on age. This model is fit to the matrix of U.S. death rates, 1933 to 1987, using the singular value decomposition (SVD) method; it accounts for almost all the variance over time in age-specific death rates as a group. Whereas e 0 has risen at a decreasing rate over the century and has decreasing variability, k(t) declines at a roughly constant rate and has roughly constant variability, facilitating forecasting. k(t), which indexes the intensity of mortality, is next modeled as a time series (specifically, a random walk with drift) and forecast. The method performs very well on within-sample forecasts, and the forecasts are insensitive to reductions in the length of the base period from 90 to 30 years; some instability appears for base periods of 10 or 20 years, however. Forecasts of age-specific rates are derived from the forecasts of k, and other life table variables are derived and presented. These imply an increase of 10.5 years in life expectancy to 86.05 in 2065 (sexes combined), with a confidence band of plus 3.9 or minus 5.6 years, including uncertainty concerning the estimated trend. Whereas 46\% now survive to age 80, by 2065 46\% will survive to age 90. Of the gains forecast for person-years lived over the life cycle from now until 2065, 74\% will occur at age 65 and over. These life expectancy forecasts are substantially lower than direct time series forecasts of e 0, and have far narrower confidence bands; however, they are substantially higher than the forecasts of the Social Security Administration's Office of the Actuary.},
+  keywords = {Demography,Forecast,Life expectancy,Mortality,Population,Projection},
+  file = {/home/fli/.zotero/zotero-data/storage/KSGENLH9/Lee and Carter - 1992 - Modeling and Forecasting U.S. Mortality.pdf}
 }
 
 @article{LeeS2006PropensityScore,
@@ -24753,7 +24827,7 @@
   abstract = {Smooth mixtures, i.e. mixture models with covariate-dependent mixing weights, are very useful flexible models for conditional densities. Previous work shows that using too simple mixture components for modeling heteroscedastic and/or heavy tailed data can give a poor fit, even with a large number of components. This paper explores how well a smooth mixture of symmetric components can capture skewed data. Simulations and applications on real data show that including covariate-dependent skewness in the components can lead to substantially improved performance on skewed data, often using a much smaller number of components. Furthermore, variable selection is effective in removing unnecessary covariates in the skewness, which means that there is little loss in allowing for skewness in the components when the data are actually symmetric. We also introduce smooth mixtures of gamma and log-normal components to model positively-valued response variables.},
   isbn = {978-1-119-99567-8},
   language = {en},
-  keywords = {.Publications 💫,capable of approximating - large class of conditional distributions,finite smooth mixtures,first real dataset - using laser-emitted light to detect chemical compounds in atmosphere,generalised linear model (GLM) - to variable selection case,inference methodology - general MCMC scheme,LIDAR data,log predictive density score (LPDS),model comparison - components assumed known in MCMC scheme,modelling conditional densities - using finite smooth mixtures,or mixtures of experts (ME) - knowing machine learning literature,simple-and-many versus complex-and-few - modelling regression data-skewed response variable,simulation study in Villani et al. (2009) - smooth mixture of homoscedastic Gaussian components for heteroscedastic data,smooth mixtures},
+  keywords = {capable of approximating - large class of conditional distributions,finite smooth mixtures,first real dataset - using laser-emitted light to detect chemical compounds in atmosphere,generalised linear model (GLM) - to variable selection case,inference methodology - general MCMC scheme,LIDAR data,log predictive density score (LPDS),model comparison - components assumed known in MCMC scheme,modelling conditional densities - using finite smooth mixtures,or mixtures of experts (ME) - knowing machine learning literature,simple-and-many versus complex-and-few - modelling regression data-skewed response variable,simulation study in Villani et al. (2009) - smooth mixture of homoscedastic Gaussian components for heteroscedastic data,smooth mixtures},
   file = {/home/fli/carbon/Papers/zotero-files/2011/Li_Villani_Kohn_2011_Modelling Conditional Densities Using Finite Smooth Mixtures.pdf}
 }
 
@@ -24784,7 +24858,7 @@
   urldate = {2022-11-11},
   abstract = {Methods for choosing a fixed set of knot locations in additive spline models are fairly well established in the statistical literature. The curse of dimensionality makes it nontrivial to extend these methods to nonadditive surface models, especially when there are more than a couple of covariates. We propose a multivariate Gaussian surface regression model that combines both additive splines and interactive splines, and a highly efficient Markov chain Monte Carlo algorithm that updates all the knot locations jointly. We use shrinkage prior to avoid overfitting with different estimated shrinkage factors for the additive and surface part of the model, and also different shrinkage parameters for the different response variables. Simulated data and an application to firm leverage data show that the approach is computationally efficient, and that allowing for freely estimated knot locations can offer a substantial improvement in out-of-sample predictive performance.},
   language = {en},
-  keywords = {.Publications 💫,Bayesian inference,free knots,Markov chain Monte Carlo,splines,surface regression},
+  keywords = {Bayesian inference,free knots,Markov chain Monte Carlo,splines,surface regression},
   file = {/home/fli/carbon/Papers/zotero-files/2013/Li_Villani_2013_Efficient Bayesian Multivariate Surface Regression.pdf;/home/fli/carbon/Papers/zotero-files/2013/Li_Villani_2013_Efficient Bayesian Multivariate Surface Regression2.pdf;/home/fli/carbon/Papers/zotero-files/2013/Li_Villani_2013_Efficient Bayesian Multivariate Surface Regression3.pdf}
 }
 
@@ -24803,7 +24877,7 @@
   urldate = {2022-11-11},
   abstract = {Copulas provide an attractive approach to the construction of multivariate distributions with flexible marginal distributions and different forms of dependences. Of particular importance in many areas is the possibility of forecasting the tail-dependences explicitly. Most of the available approaches are only able to estimate tail-dependences and correlations via nuisance parameters, and cannot be used for either interpretation or forecasting. We propose a general Bayesian approach for modeling and forecasting tail-dependences and correlations as explicit functions of covariates, with the aim of improving the copula forecasting performance. The proposed covariate-dependent copula model also allows for Bayesian variable selection from among the covariates of the marginal models, as well as the copula density. The copulas that we study include the Joe-Clayton copula, the Clayton copula, the Gumbel copula and the Student’s t-copula. Posterior inference is carried out using an efficient MCMC simulation method. Our approach is applied to both simulated data and the S\&P 100 and S\&P 600 stock indices. The forecasting performance of the proposed approach is compared with those of other modeling strategies based on log predictive scores. A value-at-risk evaluation is also performed for the model comparisons.},
   language = {en},
-  keywords = {.Publications 💫,Covariate-dependent copula,Financial forecasting,Kendall’s,MCMC,nsfc2015,Tail-dependence},
+  keywords = {Covariate-dependent copula,Financial forecasting,Kendall’s,MCMC,nsfc2015,Tail-dependence},
   annotation = {(IF 7.9, JCR Q1)},
   file = {/home/fli/carbon/Papers/zotero-files/2018/Li_Kang_2018_Improving forecasting performance using covariate-dependent copula models.pdf;/home/fli/carbon/Papers/zotero-files/2018/Li_Kang_2018_Improving forecasting performance using covariate-dependent copula models2.pdf}
 }
@@ -24820,7 +24894,7 @@
   pages = {1632528},
   doi = {10.1080/23322039.2019.1632528},
   abstract = {Understanding how defaults correlate across firms is a persistent concern in risk management. In this paper, we apply covariate-dependent copula models to assess the dynamic nature of credit risk dependence, which we define as “credit risk clustering”. We also study the driving forces of the credit risk clustering in CEC business group in China. Our empirical analysis shows that the credit risk clustering varies over time and exhibits different patterns across firm pairs in a business group. We also investigate the impacts of systematic and idiosyncratic factors on credit risk clustering. We find that the impacts of the money supply and the short-term interest rates are positive, whereas the impacts of exchange rates are negative. The roles of the CPI on credit risk clustering are ambiguous. Idiosyncratic factors are vital for predicting credit risk clustering. From a policy perspective, our results not only strengthen the results of previous research but also provide a possible approach to model and predict the extreme co-movement of credit risk in business groups with financial indicators.},
-  keywords = {.Publications 💫,business groups,covariate-dependent copulas,credit risk clustering,MCMC,nsfc2015},
+  keywords = {business groups,covariate-dependent copulas,credit risk clustering,MCMC,nsfc2015},
   file = {/home/fli/carbon/Papers/zotero-files/2019/Li_He_2019_Credit risk clustering in a business group2.pdf}
 }
 
@@ -25069,7 +25143,6 @@
   url = {https://arxiv.org/abs/2204.08283},
   abstract = {Intermittent demand forecasting is a ubiquitous and challenging problem in production systems and supply chain management. In recent years, there has been a growing focus on developing forecasting approaches for intermittent demand from academic and practical perspectives. However, limited attention has been given to forecast combination methods, which have achieved competitive performance in forecasting fast-moving time series. The current study aims to examine the empirical outcomes of some existing forecast combination methods and propose a generalized feature-based framework for intermittent demand forecasting. The proposed framework has been shown to improve the accuracy of point and quantile forecasts based on two real data sets. Further, some analysis of features, forecasting pools and computational efficiency is also provided. The findings indicate the intelligibility and flexibility of the proposed approach in intermittent demand forecasting and offer insights regarding inventory decisions.},
   language = {en},
-  keywords = {.Publications 💫},
   annotation = {(IF 9.2, JCR Q1)},
   file = {/home/fli/carbon/Papers/zotero-files/2022/Li_Kang_Petropoulos_Li_2022_Feature-based intermittent demand forecast combinations.pdf;/home/fli/carbon/Papers/zotero-files/2023/Li_Kang_Petropoulos_Li_2023_Feature-based intermittent demand forecast combinations.pdf}
 }
@@ -25092,6 +25165,22 @@
   isbn = {978-3-031-35879-1},
   language = {en},
   file = {/home/fli/carbon/Papers/zotero-files/2023/Li_Li_Kang_2023_Forecasting Large Collections of Time Series.pdf;/home/fli/carbon/Papers/zotero-files/2023/Li_Li_Kang_2023_Forecasting Large Collections of Time Series2.pdf}
+}
+
+@article{LiL2024BoostingDomainspecific,
+  title = {Boosting Domain-Specific Models with Shrinkage: An Application in Mortality Forecasting},
+  shorttitle = {Boosting Domain-Specific Models with Shrinkage},
+  author = {Li, Li and Li, Han and Panagiotelis, Anastasios},
+  date = {2024-05-20},
+  journaltitle = {International Journal of Forecasting},
+  shortjournal = {International Journal of Forecasting},
+  issn = {0169-2070},
+  doi = {10.1016/j.ijforecast.2024.05.001},
+  url = {https://www.sciencedirect.com/science/article/pii/S0169207024000402},
+  urldate = {2024-05-27},
+  abstract = {This paper extends the technique of gradient boosting with a focus on using domain-specific models instead of trees. The domain of mortality forecasting is considered as an application. The two novel contributions are to use well-known stochastic mortality models as weak learners in gradient boosting rather than trees, and to include a penalty that shrinks mortality forecasts in adjacent age groups and nearby geographical regions closer together. The proposed method demonstrates superior forecasting performance based on US male mortality data from 1969 to 2019. The proposed approach also enables us to interpret and visualize the results. The boosted model with age-based shrinkage yields the most accurate national-level mortality forecast. For state-level forecasts, spatial shrinkage provides further improvement in accuracy in addition to the benefits of age-based shrinkage. This improvement can be attributed to data sharing across states with large and small populations in adjacent regions and states with common risk factors.},
+  keywords = {Forecasting,Gradient boosting,Mortality,Shrinkage,Spatial modeling},
+  file = {/home/fli/.zotero/zotero-data/storage/MDLJN54W/Li et al. - 2024 - Boosting domain-specific models with shrinkage An application in mortality forecasting.pdf}
 }
 
 @inproceedings{LiM2014ScalingDistributed,
@@ -25899,7 +25988,7 @@
   urldate = {2022-11-11},
   abstract = {Feature-based time series representations have attracted substantial attention in a wide range of time series analysis methods. Recently, the use of time series features for forecast model averaging has been an emerging research focus in the forecasting community. Nonetheless, most of the existing approaches depend on the manual choice of an appropriate set of features. Exploiting machine learning methods to extract features from time series automatically becomes crucial in state-of-the-art time series analysis. In this paper, we introduce an automated approach to extract time series features based on time series imaging. We first transform time series into recurrence plots, from which local features can be extracted using computer vision algorithms. The extracted features are used for forecast model averaging. Our experiments show that forecasting based on automatically extracted features, with less human intervention and a more comprehensive view of the raw time series data, yields highly comparable performances with the best methods in the largest forecasting competition dataset (M4) and outperforms the top methods in the Tourism forecasting competition dataset.},
   language = {en},
-  keywords = {.Publications 💫,Forecast combination,Forecasting,Recurrence plots,Time series feature extraction,Time series imaging},
+  keywords = {Forecast combination,Forecasting,Recurrence plots,Time series feature extraction,Time series imaging},
   annotation = {(IF 8.5, JCR Q1)},
   file = {/home/fli/carbon/Papers/zotero-files/2020/Li_Kang_Li_2020_Forecasting with time series imaging2.pdf}
 }
@@ -28947,7 +29036,7 @@
   abstract = {In this paper we propose the use of the generative AI methods in Econometrics. Generative methods avoid the use of densities as done by MCMC. They directrix simulate large samples of observables and unobservable (parameters, latent variables) and then using high-dimensional deep learner to inform a nonlinear transport map from data to parameter inferences. Our themed apply to a wide verity or econometrics problems, including those where the latent variables are updates in deterministic fashion. Further, paper we illustrate our methodology in the field of causal inference and show how generative AI provides generalization of propensity scores. Our approach can also handle nonlinearity and heterogeneity. Finally, we conclude with the directions for future research.},
   language = {en},
   pubstate = {preprint},
-  keywords = {.🌟🌟🌟,Statistics - Methodology},
+  keywords = {Statistics - Methodology},
   file = {/home/fli/carbon/Papers/zotero-files/2023/Nareklishvili_Polson_Sokolov_2023_Generative Causal Inference.pdf}
 }
 
@@ -28972,7 +29061,7 @@
 
 @book{NationalBureauOfStatisticsOfChina2023ChinaStatistical,
   title = {China Statistical Yearbook 2023},
-  author = {National Bureau Of Statistics Of China,},
+  author = {National Bureau Of Statistics Of China},
   date = {2023-10-16},
   publisher = {China Statistics Press},
   location = {Beijing China},
@@ -30759,7 +30848,7 @@
   url = {https://doi.org/10.1080/07350015.2021.1961789},
   urldate = {2022-11-11},
   abstract = {Quantile regression is a method of fundamental importance. How to efficiently conduct quantile regression for a large dataset on a distributed system is of great importance. We show that the popularly used one-shot estimation is statistically inefficient if data are not randomly distributed across different workers. To fix the problem, a novel one-step estimation method is developed with the following nice properties. First, the algorithm is communication efficient. That is the communication cost demanded is practically acceptable. Second, the resulting estimator is statistically efficient. That is its asymptotic covariance is the same as that of the global estimator. Third, the estimator is robust against data distribution. That is its consistency is guaranteed even if data are not randomly distributed across different workers. Numerical experiments are provided to corroborate our findings. A real example is also presented for illustration.},
-  keywords = {.Publications 💫,Communication efficiency,Distributed system,One-shot estimation,One-step estimation,Quantile regression,Statistical efficiency},
+  keywords = {Communication efficiency,Distributed system,One-shot estimation,One-step estimation,Quantile regression,Statistical efficiency},
   file = {/home/fli/carbon/Papers/zotero-files/2022/Pan_Ren_Guo et al_2022_A Note on Distributed Quantile Regression by Pilot Sampling and One-Step.pdf}
 }
 
@@ -31724,7 +31813,7 @@
   urldate = {2022-11-11},
   abstract = {Forecasting has always been at the forefront of decision making and planning. The uncertainty that surrounds the future is both exciting and challenging, with individuals and organisations seeking to minimise risks and maximise utilities. The large number of forecasting applications calls for a diverse set of forecasting methods to tackle real-life challenges. This article provides a non-systematic review of the theory and the practice of forecasting. We provide an overview of a wide range of theoretical, state-of-the-art models, methods, principles, and approaches to prepare, produce, organise, and evaluate forecasts. We then demonstrate how such theoretical concepts are applied in a variety of real-life contexts. We do not claim that this review is an exhaustive list of methods and applications. However, we wish that our encyclopedic presentation will offer a point of reference for the rich work that has been undertaken over the last decades, with some key insights for the future of forecasting theory and practice. Given its encyclopedic nature, the intended mode of reading is non-linear. We offer cross-references to allow the readers to navigate through the various topics. We complement the theoretical concepts and applications covered by large lists of free or open-source software implementations and publicly-available databases.},
   language = {en},
-  keywords = {.Publications 💫,Applications,Encyclopedia,Methods,Prediction,Principles,Review,Time series},
+  keywords = {Applications,Encyclopedia,Methods,Prediction,Principles,Review,Time series},
   annotation = {(IF 7.9, JCR Q1, ESI Highly Cited Paper)},
   file = {/home/fli/carbon/Papers/zotero-files/2022/Petropoulos_Apiletti_Assimakopoulos et al_2022_Forecasting.pdf;/home/fli/carbon/Papers/zotero-files/2022/Petropoulos_Apiletti_Assimakopoulos et al_2022_Forecasting2.pdf}
 }
@@ -31873,7 +31962,7 @@
   doi = {10.1136/bmjopen-2017-020640},
   abstract = {Purpose Globally, the age-standardised prevalence of type 2 diabetes mellitus (T2DM) has nearly doubled from 1980 to 2014, rising from 4.7\% to 8.5\% with an estimated 422 million adults living with the chronic disease. The MULTI sTUdy Diabetes rEsearch (MULTITUDE) consortium was recently established to harmonise data from 17 independent cohort studies and clinical trials and to facilitate a better understanding of the determinants, risk factors and outcomes associated with T2DM. Participants Participants range in age from 3 to 88 years at baseline, including both individuals with and without T2DM. MULTITUDE is an individual-level pooled database of demographics, comorbidities, relevant medications, clinical laboratory values, cardiac health measures, and T2DM-associated events and outcomes across 45 US states and the District of Columbia. Findings to date Among the 135 156 ongoing participants included in the consortium, almost 25\% (33 421) were diagnosed with T2DM at baseline. The average age of the participants was 54.3, while the average age of participants with diabetes was 64.2. Men (55.3\%) and women (44.6\%) were almost equally represented across the consortium. Non-whites accounted for 31.6\% of the total participants and 40\% of those diagnosed with T2DM. Fewer individuals with diabetes reported being regular smokers than their non-diabetic counterparts (40.3\% vs 47.4\%). Over 85\% of those with diabetes were reported as either overweight or obese at baseline, compared with 60.7\% of those without T2DM. We observed differences in all-cause mortality, overall and by T2DM status, between cohorts. Future plans Given the wide variation in demographics and all-cause mortality in the cohorts, MULTITUDE consortium will be a unique resource for conducting research to determine: differences in the incidence and progression of T2DM; sequence of events or biomarkers prior to T2DM diagnosis; disease progression from T2DM to disease-related outcomes, complications and premature mortality; and to assess race/ethnicity differences in the above associations.},
   language = {en},
-  keywords = {.Publications 💫,cardiac epidemiology,epidemiology,nsfc2015,preventive medicine},
+  keywords = {cardiac epidemiology,epidemiology,nsfc2015,preventive medicine},
   file = {/home/fli/carbon/Papers/zotero-files/2018/Pino_Zuo_Olivera et al_2018_Cohort profile.pdf;/home/fli/carbon/Papers/zotero-files/2018/Pino_Zuo_Olivera et al_2018_Cohort profile2.pdf}
 }
 
@@ -34680,7 +34769,6 @@
   isbn = {978-0-07-222680-5},
   language = {en},
   pagetotal = {1023},
-  keywords = {C++ (Computer program language)},
   file = {/home/fli/carbon/Papers/zotero-files/2003/Schildt_2003_C++.pdf}
 }
 
@@ -37345,7 +37433,6 @@
   isbn = {978-0-201-70073-2},
   language = {en},
   pagetotal = {1019},
-  keywords = {C++ (Computer program language)},
   file = {/home/fli/carbon/Papers/zotero-files/2000/Stroustrup_2000_The C++ programming language.pdf;/home/fli/carbon/Papers/zotero-files/2000/Stroustrup_2000_The C++ programming language2.pdf}
 }
 
@@ -37906,7 +37993,7 @@
   urldate = {2022-11-11},
   abstract = {This paper introduces a novel meta-learning algorithm for time series forecast model performance prediction. We model the forecast error as a function of time series features calculated from historical time series with an efficient Bayesian multivariate surface regression approach. The minimum predicted forecast error is then used to identify an individual model or a combination of models to produce the final forecasts. It is well known that the performance of most meta-learning models depends on the representativeness of the reference dataset used for training. In such circumstances, we augment the reference dataset with a feature-based time series simulation approach, namely GRATIS, to generate a rich and representative time series collection. The proposed framework is tested using the M4 competition data and is compared against commonly used forecasting approaches. Our approach provides comparable performance to other model selection and combination approaches but at a lower computational cost and a higher degree of interpretability, which is important for supporting decisions. We also provide useful insights regarding which forecasting models are expected to work better for particular types of time series, the intrinsic mechanisms of the meta-learners, and how the forecasting performance is affected by various factors.},
   language = {en},
-  keywords = {.Publications 💫,Forecasting,M4 competition,Meta-learning,Performance prediction,Surface regression,Time series simulation},
+  keywords = {Forecasting,M4 competition,Meta-learning,Performance prediction,Surface regression,Time series simulation},
   annotation = {(IF 7.9, JCR Q1)},
   file = {/home/fli/carbon/Papers/zotero-files/2022/Talagala_Li_Kang_2022_FFORMPP2.pdf}
 }
@@ -40810,7 +40897,7 @@
   url = {https://arxiv.org/abs/1908.02891},
   urldate = {2022-11-11},
   abstract = {Forecasting is an indispensable element of operational research (OR) and an important aid to planning. The accurate estimation of the forecast uncertainty facilitates several operations management activities, predominantly in supporting decisions in inventory and supply chain management and effectively setting safety stocks. In this paper, we introduce a feature-based framework, which links the relationship between time series features and the interval forecasting performance into providing reliable interval forecasts. We propose an optimal threshold ratio searching algorithm and a new weight determination mechanism for selecting an appropriate subset of models and assigning combination weights for each time series tailored to the observed features. We evaluate our approach using a large set of time series from the M4 competition. Our experiments show that our approach significantly outperforms a wide range of benchmark models, both in terms of point forecasts as well as prediction intervals.},
-  keywords = {.Publications 💫,forecast combination,Forecasting,nsfc2015,prediction intervals,time series features,uncertainty estimation},
+  keywords = {forecast combination,Forecasting,nsfc2015,prediction intervals,time series features,uncertainty estimation},
   file = {/home/fli/carbon/Papers/zotero-files/2022/Wang_Kang_Petropoulos_Li_2022_The uncertainty estimation of feature-based forecast combinations3.pdf}
 }
 
@@ -41024,7 +41111,7 @@
   issn = {0925-7535},
   doi = {10.1016/j.ssci.2022.105850},
   abstract = {The semi-open character with high passenger flow in Metro Rail Transport Stations (MRTS) makes safety management of human-electromechanical interaction escalator systems more complex. Safety management should not consider only single failures, but also the complex interactions in the system. This study applies task driven behavior theory and system theory to reveal a generic framework of the MRTS escalator accident mechanism and uses Lasso-Logistic Regression (LLR) for escalator injury prediction. Escalator accidents in the Beijing MRTS are used as a case study to estimate the applicability of the methodologies. The main results affirm that the application of System-Theoretical Process Analysis (STPA) and Task Driven Accident Process Analysis (TDAPA) to the generic escalator accident mechanism reveals non-failure state task driven passenger behaviors and constraints on safety that are not addressed in previous studies. The results also confirm that LLR is able to predict escalator accidents where there is a relatively large number of variables with limited observations. Additionally, increasing the amount of data improves the prediction accuracy for all three types of injuries in the case study, suggesting the LLR model has good extrapolation ability. The results can be applied in MRTS as instruments for both escalator accident investigation and accident prevention.},
-  keywords = {.Publications 💫,Accident prediction,Escalator incident,Lasso-Logistic Regression model,Subway station,System-Theoretical Process Analysis (STPA)},
+  keywords = {Accident prediction,Escalator incident,Lasso-Logistic Regression model,Subway station,System-Theoretical Process Analysis (STPA)},
   annotation = {(通讯作者)},
   file = {/home/fli/carbon/Papers/zotero-files/2022/Wang_Pang_Gan_Skitmore_Li_2022_Escalator accident mechanism analysis and injury prediction approaches in heavy.pdf}
 }
@@ -41242,6 +41329,21 @@
   date = {1990},
   publisher = {Addison-Wesley},
   location = {Redwood City, CA}
+}
+
+@article{WelchI2008ComprehensiveLook,
+  title = {A Comprehensive Look at the Empirical Performance of Equity Premium Prediction},
+  author = {Welch, Ivo and Goyal, Amit},
+  date = {2008},
+  journaltitle = {The Review of Financial Studies},
+  volume = {21},
+  number = {4},
+  pages = {1455--1508},
+  issn = {0893-9454},
+  doi = {10.1093/rfs/hhm014},
+  url = {https://doi.org/10.1093/rfs/hhm014},
+  abstract = {Our article comprehensively reexamines the performance of variables that have been suggested by the academic literature to be good predictors of the equity premium. We find that by and large, these models have predicted poorly both in-sample (IS) and out-of-sample (OOS) for 30 years now; these models seem unstable, as diagnosed by their out-of-sample predictions and other statistics; and these models would not have helped an investor with access only to available information to profitably time the market.},
+  file = {/home/fli/.zotero/zotero-data/storage/8CBPLMN3/Welch and Goyal - 2007 - A comprehensive look at the empirical performance of equity premium prediction.pdf}
 }
 
 @article{WelchNG2022ProbabilisticForecasts,
@@ -44235,7 +44337,7 @@
   urldate = {2024-02-27},
   abstract = {Modeling the correlations among errors is closely associated with how accurately the model can quantify predictive uncertainty in probabilistic time series forecasting. Recent multivariate models have made significant progress in accounting for contemporaneous correlations among errors, while a common assumption on these errors is that they are temporally independent for the sake of statistical simplicity. However, real-world observations often deviate from this assumption, since errors usually exhibit substantial autocorrelation due to various factors such as the exclusion of temporally correlated covariates. In this work, we propose an efficient method, based on a low-rank-plus-diagonal parameterization of the covariance matrix, which can effectively characterize the autocorrelation of errors. The proposed method possesses several desirable properties: the complexity does not scale with the number of time series, the resulting covariance can be used for calibrating predictions, and it can seamlessly integrate with any model with Gaussian-distributed errors. We empirically demonstrate these properties using two distinct neural forecasting models-GPVar and Transformer. Our experimental results confirm the effectiveness of our method in enhancing predictive accuracy and the quality of uncertainty quantification on multiple real-world datasets.},
   language = {en},
-  organization = {arXiv.org},
+  pubstate = {preprint},
   file = {/home/fli/.zotero/zotero-data/storage/SD8ZRWWK/Zheng and Sun - 2024 - Multivariate Probabilistic Time Series Forecasting with Correlated Errors.pdf}
 }
 
@@ -44576,7 +44678,7 @@
   url = {https://arxiv.org/abs/1908.04904},
   urldate = {2022-11-11},
   abstract = {In this work, we develop a distributed least-square approximation (DLSA) method that is able to solve a large family of regression problems (e.g., linear regression, logistic regression, and Cox’s model) on a distributed system. By approximating the local objective function using a local quadratic form, we are able to obtain a combined estimator by taking a weighted average of local estimators. The resulting estimator is proved to be statistically as efficient as the global estimator. Moreover, it requires only one round of communication. We further conduct a shrinkage estimation based on the DLSA estimation using an adaptive Lasso approach. The solution can be easily obtained by using the LARS algorithm on the master node. It is theoretically shown that the resulting estimator possesses the oracle property and is selection consistent by using a newly designed distributed Bayesian information criterion. The finite sample performance and computational efficiency are further illustrated by an extensive numerical study and an airline dataset. The airline dataset is 52 GB in size. The entire methodology has been implemented in Python for a de-facto standard Spark system. The proposed DLSA algorithm on the Spark system takes 26 min to obtain a logistic regression estimator, which is more efficient and memory friendly than conventional methods. Supplementary materials for this article are available online.},
-  keywords = {.Publications 💫,Distributed BIC,Distributed system,Least-squares approximation,Shrinkage estimation},
+  keywords = {Distributed BIC,Distributed system,Least-squares approximation,Shrinkage estimation},
   file = {/home/fli/carbon/Papers/zotero-files/2021/Zhu_Li_Wang_2021_Least-Square Approximation for a Distributed System.pdf;/home/fli/carbon/Papers/zotero-files/2021/Zhu_Li_Wang_2021_Least-Square Approximation for a Distributed System2.pdf}
 }
 
