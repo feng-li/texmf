@@ -7507,6 +7507,21 @@
   publisher = {JSTOR}
 }
 
+@article{ChenX2016BayesianDecision,
+  title = {Bayesian Decision Process for Cost-Efficient Dynamic Ranking via Crowdsourcing},
+  author = {Chen, Xi and Jiao, Kevin and Lin, Qihang},
+  date = {2016-01-01},
+  journaltitle = {The Journal of Machine Learning Research},
+  shortjournal = {J. Mach. Learn. Res.},
+  volume = {17},
+  number = {1},
+  pages = {7617--7656},
+  issn = {1532-4435},
+  abstract = {Rank aggregation based on pairwise comparisons over a set of items has a wide range of applications. Although considerable research has been devoted to the development of rank aggregation algorithms, one basic question is how to efficiently collect a large amount of high-quality pairwise comparisons for the ranking purpose. Because of the advent of many crowdsourcing services, a crowd of workers are often hired to conduct pairwise comparisons with a small monetary reward for each pair they compare. Since different workers have different levels of reliability and different pairs have different levels of ambiguity, it is desirable to wisely allocate the limited budget for comparisons among the pairs of items and workers so that the global ranking can be accurately inferred from the comparison results. To this end, we model the active sampling problem in crowdsourced ranking as a Bayesian Markov decision process, which dynamically selects item pairs and workers to improve the ranking accuracy under a budget constraint. We further develop a computationally efficient sampling policy based on knowledge gradient as well as a moment matching technique for posterior approximation. Experimental evaluations on both synthetic and real data show that the proposed policy achieves high ranking accuracy with a lower labeling cost.},
+  keywords = {Bayesian,crowdsourced ranking,dynamic programming,knowledge gradient,Markov decision process,moment matching},
+  file = {/home/fli/.zotero/zotero-data/storage/IXTE8A48/Chen et al. - 2016 - Bayesian decision process for cost-efficient dynamic ranking via crowdsourcing.pdf}
+}
+
 @unpublished{ChenX2019QuantileRegression,
   title = {Quantile Regression under Memory Constraint},
   author = {Chen, Xi and Liu, Weidong and Zhang, Yichen},
@@ -7553,6 +7568,23 @@
   abstract = {This paper studies distributed estimation and support recovery for high-dimensional linear regression model with heavy-tailed noise. To deal with heavy-tailed noise whose variance can be infinite, we adopt the quantile regression loss function instead of the commonly used squared loss. However, the non-smooth quantile loss poses new challenges to high-dimensional distributed estimation in both computation and theoretical development. To address the challenge, we transform the response variable and establish a new connection between quantile regression and ordinary linear regression. Then, we provide a distributed estimator that is both computationally and communicationally efficient, where only the gradient information is communicated at each iteration. Theoretically, we show that, after a constant number of iterations, the proposed estimator achieves a near-oracle convergence rate without any restriction on the number of machines. Moreover, we establish the theoretical guarantee for the support recovery. The simulation analysis is provided to demonstrate the effectiveness of our method.},
   language = {en},
   file = {/home/fli/carbon/Papers/zotero-files/undefined/Chen_Liu_Mao_Yang_Distributed High-dimensional Regression Under a Quantile Loss Function.pdf}
+}
+
+@inproceedings{ChenY2015SpectralMLE,
+  title = {Spectral MLE: Top-K Rank Aggregation from Pairwise Comparisons},
+  shorttitle = {Spectral MLE},
+  booktitle = {Proceedings of the 32nd International Conference on Machine Learning},
+  author = {Chen, Yuxin and Suh, Changho},
+  date = {2015-06-01},
+  pages = {371--380},
+  publisher = {PMLR},
+  issn = {1938-7228},
+  url = {https://proceedings.mlr.press/v37/chena15.html},
+  urldate = {2024-05-29},
+  abstract = {This paper explores the preference-based top-K rank aggregation problem. Suppose that a collection of items is repeatedly compared in pairs, and one wishes to recover a consistent ordering that emphasizes the top-K ranked items, based on partially revealed preferences. We focus on the Bradley-Terry-Luce (BTL) model that postulates a set of latent preference scores underlying all items, where the odds of paired comparisons depend only on the relative scores of the items involved. We characterize the minimax limits on identifiability of top-K ranked items, in the presence of random and non-adaptive sampling. Our results highlight a separation measure that quantifies the gap of preference scores between the K-th and (K+1)-th ranked items. The minimum sample complexity required for reliable top-K ranking scales inversely with the separation measure irrespective of other preference distribution metrics. To approach this minimax limit, we propose a nearly linear-time ranking scheme, called Spectral MLE, that returns the indices of the top-K items in accordance to a careful score estimate. In a nutshell, Spectral MLE starts with an initial score estimate with minimal squared loss (obtained via a spectral method), and then successively refines each component with the assistance of coordinate-wise MLEs. Encouragingly, Spectral MLE allows perfect top-K item identification under minimal sample complexity. The practical applicability of Spectral MLE is further corroborated by numerical experiments.},
+  eventtitle = {International Conference on Machine Learning},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/3IYA8MFB/Chen and Suh - 2015 - Spectral MLE Top-K Rank Aggregation from Pairwise Comparisons.pdf}
 }
 
 @article{ChenY2020ProbabilisticForecasting,
@@ -40938,7 +40970,7 @@
   abstract = {Forecast combinations have flourished remarkably in the forecasting community and, in recent years, have become part of mainstream forecasting research and activities. Combining multiple forecasts produced for a target time series is now widely used to improve accuracy through the integration of information gleaned from different sources, thereby avoiding the need to identify a single “best” forecast. Combination schemes have evolved from simple combination methods without estimation to sophisticated techniques involving time-varying weights, nonlinear combinations, correlations among components, and cross-learning. They include combining point forecasts and combining probabilistic forecasts. This paper provides an up-to-date review of the extensive literature on forecast combinations and a reference to available open-source software implementations. We discuss the potential and limitations of various methods and highlight how these ideas have developed over time. Some crucial issues concerning the utility of forecast combinations are also surveyed. Finally, we conclude with current research gaps and potential insights for future research.},
   language = {en},
   keywords = {Combination forecast,Cross learning,Forecast combination puzzle,Forecast ensembles,Model averaging,Open-source software,Pooling,Probabilistic forecasts,Quantile forecasts},
-  annotation = {(IF: 7.9, JCR Q1)},
+  annotation = {(IF: 7.9, JCR Q1, ESI Hot Paper)},
   file = {/home/fli/carbon/Papers/zotero-files/2022/Wang_Hyndman_Li_Kang_2022_Forecast combinations2.pdf;/home/fli/carbon/Papers/zotero-files/2022/Wang_Hyndman_Li_Kang_2022_Forecast combinations5.pdf}
 }
 
