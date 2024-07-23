@@ -1,4 +1,4 @@
-all: publications sync
+all: snippets publications sync
 
 publications:
 	 /opt/jabref/bin/JabRef -n -o publications-feng.html,mylistrefs ../publications-feng.bib
