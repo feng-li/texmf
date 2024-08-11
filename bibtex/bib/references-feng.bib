@@ -46179,4 +46179,134 @@
   file = {/home/fli/.zotero/zotero-data/storage/DD7KTRJT/Archakov and Hansen - 2021 - A New Parametrization of Correlation Matrices.pdf;/home/fli/.zotero/zotero-data/storage/ZC57BB5E/Econometrica - 2021 - Archakov - A New Parametrization of Correlation Matrices.pdf}
 }
 
+@inproceedings{RoqueL2024RHiOTSFramework,
+  title = {RHiOTS: A Framework for Evaluating Hierarchical Time Series Forecasting Algorithms},
+  shorttitle = {RHiOTS},
+  booktitle = {Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)},
+  author = {Roque, Luis and Soares, Carlos and Torgo, Luís},
+  date = {2024-08-06},
+  eprint = {2408.03399},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.1145/3637528.3672062},
+  url = {http://arxiv.org/abs/2408.03399},
+  urldate = {2024-08-11},
+  abstract = {We introduce the Robustness of Hierarchically Organized Time Series (RHiOTS) framework, designed to assess the robustness of hierarchical time series forecasting models and algorithms on real-world datasets. Hierarchical time series, where lower-level forecasts must sum to upper-level ones, are prevalent in various contexts, such as retail sales across countries. Current empirical evaluations of forecasting methods are often limited to a small set of benchmark datasets, offering a narrow view of algorithm behavior. RHiOTS addresses this gap by systematically altering existing datasets and modifying the characteristics of individual series and their interrelations. It uses a set of parameterizable transformations to simulate those changes in the data distribution. Additionally, RHiOTS incorporates an innovative visualization component, turning complex, multidimensional robustness evaluation results into intuitive, easily interpretable visuals. This approach allows an in-depth analysis of algorithm and model behavior under diverse conditions. We illustrate the use of RHiOTS by analyzing the predictive performance of several algorithms. Our findings show that traditional statistical methods are more robust than state-of-the-art deep learning algorithms, except when the transformation effect is highly disruptive. Furthermore, we found no significant differences in the robustness of the algorithms when applying specific reconciliation methods, such as MinT. RHiOTS provides researchers with a comprehensive tool for understanding the nuanced behavior of forecasting algorithms, offering a more reliable basis for selecting the most appropriate method for a given problem.},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,G.3,H.2.8,I.2.6,I.5.1},
+  file = {/home/fli/.zotero/zotero-data/storage/CKK8KLS3/Roque et al. - 2024 - RHiOTS A Framework for Evaluating Hierarchical Time Series Forecasting Algorithms.pdf}
+}
+
+@inproceedings{SunFK2022FreDoFrequency,
+  title = {FreDo: Frequency Domain-Based Long-Term Time Series Forecasting},
+  shorttitle = {FreDo},
+  booktitle = {Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)},
+  author = {Sun, Fan-Keng and Boning, Duane S.},
+  date = {2022-05-24},
+  eprint = {2205.12301},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2205.12301},
+  url = {http://arxiv.org/abs/2205.12301},
+  urldate = {2024-08-11},
+  abstract = {The ability to forecast far into the future is highly beneficial to many applications, including but not limited to climatology, energy consumption, and logistics. However, due to noise or measurement error, it is questionable how far into the future one can reasonably predict. In this paper, we first mathematically show that due to error accumulation, sophisticated models might not outperform baseline models for long-term forecasting. To demonstrate, we show that a non-parametric baseline model based on periodicity can actually achieve comparable performance to a state-of-the-art Transformer-based model on various datasets. We further propose FreDo, a frequency domain-based neural network model that is built on top of the baseline model to enhance its performance and which greatly outperforms the state-of-the-art model. Finally, we validate that the frequency domain is indeed better by comparing univariate models trained in the frequency v.s. time domain.},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/HK32U3QZ/Sun and Boning - 2022 - FreDo Frequency Domain-based Long-Term Time Series Forecasting.pdf}
+}
+
+@inproceedings{LiuZ2024GenerativePretrained,
+  title = {Generative Pretrained Hierarchical Transformer for Time Series Forecasting},
+  booktitle = {Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)},
+  author = {Liu, Zhiding and Yang, Jiqian and Cheng, Mingyue and Luo, Yucong and Li, Zhi},
+  date = {2024-06-17},
+  eprint = {2402.16516},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.1145/3637528.3671855},
+  url = {http://arxiv.org/abs/2402.16516},
+  urldate = {2024-08-11},
+  abstract = {Recent efforts have been dedicated to enhancing time series forecasting accuracy by introducing advanced network architectures and self-supervised pretraining strategies. Nevertheless, existing approaches still exhibit two critical drawbacks. Firstly, these methods often rely on a single dataset for training, limiting the model's generalizability due to the restricted scale of the training data. Secondly, the one-step generation schema is widely followed, which necessitates a customized forecasting head and overlooks the temporal dependencies in the output series, and also leads to increased training costs under different horizon length settings. To address these issues, we propose a novel generative pretrained hierarchical transformer architecture for forecasting, named \textbackslash textbf\{GPHT\}. There are two aspects of key designs in GPHT. On the one hand, we advocate for constructing a mixed dataset under the channel-independent assumption for pretraining our model, comprising various datasets from diverse data scenarios. This approach significantly expands the scale of training data, allowing our model to uncover commonalities in time series data and facilitating improved transfer to specific datasets. On the other hand, GPHT employs an auto-regressive forecasting approach, effectively modeling temporal dependencies in the output series. Importantly, no customized forecasting head is required, enabling \textbackslash textit\{a single model to forecast at arbitrary horizon settings.\} We conduct sufficient experiments on eight datasets with mainstream self-supervised pretraining models and supervised models. The results demonstrated that GPHT surpasses the baseline models across various fine-tuning and zero/few-shot learning settings in the traditional long-term forecasting task. We make our codes publicly available\textbackslash footnote\{https://github.com/icantnamemyself/GPHT\}.},
+  keywords = {Computer Science - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/I9YKHYGK/Liu et al. - 2024 - Generative Pretrained Hierarchical Transformer for Time Series Forecasting.pdf}
+}
+
+@inproceedings{PiaoX2024FredformerFrequency,
+  title = {Fredformer: Frequency Debiased Transformer for Time Series Forecasting},
+  shorttitle = {Fredformer},
+  booktitle = {Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)},
+  author = {Piao, Xihao and Chen, Zheng and Murayama, Taichi and Matsubara, Yasuko and Sakurai, Yasushi},
+  date = {2024-07-03},
+  eprint = {2406.09009},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.1145/3637528.3671928},
+  url = {http://arxiv.org/abs/2406.09009},
+  urldate = {2024-08-11},
+  abstract = {The Transformer model has shown leading performance in time series forecasting. Nevertheless, in some complex scenarios, it tends to learn low-frequency features in the data and overlook high-frequency features, showing a frequency bias. This bias prevents the model from accurately capturing important high-frequency data features. In this paper, we undertook empirical analyses to understand this bias and discovered that frequency bias results from the model disproportionately focusing on frequency features with higher energy. Based on our analysis, we formulate this bias and propose Fredformer, a Transformer-based framework designed to mitigate frequency bias by learning features equally across different frequency bands. This approach prevents the model from overlooking lower amplitude features important for accurate forecasting. Extensive experiments show the effectiveness of our proposed approach, which can outperform other baselines in different real-world time-series datasets. Furthermore, we introduce a lightweight variant of the Fredformer with an attention matrix approximation, which achieves comparable performance but with much fewer parameters and lower computation costs. The code is available at: https://github.com/chenzRG/Fredformer},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/J2PLFZN8/Piao et al. - 2024 - Fredformer Frequency Debiased Transformer for Time Series Forecasting.pdf}
+}
+
+@inproceedings{JhinSY2024AddressingPrediction,
+  title = {Addressing Prediction Delays in Time Series Forecasting: A Continuous GRU Approach with Derivative Regularization},
+  shorttitle = {Addressing Prediction Delays in Time Series Forecasting},
+  booktitle = {Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)},
+  author = {Jhin, Sheo Yon and Kim, Seojin and Park, Noseong},
+  date = {2024-06-29},
+  eprint = {2407.01622},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.1145/3637528.3671969},
+  url = {http://arxiv.org/abs/2407.01622},
+  urldate = {2024-08-11},
+  abstract = {Time series forecasting has been an essential field in many different application areas, including economic analysis, meteorology, and so forth. The majority of time series forecasting models are trained using the mean squared error (MSE). However, this training based on MSE causes a limitation known as prediction delay. The prediction delay, which implies the ground-truth precedes the prediction, can cause serious problems in a variety of fields, e.g., finance and weather forecasting -- as a matter of fact, predictions succeeding ground-truth observations are not practically meaningful although their MSEs can be low. This paper proposes a new perspective on traditional time series forecasting tasks and introduces a new solution to mitigate the prediction delay. We introduce a continuous-time gated recurrent unit (GRU) based on the neural ordinary differential equation (NODE) which can supervise explicit time-derivatives. We generalize the GRU architecture in a continuous-time manner and minimize the prediction delay through our time-derivative regularization. Our method outperforms in metrics such as MSE, Dynamic Time Warping (DTW) and Time Distortion Index (TDI). In addition, we demonstrate the low prediction delay of our method in a variety of datasets.},
+  keywords = {Computer Science - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/ZSMQB7R4/Jhin et al. - 2024 - Addressing Prediction Delays in Time Series Forecasting A Continuous GRU Approach with Derivative R.pdf}
+}
+
+@inproceedings{YuC2024GinAREndToEnd,
+  title = {GinAR: An End-To-End Multivariate Time Series Forecasting Model Suitable for Variable Missing},
+  shorttitle = {GinAR},
+  booktitle = {Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)},
+  author = {Yu, Chengqing and Wang, Fei and Shao, Zezhi and Qian, Tangwen and Zhang, Zhao and Wei, Wei and Xu, Yongjun},
+  date = {2024-05-18},
+  eprint = {2405.11333},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2405.11333},
+  url = {http://arxiv.org/abs/2405.11333},
+  urldate = {2024-08-11},
+  abstract = {Multivariate time series forecasting (MTSF) is crucial for decision-making to precisely forecast the future values/trends, based on the complex relationships identified from historical observations of multiple sequences. Recently, Spatial-Temporal Graph Neural Networks (STGNNs) have gradually become the theme of MTSF model as their powerful capability in mining spatial-temporal dependencies, but almost of them heavily rely on the assumption of historical data integrity. In reality, due to factors such as data collector failures and time-consuming repairment, it is extremely challenging to collect the whole historical observations without missing any variable. In this case, STGNNs can only utilize a subset of normal variables and easily suffer from the incorrect spatial-temporal dependency modeling issue, resulting in the degradation of their forecasting performance. To address the problem, in this paper, we propose a novel Graph Interpolation Attention Recursive Network (named GinAR) to precisely model the spatial-temporal dependencies over the limited collected data for forecasting. In GinAR, it consists of two key components, that is, interpolation attention and adaptive graph convolution to take place of the fully connected layer of simple recursive units, and thus are capable of recovering all missing variables and reconstructing the correct spatial-temporal dependencies for recursively modeling of multivariate time series data, respectively. Extensive experiments conducted on five real-world datasets demonstrate that GinAR outperforms 11 SOTA baselines, and even when 90\% of variables are missing, it can still accurately predict the future values of all variables.},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/TGRM39WJ/Yu et al. - 2024 - GinAR An End-To-End Multivariate Time Series Forecasting Model Suitable for Variable Missing.pdf}
+}
+
+@inproceedings{FischerR2023AutoXPCRAutomated,
+  title = {AutoXPCR: Automated Multi-Objective Model Selection for Time Series Forecasting},
+  shorttitle = {AutoXPCR},
+  booktitle = {Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)},
+  author = {Fischer, Raphael and Saadallah, Amal},
+  date = {2024},
+  url = {https://arxiv.org/abs/2312.13038v1},
+  urldate = {2024-08-11},
+  abstract = {Automated machine learning (AutoML) streamlines the creation of ML models. While most methods select the "best" model based on predictive quality, it's crucial to acknowledge other aspects, such as interpretability and resource consumption. This holds particular importance in the context of deep neural networks (DNNs), as these models are often perceived as computationally intensive black boxes. In the challenging domain of time series forecasting, DNNs achieve stunning results, but specialized approaches for automatically selecting models are scarce. In this paper, we propose AutoXPCR - a novel method for automated and explainable multi-objective model selection. Our approach leverages meta-learning to estimate any model's performance along PCR criteria, which encompass (P)redictive error, (C)omplexity, and (R)esource demand. Explainability is addressed on multiple levels, as our interactive framework can prioritize less complex models and provide by-product explanations of recommendations. We demonstrate practical feasibility by deploying AutoXPCR on over 1000 configurations across 114 data sets from various domains. Our method clearly outperforms other model selection approaches - on average, it only requires 20\% of computation costs for recommending models with 90\% of the best-possible quality.},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/AP8TBKN6/Fischer and Saadallah - 2023 - AutoXPCR Automated Multi-Objective Model Selection for Time Series Forecasting.pdf}
+}
+
+@inproceedings{ChenM2023CalibrationTimeSeries,
+  title = {Calibration of Time-Series Forecasting: Detecting and Adapting Context-Driven Distribution Shift},
+  shorttitle = {Calibration of Time-Series Forecasting},
+  booktitle = {Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)},
+  author = {Chen, Mouxiang and Shen, Lefei and Fu, Han and Li, Zhuo and Sun, Jianling and Liu, Chenghao},
+  date = {2024},
+  doi = {10.1145/3637528.3671926},
+  url = {https://arxiv.org/abs/2310.14838v2},
+  urldate = {2024-08-11},
+  abstract = {Recent years have witnessed the success of introducing deep learning models to time series forecasting. From a data generation perspective, we illustrate that existing models are susceptible to distribution shifts driven by temporal contexts, whether observed or unobserved. Such context-driven distribution shift (CDS) introduces biases in predictions within specific contexts and poses challenges for conventional training paradigms. In this paper, we introduce a universal calibration methodology for the detection and adaptation of CDS with a trained model. To this end, we propose a novel CDS detector, termed the "residual-based CDS detector" or "Reconditionor", which quantifies the model's vulnerability to CDS by evaluating the mutual information between prediction residuals and their corresponding contexts. A high Reconditionor score indicates a severe susceptibility, thereby necessitating model adaptation. In this circumstance, we put forth a straightforward yet potent adapter framework for model calibration, termed the "sample-level contextualized adapter" or "SOLID". This framework involves the curation of a contextually similar dataset to the provided test sample and the subsequent fine-tuning of the model's prediction layer with a limited number of steps. Our theoretical analysis demonstrates that this adaptation strategy can achieve an optimal bias-variance trade-off. Notably, our proposed Reconditionor and SOLID are model-agnostic and readily adaptable to a wide range of models. Extensive experiments show that SOLID consistently enhances the performance of current forecasting models on real-world datasets, especially on cases with substantial CDS detected by the proposed Reconditionor, thus validating the effectiveness of the calibration approach.},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/J2AUG5HB/Chen et al. - 2023 - Calibration of Time-Series Forecasting Detecting and Adapting Context-Driven Distribution Shift.pdf}
+}
+
 @preamble{ "\ifdefined\DeclarePrefChars\DeclarePrefChars{'’-}\else\fi " }
