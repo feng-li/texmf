@@ -46376,4 +46376,61 @@
   file = {/home/fli/.zotero/zotero-data/storage/VPVGLSRS/Godichon-Baggioni et al. - Natural Gradient Variational Bayes without Fisher Matrix Analytic Calculation and Its Inversion.pdf}
 }
 
+@online{LopatnikovaA2021IntroductionQuantum,
+  title = {An Introduction to Quantum Computing for Statisticians and Data Scientists},
+  author = {Lopatnikova, Anna and Tran, Minh-Ngoc and Sisson, Scott A.},
+  date = {2021-12-13},
+  url = {https://arxiv.org/abs/2112.06587v2},
+  urldate = {2024-09-19},
+  abstract = {Quantum computers promise to surpass the most powerful classical supercomputers when it comes to solving many critically important practical problems, such as pharmaceutical and fertilizer design, supply chain and traffic optimization, or optimization for machine learning tasks. Because quantum computers function fundamentally differently from classical computers, the emergence of quantum computing technology will lead to a new evolutionary branch of statistical and data analytics methodologies. This review provides an introduction to quantum computing designed to be accessible to statisticians and data scientists, aiming to equip them with an overarching framework of quantum computing, the basic language and building blocks of quantum algorithms, and an overview of existing quantum applications in statistics and data analysis. Our goal is to enable statisticians and data scientists to follow quantum computing literature relevant to their fields, to collaborate with quantum algorithm designers, and, ultimately, to bring forth the next generation of statistical and data analytics tools.},
+  language = {en},
+  pubstate = {prepublished},
+  file = {/home/fli/.zotero/zotero-data/storage/XBFFY9WM/Lopatnikova et al. - 2021 - An Introduction to Quantum Computing for Statisticians and Data Scientists.pdf}
+}
+
+@inproceedings{LopatnikovaA2023QuantumVariational,
+  title = {Quantum Variational Bayes on Manifolds},
+  booktitle = {ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  author = {Lopatnikova, Anna and Tran, Minh-Ngoc},
+  date = {2023-06},
+  pages = {1--5},
+  issn = {2379-190X},
+  doi = {10.1109/ICASSP49357.2023.10096708},
+  url = {https://ieeexplore.ieee.org/document/10096708},
+  urldate = {2024-09-19},
+  abstract = {Variational Bayes (VB) has become a widely-used tool for Bayesian inference in statistics and machine learning. VB algorithms are generally restricted to the case where the variational parameter space is Euclidean. Recently, the VB framework has been extended to the case where the variational parameter space is a Riemannian manifold. Such a manifold-based algorithm, by utilizing the natural gradient, can exploit the geometric structures to derive an efficient VB procedure. However, natural gradient in high dimension can be prohibitively computationally expensive to compute. This work proposes using a quantum natural gradient within the manifold VB framework. We demonstrate that the quantum natural gradient does not suffer from the well-known quantum-classical readout computational bottleneck, and hence delivers a highly computational efficiency. The resulting quantum manifold VB algorithm is provably convergent.},
+  eventtitle = {ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  keywords = {Inference algorithms,Machine learning,Machine learning algorithms,Manifolds,natural gradient,Quantum computation,Quantum computing,Riemannian manifold,Signal processing,Signal processing algorithms,stochastic approximation,variational Bayes},
+  file = {/home/fli/.zotero/zotero-data/storage/7DE9FKHK/Lopatnikova and Tran - 2023 - Quantum Variational Bayes on Manifolds.pdf}
+}
+
+@online{LiZ2024ChainThought,
+  title = {Chain of Thought Empowers Transformers to Solve Inherently Serial Problems},
+  author = {Li, Zhiyuan and Liu, Hong and Zhou, Denny and Ma, Tengyu},
+  date = {2024-05-23},
+  eprint = {2402.12875},
+  eprinttype = {arXiv},
+  eprintclass = {cs, stat},
+  doi = {10.48550/arXiv.2402.12875},
+  url = {http://arxiv.org/abs/2402.12875},
+  urldate = {2024-09-20},
+  abstract = {Instructing the model to generate a sequence of intermediate steps, a.k.a., a chain of thought (CoT), is a highly effective method to improve the accuracy of large language models (LLMs) on arithmetics and symbolic reasoning tasks. However, the mechanism behind CoT remains unclear. This work provides a theoretical understanding of the power of CoT for decoder-only transformers through the lens of expressiveness. Conceptually, CoT empowers the model with the ability to perform inherently serial computation, which is otherwise lacking in transformers, especially when depth is low. Given input length \$n\$, previous works have shown that constant-depth transformers with finite precision \$\textbackslash mathsf\{poly\}(n)\$ embedding size can only solve problems in \$\textbackslash mathsf\{TC\}\textasciicircum 0\$ without CoT. We first show an even tighter expressiveness upper bound for constant-depth transformers with constant-bit precision, which can only solve problems in \$\textbackslash mathsf\{AC\}\textasciicircum 0\$, a proper subset of \$ \textbackslash mathsf\{TC\}\textasciicircum 0\$. However, with \$T\$ steps of CoT, constant-depth transformers using constant-bit precision and \$O(\textbackslash log n)\$ embedding size can solve any problem solvable by boolean circuits of size \$T\$. Empirically, enabling CoT dramatically improves the accuracy for tasks that are hard for parallel computation, including the composition of permutation groups, iterated squaring, and circuit value problems, especially for low-depth transformers.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computational Complexity,Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/K32Y6ZYL/Li et al. - 2024 - Chain of Thought Empowers Transformers to Solve Inherently Serial Problems.pdf}
+}
+
+@inproceedings{JinM2023TimeLLMTime,
+  title = {Time-LLM: Time Series Forecasting by Reprogramming Large Language Models},
+  shorttitle = {Time-LLM},
+  author = {Jin, Ming and Wang, Shiyu and Ma, Lintao and Chu, Zhixuan and Zhang, James Y. and Shi, Xiaoming and Chen, Pin-Yu and Liang, Yuxuan and Li, Yuan-Fang and Pan, Shirui and Wen, Qingsong},
+  date = {2023-10-13},
+  url = {https://openreview.net/forum?id=Unb5CVPtae},
+  urldate = {2024-09-21},
+  abstract = {Time series forecasting holds significant importance in many real-world dynamic systems and has been extensively studied. Unlike natural language process (NLP) and computer vision (CV), where a single large model can tackle multiple tasks, models for time series forecasting are often specialized, necessitating distinct designs for different tasks and applications. While pre-trained foundation models have made impressive strides in NLP and CV, their development in time series domains has been constrained by data sparsity. Recent studies have revealed that large language models (LLMs) possess robust pattern recognition and reasoning abilities over complex sequences of tokens. However, the challenge remains in effectively aligning the modalities of time series data and natural language to leverage these capabilities. In this work, we present Time-LLM, a reprogramming framework to repurpose LLMs for general time series forecasting with the backbone language models kept intact. We begin by reprogramming the input time series with text prototypes before feeding it into the frozen LLM to align the two modalities. To augment the LLM's ability to reason with time series data, we propose Prompt-as-Prefix (PaP), which enriches the input context and directs the transformation of reprogrammed input patches. The transformed time series patches from the LLM are finally projected to obtain the forecasts. Our comprehensive evaluations demonstrate that \textbackslash method is a powerful time series learner that outperforms state-of-the-art, specialized forecasting models. Moreover, Time-LLM excels in both few-shot and zero-shot learning scenarios. The code is made available at https://github.com/KimMeen/Time-LLM.},
+  eventtitle = {The Twelfth International Conference on Learning Representations},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/CGAYZIL2/Jin et al. - 2023 - Time-LLM Time Series Forecasting by Reprogramming Large Language Models.pdf}
+}
+
 @preamble{ "\ifdefined\DeclarePrefChars\DeclarePrefChars{'’-}\else\fi " }
