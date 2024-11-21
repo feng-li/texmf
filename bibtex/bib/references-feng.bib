@@ -5998,22 +5998,6 @@
   journaltitle = {cran.repo.bppt.go.id}
 }
 
-@article{HyndmanRJ2011OptimalCombination,
-  title = {Optimal Combination Forecasts for Hierarchical Time Series},
-  author = {Hyndman, Rob J and Ahmed, Roman A and Athanasopoulos, George and Shang, Han Lin},
-  date = {2011-09},
-  journaltitle = {Computational Statistics \& Data Analysis},
-  volume = {55},
-  number = {9},
-  pages = {2579--2589},
-  publisher = {Citeseer},
-  issn = {0167-9473},
-  doi = {10.1016/j.csda.2011.03.006},
-  language = {en},
-  keywords = {Forecast reconciliation,OLS},
-  file = {/home/fli/.zotero/zotero-data/storage/R9X9D4ZN/Hyndman et al. - 2011 - Optimal combination forecasts for hierarchical time series.pdf}
-}
-
 @article{KolassaS2011CombiningExponential,
   title = {Combining Exponential Smoothing Forecasts Using Akaike Weights},
   author = {Kolassa, Stephan},
@@ -47773,6 +47757,127 @@
   abstract = {With more than 10,000 new videos posted online every day on social websites such as YouTube and Facebook, the internet is becoming an almost infinite source of information. One crucial challenge for the coming decade is to be able to harvest relevant information from this constant flow of multimodal data. This paper addresses the task of multimodal sentiment analysis, and conducts proof-of-concept experiments that demonstrate that a joint model that integrates visual, audio, and textual features can be effectively used to identify sentiment in Web videos. This paper makes three important contributions. First, it addresses for the first time the task of tri-modal sentiment analysis, and shows that it is a feasible task that can benefit from the joint exploitation of visual, audio and textual modalities. Second, it identifies a subset of audio-visual features relevant to sentiment analysis and present guidelines on how to integrate these features. Finally, it introduces a new dataset consisting of real online data, which will be useful for future research in this area.},
   isbn = {978-1-4503-0641-6},
   file = {/home/fli/.zotero/zotero-data/storage/NNXRDU3E/Morency et al. - 2011 - Towards multimodal sentiment analysis harvesting opinions from the web.pdf}
+}
+
+@article{WickramasuriyaSL2024ProbabilisticForecast,
+  title = {Probabilistic Forecast Reconciliation under the Gaussian Framework},
+  author = {Wickramasuriya, Shanika L.},
+  date = {2024-01-02},
+  journaltitle = {Journal of Business \& Economic Statistics},
+  volume = {42},
+  number = {1},
+  pages = {272--285},
+  publisher = {ASA Website},
+  issn = {0735-0015},
+  doi = {10.1080/07350015.2023.2181176},
+  url = {https://doi.org/10.1080/07350015.2023.2181176},
+  urldate = {2024-11-13},
+  abstract = {Forecast reconciliation of multivariate time series maps a set of incoherent forecasts into coherent forecasts to satisfy a given set of linear constraints. Available methods in the literature either follow a projection matrix-based approach or an empirical copula-based reordering approach to revise the incoherent future sample paths to obtain reconciled probabilistic forecasts. The projection matrices are estimated either by optimizing a scoring rule such as energy or variogram score or simply using a projection matrix derived for point forecast reconciliation. This article proves that (a) if the incoherent predictive distribution is jointly Gaussian, then MinT (minimum trace) minimizes the logarithmic scoring rule for the hierarchy; and (b) the logarithmic score of MinT for each marginal predictive density is smaller than that of OLS (ordinary least squares). We illustrate these theoretical results using a set of simulation studies and the Australian domestic tourism dataset. The estimation of MinT needs to estimate the covariance matrix of the base forecast errors. We have evaluated the performance using the sample covariance matrix and shrinkage estimator. It was observed that the theoretical properties noted above are greatly impacted by the covariance matrix used and highlighted the importance of estimating it reliably, especially with high dimensional data.},
+  keywords = {Coherent,Hierarchical time series,Projections,Scoring rules},
+  file = {/home/fli/.zotero/zotero-data/storage/8E5Y8DYD/Wickramasuriya - 2024 - Probabilistic Forecast Reconciliation under the Gaussian Framework.pdf}
+}
+
+@book{KariyaTGeneralizedLeast,
+  title = {Generalized Least Squares},
+  author = {Kariya, Takeaki and Kurata, Hiroshi},
+  date = {2004},
+  series = {Wiley Series in Probability and Statistics},
+  edition = {1st Edition},
+  publisher = {John Wiley \& Sons},
+  url = {https://doi.org/10.1002/0470866993},
+  abstract = {"Generalised Least Squares" adopts a concise and mathematically rigorous approach. It will provide an up-to-date self-contained introduction to the unified theory of generalized least squares estimations, adopting a concise and mathematically rigorous approach. The book covers in depth the 'lower and upper bounds approach', pioneered by the first author, which is widely regarded as a very powerful and useful tool for generalized least squares estimation, helping the reader develop their understanding of the theory. The book also contains exercises at the end of each chapter and applications to statistics, econometrics, and biometrics, enabling use for self-study or as a course text.},
+  isbn = {978-0-470-86697-9},
+  file = {/home/fli/.zotero/zotero-data/storage/V6XXY8ZM/Kariya and Kurata - Generalized Least Squares.pdf}
+}
+
+@article{HyndmanRJ2011OptimalCombination,
+  title = {Optimal Combination Forecasts for Hierarchical Time Series},
+  author = {Hyndman, Rob J. and Ahmed, Roman A. and Athanasopoulos, George and Shang, Han Lin},
+  date = {2011-09-01},
+  journaltitle = {Computational Statistics \& Data Analysis},
+  shortjournal = {Computational Statistics \& Data Analysis},
+  volume = {55},
+  number = {9},
+  pages = {2579--2589},
+  issn = {0167-9473},
+  doi = {10.1016/j.csda.2011.03.006},
+  url = {https://www.sciencedirect.com/science/article/pii/S0167947311000971},
+  urldate = {2024-11-14},
+  abstract = {In many applications, there are multiple time series that are hierarchically organized and can be aggregated at several different levels in groups based on products, geography or some other features. We call these “hierarchical time series”. They are commonly forecast using either a “bottom-up” or a “top-down” method. In this paper we propose a new approach to hierarchical forecasting which provides optimal forecasts that are better than forecasts produced by either a top-down or a bottom-up approach. Our method is based on independently forecasting all series at all levels of the hierarchy and then using a regression model to optimally combine and reconcile these forecasts. The resulting revised forecasts add up appropriately across the hierarchy, are unbiased and have minimum variance amongst all combination forecasts under some simple assumptions. We show in a simulation study that our method performs well compared to the top-down approach and the bottom-up method. We demonstrate our proposed method by forecasting Australian tourism demand where the data are disaggregated by purpose of travel and geographical region.},
+  keywords = {Bottom-up forecasting,Combining forecasts,GLS regression,Hierarchical forecasting,Reconciling forecasts,Top-down forecasting},
+  file = {/home/fli/.zotero/zotero-data/storage/VR34N2LE/Hyndman et al. - 2011 - Optimal combination forecasts for hierarchical time series.pdf}
+}
+
+@article{KontoyiannisI2022BayesianContext,
+  title = {Bayesian Context Trees: Modelling and Exact Inference for Discrete Time Series},
+  shorttitle = {Bayesian Context Trees},
+  author = {Kontoyiannis, Ioannis and Mertzanis, Lambros and Panotopoulou, Athina and Papageorgiou, Ioannis and Skoularidou, Maria},
+  date = {2022-09-01},
+  journaltitle = {Journal of the Royal Statistical Society Series B: Statistical Methodology},
+  shortjournal = {Journal of the Royal Statistical Society Series B: Statistical Methodology},
+  volume = {84},
+  number = {4},
+  pages = {1287--1323},
+  issn = {1369-7412},
+  doi = {10.1111/rssb.12511},
+  url = {https://doi.org/10.1111/rssb.12511},
+  urldate = {2024-11-15},
+  abstract = {We develop a new Bayesian modelling framework for the class of higher-order, variable-memory Markov chains, and introduce an associated collection of methodological tools for exact inference with discrete time series. We show that a version of the context tree weighting alg-orithm can compute the prior predictive likelihood exa-ctly (averaged over both models and parameters), and two related algorithms are introduced, which identify the a posteriori most likely models and compute their exact posterior probabilities. All three algorithms are deterministic and have linear-time complexity. A family of variable-dimension Markov chain Monte Carlo samplers is also provided, facilitating further exploration of the posterior. The performance of the proposed methods in model selection, Markov order estimation and prediction is illustrated through simulation experiments and real-world applications with data from finance, genetics, neuroscience and animal communication. The associated algorithms are implemented in the R package BCT.},
+  file = {/home/fli/.zotero/zotero-data/storage/CNALR7IU/Kontoyiannis et al. - 2022 - Bayesian Context Trees Modelling and Exact Inference for Discrete Time Series.pdf}
+}
+
+@incollection{LiuZ2023HandlingConcept,
+  title = {Handling Concept Drift in Global Time Series Forecasting},
+  booktitle = {Forecasting with Artificial Intelligence: Theory and Applications},
+  author = {Liu, Ziyi and Godahewa, Rakshitha and Bandara, Kasun and Bergmeir, Christoph},
+  editor = {Hamoudia, Mohsen and Makridakis, Spyros and Spiliotis, Evangelos},
+  date = {2023},
+  pages = {163--189},
+  publisher = {Springer Nature Switzerland},
+  location = {Cham},
+  doi = {10.1007/978-3-031-35879-1_7},
+  url = {https://doi.org/10.1007/978-3-031-35879-1_7},
+  urldate = {2024-11-17},
+  abstract = {Machine learning (ML) based time series forecasting models often require and assume certain degrees of stationarity in the data when producing forecasts. However, in many real-world situations, the data distributions are not stationary and they can change over time while reducing the accuracy of the forecasting models, which in the ML literature is known as concept drift. Handling concept drift in forecasting is essential for many ML methods in use nowadays, however, the prior work only proposes methods to handle concept drift in the classification domain. To fill this gap, we explore concept drift handlingConcept drift handling~methods in particular for Global Forecasting Models (GFM) which recently have gained popularity in the forecasting domain. We propose two new concept drift handlingConcept drift handling methods, namely Error Contribution Weighting (ECW)Error Contribution Weighting (ECW)~and Gradient Descent Weighting (GDW)Gradient Descent Weighting (GDW), based on a continuous adaptive weighting concept. These methods use two forecasting models which are separately trained with the most recent series and all series, and finally, the weighted average of the forecasts provided by the two models is considered as the final forecasts. Using LightGBM as the underlying base learner, in our evaluationEvaluation~on three simulated datasets, the proposed models achieve significantly higher accuracy than a set of statistical benchmarksBenchmarks~and LightGBM baselines across four evaluation metrics.},
+  isbn = {978-3-031-35879-1},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/U6I3TKHD/Liu et al. - 2023 - Handling Concept Drift in Global Time Series Forecasting.pdf}
+}
+
+@article{AthanasopoulosG2024ForecastReconciliation,
+  title = {Forecast Reconciliation: A Review},
+  shorttitle = {Forecast Reconciliation},
+  author = {Athanasopoulos, George and Hyndman, Rob J. and Kourentzes, Nikolaos and Panagiotelis, Anastasios},
+  date = {2024-04-01},
+  journaltitle = {International Journal of Forecasting},
+  shortjournal = {International Journal of Forecasting},
+  volume = {40},
+  number = {2},
+  pages = {430--456},
+  issn = {0169-2070},
+  doi = {10.1016/j.ijforecast.2023.10.010},
+  url = {https://www.sciencedirect.com/science/article/pii/S0169207023001097},
+  urldate = {2024-11-21},
+  abstract = {Collections of time series formed via aggregation are prevalent in many fields. These are commonly referred to as hierarchical time series and may be constructed cross-sectionally across different variables, temporally by aggregating a single series at different frequencies, or even generalised beyond aggregation as time series that respect linear constraints. When forecasting such time series, a desirable condition is for forecasts to be coherent: to respect the constraints. The past decades have seen substantial growth in this field with the development of reconciliation methods that ensure coherent forecasts and improve forecast accuracy. This paper serves as a comprehensive review of forecast reconciliation and an entry point for researchers and practitioners dealing with hierarchical time series. The scope of the article includes perspectives on forecast reconciliation from machine learning, Bayesian statistics and probabilistic forecasting, as well as applications in economics, energy, tourism, retail demand and demography.},
+  keywords = {Aggregation,Coherence,Cross-temporal,Grouped time series,Hierarchical time series,Temporal aggregation},
+  file = {/home/fli/.zotero/zotero-data/storage/AN8BWBIZ/Athanasopoulos et al. - 2024 - Forecast reconciliation A review.pdf}
+}
+
+@article{WangG2023AttentiveStatement,
+  title = {Attentive Statement Fraud Detection: Distinguishing Multimodal Financial Data with Fine-Grained Attention},
+  shorttitle = {Attentive Statement Fraud Detection},
+  author = {Wang, Gang and Ma, Jingling and Chen, Gang},
+  date = {2023-04-01},
+  journaltitle = {Decision Support Systems},
+  shortjournal = {Decision Support Systems},
+  volume = {167},
+  pages = {113913},
+  issn = {0167-9236},
+  doi = {10.1016/j.dss.2022.113913},
+  url = {https://www.sciencedirect.com/science/article/pii/S0167923622001841},
+  urldate = {2024-11-21},
+  abstract = {Financial statement fraud caused by listed companies directly jeopardizes the reliability the financial reporting process. Leveraging multimodal information for financial statement fraud detection (FSFD) has recently become of great interest to academic research and industrial applications. Unfortunately, the predictive ability of multimodal information in FSFD remains largely underexplored, particularly the fusion ambiguity embedded in and among multi-modalities. In this study, we propose a novel attention-based multimodal deep learning method, named RCMA, toward an accurate FSFD. RCMA synthesizes a fine-grained attention mechanism including three innovative attention modules, i.e., ratio-aware attention, chapter-aware attention, and modality-aware attention mechanism. The first two attention mechanisms help to liberate the extraordinary predictive power of the financial modality and the textual modality on FSFD, respectively. Moreover, the proposed modality-aware attention mechanism enables better coordination between the two modalities. Furthermore, to ensure effective learning on the attention-based multimodal embedding, we design a novel loss function named Focal and Consistency Loss, or FCL. It considers class-imbalance and modality-consistency simultaneously, to specialize the optimization of FSFD. The experimental results on the real-world dataset show that the proposed RCMA on FSFD task outperformed the state-of-the-art benchmarks. Furthermore, interpretation analysis visualizes the attention weights of different ratio groups, chapters, and modalities from RCMA, and illustrates how these interpretations influence stakeholders' decision process for FSFD.},
+  keywords = {Chapter-aware attention,Financial statement fraud detection,Fusion ambiguity,Modality-aware attention,Ratio-aware attention}
 }
 
 @preamble{ "\ifdefined\DeclarePrefChars\DeclarePrefChars{'’-}\else\fi " }
