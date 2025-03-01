@@ -48407,22 +48407,6 @@
   file = {/home/fli/.zotero/zotero-data/storage/K9QQA7VA/Vempala - 2005 - Geometric random walks a survey.pdf}
 }
 
-@online{ZhongY2024OptimalStartinga,
-  title = {Optimal Starting Point for Time Series Forecasting},
-  author = {Zhong, Yiming and Ren, Yinuo and Cao, Guangyao and Li, Feng and Qi, Haobo},
-  date = {2024-09-25},
-  eprint = {2409.16843},
-  eprinttype = {arXiv},
-  eprintclass = {stat},
-  doi = {10.48550/arXiv.2409.16843},
-  url = {http://arxiv.org/abs/2409.16843},
-  urldate = {2025-01-19},
-  abstract = {Recent advances on time series forecasting mainly focus on improving the forecasting models themselves. However, managing the length of the input data can also significantly enhance prediction performance. In this paper, we introduce a novel approach called Optimal Starting Point Time Series Forecast (OSP-TSP) to capture the intrinsic characteristics of time series data. By adjusting the sequence length via leveraging the XGBoost and LightGBM models, the proposed approach can determine optimal starting point (OSP) of the time series and thus enhance the prediction performances. The performances of the OSP-TSP approach are then evaluated across various frequencies on the M4 dataset and other real-world datasets. Empirical results indicate that predictions based on the OSP-TSP approach consistently outperform those using the complete dataset. Moreover, recognizing the necessity of sufficient data to effectively train models for OSP identification, we further propose targeted solutions to address the issue of data insufficiency.},
-  pubstate = {prepublished},
-  keywords = {Computer Science - Machine Learning,Statistics - Applications},
-  file = {/home/fli/.zotero/zotero-data/storage/IAZUIHQY/Zhong et al. - 2024 - Optimal starting point for time series forecasting.pdf}
-}
-
 @article{CaZorziM2016RealExchange,
   title = {Real Exchange Rate Forecasting and PPP: This Time the Random Walk Loses},
   shorttitle = {Real Exchange Rate Forecasting and PPP},
@@ -48459,6 +48443,103 @@
   abstract = {This chapter discusses recent developments in inflation forecasting. We perform a horse-race among a large set of traditional and recently developed forecasting methods, and discuss a number of principles that emerge from this exercise. We find that judgmental survey forecasts outperform model-based ones, often by a wide margin. A very simple forecast that is just a glide path between the survey assessment of inflation in the current-quarter and the long-run survey forecast value turns out to be competitive with the actual survey forecast and thereby does about as well or better than model-based forecasts. We explore the strengths and weaknesses of some specific prediction methods, including forecasts based on the Phillips curve and based on dynamic stochastic general equilibrium models, in greater detail. We also consider measures of inflation expectations taken from financial markets and the tradeoff between forecasting aggregates and disaggregates.},
   keywords = {Disaggregate forecasts,Inflation compensation,Nowcasting,Shifting endpoints,Shrinkage,Survey forecasts},
   file = {/home/fli/.zotero/zotero-data/storage/9A4PFJWR/Faust and Wright - 2013 - Forecasting Inflation.pdf}
+}
+
+@online{ShrivastavaV2025LanguageModels,
+  title = {Language Models Prefer What They Know: Relative Confidence Estimation via Confidence Preferences},
+  shorttitle = {Language Models Prefer What They Know},
+  author = {Shrivastava, Vaishnavi and Kumar, Ananya and Liang, Percy},
+  date = {2025-02-03},
+  eprint = {2502.01126},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2502.01126},
+  url = {http://arxiv.org/abs/2502.01126},
+  urldate = {2025-02-12},
+  abstract = {Language models (LMs) should provide reliable confidence estimates to help users detect mistakes in their outputs and defer to human experts when necessary. Asking a language model to assess its confidence ("Score your confidence from 0-1.") is a natural way of evaluating its uncertainty. However, models struggle to provide absolute assessments of confidence (i.e. judging confidence in answering a question independent of other questions) and the coarse-grained scores they produce are not useful for evaluating the correctness of their answers. We propose relative confidence estimation, where we match up questions against each other and ask the model to make relative judgments of confidence ("Which question are you more confident in answering correctly?"). Treating each question as a "player" in a series of matchups against other questions and the model's preferences as match outcomes, we can use rank aggregation methods like Elo rating and Bradley-Terry to translate the model's confidence preferences into confidence scores. We evaluate relative confidence estimation against absolute confidence estimation and self-consistency confidence methods on five state-of-the-art LMs -- GPT-4, GPT-4o, Gemini 1.5 Pro, Claude 3.5 Sonnet, and Llama 3.1 405B -- across 14 challenging STEM, social science, and commonsense reasoning question answering tasks. Our results demonstrate that relative confidence estimation consistently provides more reliable confidence scores than absolute confidence estimation, with average gains of 3.5\% in selective classification AUC over direct absolute confidence estimation methods and 1.7\% over self-consistency approaches across all models and datasets.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language},
+  file = {/home/fli/.zotero/zotero-data/storage/PMS6YKG9/Shrivastava et al. - 2025 - Language Models Prefer What They Know Relative Confidence Estimation via Confidence Preferences.pdf}
+}
+
+@article{ZhongY2025OptimalStarting,
+  title = {Optimal Starting Point for Time Series Forecasting},
+  author = {Zhong, Yiming and Ren, Yinuo and Cao, Guangyao and Li, Feng and Qi, Haobo},
+  date = {2025-02-12},
+  journaltitle = {Expert Systems with Applications},
+  shortjournal = {Expert Systems with Applications},
+  pages = {126798},
+  issn = {0957-4174},
+  doi = {10.1016/j.eswa.2025.126798},
+  url = {https://www.sciencedirect.com/science/article/pii/S0957417425004208},
+  urldate = {2025-02-14},
+  abstract = {Recent advances on time series forecasting mainly focus on improving the forecasting models themselves. However, when the time series data suffer from potential structural breaks or concept drifts, the forecasting performance might be significantly reduced. In this paper, we introduce a novel approach called Optimal Starting Point Time Series Forecast (OSP-TSP) for optimal forecasting, which can be combined with existing time series forecasting models. By adjusting the sequence length via leveraging the XGBoost and LightGBM models, the proposed approach can determine the optimal starting point (OSP) of the time series and then enhance the prediction performances of the base forecasting models. To illustrate the effectiveness of the proposed approach, comprehensive empirical analysis have been conducted on the M4 dataset and other real world datasets. Empirical results indicate that predictions based on the OSP-TSP approach consistently outperform those using the complete time series dataset. Moreover, comparison results reveals that combining our approach with existing forecasting models can achieve better prediction accuracy, which also reflect the advantages of the proposed approach.},
+  keywords = {Optimal starting point,Time series features,Time series forecasting}
+}
+
+@article{DessaintO2024DoesAlternative,
+  title = {Does Alternative Data Improve Financial Forecasting? The Horizon Effect},
+  shorttitle = {Does Alternative Data Improve Financial Forecasting?},
+  author = {Dessaint, Olivier and Foucault, Thierry and Fresard, Laurent},
+  date = {2024},
+  journaltitle = {The Journal of Finance},
+  volume = {79},
+  number = {3},
+  pages = {2237--2287},
+  issn = {1540-6261},
+  doi = {10.1111/jofi.13323},
+  url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.13323},
+  urldate = {2025-02-14},
+  abstract = {Existing research suggests that alternative data are mainly informative about short-term future outcomes. We show theoretically that the availability of short-term-oriented data can induce forecasters to optimally shift their attention from the long term to the short term because it reduces the cost of obtaining short-term information. Consequently, the informativeness of their long-term forecasts decreases, even though the informativeness of their short-term forecasts increases. We test and confirm this prediction by considering how the informativeness of equity analysts' forecasts at various horizons varies over the long run and with their exposure to social media data.},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/VSMLSNHJ/Dessaint et al. - 2024 - Does Alternative Data Improve Financial Forecasting The Horizon Effect.pdf}
+}
+
+@article{WangWen2025VARX,
+  title = {基于分段组合VARX模型的中国出境游客数量预测},
+  author = {{王雯} and {李丰}},
+  date = {2025-03},
+  journaltitle = {经济管理学刊},
+  volume = {4},
+  pages = {1--30},
+  issn = {2097-2202},
+  url = {https://link.cnki.net/urlid/10.1867.F.20250122.1007.002},
+  urldate = {2025-02-18},
+  abstract = {本文对结构性变化的旅游需求进行研究,基于带有外生变量的向量自回归(VARX)模型,提出了一种分段组合预测的方法。与既有研究普遍采用的基于完整数据集构建组合预测模型不同,本文创新性地将时间因素纳入组合预测考量,通过将不同时间段的变量视为独立的单元,构建出分段时间序列数据集的组合预测模型。该方法以游客的网络搜索行为作为外生变量用于预测旅游人数,并捕捉这些外生变量在不同时间节点上对旅游人数产生的差异化影响,特别是在新冠疫情等突发冲击下的动态变化。实证结果显示,VARX模型的分段组合在预测中国出境旅游人数时展现出更高的准确性,其预测精度因考虑了外生变量在不同时间段的特异性影响而得以提升。事后分析进一步显示,特别是针对2024年中国出境旅游趋势的外样本预测结果,随着新冠疫情影响的逐渐消退及全球旅游市场的逐步复苏,中国出境旅游人数将呈现积极向上的增长态势。这一结论与现有公开文献中的趋势分析相吻合,进一步印证了本文预测方法的实践应用价值。},
+  language = {zh-CN},
+  keywords = {分段组合,带有外生变量的向量自回归模型,旅游预测},
+  file = {/home/fli/.zotero/zotero-data/storage/EPM4DGEN/王雯 and 李丰 - 2025 - 基于分段组合VARX模型的中国出境游客数量预测.pdf}
+}
+
+@article{JiangJ2023ReImaginingPrice,
+  title = {(Re-)Imag(in)Ing Price Trends},
+  author = {Jiang, Jingwen and Kelly, Bryan and Xiu, Dacheng},
+  date = {2023},
+  journaltitle = {The Journal of Finance},
+  volume = {78},
+  number = {6},
+  pages = {3193--3249},
+  issn = {1540-6261},
+  doi = {10.1111/jofi.13268},
+  url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/jofi.13268},
+  urldate = {2025-02-21},
+  abstract = {We reconsider trend-based predictability by employing flexible learning methods to identify price patterns that are highly predictive of returns, as opposed to testing predefined patterns like momentum or reversal. Our predictor data are stock-level price charts, allowing us to extract the most predictive price patterns using machine learning image analysis techniques. These patterns differ significantly from commonly analyzed trend signals, yield more accurate return predictions, enable more profitable investment strategies, and demonstrate robustness across specifications. Remarkably, they exhibit context independence, as short-term patterns perform well on longer time scales, and patterns learned from U.S. stocks prove effective in international markets.},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/4JFUZ75X/Jiang et al. - 2023 - (Re-)Imag(in)ing Price Trends.pdf}
+}
+
+@article{TavakoliS2024StatisticsPhonetics,
+  title = {Statistics in Phonetics},
+  author = {Tavakoli, Shahin and Matteo, Beatrice and Pigoli, Davide and Chodroff, Eleanor and Coleman, John and Gubian, Michele and Renwick, Margaret E.L. and Sonderegger, Morgan},
+  date = {2024},
+  journaltitle = {Annual Review of Statistics and Its Application},
+  publisher = {Annual Reviews},
+  issn = {2326-8298},
+  doi = {10.1146/annurev-statistics-112723-034642},
+  url = {https://www.annualreviews.org/content/journals/10.1146/annurev-statistics-112723-034642},
+  abstract = {Phonetics is the scientific field concerned with the study of how speech is produced, heard, and perceived. It abounds with data, such as acoustic speech recordings, neuroimaging data, or articulatory data. In this article, we provide an introduction to different areas of phonetics (acoustic phonetics, sociophonetics, speech perception, articulatory phonetics, speech inversion, sound change, and speech technology), an overview of the statistical methods for analyzing their data, and an introduction to the signal processing methods commonly applied to speech recordings. A major transition in the statistical modeling of phonetic data has been the shift from fixed effects to random effects regression models, the modeling of curve data (for instance, via generalized additive mixed models or functional data analysis methods), and the use of Bayesian methods. This shift has been driven in part by the increased focus on large speech corpora in phonetics, which has arisen from machine learning methods such as forced alignment. We conclude by identifying opportunities for future research.},
+  keywords = {Statistics - Applications},
+  file = {/home/fli/.zotero/zotero-data/storage/FPWZMGB6/Tavakoli et al. - 2024 - Statistics in Phonetics.pdf}
 }
 
 @preamble{ "\ifdefined\DeclarePrefChars\DeclarePrefChars{'’-}\else\fi " }
