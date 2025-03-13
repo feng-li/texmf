@@ -23257,23 +23257,6 @@
   file = {/home/fli/.zotero/zotero-data/storage/UA2W9EB7/Colin_Santos_Scaman_Theoretical Limits of Pipeline Parallel Optimization and Application to.pdf}
 }
 
-@online{DangKD2019HamiltonianMonte,
-  title = {Hamiltonian Monte Carlo with Energy Conserving Subsampling},
-  author = {Dang, Khue-Dung and Quiroz, Matias and Kohn, Robert and Tran, Minh-Ngoc and Villani, Mattias},
-  date = {2019-05-01},
-  eprint = {arXiv:1708.00955},
-  eprinttype = {MIT Press},
-  url = {http://arxiv.org/abs/1708.00955},
-  urldate = {2022-09-29},
-  abstract = {Hamiltonian Monte Carlo (HMC) samples efficiently from high-dimensional posterior distributions with proposed parameter draws obtained by iterating on a discretized version of the Hamiltonian dynamics. The iterations make HMC computationally costly, especially in problems with large datasets, since it is necessary to compute posterior densities and their derivatives with respect to the parameters. Naively computing the Hamiltonian dynamics on a subset of the data causes HMC to lose its key ability to generate distant parameter proposals with high acceptance probability. The key insight in our article is that efficient subsampling HMC for the parameters is possible if both the dynamics and the acceptance probability are computed from the same data subsample in each complete HMC iteration. We show that this is possible to do in a principled way in a HMC-within-Gibbs framework where the subsample is updated using a pseudo marginal MH step and the parameters are then updated using an HMC step, based on the current subsample. We show that our subsampling methods are fast and compare favorably to two popular sampling algorithms that utilize gradient estimates from data subsampling. We also explore the current limitations of subsampling HMC algorithms by varying the quality of the variance reducing control variates used in the estimators of the posterior density and its gradients.},
-  language = {en},
-  owner = {fli},
-  pubstate = {prepublished},
-  keywords = {Statistics - Computation,Statistics - Machine Learning,Statistics - Methodology},
-  timestamp = {2013.02.06},
-  file = {/home/fli/.zotero/zotero-data/storage/S4IVB76X/Dang_Quiroz_Kohn_Tran_Villani_2019_Hamiltonian Monte Carlo with Energy Conserving Subsampling.pdf}
-}
-
 @article{DunsonDB2020HastingsAlgorithm,
   title = {The Hastings Algorithm at Fifty},
   author = {Dunson, D B and Johndrow, J E},
@@ -24724,22 +24707,6 @@
   urldate = {2022-09-29},
   language = {en},
   file = {/home/fli/.zotero/zotero-data/storage/BZYIZR2Y/Deshpande_Ročková_George_2019_Simultaneous Variable and Covariance Selection With the Multivariate.pdf}
-}
-
-@online{DinhV2017ProbabilisticPath,
-  title = {Probabilistic Path Hamiltonian Monte Carlo},
-  author = {Dinh, Vu and Bilge, Arman and Zhang, Cheng and Matsen IV, Frederick A.},
-  date = {2017-06-23},
-  eprint = {1702.07814},
-  eprinttype = {arXiv},
-  eprintclass = {q-bio},
-  url = {http://arxiv.org/abs/1702.07814},
-  urldate = {2022-09-29},
-  abstract = {Hamiltonian Monte Carlo (HMC) is an efficient and effective means of sampling posterior distributions on Euclidean space, which has been extended to manifolds with boundary. However, some applications require an extension to more general spaces. For example, phylogenetic (evolutionary) trees are defined in terms of both a discrete graph and associated continuous parameters; although one can represent these aspects using a single connected space, this rather complex space is not suitable for existing HMC algorithms. In this paper, we develop Probabilistic Path HMC (PPHMC) as a first step to sampling distributions on spaces with intricate combinatorial structure. We define PPHMC on orthant complexes, show that the resulting Markov chain is ergodic, and provide a promising implementation for the case of phylogenetic trees in opensource software. We also show that a surrogate function to ease the transition across a boundary on which the log-posterior has discontinuous derivatives can greatly improve efficiency.},
-  language = {en},
-  pubstate = {prepublished},
-  keywords = {Quantitative Biology - Populations and Evolution},
-  file = {/home/fli/.zotero/zotero-data/storage/7B7U6P2Z/Dinh_Bilge_Zhang_Matsen IV_2017_Probabilistic Path Hamiltonian Monte Carlo.pdf}
 }
 
 @article{EklundA2017BayesianHeteroscedastic,
@@ -40653,7 +40620,6 @@
   url = {https://arxiv.org/abs/2311.12279},
   urldate = {2024-02-22},
   abstract = {As the popularity of hierarchical point forecast reconciliation methods increases, there is a growing interest in probabilistic forecast reconciliation. Many studies have utilized machine learning or deep learning techniques to implement probabilistic forecasting reconciliation and have made notable progress. However, these methods treat the reconciliation step as a fixed and hard post-processing step, leading to a trade-off between accuracy and coherency. In this paper, we propose a new approach for probabilistic forecast reconciliation. Unlike existing approaches, our proposed approach fuses the prediction step and reconciliation step into a deep learning framework, making the reconciliation step more flexible and soft by introducing the Kullback-Leibler divergence regularization term into the loss function. The approach is evaluated using three hierarchical time series datasets, which shows the advantages of our approach over other probabilistic forecast reconciliation methods.},
-  eventtitle = {2023 IEEE International Conference on Data Mining Workshops (ICDMW)},
   keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Conferences,Data mining,Deep learning,Forecasting,Fuses,Hierarchical time series,Probabilistic forecast reconciliation,Probabilistic logic,Time series analysis},
   file = {/home/fli/.zotero/zotero-data/storage/CXHKSPSH/Zhang et al. - 2023 - Probabilistic Forecast Reconciliation with Kullback-Leibler Divergence Regularization.pdf;/home/fli/.zotero/zotero-data/storage/GNEUHQ5Y/Zhang et al. - 2023 - Probabilistic Forecast Reconciliation with Kullback-Leibler Divergence Regularization.pdf;/home/fli/.zotero/zotero-data/storage/HH8UF4HC/Zhang et al. - 2023 - Probabilistic Forecast Reconciliation with Kullback-Leibler Divergence Regularization.pdf}
 }
@@ -48640,6 +48606,581 @@
   language = {en},
   keywords = {D80,Earnings conference calls,Ethical financial reporting,G10,G12,G14,G30,M41,Stock price crash risk,Tone,Truthful communication,Voluntary disclosure},
   file = {/home/fli/.zotero/zotero-data/storage/LN9QHFB8/Fu et al. - 2021 - The Information Role of Earnings Conference Call Tone Evidence from Stock Price Crash Risk.pdf}
+}
+
+@article{Jennings-ShafferC2025FindingHigh,
+  title = {Finding High Posterior Density Phylogenies by Systematically Extending a Directed Acyclic Graph},
+  author = {Jennings-Shaffer, Chris and Rich, David H. and Macaulay, Matthew and Karcher, Michael D. and Ganapathy, Tanvi and Kiami, Shosuke and Kooperberg, Anna and Zhang, Cheng and Suchard, Marc A. and Matsen, Frederick A.},
+  date = {2025-02-28},
+  journaltitle = {Algorithms for Molecular Biology},
+  shortjournal = {Algorithms Mol Biol},
+  volume = {20},
+  number = {1},
+  pages = {2},
+  issn = {1748-7188},
+  doi = {10.1186/s13015-025-00273-x},
+  url = {https://almob.biomedcentral.com/articles/10.1186/s13015-025-00273-x},
+  urldate = {2025-03-07},
+  abstract = {Abstract             Bayesian phylogenetics typically estimates a posterior distribution, or aspects thereof, using Markov chain Monte Carlo methods. These methods integrate over tree space by applying local rearrangements to move a tree through its space as a random walk. Previous work explored the possibility of replacing this random walk with a systematic search, but was quickly overwhelmed by the large number of probable trees in the posterior distribution. In this paper we develop methods to sidestep this problem using a recently introduced structure called the subsplit directed acyclic graph (sDAG). This structure can represent many trees at once, and local rearrangements of trees translate to methods of enlarging the sDAG. Here we propose two methods of introducing, ranking, and selecting local rearrangements on sDAGs to produce a collection of trees with high posterior density. One of these methods successfully recovers the set of high posterior density trees across a range of data sets. However, we find that a simpler strategy of aggregating trees into an sDAG in fact is computationally faster and returns a higher fraction of probable trees.},
+  language = {en}
+}
+
+@online{GongC2025AdversarialTransform,
+  title = {Adversarial Transform Particle Filters},
+  author = {Gong, Chengxin and Lin, Wei and Zhang, Cheng},
+  date = {2025-02-10},
+  eprint = {2502.06165},
+  eprinttype = {arXiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2502.06165},
+  url = {http://arxiv.org/abs/2502.06165},
+  urldate = {2025-03-07},
+  abstract = {The particle filter (PF) and the ensemble Kalman filter (EnKF) are widely used for approximate inference in state-space models. From a Bayesian perspective, these algorithms represent the prior by an ensemble of particles and update it to the posterior with new observations over time. However, the PF often suffers from weight degeneracy in high-dimensional settings, whereas the EnKF relies on linear Gaussian assumptions that can introduce significant approximation errors. In this paper, we propose the Adversarial Transform Particle Filter (ATPF), a novel filtering framework that combines the strengths of the PF and the EnKF through adversarial learning. Specifically, importance sampling is used to ensure statistical consistency as in the PF, while adversarially learned transformations, such as neural networks, allow accurate posterior matching for nonlinear and non-Gaussian systems. In addition, we incorporate kernel methods to ease optimization and leverage regularization techniques based on optimal transport for better statistical properties and numerical stability. We provide theoretical guarantees, including generalization bounds for both the analysis and forecast steps of ATPF. Extensive experiments across various nonlinear and non-Gaussian scenarios demonstrate the effectiveness and practical advantages of our method.},
+  pubstate = {prepublished},
+  keywords = {Statistics - Machine Learning,Statistics - Methodology},
+  file = {/home/fli/.zotero/zotero-data/storage/YNWS7NBM/Gong et al. - 2025 - Adversarial Transform Particle Filters.pdf}
+}
+
+@online{XieT2025PhyloVAEUnsupervised,
+  title = {PhyloVAE: Unsupervised Learning of Phylogenetic Trees via Variational Autoencoders},
+  shorttitle = {PhyloVAE},
+  author = {Xie, Tianyu and Richman, Harry and Gao, Jiansi and IV, Frederick A. Matsen and Zhang, Cheng},
+  date = {2025-02-07},
+  eprint = {2502.04730},
+  eprinttype = {arXiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2502.04730},
+  url = {http://arxiv.org/abs/2502.04730},
+  urldate = {2025-03-07},
+  abstract = {Learning informative representations of phylogenetic tree structures is essential for analyzing evolutionary relationships. Classical distance-based methods have been widely used to project phylogenetic trees into Euclidean space, but they are often sensitive to the choice of distance metric and may lack sufficient resolution. In this paper, we introduce phylogenetic variational autoencoders (PhyloVAEs), an unsupervised learning framework designed for representation learning and generative modeling of tree topologies. Leveraging an efficient encoding mechanism inspired by autoregressive tree topology generation, we develop a deep latent-variable generative model that facilitates fast, parallelized topology generation. PhyloVAE combines this generative model with a collaborative inference model based on learnable topological features, allowing for high-resolution representations of phylogenetic tree samples. Extensive experiments demonstrate PhyloVAE's robust representation learning capabilities and fast generation of phylogenetic tree topologies.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning,Quantitative Biology - Populations and Evolution,Statistics - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/LVCFPW8G/Xie et al. - 2025 - PhyloVAE Unsupervised Learning of Phylogenetic Trees via Variational Autoencoders.pdf}
+}
+
+@online{ChengZ2025ProvableSampleEfficient,
+  title = {Provable Sample-Efficient Transfer Learning Conditional Diffusion Models via Representation Learning},
+  author = {Cheng, Ziheng and Xie, Tianyu and Zhang, Shiyue and Zhang, Cheng},
+  date = {2025-02-06},
+  eprint = {2502.04491},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2502.04491},
+  url = {http://arxiv.org/abs/2502.04491},
+  urldate = {2025-03-07},
+  abstract = {While conditional diffusion models have achieved remarkable success in various applications, they require abundant data to train from scratch, which is often infeasible in practice. To address this issue, transfer learning has emerged as an essential paradigm in small data regimes. Despite its empirical success, the theoretical underpinnings of transfer learning conditional diffusion models remain unexplored. In this paper, we take the first step towards understanding the sample efficiency of transfer learning conditional diffusion models through the lens of representation learning. Inspired by practical training procedures, we assume that there exists a low-dimensional representation of conditions shared across all tasks. Our analysis shows that with a well-learned representation from source tasks, the samplecomplexity of target tasks can be reduced substantially. In addition, we investigate the practical implications of our theoretical results in several real-world applications of conditional diffusion models. Numerical experiments are also conducted to verify our results.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning,Mathematics - Statistics Theory,Statistics - Machine Learning,Statistics - Statistics Theory},
+  file = {/home/fli/.zotero/zotero-data/storage/FSEWDI94/Cheng et al. - 2025 - Provable Sample-Efficient Transfer Learning Conditional Diffusion Models via Representation Learning.pdf}
+}
+
+@article{XieT2024ImprovingTree,
+  title = {Improving Tree Probability Estimation with Stochastic Optimization and Variance Reduction},
+  author = {Xie, Tianyu and Yuan, Musu and Deng, Minghua and Zhang, Cheng},
+  date = {2024-12},
+  journaltitle = {Statistics and Computing},
+  shortjournal = {Stat Comput},
+  volume = {34},
+  number = {6},
+  pages = {186},
+  issn = {0960-3174, 1573-1375},
+  doi = {10.1007/s11222-024-10498-2},
+  url = {https://link.springer.com/10.1007/s11222-024-10498-2},
+  urldate = {2025-03-07},
+  language = {en}
+}
+
+@online{ZhangS2024SemiImplicitFunctional,
+  title = {Semi-Implicit Functional Gradient Flow},
+  author = {Zhang, Shiyue and Cheng, Ziheng and Zhang, Cheng},
+  date = {2024-10-23},
+  eprint = {2410.17935},
+  eprinttype = {arXiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2410.17935},
+  url = {http://arxiv.org/abs/2410.17935},
+  urldate = {2025-03-07},
+  abstract = {Particle-based variational inference methods (ParVIs) use non-parametric variational families represented by particles to approximate the target distribution according to the kernelized Wasserstein gradient flow for the Kullback-Leibler (KL) divergence. Recent works introduce functional gradient flows to substitute the kernel for better flexibility. However, the deterministic updating mechanism may suffer from limited exploration and require expensive repetitive runs for new samples. In this paper, we propose Semi-Implicit Functional Gradient flow (SIFG), a functional gradient ParVI method that uses perturbed particles as the approximation family. The corresponding functional gradient flow, which can be estimated via denoising score matching, exhibits strong theoretical convergence guarantee. We also present an adaptive version of our method to automatically choose the suitable noise magnitude. Extensive experiments demonstrate the effectiveness and efficiency of the proposed framework on both simulated and real data problems.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/AHS3PTPI/Zhang et al. - 2024 - Semi-Implicit Functional Gradient Flow.pdf}
+}
+
+@online{ShiZ2024DiffusionPINNSampler,
+  title = {Diffusion-PINN Sampler},
+  author = {Shi, Zhekun and Yu, Longlin and Xie, Tianyu and Zhang, Cheng},
+  date = {2024-10-20},
+  eprint = {2410.15336},
+  eprinttype = {arXiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2410.15336},
+  url = {http://arxiv.org/abs/2410.15336},
+  urldate = {2025-03-07},
+  abstract = {Recent success of diffusion models has inspired a surge of interest in developing sampling techniques using reverse diffusion processes. However, accurately estimating the drift term in the reverse stochastic differential equation (SDE) solely from the unnormalized target density poses significant challenges, hindering existing methods from achieving state-of-the-art performance. In this paper, we introduce the Diffusion-PINN Sampler (DPS), a novel diffusion-based sampling algorithm that estimates the drift term by solving the governing partial differential equation of the log-density of the underlying SDE marginals via physics-informed neural networks (PINN). We prove that the error of log-density approximation can be controlled by the PINN residual loss, enabling us to establish convergence guarantees of DPS. Experiments on a variety of sampling tasks demonstrate the effectiveness of our approach, particularly in accurately identifying mixing proportions when the target contains isolated components.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/3FCBLX5B/Shi et al. - 2024 - Diffusion-PINN Sampler.pdf}
+}
+
+@article{KarcherMD2024VariationalSupertrees,
+  title = {Variational Supertrees for Bayesian Phylogenetics},
+  author = {Karcher, Michael D. and Zhang, Cheng and Matsen, Frederic A.},
+  date = {2024-09},
+  journaltitle = {Bulletin of Mathematical Biology},
+  shortjournal = {Bull Math Biol},
+  volume = {86},
+  number = {9},
+  pages = {114},
+  issn = {0092-8240, 1522-9602},
+  doi = {10.1007/s11538-024-01338-5},
+  url = {https://link.springer.com/10.1007/s11538-024-01338-5},
+  urldate = {2025-03-07},
+  abstract = {Abstract             Bayesian phylogenetic inference is powerful but computationally intensive. Researchers may find themselves with two phylogenetic posteriors on overlapping data sets and may wish to approximate a combined result without having to re-run potentially expensive Markov chains on the combined data set. This raises the question: given overlapping subsets of a set of taxa (e.g. species or virus samples), and given posterior distributions on phylogenetic tree topologies for each of these taxon sets, how can we optimize a probability distribution on phylogenetic tree topologies for the entire taxon set? In this paper we develop a variational approach to this problem and demonstrate its effectiveness. Specifically, we develop an algorithm to find a suitable support of the variational tree topology distribution on the entire taxon set, as well as a gradient-descent algorithm to minimize the divergence from the restrictions of the variational distribution to each of the given per-subset probability distributions, in an effort to approximate the posterior distribution on the entire taxon set.},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/2IHJUSJI/Karcher et al. - 2024 - Variational Supertrees for Bayesian Phylogenetics.pdf}
+}
+
+@online{XieT2024VariationalBayesian,
+  title = {Variational Bayesian Phylogenetic Inference with Semi-Implicit Branch Length Distributions},
+  author = {Xie, Tianyu and IV, Frederick A. Matsen and Suchard, Marc A. and Zhang, Cheng},
+  date = {2024-08-09},
+  eprint = {2408.05058},
+  eprinttype = {arXiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2408.05058},
+  url = {http://arxiv.org/abs/2408.05058},
+  urldate = {2025-03-07},
+  abstract = {Reconstructing the evolutionary history relating a collection of molecular sequences is the main subject of modern Bayesian phylogenetic inference. However, the commonly used Markov chain Monte Carlo methods can be inefficient due to the complicated space of phylogenetic trees, especially when the number of sequences is large. An alternative approach is variational Bayesian phylogenetic inference (VBPI) which transforms the inference problem into an optimization problem. While effective, the default diagonal lognormal approximation for the branch lengths of the tree used in VBPI is often insufficient to capture the complexity of the exact posterior. In this work, we propose a more flexible family of branch length variational posteriors based on semi-implicit hierarchical distributions using graph neural networks. We show that this semi-implicit construction emits straightforward permutation equivariant distributions, and therefore can handle the non-Euclidean branch length space across different tree topologies with ease. To deal with the intractable marginal probability of semi-implicit variational distributions, we develop several alternative lower bounds for stochastic optimization. We demonstrate the effectiveness of our proposed method over baseline methods on benchmark data examples, in terms of both marginal likelihood estimation and branch length posterior approximation.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/BWV3JU3Q/Xie et al. - 2024 - Variational Bayesian Phylogenetic Inference with Semi-implicit Branch Length Distributions.pdf}
+}
+
+@online{ChengZ2024KernelSemiImplicit,
+  title = {Kernel Semi-Implicit Variational Inference},
+  author = {Cheng, Ziheng and Yu, Longlin and Xie, Tianyu and Zhang, Shiyue and Zhang, Cheng},
+  date = {2024-05-29},
+  eprint = {2405.18997},
+  eprinttype = {arXiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2405.18997},
+  url = {http://arxiv.org/abs/2405.18997},
+  urldate = {2025-03-07},
+  abstract = {Semi-implicit variational inference (SIVI) extends traditional variational families with semi-implicit distributions defined in a hierarchical manner. Due to the intractable densities of semi-implicit distributions, classical SIVI often resorts to surrogates of evidence lower bound (ELBO) that would introduce biases for training. A recent advancement in SIVI, named SIVI-SM, utilizes an alternative score matching objective made tractable via a minimax formulation, albeit requiring an additional lower-level optimization. In this paper, we propose kernel SIVI (KSIVI), a variant of SIVI-SM that eliminates the need for lower-level optimization through kernel tricks. Specifically, we show that when optimizing over a reproducing kernel Hilbert space (RKHS), the lower-level problem has an explicit solution. This way, the upper-level objective becomes the kernel Stein discrepancy (KSD), which is readily computable for stochastic gradient descent due to the hierarchical structure of semi-implicit variational distributions. An upper bound for the variance of the Monte Carlo gradient estimators of the KSD objective is derived, which allows us to establish novel convergence guarantees of KSIVI. We demonstrate the effectiveness and efficiency of KSIVI on both synthetic distributions and a variety of real data Bayesian inference tasks.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/IZY99KDA/Cheng et al. - 2024 - Kernel Semi-Implicit Variational Inference.pdf}
+}
+
+@online{XieT2024ReflectedFlow,
+  title = {Reflected Flow Matching},
+  author = {Xie, Tianyu and Zhu, Yu and Yu, Longlin and Yang, Tong and Cheng, Ziheng and Zhang, Shiyue and Zhang, Xiangyu and Zhang, Cheng},
+  date = {2024-05-26},
+  eprint = {2405.16577},
+  eprinttype = {arXiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2405.16577},
+  url = {http://arxiv.org/abs/2405.16577},
+  urldate = {2025-03-07},
+  abstract = {Continuous normalizing flows (CNFs) learn an ordinary differential equation to transform prior samples into data. Flow matching (FM) has recently emerged as a simulation-free approach for training CNFs by regressing a velocity model towards the conditional velocity field. However, on constrained domains, the learned velocity model may lead to undesirable flows that result in highly unnatural samples, e.g., oversaturated images, due to both flow matching error and simulation error. To address this, we add a boundary constraint term to CNFs, which leads to reflected CNFs that keep trajectories within the constrained domains. We propose reflected flow matching (RFM) to train the velocity model in reflected CNFs by matching the conditional velocity fields in a simulation-free manner, similar to the vanilla FM. Moreover, the analytical form of conditional velocity fields in RFM avoids potentially biased approximations, making it superior to existing score-based generative models on constrained domains. We demonstrate that RFM achieves comparable or better results on standard image benchmarks and produces high-quality class-conditioned samples under high guidance weight.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/G7V9YSZ9/Xie et al. - 2024 - Reflected Flow Matching.pdf}
+}
+
+@article{WuZ2024ReducedorderModelbased,
+  title = {Reduced-Order Model-Based Variational Inference with Normalizing Flows for Bayesian Elliptic Inverse Problems},
+  author = {Wu, Zhizhang and Zhang, Cheng and Zhang, Zhiwen},
+  date = {2024},
+  journaltitle = {Journal of Computational and Applied Mathematics},
+  volume = {441},
+  pages = {115659},
+  publisher = {Elsevier},
+  url = {https://www.sciencedirect.com/science/article/pii/S0377042723006039},
+  urldate = {2025-03-07},
+  file = {/home/fli/.zotero/zotero-data/storage/53U5NQNB/Wu et al. - 2024 - Reduced-order model-based variational inference with normalizing flows for Bayesian elliptic inverse.pdf}
+}
+
+@article{LiS2023DatadrivenModelbased,
+  title = {A Data-Driven and Model-Based Accelerated Hamiltonian Monte Carlo Method for Bayesian Elliptic Inverse Problems},
+  author = {Li, Sijing and Zhang, Cheng and Zhang, Zhiwen and Zhao, Hongkai},
+  date = {2023-08},
+  journaltitle = {Statistics and Computing},
+  shortjournal = {Stat Comput},
+  volume = {33},
+  number = {4},
+  pages = {90},
+  issn = {0960-3174, 1573-1375},
+  doi = {10.1007/s11222-023-10262-y},
+  url = {https://link.springer.com/10.1007/s11222-023-10262-y},
+  urldate = {2025-03-07},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/KMFSRIDA/Li et al. - 2023 - A data-driven and model-based accelerated Hamiltonian Monte Carlo method for Bayesian elliptic inver.pdf}
+}
+
+@article{ZhangC2024VariationalApproach,
+  title = {A Variational Approach to Bayesian Phylogenetic Inference},
+  author = {Zhang, Cheng and Matsen IV, Frederick A.},
+  date = {2024},
+  journaltitle = {Journal of Machine Learning Research},
+  volume = {25},
+  number = {145},
+  pages = {1--56},
+  url = {http://www.jmlr.org/papers/v25/22-0348.html},
+  urldate = {2025-03-07},
+  file = {/home/fli/.zotero/zotero-data/storage/QXHUIXUG/Zhang and Matsen IV - 2024 - A variational approach to Bayesian phylogenetic inference.pdf}
+}
+
+@article{JunSH2023TopologymarginalComposite,
+  title = {A Topology-Marginal Composite Likelihood via a Generalized Phylogenetic Pruning Algorithm},
+  author = {Jun, Seong-Hwan and Nasif, Hassan and Jennings-Shaffer, Chris and Rich, David H and Kooperberg, Anna and Fourment, Mathieu and Zhang, Cheng and Suchard, Marc A and Matsen, Frederick A},
+  date = {2023-07-31},
+  journaltitle = {Algorithms for Molecular Biology},
+  shortjournal = {Algorithms Mol Biol},
+  volume = {18},
+  number = {1},
+  pages = {10},
+  issn = {1748-7188},
+  doi = {10.1186/s13015-023-00235-1},
+  url = {https://almob.biomedcentral.com/articles/10.1186/s13015-023-00235-1},
+  urldate = {2025-03-07},
+  abstract = {Abstract             Bayesian phylogenetics is a computationally challenging inferential problem. Classical methods are based on random-walk Markov chain Monte Carlo (MCMC), where random proposals are made on the tree parameter and the continuous parameters simultaneously. Variational phylogenetics is a promising alternative to MCMC, in which one fits an approximating distribution to the unnormalized phylogenetic posterior. Previous work fit this variational approximation using stochastic gradient descent, which is the canonical way of fitting general variational approximations. However, phylogenetic trees are special structures, giving opportunities for efficient computation. In this paper we describe a new algorithm that directly generalizes the Felsenstein pruning algorithm (a.k.a. sum-product algorithm) to compute a composite-like likelihood by marginalizing out ancestral states and subtrees simultaneously. We show the utility of this algorithm by rapidly making point estimates for branch lengths of a multi-tree phylogenetic model. These estimates accord with a long MCMC run and with estimates obtained using a variational method, but are much faster to obtain. Thus, although generalized pruning does not lead to a variational algorithm as such, we believe that it will form a useful starting point for variational inference.},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/3J54T977/Jun et al. - 2023 - A topology-marginal composite likelihood via a generalized phylogenetic pruning algorithm.pdf}
+}
+
+@article{YuL2023HierarchicalSemiimplicit,
+  title = {Hierarchical Semi-Implicit Variational Inference with Application to Diffusion Model Acceleration},
+  author = {Yu, Longlin and Xie, Tianyu and Zhu, Yu and Yang, Tong and Zhang, Xiangyu and Zhang, Cheng},
+  date = {2023},
+  journaltitle = {Advances in Neural Information Processing Systems},
+  volume = {36},
+  pages = {49603--49627},
+  url = {https://proceedings.neurips.cc/paper_files/paper/2023/hash/9bbb3c3aa33616c55521e2f826c132bd-Abstract-Conference.html},
+  urldate = {2025-03-07}
+}
+
+@online{YuL2023SemiImplicitVariational,
+  title = {Semi-Implicit Variational Inference via Score Matching},
+  author = {Yu, Longlin and Zhang, Cheng},
+  date = {2023-08-19},
+  eprint = {2308.10014},
+  eprinttype = {arXiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2308.10014},
+  url = {http://arxiv.org/abs/2308.10014},
+  urldate = {2025-03-07},
+  abstract = {Semi-implicit variational inference (SIVI) greatly enriches the expressiveness of variational families by considering implicit variational distributions defined in a hierarchical manner. However, due to the intractable densities of variational distributions, current SIVI approaches often use surrogate evidence lower bounds (ELBOs) or employ expensive inner-loop MCMC runs for unbiased ELBOs for training. In this paper, we propose SIVI-SM, a new method for SIVI based on an alternative training objective via score matching. Leveraging the hierarchical structure of semi-implicit variational families, the score matching objective allows a minimax formulation where the intractable variational densities can be naturally handled with denoising score matching. We show that SIVI-SM closely matches the accuracy of MCMC and outperforms ELBO-based SIVI methods in a variety of Bayesian inference tasks.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning,Statistics - Methodology},
+  file = {/home/fli/.zotero/zotero-data/storage/W5E7HT6X/Yu and Zhang - 2023 - Semi-Implicit Variational Inference via Score Matching.pdf}
+}
+
+@article{XieT2023ARTreeDeep,
+  title = {ARTree: A Deep Autoregressive Model for Phylogenetic Inference},
+  shorttitle = {ARTree},
+  author = {Xie, Tianyu and Zhang, Cheng},
+  date = {2023},
+  journaltitle = {Advances in Neural Information Processing Systems},
+  volume = {36},
+  pages = {14427--14444},
+  url = {https://proceedings.neurips.cc/paper_files/paper/2023/hash/2e9e513860b1342f3a12ebecf0528a21-Abstract-Conference.html},
+  urldate = {2025-03-07},
+  file = {/home/fli/.zotero/zotero-data/storage/Y23CJJIC/Xie and Zhang - 2023 - ARTree A deep autoregressive model for phylogenetic inference.pdf}
+}
+
+@article{ZhangC2021NonbifurcatingPhylogenetic,
+  title = {Nonbifurcating Phylogenetic Tree Inference via the Adaptive LASSO},
+  author = {Zhang, Cheng and Dinh, Vu and Matsen, Frederick A.},
+  date = {2021-04-03},
+  journaltitle = {Journal of the American Statistical Association},
+  shortjournal = {Journal of the American Statistical Association},
+  volume = {116},
+  number = {534},
+  pages = {858--873},
+  issn = {0162-1459, 1537-274X},
+  doi = {10.1080/01621459.2020.1778481},
+  url = {https://www.tandfonline.com/doi/full/10.1080/01621459.2020.1778481},
+  urldate = {2025-03-07},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/AQM3X8FJ/Zhang et al. - 2021 - Nonbifurcating Phylogenetic Tree Inference via the Adaptive LASSO.pdf}
+}
+
+@article{ZhangC2023LearnableTopological,
+  title = {Learnable Topological Features for Phylogenetic Inference via Graph Neural Networks},
+  author = {Zhang, Cheng},
+  date = {2023},
+  journaltitle = {ArXiv},
+  pages = {arXiv--2302},
+  url = {https://pmc.ncbi.nlm.nih.gov/articles/PMC9949155/},
+  urldate = {2025-03-07}
+}
+
+@online{LiangJ2020InterventionGenerative,
+  title = {Intervention Generative Adversarial Networks},
+  author = {Liang, Jiadong and Zhang, Liangyu and Zhang, Cheng and Zhang, Zhihua},
+  date = {2020-08-09},
+  eprint = {2008.03712},
+  eprinttype = {arXiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2008.03712},
+  url = {http://arxiv.org/abs/2008.03712},
+  urldate = {2025-03-07},
+  abstract = {In this paper we propose a novel approach for stabilizing the training process of Generative Adversarial Networks as well as alleviating the mode collapse problem. The main idea is to introduce a regularization term that we call intervention loss into the objective. We refer to the resulting generative model as Intervention Generative Adversarial Networks (IVGAN). By perturbing the latent representations of real images obtained from an auxiliary encoder network with Gaussian invariant interventions and penalizing the dissimilarity of the distributions of the resulting generated images, the intervention loss provides more informative gradient for the generator, significantly improving GAN's training stability. We demonstrate the effectiveness and efficiency of our methods via solid theoretical analysis and thorough evaluation on standard real-world datasets as well as the stacked MNIST dataset.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/VXIZX9G4/Liang et al. - 2020 - Intervention Generative Adversarial Networks.pdf}
+}
+
+@article{ZhangC2020ImprovedVariational,
+  title = {Improved Variational Bayesian Phylogenetic Inference with Normalizing Flows},
+  author = {Zhang, Cheng},
+  date = {2020},
+  journaltitle = {Advances in neural information processing systems},
+  volume = {33},
+  pages = {18760--18771},
+  url = {https://proceedings.neurips.cc/paper/2020/hash/d96409bf894217686ba124d7356686c9-Abstract.html},
+  urldate = {2025-03-07},
+  file = {/home/fli/.zotero/zotero-data/storage/S9ZG2F23/Zhang - 2020 - Improved variational Bayesian phylogenetic inference with normalizing flows.pdf}
+}
+
+@article{MatsenIVFALearningUsing,
+  title = {Learning, Using, and Extending Variational Distributions of Phylogenetic Trees},
+  author = {Matsen IV, Frederick A. and Karcher, Michael and Fourment, Mathieu and Magee, Andrew and Swanepoel, Christiaan and Zhang, Cheng}
+}
+
+@inproceedings{ZhangC2019VariationalBayesian,
+  title = {Variational Bayesian Phylogenetic Inference.},
+  booktitle = {ICLR (Poster)},
+  author = {Zhang, Cheng and Matsen IV, Frederick A.},
+  date = {2019},
+  url = {https://zcrabbit.github.io/static/slides/CAIMS2019.pdf},
+  urldate = {2025-03-07},
+  file = {/home/fli/.zotero/zotero-data/storage/2C6R93ZX/Zhang and Matsen IV - 2019 - Variational Bayesian Phylogenetic Inference..pdf}
+}
+
+@article{ZhangC2018GeneralizingTree,
+  title = {Generalizing Tree Probability Estimation via Bayesian Networks},
+  author = {Zhang, Cheng and Matsen IV, Frederick A.},
+  date = {2018},
+  journaltitle = {Advances in neural information processing systems},
+  volume = {31},
+  url = {https://proceedings.neurips.cc/paper/2018/hash/b137fdd1f79d56c7edf3365fea7520f2-Abstract.html},
+  urldate = {2025-03-07},
+  file = {/home/fli/.zotero/zotero-data/storage/IQTEF3BY/Zhang and Matsen IV - 2018 - Generalizing tree probability estimation via Bayesian networks.pdf}
+}
+
+@article{ZhangC2017HamiltonianMonte,
+  title = {Hamiltonian Monte Carlo Acceleration Using Surrogate Functions with Random Bases},
+  author = {Zhang, Cheng and Shahbaba, Babak and Zhao, Hongkai},
+  date = {2017-11},
+  journaltitle = {Statistics and Computing},
+  shortjournal = {Stat Comput},
+  volume = {27},
+  number = {6},
+  pages = {1473--1490},
+  issn = {0960-3174, 1573-1375},
+  doi = {10.1007/s11222-016-9699-1},
+  url = {http://link.springer.com/10.1007/s11222-016-9699-1},
+  urldate = {2025-03-07},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/YQDM2H22/Zhang et al. - 2017 - Hamiltonian Monte Carlo acceleration using surrogate functions with random bases.pdf}
+}
+
+@article{ZhangC2017VariationalHamiltonian,
+  title = {Variational Hamiltonian Monte Carlo via Score Matching},
+  author = {Zhang, Cheng and Shahbaba, Babak and Zhao, Hongkai},
+  date = {2017},
+  journaltitle = {Bayesian Analysis},
+  volume = {13},
+  number = {2},
+  pages = {485},
+  url = {https://pmc.ncbi.nlm.nih.gov/articles/PMC10162593/},
+  urldate = {2025-03-07}
+}
+
+@article{ZhangC2017PrecomputingStrategy,
+  title = {Precomputing Strategy for Hamiltonian Monte Carlo Method Based on Regularity in Parameter Space},
+  author = {Zhang, Cheng and Shahbaba, Babak and Zhao, Hongkai},
+  date = {2017-03},
+  journaltitle = {Computational Statistics},
+  shortjournal = {Comput Stat},
+  volume = {32},
+  number = {1},
+  pages = {253--279},
+  issn = {0943-4062, 1613-9658},
+  doi = {10.1007/s00180-016-0683-1},
+  url = {http://link.springer.com/10.1007/s00180-016-0683-1},
+  urldate = {2025-03-07},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/9G9DXI72/Zhang et al. - 2017 - Precomputing strategy for Hamiltonian Monte Carlo method based on regularity in parameter space.pdf}
+}
+
+@inproceedings{DinhV2017ProbabilisticPath,
+  title = {Probabilistic Path Hamiltonian Monte Carlo},
+  booktitle = {International Conference on Machine Learning},
+  author = {Dinh, Vu and Bilge, Arman and Zhang, Cheng and Matsen IV, Frederick A.},
+  date = {2017},
+  pages = {1009--1018},
+  publisher = {PMLR},
+  url = {http://proceedings.mlr.press/v70/dinh17a.html},
+  urldate = {2025-03-07},
+  file = {/home/fli/.zotero/zotero-data/storage/WNEFNZQH/Dinh et al. - 2017 - Probabilistic path hamiltonian monte carlo.pdf}
+}
+
+@book{ZhangC2017ScalableHamiltonian,
+  title = {Scalable Hamiltonian Monte Carlo via Surrogate Methods},
+  author = {Zhang, Cheng},
+  date = {2017},
+  publisher = {University of California, Irvine},
+  url = {https://search.proquest.com/openview/fcdb518e2b1d5461c3bd336e2bc8c2cc/1?pq-origsite=gscholar&cbl=18750},
+  urldate = {2025-03-07},
+  file = {/home/fli/.zotero/zotero-data/storage/AAMQRFZ2/Zhang - 2017 - Scalable Hamiltonian Monte Carlo via Surrogate Methods.pdf}
+}
+
+@inproceedings{ZhangS2024FunctionalGradient,
+  title = {Functional Gradient Flows for Constrained Sampling},
+  author = {Zhang, Shiyue and Yu, Longlin and Cheng, Ziheng and Zhang, Cheng},
+  date = {2024-11-06},
+  url = {https://openreview.net/forum?id=kpo6ZCgVZH&noteId=nz822r0EXD},
+  urldate = {2025-03-10},
+  abstract = {Recently, through a unified gradient flow perspective of Markov chain Monte Carlo (MCMC) and variational inference (VI), particle-based variational inference methods (ParVIs) have been proposed that tend to combine the best of both worlds. While typical ParVIs such as Stein Variational Gradient Descent (SVGD) approximate the gradient flow within a reproducing kernel Hilbert space (RKHS), many attempts have been made recently to replace RKHS with more expressive function spaces, such as neural networks. While successful, these methods are mainly designed for sampling from unconstrained domains. In this paper, we offer a general solution to constrained sampling by introducing a boundary condition for the gradient flow which would confine the particles within the specific domain. This allows us to propose a new functional gradient ParVI method for constrained sampling, called *constrained functional gradient flow* (CFG), with provable continuous-time convergence in total variation (TV). We also present novel numerical strategies to handle the boundary integral term arising from the domain constraints. Our theory and experiments demonstrate the effectiveness of the proposed framework.},
+  eventtitle = {The Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS 2024)},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/NIHHBB32/Zhang et al. - 2024 - Functional Gradient Flows for Constrained Sampling.pdf}
+}
+
+@inproceedings{ChengZ2023ParticlebasedVariational,
+  title = {Particle-Based Variational Inference with Generalized Wasserstein Gradient Flow},
+  author = {Cheng, Ziheng and Zhang, Shiyue and Yu, Longlin and Zhang, Cheng},
+  date = {2023-11-02},
+  url = {https://openreview.net/forum?id=oNuam8eFz2},
+  urldate = {2025-03-10},
+  abstract = {Particle-based variational inference methods (ParVIs) such as Stein variational gradient descent (SVGD) update the particles based on the kernelized Wasserstein gradient flow for the Kullback-Leibler (KL) divergence. However, the design of kernels is often non-trivial and can be restrictive for the flexibility of the method. Recent works show that functional gradient flow approximations with quadratic form regularization terms can improve performance. In this paper, we propose a ParVI framework, called generalized Wasserstein gradient descent (GWG), based on a generalized Wasserstein gradient flow of the KL divergence, which can be viewed as a functional gradient method with a broader class of regularizers induced by convex functions. We show that GWG exhibits strong convergence guarantees. We also provide an adaptive version that automatically chooses Wasserstein metric to accelerate convergence. In experiments, we demonstrate the effectiveness and efficiency of the proposed framework on both simulated and real data problems.},
+  eventtitle = {Thirty-Seventh Conference on Neural Information Processing Systems (NeurIPS 2023)},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/B3CK2H2G/Cheng et al. - 2023 - Particle-based Variational Inference with Generalized Wasserstein Gradient Flow.pdf}
+}
+
+@article{DangKD2019HamiltonianMonte,
+  title = {Hamiltonian Monte Carlo with Energy Conserving Subsampling},
+  author = {Dang, Khue-Dung and Quiroz, Matias and Kohn, Robert and Tran, Minh-Ngoc and Villani, Mattias},
+  date = {2019},
+  journaltitle = {Journal of Machine Learning Research},
+  volume = {20},
+  number = {100},
+  pages = {1--31},
+  issn = {1533-7928},
+  url = {http://jmlr.org/papers/v20/17-452.html},
+  urldate = {2025-03-10},
+  abstract = {Hamiltonian Monte Carlo (HMC) samples efficiently from high-dimensional posterior distributions with proposed parameter draws obtained by iterating on a discretized version of the Hamiltonian dynamics. The iterations make HMC computationally costly, especially in problems with large data sets, since it is necessary to compute posterior densities and their derivatives with respect to the parameters. Naively computing the Hamiltonian dynamics on a subset of the data causes HMC to lose its key ability to generate distant parameter proposals with high acceptance probability. The key insight in our article is that efficient subsampling HMC for the parameters is possible if both the dynamics and the acceptance probability are computed from the same data subsample in each complete HMC iteration. We show that this is possible to do in a principled way in a HMC-within-Gibbs framework where the subsample is updated using a pseudo marginal MH step and the parameters are then updated using an HMC step, based on the current subsample. We show that our subsampling methods are fast and compare favorably to two popular sampling algorithms that use gradient estimates from data subsampling. We also explore the current limitations of subsampling HMC algorithms by varying the quality of the variance reducing control variates used in the estimators of the posterior density and its gradients.},
+  file = {/home/fli/.zotero/zotero-data/storage/T2S967CV/Dang et al. - 2019 - Hamiltonian Monte Carlo with Energy Conserving Subsampling.pdf}
+}
+
+@article{RussellJA1980CircumplexModel,
+  title = {A Circumplex Model of Affect},
+  author = {Russell, James A.},
+  date = {1980},
+  journaltitle = {Journal of Personality and Social Psychology},
+  volume = {39},
+  number = {6},
+  pages = {1161--1178},
+  publisher = {American Psychological Association},
+  location = {US},
+  issn = {1939-1315},
+  doi = {10.1037/h0077714},
+  abstract = {Factor-analytic evidence has led most psychologists to describe affect as a set of dimensions, such as displeasure, distress, depression, excitement, and so on, with each dimension varying independently of the others. However, there is other evidence that rather than being independent, these affective dimensions are interrelated in a highly systematic fashion. The evidence suggests that these interrelationships can be represented by a spatial model in which affective concepts fall in a circle in the following order: pleasure (0), excitement (45), arousal (90), distress (135), displeasure (180), depression (225), sleepiness (270), and relaxation (315). This model was offered both as a way psychologists can represent the structure of affective experience, as assessed through self-report, and as a representation of the cognitive structure that laymen utilize in conceptualizing affect. Supportive evidence was obtained by scaling 28 emotion-denoting adjectives in 4 different ways: R. T. Ross's (1938) technique for a circular ordering of variables, a multidimensional scaling procedure based on perceived similarity among the terms, a unidimensional scaling on hypothesized pleasure–displeasure and degree-of-arousal dimensions, and a principal-components analysis of 343 Ss' self-reports of their current affective states. (70 ref) (PsycINFO Database Record (c) 2016 APA, all rights reserved)},
+  keywords = {Emotional States,Emotions,Models},
+  file = {/home/fli/.zotero/zotero-data/storage/EKDUAA3D/Russell - 1980 - A circumplex model of affect.pdf}
+}
+
+@article{WangY2022SystematicReview,
+  title = {A Systematic Review on Affective Computing: Emotion Models, Databases, and Recent Advances},
+  shorttitle = {A Systematic Review on Affective Computing},
+  author = {Wang, Yan and Song, Wei and Tao, Wei and Liotta, Antonio and Yang, Dawei and Li, Xinlei and Gao, Shuyong and Sun, Yixuan and Ge, Weifeng and Zhang, Wei and Zhang, Wenqiang},
+  date = {2022-07-01},
+  journaltitle = {Information Fusion},
+  shortjournal = {Information Fusion},
+  volume = {83--84},
+  pages = {19--52},
+  issn = {1566-2535},
+  doi = {10.1016/j.inffus.2022.03.009},
+  url = {https://www.sciencedirect.com/science/article/pii/S1566253522000367},
+  urldate = {2025-03-12},
+  abstract = {Affective computing conjoins the research topics of emotion recognition and sentiment analysis, and can be realized with unimodal or multimodal data, consisting primarily of physical information (e.g., text, audio, and visual) and physiological signals (e.g., EEG and ECG). Physical-based affect recognition caters to more researchers due to the availability of multiple public databases, but it is challenging to reveal one's inner emotion hidden purposefully from facial expressions, audio tones, body gestures, etc. Physiological signals can generate more precise and reliable emotional results; yet, the difficulty in acquiring these signals hinders their practical application. Besides, by fusing physical information and physiological signals, useful features of emotional states can be obtained to enhance the performance of affective computing models. While existing reviews focus on one specific aspect of affective computing, we provide a systematical survey of important components: emotion models, databases, and recent advances. Firstly, we introduce two typical emotion models followed by five kinds of commonly used databases for affective computing. Next, we survey and taxonomize state-of-the-art unimodal affect recognition and multimodal affective analysis in terms of their detailed architectures and performances. Finally, we discuss some critical aspects of affective computing and its applications and conclude this review by pointing out some of the most promising future directions, such as the establishment of benchmark database and fusion strategies. The overarching goal of this systematic review is to help academic and industrial researchers understand the recent advances as well as new developments in this fast-paced, high-impact domain.},
+  keywords = {Affective computing,Deep learning,Feature learning,Machine learning,Multimodal affective analysis,Unimodal affect recognition},
+  file = {/home/fli/.zotero/zotero-data/storage/BAQQFLWT/Wang et al. - 2022 - A systematic review on affective computing emotion models, databases, and recent advances.pdf;/home/fli/.zotero/zotero-data/storage/GUUQ3JH6/1-s2.0-S1566253522000367-main.pdf}
+}
+
+@article{ElAyadiM2011SurveySpeech,
+  title = {Survey on Speech Emotion Recognition: Features, Classification Schemes, and Databases},
+  shorttitle = {Survey on Speech Emotion Recognition},
+  author = {El Ayadi, Moataz and Kamel, Mohamed S. and Karray, Fakhri},
+  date = {2011-03-01},
+  journaltitle = {Pattern Recognition},
+  shortjournal = {Pattern Recognition},
+  volume = {44},
+  number = {3},
+  pages = {572--587},
+  issn = {0031-3203},
+  doi = {10.1016/j.patcog.2010.09.020},
+  url = {https://www.sciencedirect.com/science/article/pii/S0031320310004619},
+  urldate = {2025-03-12},
+  abstract = {Recently, increasing attention has been directed to the study of the emotional content of speech signals, and hence, many systems have been proposed to identify the emotional content of a spoken utterance. This paper is a survey of speech emotion classification addressing three important aspects of the design of a speech emotion recognition system. The first one is the choice of suitable features for speech representation. The second issue is the design of an appropriate classification scheme and the third issue is the proper preparation of an emotional speech database for evaluating system performance. Conclusions about the performance and limitations of current speech emotion recognition systems are discussed in the last section of this survey. This section also suggests possible ways of improving speech emotion recognition systems.},
+  keywords = {Archetypal emotions,Dimensionality reduction techniques,Emotional speech databases,Speech emotion recognition,Statistical classifiers},
+  file = {/home/fli/.zotero/zotero-data/storage/6A7G3T8G/El Ayadi et al. - 2011 - Survey on speech emotion recognition Features, classification schemes, and databases.pdf}
+}
+
+@article{LuYang2023ZaiXianWenDa,
+  title = {在线问答平台中基于回答质量的用户排序模型——以“知乎”为例},
+  author = {{吕洋} and {朱紫怡} and {郭星砚} and {朱仲义}},
+  date = {2023},
+  journaltitle = {数理统计与管理},
+  volume = {42},
+  number = {5},
+  pages = {761--774},
+  issn = {1002-1566},
+  doi = {10.13860/j.cnki.sltj.20230919-005},
+  url = {https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2023&filename=SLTJ202305001},
+  urldate = {2025-03-13},
+  abstract = {为提高用户通过在线问答平台获取知识的效率,本文提出了一种基于回答质量的用户排序方法。该方法利用XGBoost模型对与用户回答质量相关的属性进行赋权,改进了传统的点级排序学习方法。模拟研究表明,新方法相比于逻辑回归、基于熵权法改进和基于随机森林改进的排序方法,可以得到更准确、更稳定的结果。进一步将该方法应用于“知乎”平台,发现新方法不仅可以优化用户排序结果,而且可以帮助平台据此进行环境治理,提升用户的使用体验。},
+  language = {zh-CN},
+  keywords = {XGBoost,用户排序,问答平台,随机森林},
+  annotation = {foundation: 国家自然科学基金(12226308)；\\
+download: 509\\
+CLC: G206;O223\\
+dbcode: CJFQ\\
+dbname: CJFDLAST2023\\
+filename: SLTJ202305001},
+  file = {/home/fli/.zotero/zotero-data/storage/PFZWBXNP/吕洋 et al. - 2023 - 在线问答平台中基于回答质量的用户排序模型——以“知乎”为例.pdf}
+}
+
+@article{LinL2025UnifiedRules,
+  title = {Unified Rules of Renewable Weighted Sums for Various Online Updating Estimations},
+  author = {Lin, Lu and Li, Weiyu and Lu, Jun},
+  date = {2025-01-02},
+  journaltitle = {Journal of Statistical Computation and Simulation},
+  publisher = {Taylor \& Francis},
+  issn = {0094-9655},
+  url = {https://www.tandfonline.com/doi/abs/10.1080/00949655.2024.2411604},
+  urldate = {2025-03-13},
+  abstract = {This paper establishes unified frameworks of renewable weighted sums (RWS) for various online updating estimations in the models with streaming data sets. The newly defined RWS lays the foundation ...},
+  language = {EN}
+}
+
+@article{ZhangH2023LeastSquares,
+  title = {Least Squares Model Averaging for Distributed Data},
+  author = {Zhang, Haili and Liu, Zhaobo and Zou, Guohua},
+  date = {2023},
+  journaltitle = {Journal of Machine Learning Research},
+  volume = {24},
+  number = {215},
+  pages = {1--59},
+  issn = {1533-7928},
+  url = {http://jmlr.org/papers/v24/22-0511.html},
+  urldate = {2025-03-13},
+  abstract = {Divide and conquer algorithm is a common strategy applied in big data. Model averaging has the natural divide-and-conquer feature, but its theory has not been developed in big data scenarios. The goal of this paper is to fill this gap. We propose two divide-and-conquer-type model averaging estimators for linear models with distributed data. Under some regularity conditions, we show that the weights from Mallows model averaging criterion converge in L2 to the theoretically optimal weights minimizing the risk of the model averaging estimator. We also give the bounds of the in-sample and out-of-sample mean squared errors and prove the asymptotic optimality for the proposed model averaging estimators. Our conclusions hold even when the dimensions and the number of candidate models are divergent. Simulation results and a real airline data analysis illustrate that the proposed model averaging methods perform better than the commonly used model selection and model averaging methods in distributed data cases. Our approaches contribute to model averaging theory in distributed data and parallel computations, and can be applied in big data analysis to save time and reduce the computational burden.},
+  file = {/home/fli/.zotero/zotero-data/storage/BGGE9H8H/Zhang et al. - 2023 - Least Squares Model Averaging for Distributed Data.pdf}
 }
 
 @preamble{ "\ifdefined\DeclarePrefChars\DeclarePrefChars{'’-}\else\fi " }
