@@ -49548,4 +49548,108 @@ filename: SLTJ202305001},
   file = {/home/fli/.zotero/zotero-data/storage/Y3ZKT2JL/Lugger et al. - 2008 - Psychological Motivated Multi-Stage Emotion Classification Exploiting Voice Quality Features.pdf}
 }
 
+@online{ChenY2024F5TTSFairytaler,
+  title = {F5-TTS: A Fairytaler That Fakes Fluent and Faithful Speech with Flow Matching},
+  shorttitle = {F5-TTS},
+  author = {Chen, Yushen and Niu, Zhikang and Ma, Ziyang and Deng, Keqi and Wang, Chunhui and Zhao, Jian and Yu, Kai and Chen, Xie},
+  date = {2024-10-15},
+  eprint = {2410.06885},
+  eprinttype = {arXiv},
+  eprintclass = {eess},
+  doi = {10.48550/arXiv.2410.06885},
+  url = {http://arxiv.org/abs/2410.06885},
+  urldate = {2025-04-03},
+  abstract = {This paper introduces F5-TTS, a fully non-autoregressive text-to-speech system based on flow matching with Diffusion Transformer (DiT). Without requiring complex designs such as duration model, text encoder, and phoneme alignment, the text input is simply padded with filler tokens to the same length as input speech, and then the denoising is performed for speech generation, which was originally proved feasible by E2 TTS. However, the original design of E2 TTS makes it hard to follow due to its slow convergence and low robustness. To address these issues, we first model the input with ConvNeXt to refine the text representation, making it easy to align with the speech. We further propose an inference-time Sway Sampling strategy, which significantly improves our model's performance and efficiency. This sampling strategy for flow step can be easily applied to existing flow matching based models without retraining. Our design allows faster training and achieves an inference RTF of 0.15, which is greatly improved compared to state-of-the-art diffusion-based TTS models. Trained on a public 100K hours multilingual dataset, our Fairytaler Fakes Fluent and Faithful speech with Flow matching (F5-TTS) exhibits highly natural and expressive zero-shot ability, seamless code-switching capability, and speed control efficiency. Demo samples can be found at https://SWivid.github.io/F5-TTS. We release all code and checkpoints to promote community development.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
+  file = {/home/fli/.zotero/zotero-data/storage/NIK3B3FD/Chen et al. - 2024 - F5-TTS A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching.pdf}
+}
+
+@inproceedings{EskimezSE2024E2TTS,
+  title = {E2 TTS: Embarrassingly Easy Fully Non-Autoregressive Zero-Shot TTS},
+  shorttitle = {E2 TTS},
+  booktitle = {2024 IEEE Spoken Language Technology Workshop (SLT)},
+  author = {Eskimez, Sefik Emre and Wang, Xiaofei and Thakker, Manthan and Li, Canrun and Tsai, Chung-Hsien and Xiao, Zhen and Yang, Hemin and Zhu, Zirun and Tang, Min and Tan, Xu and Liu, Yanqing and Zhao, Sheng and Kanda, Naoyuki},
+  date = {2024-12},
+  pages = {682--689},
+  doi = {10.1109/SLT61566.2024.10832320},
+  url = {https://ieeexplore.ieee.org/abstract/document/10832320},
+  urldate = {2025-04-03},
+  abstract = {This paper introduces Embarrassingly Easy Text-to-Speech (E2 TTS), a fully non-autoregressive zero-shot text-to-speech system that offers human-level naturalness and state-of-the-art speaker similarity and intelligibility. In the E2 TTS framework, the text input is converted into a character sequence with filler tokens. The flow-matching-based mel spectrogram generator is then trained based on the audio infilling task. Unlike many previous works, it does not require additional components (e.g., duration model, grapheme-to-phoneme) or complex techniques (e.g., monotonic alignment search). Despite its simplicity, E2 TTS achieves state-of-the-art zero-shot TTS capabilities that are comparable to or surpass previous works, including Voicebox and NaturalSpeech 3. The simplicity of E2 TTS also allows for flexibility in the input representation. We propose several variants of E2 TTS to improve usability during inference. See https://aka.ms/e2tts/for demo samples.},
+  eventtitle = {2024 IEEE Spoken Language Technology Workshop (SLT)},
+  keywords = {Conferences,flow-matching,Generators,Spectrogram,Text to speech,Usability,zero-shot text-to-speech},
+  file = {/home/fli/.zotero/zotero-data/storage/NG4T92ZT/Eskimez et al. - 2024 - E2 TTS Embarrassingly Easy Fully Non-Autoregressive Zero-Shot TTS.pdf}
+}
+
+@online{KangW2024Libriheavy50000,
+  title = {Libriheavy: A 50,000 Hours ASR Corpus with Punctuation Casing and Context},
+  shorttitle = {Libriheavy},
+  author = {Kang, Wei and Yang, Xiaoyu and Yao, Zengwei and Kuang, Fangjun and Yang, Yifan and Guo, Liyong and Lin, Long and Povey, Daniel},
+  date = {2024-01-15},
+  eprint = {2309.08105},
+  eprinttype = {arXiv},
+  eprintclass = {eess},
+  doi = {10.48550/arXiv.2309.08105},
+  url = {http://arxiv.org/abs/2309.08105},
+  urldate = {2025-04-03},
+  abstract = {In this paper, we introduce Libriheavy, a large-scale ASR corpus consisting of 50,000 hours of read English speech derived from LibriVox. To the best of our knowledge, Libriheavy is the largest freely-available corpus of speech with supervisions. Different from other open-sourced datasets that only provide normalized transcriptions, Libriheavy contains richer information such as punctuation, casing and text context, which brings more flexibility for system building. Specifically, we propose a general and efficient pipeline to locate, align and segment the audios in previously published Librilight to its corresponding texts. The same as Librilight, Libriheavy also has three training subsets small, medium, large of the sizes 500h, 5000h, 50000h respectively. We also extract the dev and test evaluation sets from the aligned audios and guarantee there is no overlapping speakers and books in training sets. Baseline systems are built on the popular CTC-Attention and transducer models. Additionally, we open-source our dataset creatation pipeline which can also be used to other audio alignment tasks.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Sound,Electrical Engineering and Systems Science - Audio and Speech Processing},
+  file = {/home/fli/.zotero/zotero-data/storage/BI5DMX3W/Kang et al. - 2024 - Libriheavy a 50,000 hours ASR corpus with punctuation casing and context.pdf}
+}
+
+@article{KhanG2022WhenOptimal,
+  title = {When Optimal Transport Meets Information Geometry},
+  author = {Khan, Gabriel and Zhang, Jun},
+  date = {2022-07-01},
+  journaltitle = {Information Geometry},
+  shortjournal = {Info. Geo.},
+  volume = {5},
+  number = {1},
+  pages = {47--78},
+  issn = {2511-249X},
+  doi = {10.1007/s41884-022-00066-w},
+  url = {https://doi.org/10.1007/s41884-022-00066-w},
+  urldate = {2025-04-03},
+  abstract = {Information geometry and optimal transport are two distinct geometric frameworks for modeling families of probability measures. During the recent years, there has been a surge of research endeavors that cut across these two areas and explore their links and interactions. This paper is intended to provide an (incomplete) survey of these works, including entropy-regularized transport, divergence functions arising from c-duality, density manifolds and transport information geometry, the para-Kähler and Kähler geometries underlying optimal transport and the regularity theory for its solutions. Some outstanding questions that would be of interest to audience of both these two disciplines are posed. Our piece also serves as an introduction to the Special Issue on Optimal Transport of the journal Information Geometry.},
+  language = {en},
+  keywords = {c-duality and divergence function,Entropy-regulated transport,Kähler and para-Kähler geometries},
+  file = {/home/fli/.zotero/zotero-data/storage/WUN5PPV7/Khan and Zhang - 2022 - When optimal transport meets information geometry.pdf}
+}
+
+@article{MayewWJ2012PowerVoice,
+  title = {The Power of Voice: Managerial Affective States and Future Firm Performance},
+  shorttitle = {The Power of Voice},
+  author = {Mayew, William J. and Venkatachalam, Mohan},
+  date = {2012},
+  journaltitle = {The Journal of Finance},
+  volume = {67},
+  number = {1},
+  pages = {1--43},
+  issn = {1540-6261},
+  doi = {10.1111/j.1540-6261.2011.01705.x},
+  url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2011.01705.x},
+  urldate = {2025-04-07},
+  abstract = {We measure managerial affective states during earnings conference calls by analyzing conference call audio files using vocal emotion analysis software. We hypothesize and find that, when managers are scrutinized by analysts during conference calls, positive and negative affects displayed by managers are informative about the firm's financial future. Analysts do not incorporate this information when forecasting near-term earnings. When making stock recommendation changes, however, analysts incorporate positive but not negative affect. This study presents new evidence that managerial vocal cues contain useful information about a firm's fundamentals, incremental to both quantitative earnings information and qualitative “soft” information conveyed by linguistic content.},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/EPSTZJI5/Mayew and Venkatachalam - 2012 - The Power of Voice Managerial Affective States and Future Firm Performance.pdf}
+}
+
+@online{LyuH2024XReflectCrossReflection,
+  title = {X-Reflect: Cross-Reflection Prompting for Multimodal Recommendation},
+  shorttitle = {X-Reflect},
+  author = {Lyu, Hanjia and Rossi, Ryan and Chen, Xiang and Tanjim, Md Mehrab and Petrangeli, Stefano and Sarkhel, Somdeb and Luo, Jiebo},
+  date = {2024-08-27},
+  eprint = {2408.15172},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2408.15172},
+  url = {http://arxiv.org/abs/2408.15172},
+  urldate = {2025-04-07},
+  abstract = {Large Language Models (LLMs) and Large Multimodal Models (LMMs) have been shown to enhance the effectiveness of enriching item descriptions, thereby improving the accuracy of recommendation systems. However, most existing approaches either rely on text-only prompting or employ basic multimodal strategies that do not fully exploit the complementary information available from both textual and visual modalities. This paper introduces a novel framework, Cross-Reflection Prompting, termed X-Reflect, designed to address these limitations by prompting LMMs to explicitly identify and reconcile supportive and conflicting information between text and images. By capturing nuanced insights from both modalities, this approach generates more comprehensive and contextually richer item representations. Extensive experiments conducted on two widely used benchmarks demonstrate that our method outperforms existing prompting baselines in downstream recommendation accuracy. Additionally, we evaluate the generalizability of our framework across different LMM backbones and the robustness of the prompting strategies, offering insights for optimization. This work underscores the importance of integrating multimodal information and presents a novel solution for improving item understanding in multimodal recommendation systems.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Information Retrieval},
+  file = {/home/fli/.zotero/zotero-data/storage/FQTC92AE/Lyu et al. - 2024 - X-Reflect Cross-Reflection Prompting for Multimodal Recommendation.pdf}
+}
+
 @preamble{ "\ifdefined\DeclarePrefChars\DeclarePrefChars{'’-}\else\fi " }
