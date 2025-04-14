@@ -21157,22 +21157,6 @@
   file = {/home/fli/.zotero/zotero-data/storage/R4NLTLBJ/Cohen_Sood_Zeng_Balch_Veloso_2021_Visual Time Series Forecasting.pdf}
 }
 
-@online{EngelmannJ2020ConditionalWasserstein,
-  title = {Conditional Wasserstein GAN-Based Oversampling of Tabular Data for Imbalanced Learning},
-  author = {Engelmann, Justin and Lessmann, Stefan},
-  date = {2020-08-20},
-  eprint = {2008.09202},
-  eprinttype = {arXiv},
-  eprintclass = {cs},
-  url = {http://arxiv.org/abs/2008.09202},
-  urldate = {2022-09-28},
-  abstract = {Class imbalance is a common problem in supervised learning and impedes the predictive performance of classification models. Popular countermeasures include oversampling the minority class. Standard methods like SMOTE rely on finding nearest neighbours and linear interpolations which are problematic in case of high-dimensional, complex data distributions. Generative Adversarial Networks (GANs) have been proposed as an alternative method for generating artificial minority examples as they can model complex distributions. However, prior research on GAN-based oversampling does not incorporate recent advancements from the literature on generating realistic tabular data with GANs. Previous studies also focus on numerical variables whereas categorical features are common in many business applications of classification methods such as credit scoring. The paper propoes an oversampling method based on a conditional Wasserstein GAN that can effectively model tabular datasets with numerical and categorical variables and pays special attention to the down-stream classification task through an auxiliary classifier loss. We benchmark our method against standard oversampling methods and the imbalanced baseline on seven real-world datasets. Empirical results evidence the competitiveness of GAN-based oversampling.},
-  language = {en},
-  pubstate = {prepublished},
-  keywords = {Computer Science - Machine Learning},
-  file = {/home/fli/.zotero/zotero-data/storage/UVMUG77W/Engelmann_Lessmann_2020_Conditional Wasserstein GAN-based Oversampling of Tabular Data for Imbalanced.pdf}
-}
-
 @article{FernandesM2021SmoothingQuantile,
   title = {Smoothing Quantile Regressions},
   author = {Fernandes, Marcelo and Guerre, Emmanuel and Horta, Eduardo},
@@ -45679,9 +45663,10 @@
 @article{WangH2024CatastropheDuration,
   title = {Catastrophe Duration and Loss Prediction via Natural Language Processing},
   author = {Wang, Han and Wang, Wen and Li, Feng and Kang, Yanfei and Li, Han},
-  date = {2024},
+  date = {2025-04-02},
   journaltitle = {Variance},
-  volume = {Forthcoming},
+  volume = {18},
+  url = {https://variancejournal.org/article/133589-catastrophe-duration-and-loss-prediction-via-natural-language-processing},
   abstract = {Textual information from online news is more timely than insurance claim data during catastrophes, and there is value in using this information to achieve earlier damage estimates. In this paper, we use text-based information to predict the duration and severity of catastrophes. We construct text vectors through Word2Vec and BERT models, using Random Forest, LightGBM, and XGBoost as different learners, all of which show more satisfactory prediction results. This new approach is informative in providing timely warnings of the severity of a catastrophe, which can aid decision-making and support appropriate responses.},
   file = {/home/fli/.zotero/zotero-data/storage/TEQ7QPKP/Wang et al. - 2024 - Catastrophe Duration and Loss Prediction via Natural Language Processing.pdf}
 }
@@ -48466,7 +48451,7 @@
   urldate = {2025-03-02},
   abstract = {Recent advances on time series forecasting mainly focus on improving the forecasting models themselves. However, when the time series data suffer from potential structural breaks or concept drifts, the forecasting performance might be significantly reduced. In this paper, we introduce a novel approach called Optimal Starting Point Time Series Forecast (OSP-TSP) for optimal forecasting, which can be combined with existing time series forecasting models. By adjusting the sequence length via leveraging the XGBoost and LightGBM models, the proposed approach can determine the optimal starting point (OSP) of the time series and then enhance the prediction performances of the base forecasting models. To illustrate the effectiveness of the proposed approach, comprehensive empirical analysis have been conducted on the M4 dataset and other real world datasets. Empirical results indicate that predictions based on the OSP-TSP approach consistently outperform those using the complete time series dataset. Moreover, comparison results reveals that combining our approach with existing forecasting models can achieve better prediction accuracy, which also reflect the advantages of the proposed approach.},
   keywords = {Optimal starting point,Time series features,Time series forecasting},
-  file = {/home/fli/.zotero/zotero-data/storage/PRI983SL/Zhong et al. - 2025 - Optimal starting point for time series forecasting.pdf}
+  file = {/home/fli/.zotero/zotero-data/storage/GQJ2ARL9/1-s2.0-S0957417425004208-main.pdf;/home/fli/.zotero/zotero-data/storage/PRI983SL/Zhong et al. - 2025 - Optimal starting point for time series forecasting.pdf}
 }
 
 @online{KimA2025FinancialStatement,
@@ -49674,6 +49659,208 @@ filename: SLTJ202305001},
   abstract = {Multi-horizon forecasting often contains a complex mix of inputs – including static (i.e. time-invariant) covariates, known future inputs, and other exogenous time series that are only observed in the past – without any prior information on how they interact with the target. Several deep learning methods have been proposed, but they are typically ‘black-box’ models that do not shed light on how they use the full range of inputs present in practical scenarios. In this paper, we introduce the Temporal Fusion Transformer (TFT) – a novel attention-based architecture that combines high-performance multi-horizon forecasting with interpretable insights into temporal dynamics. To learn temporal relationships at different scales, TFT uses recurrent layers for local processing and interpretable self-attention layers for long-term dependencies. TFT utilizes specialized components to select relevant features and a series of gating layers to suppress unnecessary components, enabling high performance in a wide range of scenarios. On a variety of real-world datasets, we demonstrate significant performance improvements over existing benchmarks, and highlight three practical interpretability use cases of TFT.},
   keywords = {Attention mechanisms,Deep learning,Explainable AI,Interpretability,Multi-horizon forecasting,Time series},
   file = {/home/fli/.zotero/zotero-data/storage/P4DHMUX7/Lim et al. - 2021 - Temporal Fusion Transformers for interpretable multi-horizon time series forecasting.pdf}
+}
+
+@inproceedings{ArjovskyM2017WassersteinGenerative,
+  title = {Wasserstein Generative Adversarial Networks},
+  booktitle = {Proceedings of the 34th International Conference on Machine Learning},
+  author = {Arjovsky, Martin and Chintala, Soumith and Bottou, Léon},
+  date = {2017-07-17},
+  pages = {214--223},
+  publisher = {PMLR},
+  issn = {2640-3498},
+  url = {https://proceedings.mlr.press/v70/arjovsky17a.html},
+  urldate = {2025-04-09},
+  abstract = {We introduce a new algorithm named WGAN, an alternative to traditional GAN training. In this new model, we show that we can improve the stability of learning, get rid of problems like mode collapse, and provide meaningful learning curves useful for debugging and hyperparameter searches. Furthermore, we show that the corresponding optimization problem is sound, and provide extensive theoretical work highlighting the deep connections to different distances between distributions.},
+  eventtitle = {International Conference on Machine Learning},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/KTM2ERZP/Arjovsky et al. - 2017 - Wasserstein Generative Adversarial Networks.pdf;/home/fli/.zotero/zotero-data/storage/PK2FI4MJ/Arjovsky et al. - 2017 - Wasserstein Generative Adversarial Networks.pdf}
+}
+
+@inproceedings{GulrajaniI2017ImprovedTraining,
+  title = {Improved Training of Wasserstein GANs},
+  booktitle = {Proceedings of the 31st International Conference on Neural Information Processing Systems},
+  author = {Gulrajani, Ishaan and Ahmed, Faruk and Arjovsky, Martin and Dumoulin, Vincent and Courville, Aaron},
+  date = {2017-12-04},
+  series = {NIPS'17},
+  pages = {5769--5779},
+  publisher = {Curran Associates Inc.},
+  location = {Red Hook, NY, USA},
+  abstract = {Generative Adversarial Networks (GANs) are powerful generative models, but suffer from training instability. The recently proposed Wasserstein GAN (WGAN) makes progress toward stable training of GANs, but sometimes can still generate only poor samples or fail to converge. We find that these problems are often due to the use of weight clipping in WGAN to enforce a Lipschitz constraint on the critic, which can lead to undesired behavior. We propose an alternative to clipping weights: penalize the norm of gradient of the critic with respect to its input. Our proposed method performs better than standard WGAN and enables stable training of a wide variety of GAN architectures with almost no hyperparameter tuning, including 101-layer ResNets and language models with continuous generators. We also achieve high quality generations on CIFAR-10 and LSUN bedrooms.},
+  isbn = {978-1-5108-6096-4},
+  file = {/home/fli/.zotero/zotero-data/storage/HBI2PR5H/Gulrajani et al. - 2017 - Improved training of wasserstein GANs.pdf}
+}
+
+@inproceedings{ArjovskyM2017PrincipledMethods,
+  title = {Towards Principled Methods for Training Generative Adversarial Networks},
+  author = {Arjovsky, Martin and Bottou, Leon},
+  date = {2017-02-06},
+  url = {https://openreview.net/forum?id=Hk4_qw5xe},
+  urldate = {2025-04-10},
+  abstract = {The goal of this paper is not to introduce a single algorithm or method, but to make theoretical steps towards fully understanding the training dynamics of gen- erative adversarial networks. In order to substantiate our theoretical analysis, we perform targeted experiments to verify our assumptions, illustrate our claims, and quantify the phenomena. This paper is divided into three sections. The first sec- tion introduces the problem at hand. The second section is dedicated to studying and proving rigorously the problems including instability and saturation that arize when training generative adversarial networks. The third section examines a prac- tical and theoretically grounded direction towards solving these problems, while introducing new tools to study them.},
+  eventtitle = {International Conference on Learning Representations},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/PJ5YFVNS/Arjovsky and Bottou - 2017 - Towards Principled Methods for Training Generative Adversarial Networks.pdf}
+}
+
+@article{ZhuC2023AutoregressiveOptimal,
+  title = {Autoregressive Optimal Transport Models},
+  author = {Zhu, Changbo and Müller, Hans-Georg},
+  date = {2023-07-01},
+  journaltitle = {Journal of the Royal Statistical Society Series B: Statistical Methodology},
+  shortjournal = {Journal of the Royal Statistical Society Series B: Statistical Methodology},
+  volume = {85},
+  number = {3},
+  pages = {1012--1033},
+  issn = {1369-7412},
+  doi = {10.1093/jrsssb/qkad051},
+  url = {https://doi.org/10.1093/jrsssb/qkad051},
+  urldate = {2025-04-11},
+  abstract = {Series of univariate distributions indexed by equally spaced time points are ubiquitous in applications and their analysis constitutes one of the challenges of the emerging field of distributional data analysis. To quantify such distributional time series, we propose a class of intrinsic autoregressive models that operate in the space of optimal transport maps. The autoregressive transport models that we introduce here are based on regressing optimal transport maps on each other, where predictors can be transport maps from an overall barycenter to a current distribution or transport maps between past consecutive distributions of the distributional time series. Autoregressive transport models and their associated distributional regression models specify the link between predictor and response transport maps by moving along geodesics in Wasserstein space. These models emerge as natural extensions of the classical autoregressive models in Euclidean space. Unique stationary solutions of autoregressive transport models are shown to exist under a geometric moment contraction condition of Wu \&amp; Shao [(2004) Limit theorems for iterated random functions. Journal of Applied Probability 41, 425–436)], using properties of iterated random functions. We also discuss an extension to a varying coefficient model for first-order autoregressive transport models. In addition to simulations, the proposed models are illustrated with distributional time series of house prices across U.S. counties and annual summer temperature distributions.},
+  file = {/home/fli/.zotero/zotero-data/storage/SUC2SMHF/Zhu and Müller - 2023 - Autoregressive optimal transport models.pdf}
+}
+
+@article{EngelmannJ2021ConditionalWasserstein,
+  title = {Conditional Wasserstein GAN-Based Oversampling of Tabular Data for Imbalanced Learning},
+  author = {Engelmann, Justin and Lessmann, Stefan},
+  date = {2021-07-15},
+  journaltitle = {Expert Systems with Applications},
+  shortjournal = {Expert Systems with Applications},
+  volume = {174},
+  pages = {114582},
+  issn = {0957-4174},
+  doi = {10.1016/j.eswa.2021.114582},
+  url = {https://www.sciencedirect.com/science/article/pii/S0957417421000233},
+  urldate = {2025-04-11},
+  abstract = {Class imbalance impedes the predictive performance of classification models. Popular countermeasures include oversampling minority class cases by creating synthetic examples. The paper examines the potential of Generative Adversarial Networks (GANs) for oversampling. A few prior studies have used GANs for this purpose but do not reflect recent methodological advancements for generating tabular data using GANs. The paper proposes an approach based on a conditional Wasserstein GAN that can effectively model tabular datasets with numerical and categorical variables and pays special attention to the down-stream classification task through an auxiliary classifier loss. We focus on a credit scoring context in which binary classifiers predict the default risk of loan applications. Empirical comparisons in this context evidence the competitiveness of GAN-based oversampling compared to several standard oversampling regimes. We also clarify the conditions under which oversampling in general and the proposed GAN-based approach in particular raise predictive performance. In sum, our findings suggest that GAN architectures for tabular data and our extensions deserve a place in data scientists’ modelling toolbox.},
+  keywords = {Credit scoring,Generative adversarial networks,Imbalanced learning,Oversampling},
+  file = {/home/fli/.zotero/zotero-data/storage/LUZN4B2V/Engelmann and Lessmann - 2021 - Conditional Wasserstein GAN-based oversampling of tabular data for imbalanced learning.pdf}
+}
+
+@article{DubeyP2022ModelingTimeVarying,
+  title = {Modeling Time-Varying Random Objects and Dynamic Networks},
+  author = {Dubey, Paromita and and Müller, Hans-Georg},
+  options = {useprefix=true},
+  date = {2022-10-02},
+  journaltitle = {Journal of the American Statistical Association},
+  volume = {117},
+  number = {540},
+  pages = {2252--2267},
+  publisher = {ASA Website},
+  issn = {0162-1459},
+  doi = {10.1080/01621459.2021.1917416},
+  url = {https://doi.org/10.1080/01621459.2021.1917416},
+  urldate = {2025-04-11},
+  abstract = {Samples of dynamic or time-varying networks and other random object data such as time-varying probability distributions are increasingly encountered in modern data analysis. Common methods for time-varying data such as functional data analysis are infeasible when observations are time courses of networks or other complex non-Euclidean random objects that are elements of general metric spaces. In such spaces, only pairwise distances between the data objects are available and a strong limitation is that one cannot carry out arithmetic operations due to the lack of an algebraic structure. We combat this complexity by a generalized notion of mean trajectory taking values in the object space. For this, we adopt pointwise Fréchet means and then construct pointwise distance trajectories between the individual time courses and the estimated Fréchet mean trajectory, thus representing the time-varying objects and networks by functional data. Functional principal component analysis of these distance trajectories can reveal interesting features of dynamic networks and object time courses and is useful for downstream analysis. Our approach also makes it possible to study the empirical dynamics of time-varying objects, including dynamic regression to the mean or explosive behavior over time. We demonstrate desirable asymptotic properties of sample based estimators for suitable population targets under mild assumptions. The utility of the proposed methodology is illustrated with dynamic networks, time-varying distribution data and longitudinal growth data.},
+  keywords = {Empirical dynamics,Fréchet mean trajectory,Functional data analysis,Metric space,Object time courses,Time-varying distributions,Time-varying networks},
+  file = {/home/fli/.zotero/zotero-data/storage/A8INAPRW/Dubey and and Müller - 2022 - Modeling Time-Varying Random Objects and Dynamic Networks.pdf}
+}
+
+@article{PetersenA2019WassersteinCovariance,
+  title = {Wasserstein Covariance for Multiple Random Densities},
+  author = {Petersen, Alexander and Müller, Hans-Georg},
+  date = {2019-06-01},
+  journaltitle = {Biometrika},
+  shortjournal = {Biometrika},
+  volume = {106},
+  number = {2},
+  pages = {339--351},
+  issn = {0006-3444},
+  doi = {10.1093/biomet/asz005},
+  url = {https://doi.org/10.1093/biomet/asz005},
+  urldate = {2025-04-14},
+  abstract = {A common feature of methods for analysing samples of probability density functions is that they respect the geometry inherent to the space of densities. Once a metric is specified for this space, the Fréchet mean is typically used to quantify and visualize the average density of the sample. For one-dimensional densities, the Wasserstein metric is popular due to its theoretical appeal and interpretive value as an optimal transport metric, leading to the Wasserstein–Fréchet mean or barycentre as the mean density. We extend the existing methodology for samples of densities in two key directions. First, motivated by applications in neuroimaging, we consider dependent density data, where a \$p\$-vector of univariate random densities is observed for each sampling unit. Second, we introduce a Wasserstein covariance measure and propose intuitively appealing estimators for both fixed and diverging \$p\$, where the latter corresponds to continuously indexed densities. We also give theory demonstrating consistency and asymptotic normality, while accounting for errors introduced in the unavoidable preparatory density estimation step. The utility of the Wasserstein covariance matrix is demonstrated through applications to functional connectivity in the brain using functional magnetic resonance imaging data and to the secular evolution of mortality for various countries.},
+  file = {/home/fli/.zotero/zotero-data/storage/YFGKKKIB/Petersen and Müller - 2019 - Wasserstein covariance for multiple random densities.pdf}
+}
+
+@article{HarveyCR2016CrossSectionExpected,
+  title = {… and the Cross-Section of Expected Returns},
+  author = {Harvey, Campbell R. and Liu, Yan and Zhu, Heqing},
+  date = {2016-01-01},
+  journaltitle = {The Review of Financial Studies},
+  shortjournal = {The Review of Financial Studies},
+  volume = {29},
+  number = {1},
+  pages = {5--68},
+  issn = {0893-9454},
+  doi = {10.1093/rfs/hhv059},
+  url = {https://doi.org/10.1093/rfs/hhv059},
+  urldate = {2025-04-14},
+  abstract = {Hundreds of papers and factors attempt to explain the cross-section of expected returns. Given this extensive data mining, it does not make sense to use the usual criteria for establishing significance. Which hurdle should be used for current research? Our paper introduces a new multiple testing framework and provides historical cutoffs from the first empirical tests in 1967 to today. A new factor needs to clear a much higher hurdle, with a t-statistic greater than 3.0. We argue that most claimed research findings in financial economics are likely false.Received October 22, 2014; accepted June 15, 2015 by Editor Andrew Karolyi.},
+  file = {/home/fli/.zotero/zotero-data/storage/IK3AMC6V/Harvey et al. - 2016 - … and the Cross-Section of Expected Returns.pdf}
+}
+
+@article{BekiermanJ2021MixedFrequency,
+  title = {A Mixed Frequency Stochastic Volatility Model for Intraday Stock Market Returns*},
+  author = {Bekierman, Jeremias and Gribisch, Bastian},
+  date = {2021-06-01},
+  journaltitle = {Journal of Financial Econometrics},
+  shortjournal = {Journal of Financial Econometrics},
+  volume = {19},
+  number = {3},
+  pages = {496--530},
+  issn = {1479-8409},
+  doi = {10.1093/jjfinec/nbz021},
+  url = {https://doi.org/10.1093/jjfinec/nbz021},
+  urldate = {2025-04-14},
+  abstract = {We propose a mixed frequency stochastic volatility model for intraday returns. To account for long-memory type of dependence patterns we introduce a long-run component that changes daily and a short-run component that captures the remaining intraday volatility dynamics. We analyze the model’s stochastic properties and extend it to capture leverage effects and overnight return information. The model is estimated by simulated maximum likelihood using efficient importance sampling. We apply the model to 30-min returns of 12 stocks. The results show that the model successfully accounts for the complex dynamic and distributional properties of asset returns both on the intraday and the daily frequency.},
+  file = {/home/fli/.zotero/zotero-data/storage/L89REQLN/Bekierman and Gribisch - 2021 - A Mixed Frequency Stochastic Volatility Model for Intraday Stock Market Returns.pdf}
+}
+
+@article{YangH2020QuantileFunction,
+  title = {Quantile Function on Scalar Regression Analysis for Distributional Data},
+  author = {Yang, Hojin and , Veerabhadran, Baladandayuthapani and , Arvind U.K., Rao and and Morris, Jeffrey S.},
+  options = {useprefix=true},
+  date = {2020-01-02},
+  journaltitle = {Journal of the American Statistical Association},
+  volume = {115},
+  number = {529},
+  eprint = {32981991},
+  eprinttype = {pubmed},
+  pages = {90--106},
+  publisher = {ASA Website},
+  issn = {0162-1459},
+  doi = {10.1080/01621459.2019.1609969},
+  url = {https://doi.org/10.1080/01621459.2019.1609969},
+  urldate = {2025-04-14},
+  abstract = {Radiomics involves the study of tumor images to identify quantitative markers explaining cancer heterogeneity. The predominant approach is to extract hundreds to thousands of image features, including histogram features comprised of summaries of the marginal distribution of pixel intensities, which leads to multiple testing problems and can miss out on insights not contained in the selected features. In this paper, we present methods to model the entire marginal distribution of pixel intensities via the quantile function as functional data, regressed on a set of demographic, clinical, and genetic predictors to investigate their effects of imaging-based cancer heterogeneity. We call this approach quantile functional regression, regressing subject-specific marginal distributions across repeated measurements on a set of covariates, allowing us to assess which covariates are associated with the distribution in a global sense, as well as to identify distributional features characterizing these differences, including mean, variance, skewness, heavy-tailedness, and various upper and lower quantiles. To account for smoothness in the quantile functions, account for intrafunctional correlation, and gain statistical power, we introduce custom basis functions we call quantlets that are sparse, regularized, near-lossless, and empirically defined, adapting to the features of a given dataset and containing a Gaussian subspace so non-Gaussianness can be assessed. We fit this model using a Bayesian framework that uses nonlinear shrinkage of quantlet coefficients to regularize the functional regression coefficients and provides fully Bayesian inference after fitting a Markov chain Monte Carlo. We demonstrate the benefit of the basis space modeling through simulation studies, and apply the method to Magnetic resonance imaging (MRI)-based radiomic dataset from Glioblastoma Multiforme to relate imaging-based quantile functions to various demographic, clinical, and genetic predictors, finding specific differences in tumor pixel intensity distribution between males and females and between tumors with and without DDIT3 mutations. Supplementary materials for this article, including a standardized description of the materials available for reproducing the work, are available as an online supplement.},
+  keywords = {Basis functions,Bayesian modeling,Functional regression,Imaging genetics,Markov chain Monte Carlo,Probability density function},
+  file = {/home/fli/.zotero/zotero-data/storage/CIZYAUFS/Yang et al. - 2020 - Quantile Function on Scalar Regression Analysis for Distributional Data.pdf}
+}
+
+@article{PetersenA2016FunctionalData,
+  title = {Functional Data Analysis for Density Functions by Transformation to a Hilbert Space},
+  author = {Petersen, Alexander and Müller, Hans-Georg},
+  date = {2016-02},
+  journaltitle = {The Annals of Statistics},
+  volume = {44},
+  number = {1},
+  pages = {183--218},
+  publisher = {Institute of Mathematical Statistics},
+  issn = {0090-5364, 2168-8966},
+  doi = {10.1214/15-AOS1363},
+  url = {https://projecteuclid.org/journals/annals-of-statistics/volume-44/issue-1/Functional-data-analysis-for-density-functions-by-transformation-to-a/10.1214/15-AOS1363.full},
+  urldate = {2025-04-14},
+  abstract = {Functional data that are nonnegative and have a constrained integral can be considered as samples of one-dimensional density functions. Such data are ubiquitous. Due to the inherent constraints, densities do not live in a vector space and, therefore, commonly used Hilbert space based methods of functional data analysis are not applicable. To address this problem, we introduce a transformation approach, mapping probability densities to a Hilbert space of functions through a continuous and invertible map. Basic methods of functional data analysis, such as the construction of functional modes of variation, functional regression or classification, are then implemented by using representations of the densities in this linear space. Representations of the densities themselves are obtained by applying the inverse map from the linear functional space to the density space. Transformations of interest include log quantile density and log hazard transformations, among others. Rates of convergence are derived for the representations that are obtained for a general class of transformations under certain structural properties. If the subject-specific densities need to be estimated from data, these rates correspond to the optimal rates of convergence for density estimation. The proposed methods are illustrated through simulations and applications in brain imaging.},
+  keywords = {62G05,62G07,62G20,Basis representation,Kernel estimation,log hazard,prediction,quantiles,rate of convergence,samples of density functions,Wasserstein metric},
+  file = {/home/fli/.zotero/zotero-data/storage/6J3ENJ4S/Petersen and Müller - 2016 - Functional data analysis for density functions by transformation to a Hilbert space.pdf}
+}
+
+@article{HenziA2021IsotonicDistributional,
+  title = {Isotonic Distributional Regression},
+  author = {Henzi, Alexander and Ziegel, Johanna F. and Gneiting, Tilmann},
+  date = {2021-11-01},
+  journaltitle = {Journal of the Royal Statistical Society Series B: Statistical Methodology},
+  shortjournal = {Journal of the Royal Statistical Society Series B: Statistical Methodology},
+  volume = {83},
+  number = {5},
+  pages = {963--993},
+  issn = {1369-7412},
+  doi = {10.1111/rssb.12450},
+  url = {https://doi.org/10.1111/rssb.12450},
+  urldate = {2025-04-14},
+  abstract = {Isotonic distributional regression (IDR) is a powerful non-parametric technique for the estimation of conditional distributions under order restrictions. In a nutshell, IDR learns conditional distributions that are calibrated, and simultaneously optimal relative to comprehensive classes of relevant loss functions, subject to isotonicity constraints in terms of a partial order on the covariate space. Non-parametric isotonic quantile regression and non-parametric isotonic binary regression emerge as special cases. For prediction, we propose an interpolation method that generalizes extant specifications under the pool adjacent violators algorithm. We recommend the use of IDR as a generic benchmark technique in probabilistic forecast problems, as it does not involve any parameter tuning nor implementation choices, except for the selection of a partial order on the covariate space. The method can be combined with subsample aggregation, with the benefits of smoother regression functions and gains in computational efficiency. In a simulation study, we compare methods for distributional regression in terms of the continuous ranked probability score (CRPS) and L2 estimation error, which are closely linked. In a case study on raw and post-processed quantitative precipitation forecasts from a leading numerical weather prediction system, IDR is competitive with state of the art techniques.},
+  file = {/home/fli/.zotero/zotero-data/storage/S7Z3TWUV/Henzi et al. - 2021 - Isotonic Distributional Regression.pdf}
 }
 
 @preamble{ "\ifdefined\DeclarePrefChars\DeclarePrefChars{'’-}\else\fi " }
