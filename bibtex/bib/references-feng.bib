@@ -39338,21 +39338,6 @@
   file = {/home/fli/.zotero/zotero-data/storage/IN39XN2Y/Scher and Messori - 2021 - Ensemble methods for neural network‐based weather forecasts.pdf}
 }
 
-@article{BenTaiebS2021HierarchicalProbabilistic,
-  title = {Hierarchical Probabilistic Forecasting of Electricity Demand with Smart Meter Data},
-  author = {Ben Taieb, Souhaib and Taylor, James W and Hyndman, Rob J},
-  date = {2021-01},
-  journaltitle = {Journal of the American Statistical Association},
-  volume = {116},
-  number = {533},
-  pages = {27--43},
-  publisher = {Taylor \& Francis},
-  issn = {0162-1459},
-  doi = {10.1080/01621459.2020.1736081},
-  language = {en},
-  file = {/home/fli/.zotero/zotero-data/storage/AJN8WAYQ/Ben Taieb_Taylor_Hyndman_2020_Hierarchical Probabilistic Forecasting of Electricity Demand With Smart Meter.pdf}
-}
-
 @book{SurowieckiJ2005WisdomCrowds,
   title = {The Wisdom of Crowds},
   author = {Surowiecki, James},
@@ -49861,6 +49846,92 @@ filename: SLTJ202305001},
   urldate = {2025-04-14},
   abstract = {Isotonic distributional regression (IDR) is a powerful non-parametric technique for the estimation of conditional distributions under order restrictions. In a nutshell, IDR learns conditional distributions that are calibrated, and simultaneously optimal relative to comprehensive classes of relevant loss functions, subject to isotonicity constraints in terms of a partial order on the covariate space. Non-parametric isotonic quantile regression and non-parametric isotonic binary regression emerge as special cases. For prediction, we propose an interpolation method that generalizes extant specifications under the pool adjacent violators algorithm. We recommend the use of IDR as a generic benchmark technique in probabilistic forecast problems, as it does not involve any parameter tuning nor implementation choices, except for the selection of a partial order on the covariate space. The method can be combined with subsample aggregation, with the benefits of smoother regression functions and gains in computational efficiency. In a simulation study, we compare methods for distributional regression in terms of the continuous ranked probability score (CRPS) and L2 estimation error, which are closely linked. In a case study on raw and post-processed quantitative precipitation forecasts from a leading numerical weather prediction system, IDR is competitive with state of the art techniques.},
   file = {/home/fli/.zotero/zotero-data/storage/S7Z3TWUV/Henzi et al. - 2021 - Isotonic Distributional Regression.pdf}
+}
+
+@online{SantambrogioF2016EuclideanMetric,
+  title = {\{ Euclidean, Metric, and Wasserstein \} Gradient Flows: An Overview},
+  shorttitle = {\{ Euclidean, Metric, and Wasserstein \} Gradient Flows},
+  author = {Santambrogio, Filippo},
+  date = {2016-09-13},
+  eprint = {1609.03890},
+  eprinttype = {arXiv},
+  eprintclass = {math},
+  doi = {10.48550/arXiv.1609.03890},
+  url = {http://arxiv.org/abs/1609.03890},
+  urldate = {2025-04-16},
+  abstract = {This is an expository paper on the theory of gradient flows, and in particular of those PDEs which can be interpreted as gradient flows for the Wasserstein metric on the space of probability measures (a distance induced by optimal transport). The starting point is the Euclidean theory, and then its generalization to metric spaces, according to the work of Ambrosio, Gigli and Savar\{\textbackslash 'e\}. Then comes an independent exposition of the Wasserstein theory, with a short introduction to the optimal transport tools that are needed and to the notion of geodesic convexity, followed by a precise desciption of the Jordan-Kinderleher-Otto scheme, with proof of convergence in the easiest case: the linear Fokker-Planck equation. A discussion of other gradient flows PDEs and of numerical methods based on these ideas is also provided. The paper ends with a new, theoretical, development, due to Ambrosio, Gigli, Savar\{\textbackslash 'e\}, Kuwada and Ohta: the study of the heat flow in metric measure spaces.},
+  pubstate = {prepublished},
+  keywords = {Mathematics - Analysis of PDEs,Mathematics - Dynamical Systems},
+  file = {/home/fli/.zotero/zotero-data/storage/D9SM6TBV/Santambrogio - 2016 - Euclidean, Metric, and Wasserstein Gradient Flows an overview.pdf}
+}
+
+@online{MirzaM2014ConditionalGenerative,
+  title = {Conditional Generative Adversarial Nets},
+  author = {Mirza, Mehdi and Osindero, Simon},
+  date = {2014-11-06},
+  eprint = {1411.1784},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.1411.1784},
+  url = {http://arxiv.org/abs/1411.1784},
+  urldate = {2025-04-16},
+  abstract = {Generative Adversarial Nets [8] were recently introduced as a novel way to train generative models. In this work we introduce the conditional version of generative adversarial nets, which can be constructed by simply feeding the data, y, we wish to condition on to both the generator and discriminator. We show that this model can generate MNIST digits conditioned on class labels. We also illustrate how this model could be used to learn a multi-modal model, and provide preliminary examples of an application to image tagging in which we demonstrate how this approach can generate descriptive tags which are not part of training labels.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/CUDEIRUH/Mirza and Osindero - 2014 - Conditional Generative Adversarial Nets.pdf}
+}
+
+@online{LiuS2021WassersteinGenerative,
+  title = {Wasserstein Generative Learning of Conditional Distribution},
+  author = {Liu, Shiao and Zhou, Xingyu and Jiao, Yuling and Huang, Jian},
+  date = {2021-12-19},
+  eprint = {2112.10039},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2112.10039},
+  url = {http://arxiv.org/abs/2112.10039},
+  urldate = {2025-04-16},
+  abstract = {Conditional distribution is a fundamental quantity for describing the relationship between a response and a predictor. We propose a Wasserstein generative approach to learning a conditional distribution. The proposed approach uses a conditional generator to transform a known distribution to the target conditional distribution. The conditional generator is estimated by matching a joint distribution involving the conditional generator and the target joint distribution, using the Wasserstein distance as the discrepancy measure for these joint distributions. We establish non-asymptotic error bound of the conditional sampling distribution generated by the proposed method and show that it is able to mitigate the curse of dimensionality, assuming that the data distribution is supported on a lower-dimensional set. We conduct numerical experiments to validate proposed method and illustrate its applications to conditional sample generation, nonparametric conditional density estimation, prediction uncertainty quantification, bivariate response data, image reconstruction and image generation.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning,Mathematics - Statistics Theory,Statistics - Statistics Theory},
+  file = {/home/fli/.zotero/zotero-data/storage/WQUN5Y4A/Liu et al. - 2021 - Wasserstein Generative Learning of Conditional Distribution.pdf}
+}
+
+@article{RafteryAE2016UseCommunication,
+  title = {Use and Communication of Probabilistic Forecasts},
+  author = {Raftery, Adrian E.},
+  date = {2016},
+  journaltitle = {Statistical Analysis and Data Mining: An ASA Data Science Journal},
+  volume = {9},
+  number = {6},
+  pages = {397--410},
+  issn = {1932-1872},
+  doi = {10.1002/sam.11302},
+  url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/sam.11302},
+  urldate = {2025-04-21},
+  abstract = {Probabilistic forecasts are becoming more and more available. How should they be used and communicated? What are the obstacles to their use in practice? We review experience with five problems where probabilistic forecasting played an important role. This leads us to identify five types of potential users: low stakes users, who do not need probabilistic forecasts; general assessors, who need an overall idea of the uncertainty in the forecast; change assessors, who need to know if a change is out of line with expectations; risk avoiders, who wish to limit the risk of an adverse outcome; and decision theorists, who quantify their loss function and perform the decision-theoretic calculations. This suggests that it is important to interact with users and consider their goals. Cognitive research tells us that calibration is important for trust in probability forecasts and that it is important to match the verbal expression with the task. The cognitive load should be minimized, reducing the probabilistic forecast to a single percentile if appropriate. Probabilities of adverse events and percentiles of the predictive distribution of quantities of interest often seem to be the best way to summarize probabilistic forecasts. Formal decision theory has an important role but in a limited range of applications. © 2016 Wiley Periodicals, Inc. Statistical Analysis and Data Mining: The ASA Data Science Journal, 2016},
+  language = {en},
+  keywords = {calibration,cognitive research,decision theory,risk,uncertainty},
+  file = {/home/fli/.zotero/zotero-data/storage/QIGU9DJH/Raftery - 2016 - Use and communication of probabilistic forecasts.pdf}
+}
+
+@article{TaiebSB2021HierarchicalProbabilistic,
+  title = {Hierarchical Probabilistic Forecasting of Electricity Demand With Smart Meter Data},
+  author = {Taieb, Souhaib Ben and Taylor, James W. and and Hyndman, Rob J.},
+  options = {useprefix=true},
+  date = {2021-01-02},
+  journaltitle = {Journal of the American Statistical Association},
+  volume = {116},
+  number = {533},
+  pages = {27--43},
+  publisher = {ASA Website},
+  issn = {0162-1459},
+  doi = {10.1080/01621459.2020.1736081},
+  url = {https://doi.org/10.1080/01621459.2020.1736081},
+  urldate = {2025-04-23},
+  abstract = {Decisions regarding the supply of electricity across a power grid must take into consideration the inherent uncertainty in demand. Optimal decision-making requires probabilistic forecasts for demand in a hierarchy with various levels of aggregation, such as substations, cities, and regions. The forecasts should be coherent in the sense that the forecast of the aggregated series should equal the sum of the forecasts of the corresponding disaggregated series. Coherency is essential, since the allocation of electricity at one level of the hierarchy relies on the appropriate amount being provided from the previous level. We introduce a new probabilistic forecasting method for a large hierarchy based on UK residential smart meter data. We find our method provides coherent and accurate probabilistic forecasts, as a result of an effective forecast combination. Furthermore, by avoiding distributional assumptions, we find that our method captures the variety of distributions in the smart meter hierarchy. Finally, the results confirm that, to ensure coherency in our large-scale hierarchy, it is sufficient to model a set of lower-dimension dependencies, rather than modeling the entire joint distribution of all series in the hierarchy. In achieving coherent and accurate hierarchical probabilistic forecasts, this work contributes to improved decision-making for smart grids. Supplementary materials for this article, including a standardized description of the materials available for reproducing the work, are available as an online supplement.},
+  keywords = {Aggregates of time series,Empirical copulas,Forecast combinations,Predictive distributions,Smart meters},
+  file = {/home/fli/.zotero/zotero-data/storage/P983QZ8R/Taieb et al. - 2021 - Hierarchical Probabilistic Forecasting of Electricity Demand With Smart Meter Data.pdf}
 }
 
 @preamble{ "\ifdefined\DeclarePrefChars\DeclarePrefChars{'’-}\else\fi " }
