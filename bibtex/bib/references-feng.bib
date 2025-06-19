@@ -39739,8 +39739,7 @@
   urldate = {2023-09-06},
   abstract = {We propose generalized random forests, a method for nonparametric statistical estimation based on random forests (Breiman [Mach. Learn. 45 (2001) 5–32]) that can be used to fit any quantity of interest identified as the solution to a set of local moment equations. Following the literature on local maximum likelihood estimation, our method considers a weighted set of nearby training examples; however, instead of using classical kernel weighting functions that are prone to a strong curse of dimensionality, we use an adaptive weighting function derived from a forest designed to express heterogeneity in the specified quantity of interest. We propose a flexible, computationally efficient algorithm for growing generalized random forests, develop a large sample theory for our method showing that our estimates are consistent and asymptotically Gaussian and provide an estimator for their asymptotic variance that enables valid confidence intervals. We use our approach to develop new methods for three statistical tasks: nonparametric quantile regression, conditional average partial effect estimation and heterogeneous treatment effect estimation via instrumental variables. A software implementation, grf for R and C++, is available from CRAN.},
   language = {en},
-  keywords = {Asymptotic theory,Causal inference,instrumental variable},
-  file = {/home/fli/.zotero/zotero-data/storage/CC57L3LP/Athey_Tibshirani_Wager_2019_Generalized random forests.pdf}
+  keywords = {Asymptotic theory,Causal inference,instrumental variable}
 }
 
 @online{AtheyS2019EstimatingTreatment,
@@ -50771,6 +50770,191 @@ filename: GLSJ202208014},
   pubstate = {prepublished},
   keywords = {Computer Science - Machine Learning,Computer Science - Numerical Analysis,Mathematics - History and Overview,Mathematics - Numerical Analysis,Statistics - Machine Learning},
   file = {/home/fli/.zotero/zotero-data/storage/2XC4JQKE/Bright et al. - 2025 - Matrix Calculus (for Machine Learning and Beyond).pdf}
+}
+
+@online{GustafssonO2024SpectralDomain,
+  title = {Spectral Domain Likelihoods for Bayesian Inference in Time-Varying Parameter Models},
+  author = {Gustafsson, Oskar and Villani, Mattias and Kohn, Robert},
+  date = {2024-11-21},
+  eprint = {2411.14010},
+  eprinttype = {arXiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2411.14010},
+  url = {http://arxiv.org/abs/2411.14010},
+  urldate = {2025-06-16},
+  abstract = {Inference for locally stationary processes is often based on some local Whittle-type approximation of the likelihood function defined in the frequency domain. The main reasons for using such a likelihood approximation is that i) it has substantially lower computational cost and better scalability to long time series compared to the time domain likelihood, particularly when used for Bayesian inference via Markov Chain Monte Carlo (MCMC), ii) convenience when the model itself is specified in the frequency domain, and iii) it provides access to bootstrap and subsampling MCMC which exploits the asymptotic independence of Fourier transformed data. Most of the existing literature compares the asymptotic performance of the maximum likelihood estimator (MLE) from such frequency domain likelihood approximation with the exact time domain MLE. Our article uses three simulation studies to assess the finite-sample accuracy of several frequency domain likelihood functions when used to approximate the posterior distribution in time-varying parameter models. The methods are illustrated on an application to egg price data.},
+  pubstate = {prepublished},
+  keywords = {Statistics - Methodology},
+  file = {/home/fli/.zotero/zotero-data/storage/2P8VP7SI/Gustafsson et al. - 2024 - Spectral domain likelihoods for Bayesian inference in time-varying parameter models.pdf}
+}
+
+@online{HollymanR2024ScaleableDynamic,
+  title = {Scaleable Dynamic Forecast Reconciliation},
+  author = {Hollyman, Ross and Petropoulos, Fotios and Tipping, Michael E.},
+  date = {2024-09-19},
+  eprint = {2409.12856},
+  eprinttype = {arXiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2409.12856},
+  url = {http://arxiv.org/abs/2409.12856},
+  urldate = {2025-06-17},
+  abstract = {We introduce a dynamic approach to probabilistic forecast reconciliation at scale. Our model differs from the existing literature in this area in several important ways. Firstly we explicitly allow the weights allocated to the base forecasts in forming the combined, reconciled forecasts to vary over time. Secondly we drop the assumption, near ubiquitous in the literature, that in-sample base forecasts are appropriate for determining these weights, and use out of sample forecasts instead. Most existing probabilistic reconciliation approaches rely on time consuming sampling based techniques, and therefore do not scale well (or at all) to large data sets. We address this problem in two main ways, firstly by utilising a closed from estimator of covariance structure appropriate to hierarchical forecasting problems, and secondly by decomposing large hierarchies in to components which can be reconciled separately.},
+  pubstate = {prepublished},
+  keywords = {Statistics - Applications,Statistics - Methodology},
+  file = {/home/fli/.zotero/zotero-data/storage/VX2D4CE9/Hollyman et al. - 2024 - Scaleable Dynamic Forecast Reconciliation.pdf}
+}
+
+@online{WenH2025ValueorientedForecast,
+  title = {Value-Oriented Forecast Reconciliation for Renewables in Electricity Markets},
+  author = {Wen, Honglin and Pinson, Pierre},
+  date = {2025-01-27},
+  eprint = {2501.16086},
+  eprinttype = {arXiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2501.16086},
+  url = {http://arxiv.org/abs/2501.16086},
+  urldate = {2025-06-17},
+  abstract = {Forecast reconciliation is considered an effective method for achieving coherence and improving forecast accuracy. However, the value of reconciled forecasts in downstream decision-making tasks has been mostly overlooked. In a multi-agent setup with heterogeneous loss functions, this oversight may lead to unfair outcomes, hence resulting in conflicts during the reconciliation process. To address this, we propose a value-oriented forecast reconciliation approach that focuses on the forecast value for individual agents. Fairness is ensured through the use of a Nash bargaining framework. Specifically, we model this problem as a cooperative bargaining game, where each agent aims to optimize their own gain while contributing to the overall reconciliation process. We then present a primal-dual algorithm for parameter estimation based on empirical risk minimization. From an application perspective, we consider an aggregated wind energy trading problem, where profits are distributed using a weighted allocation rule. We demonstrate the effectiveness of our approach through several numerical experiments, showing that it consistently results in increased profits for all agents involved.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/6GR2IT3S/Wen and Pinson - 2025 - Value-oriented forecast reconciliation for renewables in electricity markets.pdf}
+}
+
+@online{MollerJK2024OptimalForecast,
+  title = {Optimal Forecast Reconciliation with Uncertainty Quantification},
+  author = {Møller, Jan Kloppenborg and Nystrup, Peter and Hjorth, Poul G. and Madsen, Henrik},
+  date = {2024-02-09},
+  eprint = {2402.06480},
+  eprinttype = {arXiv},
+  eprintclass = {stat},
+  doi = {10.48550/arXiv.2402.06480},
+  url = {http://arxiv.org/abs/2402.06480},
+  urldate = {2025-06-17},
+  abstract = {We propose to estimate the weight matrix used for forecast reconciliation as parameters in a general linear model in order to quantify its uncertainty. This implies that forecast reconciliation can be formulated as an orthogonal projection from the space of base-forecast errors into a coherent linear subspace. We use variance decomposition together with the Wishart distribution to derive the central estimator for the forecast-error covariance matrix. In addition, we prove that distance-reducing properties apply to the reconciled forecasts at all levels of the hierarchy as well as to the forecast-error covariance. A covariance matrix for the reconciliation weight matrix is derived, which leads to improved estimates of the forecast-error covariance matrix. We show how shrinkage can be introduced in the formulated model by imposing specific priors on the weight matrix and the forecast-error covariance matrix. The method is illustrated in a simulation study that shows consistent improvements in the log-score. Finally, standard errors for the weight matrix and the variance-separation formula are illustrated using a case study of forecasting electricity load in Sweden.},
+  pubstate = {prepublished},
+  keywords = {Statistics - Methodology},
+  file = {/home/fli/.zotero/zotero-data/storage/Q55G9IIT/Møller et al. - 2024 - Optimal Forecast Reconciliation with Uncertainty Quantification.pdf}
+}
+
+@thesis{GirolimettoD2024ForecastReconciliation,
+  title = {Forecast Reconciliation: Methodological Issues and Applications},
+  shorttitle = {Forecast Reconciliation},
+  author = {Girolimetto, Daniele},
+  date = {2024-05-07T00:00:00+02:00},
+  institution = {Università degli studi di Padova},
+  url = {https://www.research.unipd.it/handle/11577/3513823},
+  urldate = {2025-06-17},
+  abstract = {open},
+  language = {eng},
+  annotation = {Accepted: 2024-05-20T09:48:47Z},
+  file = {/home/fli/.zotero/zotero-data/storage/2TPM9MPH/Girolimetto - 2024 - Forecast reconciliation Methodological issues and applications.pdf}
+}
+
+@inproceedings{TsiourvasA2024LearningOptimal,
+  title = {Learning Optimal Projection for Forecast Reconciliation of Hierarchical Time Series},
+  author = {Tsiourvas, Asterios and Sun, Wei and Perakis, Georgia and Chen, Pin-Yu and Zhu, Yada},
+  date = {2024-06-06},
+  url = {https://openreview.net/forum?id=55HfvJ6lDB},
+  urldate = {2025-06-17},
+  abstract = {Hierarchical time series forecasting requires not only prediction accuracy but also coherency, i.e., forecasts add up appropriately across the hierarchy. Recent literature has shown that reconciliation via projection outperforms prior methods such as top-down or bottom-up approaches. Unlike existing work that pre-specifies a projection matrix (e.g., orthogonal), we study the problem of learning the optimal oblique projection from data for coherent forecasting of hierarchical time series. In addition to the unbiasedness-preserving property, oblique projection implicitly accounts for the hierarchy structure and assigns different weights to individual time series, providing significant adaptability over orthogonal projection which treats base forecast errors equally. We examine two broad classes of projections, namely Euclidean projection and general oblique projections. We propose to model the reconciliation step as a learnable, structured, projection layer in the neural forecaster architecture. The proposed approach allows for the efficient learning of the optimal projection in an end-to-end framework where both the neural forecaster and the projection layer are learned simultaneously. An empirical evaluation of real-world hierarchical time series datasets demonstrates the superior performance of the proposed method over existing state-of-the-art approaches.},
+  eventtitle = {Forty-First International Conference on Machine Learning},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/QZJL7DGM/Tsiourvas et al. - 2024 - Learning Optimal Projection for Forecast Reconciliation of Hierarchical Time Series.pdf}
+}
+
+@inproceedings{OprescuM2019OrthogonalRandom,
+  title = {Orthogonal Random Forest for Causal Inference},
+  booktitle = {Proceedings of the 36th International Conference on Machine Learning},
+  author = {Oprescu, Miruna and Syrgkanis, Vasilis and Wu, Zhiwei Steven},
+  date = {2019-05-24},
+  pages = {4932--4941},
+  publisher = {PMLR},
+  issn = {2640-3498},
+  url = {https://proceedings.mlr.press/v97/oprescu19a.html},
+  urldate = {2025-06-17},
+  abstract = {We propose the orthogonal random forest, an algorithm that combines Neyman-orthogonality to reduce sensitivity with respect to estimation error of nuisance parameters with generalized random forests (Athey et al., 2017)—a flexible non-parametric method for statistical estimation of conditional moment models using random forests. We provide a consistency rate and establish asymptotic normality for our estimator. We show that under mild assumptions on the consistency rate of the nuisance estimator, we can achieve the same error rate as an oracle with a priori knowledge of these nuisance parameters. We show that when the nuisance functions have a locally sparse parametrization, then a local ell\_1-penalized regression achieves the required rate. We apply our method to estimate heterogeneous treatment effects from observational data with discrete treatments or continuous treatments, and we show that, unlike prior work, our method provably allows to control for a high-dimensional set of variables under standard sparsity conditions. We also provide a comprehensive empirical evaluation of our algorithm on both synthetic and real data.},
+  eventtitle = {International Conference on Machine Learning},
+  language = {en},
+  file = {/home/fli/.zotero/zotero-data/storage/GETNHZ2X/Oprescu et al. - 2019 - Orthogonal Random Forest for Causal Inference.pdf;/home/fli/.zotero/zotero-data/storage/INXGRI4X/Oprescu et al. - 2019 - Orthogonal Random Forest for Causal Inference.pdf}
+}
+
+@online{AcemogluD2025AiSocial,
+  type = {SSRN Scholarly Paper},
+  title = {AI and Social Media: A Political Economy Perspective},
+  shorttitle = {Ai and Social Media},
+  author = {Acemoglu, Daron and Ozdaglar, Asuman E. and Siderius, James},
+  date = {2025-06-01},
+  number = {5296536},
+  eprint = {5296536},
+  eprinttype = {Social Science Research Network},
+  location = {Rochester, NY},
+  url = {https://papers.ssrn.com/abstract=5296536},
+  urldate = {2025-06-17},
+  abstract = {We consider the political consequences of the use of artificial intelligence (AI) by online platforms engaged in social media content dissemination, entertainment, or electronic commerce. We identify two distinct but complementary mechanisms, the social media channel and the digital ads channel, which together and separately contribute to the polarization of voters and consequently the polarization of parties. First, AI-driven recommendations aimed at maximizing user engagement on platforms create echo chambers (or “filter bubbles”) that increase the likelihood that individuals are not confronted with counter-attitudinal content. Consequently, social media engagement makes voters more polarized, and then parties respond by becoming more polarized themselves. Second, we show that party competition can encourage platforms to rely more on targeted digital ads for monetization (as opposed to a subscription-based business model), and such ads in turn make the electorate more polarized, further contributing to the polarization of parties. These effects do not arise when one party is dominant, in which case the profit-maximizing business model of the platform is subscription-based. We discuss the impact regulations can have on the polarizing effects of AI-powered online platforms.Institutional subscribers to the NBER working paper series, and residents of developing countries may download this paper without additional charge at www.nber.org.},
+  language = {en},
+  pubstate = {prepublished},
+  keywords = {Ai and Social Media: A Political Economy Perspective,Asuman E. Ozdaglar,Daron Acemoglu,James Siderius,SSRN}
+}
+
+@article{DrechselT2023EstimatingEffects,
+  title = {Estimating the Effects of Political Pressure on the Fed: A Narrative Approach with New Data},
+  shorttitle = {Estimating the Effects of Political Pressure on the Fed},
+  author = {Drechsel, Thomas},
+  date = {2023-11},
+  journaltitle = {CEPR Discussion Papers},
+  number = {18612},
+  publisher = {C.E.P.R. Discussion Papers},
+  url = {https://ideas.repec.org//p/cpr/ceprdp/18612.html},
+  urldate = {2025-06-17},
+  abstract = {This paper combines new data and a narrative approach to identify shocks to political pressure on the Federal Reserve. From archival records, I build a data set of personal interactions between U.S. Presidents and Fed officials between 1933 and 2016. Since personal interactions do not necessarily reflect political pressure, I develop a narrative identification strategy based on President Nixonâ€™s pressure on Fed Chair Burns. I exploit this narrative through restrictions on a structural vector autoregression that includes the personal interaction data. I find that political pressure shocks (i) increase inflation strongly and persistently, (ii) lead to statistically weak negative effects on activity, (iii) contributed to inflationary episodes outside of the Nixon era, and (iv) transmit differently from standard expansionary monetary policy shocks, by having a stronger effect on inflation expectations. Quantitatively, increasing political pressure by half as much as Nixon, for six months, raises the price level more than 8\%.While the role of central bank independence has previously been studied using cross-country data, my estimates cover one economy through time and are quantitative: increasing political pressure by half as much as Nixon, for six months, raises the U.S. price level by more than 8\%.},
+  language = {en},
+  keywords = {Central bank independence,Federal Reserve,Inflation,Narrative identification}
+}
+
+@article{JoeH2006GeneratingRandom,
+  title = {Generating Random Correlation Matrices Based on Partial Correlations},
+  author = {Joe, Harry},
+  date = {2006-11-01},
+  journaltitle = {Journal of Multivariate Analysis},
+  shortjournal = {Journal of Multivariate Analysis},
+  volume = {97},
+  number = {10},
+  pages = {2177--2189},
+  issn = {0047-259X},
+  doi = {10.1016/j.jmva.2005.05.010},
+  url = {https://www.sciencedirect.com/science/article/pii/S0047259X05000886},
+  urldate = {2025-06-19},
+  abstract = {A d-dimensional positive definite correlation matrix R=(ρij) can be parametrized in terms of the correlations ρi,i+1 for i=1,…,d-1, and the partial correlations ρij|i+1,…j-1 for j-i⩾2. These d2 parameters can independently take values in the interval (-1,1). Hence we can generate a random positive definite correlation matrix by choosing independent distributions Fij, 1⩽i},
+  keywords = {Beta distribution,Determinant of correlation matrix},
+  file = {/home/fli/.zotero/zotero-data/storage/HVHP8K27/Joe - 2006 - Generating random correlation matrices based on partial correlations.pdf}
+}
+
+@online{ShiJ2024LatentFactor,
+  title = {A Latent Factor Model for High-Dimensional Binary Data},
+  author = {Shi, Jiaxin and Gao, Yuan and Pan, Rui and Wang, Hansheng},
+  date = {2024-04-12},
+  url = {https://arxiv.org/abs/2404.08457v1},
+  urldate = {2025-06-19},
+  abstract = {In this study, we develop a latent factor model for analysing high-dimensional binary data. Specifically, a standard probit model is used to describe the regression relationship between the observed binary data and the continuous latent variables. Our method assumes that the dependency structure of the observed binary data can be fully captured by the continuous latent factors. To estimate the model, a moment-based estimation method is developed. The proposed method is able to deal with both discontinuity and high dimensionality. Most importantly, the asymptotic properties of the resulting estimators are rigorously established. Extensive simulation studies are presented to demonstrate the proposed methodology. A real dataset about product descriptions is analysed for illustration.},
+  language = {en},
+  pubstate = {prepublished},
+  file = {/home/fli/.zotero/zotero-data/storage/Z8PJQDFG/Shi et al. - 2024 - A Latent Factor Model for High-Dimensional Binary Data.pdf}
+}
+
+@article{2009GeneratingRandom,
+  title = {Generating Random Correlation Matrices Based on Vines and Extended Onion Method},
+  date = {2009-10-01},
+  journaltitle = {Journal of Multivariate Analysis},
+  volume = {100},
+  number = {9},
+  pages = {1989--2001},
+  publisher = {Academic Press},
+  issn = {0047-259X},
+  doi = {10.1016/j.jmva.2009.04.008},
+  url = {https://www.sciencedirect.com/science/article/pii/S0047259X09000876},
+  urldate = {2025-06-19},
+  abstract = {We extend and improve two existing methods of generating random correlation matrices, the onion method of Ghosh and Henderson [S. Ghosh, S.G. Henderso…},
+  language = {en-US}
 }
 
 @preamble{ "\ifdefined\DeclarePrefChars\DeclarePrefChars{'’-}\else\fi " }
