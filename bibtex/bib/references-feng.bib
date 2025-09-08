@@ -51558,4 +51558,111 @@ filename: GLSJ202208014},
   file = {/home/fli/.zotero/zotero-data/storage/BX3U4K48/Gao et al. - 2025 - Grid Point Approximation for Distributed Nonparametric Smoothing and Prediction.pdf}
 }
 
+@online{RabanserS2020EffectivenessDiscretization,
+  title = {The Effectiveness of Discretization in Forecasting: An Empirical Study on Neural Time Series Models},
+  shorttitle = {The Effectiveness of Discretization in Forecasting},
+  author = {Rabanser, Stephan and Januschowski, Tim and Flunkert, Valentin and Salinas, David and Gasthaus, Jan},
+  date = {2020-05-20},
+  eprint = {2005.10111},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2005.10111},
+  url = {http://arxiv.org/abs/2005.10111},
+  urldate = {2025-08-28},
+  abstract = {Time series modeling techniques based on deep learning have seen many advancements in recent years, especially in data-abundant settings and with the central aim of learning global models that can extract patterns across multiple time series. While the crucial importance of appropriate data pre-processing and scaling has often been noted in prior work, most studies focus on improving model architectures. In this paper we empirically investigate the effect of data input and output transformations on the predictive performance of several neural forecasting architectures. In particular, we investigate the effectiveness of several forms of data binning, i.e. converting real-valued time series into categorical ones, when combined with feed-forward, recurrent neural networks, and convolution-based sequence models. In many non-forecasting applications where these models have been very successful, the model inputs and outputs are categorical (e.g. words from a fixed vocabulary in natural language processing applications or quantized pixel color intensities in computer vision). For forecasting applications, where the time series are typically real-valued, various ad-hoc data transformations have been proposed, but have not been systematically compared. To remedy this, we evaluate the forecasting accuracy of instances of the aforementioned model classes when combined with different types of data scaling and binning. We find that binning almost always improves performance (compared to using normalized real-valued inputs), but that the particular type of binning chosen is of lesser importance.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning}
+}
+
+@online{RonnebergerO2015UNetConvolutional,
+  title = {U-Net: Convolutional Networks for Biomedical Image Segmentation},
+  shorttitle = {U-Net},
+  author = {Ronneberger, Olaf and Fischer, Philipp and Brox, Thomas},
+  date = {2015-05-18},
+  eprint = {1505.04597},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.1505.04597},
+  url = {http://arxiv.org/abs/1505.04597},
+  urldate = {2025-08-29},
+  abstract = {There is large consent that successful training of deep networks requires many thousand annotated training samples. In this paper, we present a network and training strategy that relies on the strong use of data augmentation to use the available annotated samples more efficiently. The architecture consists of a contracting path to capture context and a symmetric expanding path that enables precise localization. We show that such a network can be trained end-to-end from very few images and outperforms the prior best method (a sliding-window convolutional network) on the ISBI challenge for segmentation of neuronal structures in electron microscopic stacks. Using the same network trained on transmitted light microscopy images (phase contrast and DIC) we won the ISBI cell tracking challenge 2015 in these categories by a large margin. Moreover, the network is fast. Segmentation of a 512x512 image takes less than a second on a recent GPU. The full implementation (based on Caffe) and the trained networks are available at http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net .},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  file = {/home/fli/.zotero/zotero-data/storage/QB76JVST/Ronneberger et al. - 2015 - U-Net Convolutional Networks for Biomedical Image Segmentation.pdf}
+}
+
+@article{ChangC2025LLM4TSAligning,
+  title = {LLM4TS: Aligning Pre-Trained LLMs as Data-Efficient Time-Series Forecasters},
+  shorttitle = {LLM4TS},
+  author = {Chang, Ching and Wang, Wei-Yao and Peng, Wen-Chih and Chen, Tien-Fu},
+  date = {2025-06-30},
+  journaltitle = {ACM Transactions on Intelligent Systems and Technology},
+  shortjournal = {ACM Trans. Intell. Syst. Technol.},
+  volume = {16},
+  number = {3},
+  eprint = {2308.08469},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  pages = {1--20},
+  issn = {2157-6904, 2157-6912},
+  doi = {10.1145/3719207 10.1145/3719207},
+  url = {http://arxiv.org/abs/2308.08469},
+  urldate = {2025-08-29},
+  abstract = {Multivariate time-series forecasting is vital in various domains, e.g., economic planning and weather prediction. Deep train-from-scratch models have exhibited effective performance yet require large amounts of data, which limits real-world applicability. Recently, researchers have leveraged the representation learning transferability of pre-trained Large Language Models (LLMs) to handle limited non-linguistic datasets effectively. However, incorporating LLMs with time-series data presents challenges of limited adaptation due to different compositions between time-series and linguistic data, and the inability to process multi-scale temporal information. To tackle these challenges, we propose LLM4TS, a framework for time-series forecasting with pre-trained LLMs. LLM4TS consists of a two-stage fine-tuning strategy: the time-series alignment stage to align LLMs with the nuances of time-series data, and the forecasting fine-tuning stage for downstream time-series forecasting tasks. Furthermore, our framework features a novel two-level aggregation method that integrates multi-scale temporal data within pre-trained LLMs, enhancing their ability to interpret time-specific information. In experiments across 7 time-series forecasting datasets, LLM4TS is superior to existing state-of-the-art methods compared with trained-from-scratch models in full-shot scenarios, and also achieves the highest rank in few-shot scenarios. In addition, evaluations compared with different unsupervised representation learning approaches highlight LLM4TS's effectiveness with representation learning in forecasting tasks. Ablation studies further validate each component's contribution to LLM4TS and underscore the essential role of utilizing LLM's pre-trained weights for optimal performance. The code is available at https://github.com/blacksnail789521/LLM4TS.},
+  keywords = {Computer Science - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/ZYI5HT4D/Chang et al. - 2025 - LLM4TS Aligning Pre-Trained LLMs as Data-Efficient Time-Series Forecasters.pdf}
+}
+
+@online{LiuY2024ITransformerInverted,
+  title = {iTransformer: Inverted Transformers Are Effective for Time Series Forecasting},
+  shorttitle = {iTransformer},
+  author = {Liu, Yong and Hu, Tengge and Zhang, Haoran and Wu, Haixu and Wang, Shiyu and Ma, Lintao and Long, Mingsheng},
+  date = {2024-03-14},
+  eprint = {2310.06625},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2310.06625},
+  url = {http://arxiv.org/abs/2310.06625},
+  urldate = {2025-08-29},
+  abstract = {The recent boom of linear forecasting models questions the ongoing passion for architectural modifications of Transformer-based forecasters. These forecasters leverage Transformers to model the global dependencies over temporal tokens of time series, with each token formed by multiple variates of the same timestamp. However, Transformers are challenged in forecasting series with larger lookback windows due to performance degradation and computation explosion. Besides, the embedding for each temporal token fuses multiple variates that represent potential delayed events and distinct physical measurements, which may fail in learning variate-centric representations and result in meaningless attention maps. In this work, we reflect on the competent duties of Transformer components and repurpose the Transformer architecture without any modification to the basic components. We propose iTransformer that simply applies the attention and feed-forward network on the inverted dimensions. Specifically, the time points of individual series are embedded into variate tokens which are utilized by the attention mechanism to capture multivariate correlations; meanwhile, the feed-forward network is applied for each variate token to learn nonlinear representations. The iTransformer model achieves state-of-the-art on challenging real-world datasets, which further empowers the Transformer family with promoted performance, generalization ability across different variates, and better utilization of arbitrary lookback windows, making it a nice alternative as the fundamental backbone of time series forecasting. Code is available at this repository: https://github.com/thuml/iTransformer.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning},
+  file = {/home/fli/.zotero/zotero-data/storage/LXS2IU25/Liu et al. - 2024 - iTransformer Inverted Transformers Are Effective for Time Series Forecasting.pdf}
+}
+
+@inproceedings{WangS2025FRTFlowbased,
+  title = {FRT: Flow-Based Reconcile Transformer for Hierarchical Time Series},
+  shorttitle = {FRT},
+  booktitle = {Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2},
+  author = {Wang, Shiyu and Lu, Wei and Li, Jiawei and Shi, Xiaoming and Zhong, Xinyue and Ye, Zhou and Jin, Ming and Wen, Qingsong},
+  date = {2025-08-03},
+  series = {KDD '25},
+  pages = {4995--5006},
+  publisher = {Association for Computing Machinery},
+  location = {New York, NY, USA},
+  doi = {10.1145/3711896.3737224},
+  url = {https://dl.acm.org/doi/10.1145/3711896.3737224},
+  urldate = {2025-09-04},
+  abstract = {Many real-world applications contain data in the form of multivariate time series (TS) with the hierarchical structure, where classic methods forecasting each TS independently are inadequate for coherency (i.e., satisfying the hierarchical aggregation constraints). Furthermore, the discrepancies between statistical properties of different levels can be huge, exacerbated by non-Gaussian distributions and non-linear correlations. In this paper, we propose a novel end-to-end hierarchical TS forecasting model, i.e., a Flow-based Reconcile Transformer (FRT). FRT employs a conditional normalizing flow-based autoregressive transformer, to represent complex data distribution, while simultaneously reconciling the forecasts to ensure coherency. Go beyond other state-of-the-art methods, FRT accomplishes forecasting and reconciliation simultaneously, while avoiding any post-processing steps. Moreover, FRT is a deep model that does not rely on any strong assumptions such as unbiased estimates or Gaussian distribution. Our experiments are conducted on four real-world hierarchical datasets from different industrial domains (three public ones and a dataset from the application servers of our company's data center) and the results demonstrate the efficacy of our proposed method. Our method has been implemented extensively within the production environments of a prominent global payment company. It has emerged as a cornerstone for workload forecasting within their data center and plays a critical role in the optimization of cloud computing resource allocation across the entire cluster. This successful deployment of the application demonstrates that our approach achieves precise hierarchical workload prediction, which is of great significance for efficient resource scheduling, enhancing resource utilization, and reducing server resource use and energy consumption in data centers.},
+  isbn = {979-8-4007-1454-2},
+  file = {/home/fli/.zotero/zotero-data/storage/WDNI55HA/Wang et al. - 2025 - FRT Flow-based Reconcile Transformer for Hierarchical Time Series.pdf}
+}
+
+@online{JosephB2025WhenInfluence,
+  title = {When Influence Misleads: Informational and Strategic Limits of Social Learning in Trading Networks},
+  shorttitle = {When Influence Misleads},
+  author = {Joseph, Bijin and Riedl, Christoph and Pentland, Alex and Moro, Esteban},
+  date = {2025-07-03},
+  eprint = {2507.01817},
+  eprinttype = {arXiv},
+  eprintclass = {physics},
+  doi = {10.48550/arXiv.2507.01817},
+  url = {http://arxiv.org/abs/2507.01817},
+  urldate = {2025-09-06},
+  abstract = {Social learning is a fundamental mechanism shaping decision-making across numerous social networks, including social trading platforms. In those platforms, investors combine traditional investing with copying the behavior of others. However, the underlying factors that drive mirroring decisions and their impact on performance remain poorly understood. Using high-resolution data on trades and social interactions from a large social trading platform, we uncover a fundamental tension between popularity and performance in shaping imitation behavior. Despite having access to performance data, people overwhelmingly choose whom to mirror based on social popularity, a signal poorly correlated with actual performance. This bias, reinforced by cognitive constraints and slow-changing popularity dynamics, results in widespread underperformance. However, traders who frequently revise their mirroring choices (trading explorers) consistently outperform those who maintain more static connections. Building an accurate model of social trading based on our findings, we show that prioritizing performance over popularity in social signals dramatically improves both individual and collective outcomes in trading platforms. These findings expose the hidden inefficiencies of social learning and suggest design principles for building more effective platforms.},
+  pubstate = {prepublished},
+  keywords = {Physics - Physics and Society},
+  file = {/home/fli/.zotero/zotero-data/storage/KL89MYG4/Joseph et al. - 2025 - When Influence Misleads Informational and Strategic Limits of Social Learning in Trading Networks.pdf}
+}
+
 @preamble{ "\ifdefined\DeclarePrefChars\DeclarePrefChars{'’-}\else\fi " }
