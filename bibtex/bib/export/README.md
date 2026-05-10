@@ -1,11 +1,10 @@
-# Feng Li's customized html layout
+# Feng Li's customized html exporter
 
-- The original files are from https://github.com/JabRef/jabref/tree/main/src/main/resources/resource/layout
+- The original layout files are from https://github.com/JabRef/jabref/tree/main/src/main/resources/resource/layout
 
 - Current usage
 
 ``` shell
-cd export
 ./bib_to_html.py
 ```
 
@@ -48,14 +47,3 @@ Add a `code` field inside any BibLaTeX entry to show a `[Code]` link:
 `bib_to_html.py` reads the shared begin/end layout files for both full-page and
 snippet exports. Snippet output is derived by trimming the document wrapper and
 applying snippet-specific CSS defaults.
-
-- Historical JabRef installation
-  - Open "JabRef GUI -> Options -> Preferences -> Custom export formats".
-  - Link to the main layout file and save with an `Export format name` like `mylistrefs`.
-  - This saves the preferences in `~/.java/.userPrefs/org/jabref/prefs.xml`.
-
-- Historical JabRef usage
-
-``` shell
-    /opt/jabref/bin/JabRef -n -o publications.html,mylistrefs -i publications.bib
-```
