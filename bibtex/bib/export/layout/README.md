@@ -6,11 +6,38 @@
 
 ``` shell
 cd export
-make publications snippets
+./bib_to_html.py
 ```
 
-The Makefile uses `bib_to_html.py` and requires the Python package
-`bibtexparser`.
+The converter requires the Python package `bibtexparser`. Run
+`./bib_to_html.py --help` for all options.
+
+- Common commands
+
+``` shell
+./bib_to_html.py
+./bib_to_html.py --mode full ../publications-feng.bib
+./bib_to_html.py --mode snippet ../publications-feng.bib -o publications-feng_snippets.html
+./bib_to_html.py --static --mode snippet ../publications-feng.bib -o publications-feng_static.html
+```
+
+Use `--static` to omit JavaScript, quick search, Abstract/Review/BibTeX links,
+and hidden Abstract/Review/BibTeX blocks.
+
+- Optional links
+
+Optional link fields are rendered only when present; absent fields are omitted.
+Add a `code` field inside any BibLaTeX entry to show a `[Code]` link:
+
+``` bibtex
+@article{ZhuX2021LeastSquareApproximation,
+  title = {Least-Square Approximation for a Distributed System},
+  ...
+  url = {https://arxiv.org/abs/1908.04904},
+  code = {https://github.com/feng-li/dlsa},
+  doi = {10.1080/10618600.2021.1923517}
+}
+```
 
 - Active layout files
   - `listrefs.begin.layout`
