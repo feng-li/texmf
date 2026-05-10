@@ -12,6 +12,16 @@ make publications snippets
 The Makefile uses `bib_to_html.py` and requires the Python package
 `bibtexparser`.
 
+- Active layout files
+  - `listrefs.begin.layout`
+  - `listrefs.end.layout`
+  - `listrefs.layout`
+  - `listrefs.misc.layout`
+
+`bib_to_html.py` reads the shared begin/end layout files for both full-page and
+snippet exports. Snippet output is derived by trimming the document wrapper and
+applying snippet-specific CSS defaults.
+
 - Historical JabRef installation
   - Open "JabRef GUI -> Options -> Preferences -> Custom export formats".
   - Link to the main layout file and save with an `Export format name` like `mylistrefs`.
