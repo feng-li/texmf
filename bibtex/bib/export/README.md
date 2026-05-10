@@ -1,8 +1,8 @@
 # Feng Li's customized html exporter
 
-- The original layout files are from https://github.com/JabRef/jabref/tree/main/src/main/resources/resource/layout
+- The original layout files are from [https://github.com/JabRef/jabref](https://github.com/JabRef/jabref/tree/main/jablib/src/main/resources/resource/layout/listrefs)
 
-- Current usage
+- Usage
 
 ``` shell
 ./bib_to_html.py
