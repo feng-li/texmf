@@ -254,6 +254,7 @@ function toggleInfo(articleid,info) {
 		bibshow?rev.className = 'review nextshow': rev.className = 'review';
 	}
 
+	updateExpandAllButton();
 }
 
 function setStatistics (hits) {
@@ -285,11 +286,78 @@ function showAll(){
 	}
 }
 
+function infoBaseClass(row) {
+	if (row.className.match(/abstract/)) { return 'abstract'; }
+	if (row.className.match(/review/)) { return 'review'; }
+	if (row.className.match(/bibtex/)) { return 'bibtex'; }
+	return '';
+}
+
+function rowIsVisible(row) {
+	return row && (!row.parentNode || row.parentNode.className.indexOf('noshow') == -1)
+		&& row.className.indexOf('noshow') == -1;
+}
+
+function hasOpenInfo(){
+	for (var i=0; i < numInfo; i++){
+		if (infoBaseClass(infoRows[i]) && rowIsVisible(infoRows[i])) {
+			return true;
+		}
+	}
+	return false;
+}
+
+function updateExpandAllButton(){
+	var togglebutton = document.getElementById('expandcollapseall');
+	if (!togglebutton) { return; }
+	var text = hasOpenInfo() ? 'collapse all' : 'expand all';
+	togglebutton.innerText = text;
+	togglebutton.textContent = text;
+}
+
 function closeAllInfo(){
 	for (var i=0; i < numInfo; i++){
-		if (infoRows[i].className.indexOf('noshow') ==-1) {
-			infoRows[i].className = infoRows[i].className + ' noshow';
+		var baseClass = infoBaseClass(infoRows[i]);
+		if (baseClass) {
+			infoRows[i].className = baseClass + ' noshow';
 		}
+	}
+	updateExpandAllButton();
+}
+
+function collapseAllInfo(){
+	closeAllInfo();
+	for (var i=0; i < numEntries; i++){
+		if (entryRows[i].className.indexOf('highlight') != -1) {
+			if (entryRows[i].className.indexOf('noshow') != -1) {
+				entryRows[i].className = 'bibitem noshow';
+			} else {
+				entryRows[i].className = 'bibitem show';
+			}
+		}
+	}
+}
+
+function expandAllInfo(){
+	for (var i=0; i < numInfo; i++){
+		var baseClass = infoBaseClass(infoRows[i]);
+		if (baseClass && (!infoRows[i].parentNode || infoRows[i].parentNode.className.indexOf('noshow') == -1)) {
+			infoRows[i].className = baseClass + ' show';
+		}
+	}
+	for (var j=0; j < numEntries; j++){
+		if (!entryRows[j].parentNode || entryRows[j].parentNode.className.indexOf('noshow') == -1) {
+			entryRows[j].className = 'bibitem highlight show';
+		}
+	}
+	updateExpandAllButton();
+}
+
+function toggleAllInfo(){
+	if (hasOpenInfo()) {
+		collapseAllInfo();
+	} else {
+		expandAllInfo();
 	}
 }
 
@@ -380,8 +448,8 @@ div#settings input { margin-bottom: 0px;}
 
 div#settings.hidden {display:none;}
 
-#showsettings { border: 1px grey solid; padding: 0 0.5em; float:right; line-height: 1.6em; text-align: right; }
-#showsettings:hover { cursor: pointer; }
+#showsettings, #expandcollapseall { border: 1px grey solid; padding: 0 0.5em; float:right; line-height: 1.6em; text-align: right; margin-left: 0.5em; }
+#showsettings:hover, #expandcollapseall:hover { cursor: pointer; }
 
 .invalidsearch { background-color: red; }
 input[type="button"] { background-color: #efefef; border: 1px #2E2E2E solid;}
@@ -431,6 +499,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <input type="text" id="qs_field" autocomplete="off" placeholder="Type to search..." /> <input type="button" onclick="clearQS()" value="clear" />
 <span id="searchstat">Matching entries: <span id="stat">0</span></span>
 <div id="showsettings" onclick="toggleSettings()">settings...</div>
+<div id="expandcollapseall" onclick="toggleAllInfo()">expand all</div>
 <div id="settings" class="hidden">
 <ul>
 <li><input type="checkbox" class="search_setting" id="opt_searchAbs" onchange="updateSetting(this)"><label for="opt_searchAbs"> include abstract</label></li>
