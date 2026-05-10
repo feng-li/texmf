@@ -1,14 +1,17 @@
+PYTHON ?= python3
+CONVERTER := ./bib_to_html.py
+
 all: snippets publications sync
 
 publications:
-	 /opt/jabref/bin/JabRef -n -o publications-feng.html,mylistrefs ../publications-feng.bib
-	 /opt/jabref/bin/JabRef -n -o publications-yanfei.html,mylistrefs ../publications-yanfei.bib
-	 /opt/jabref/bin/JabRef -n -o publications-kllab.html,mylistrefs ../publications-kllab.bib
+	$(PYTHON) $(CONVERTER) --mode full ../publications-feng.bib -o publications-feng.html
+	$(PYTHON) $(CONVERTER) --mode full ../publications-yanfei.bib -o publications-yanfei.html
+	$(PYTHON) $(CONVERTER) --mode full ../publications-kllab.bib -o publications-kllab.html
 
 snippets:
-	/opt/jabref/bin/JabRef -n -o publications-feng_snippets.html,mylistrefs_snippets -i ../publications-feng.bib
-	/opt/jabref/bin/JabRef -n -o publications-yanfei_snippets.html,mylistrefs_snippets -i ../publications-yanfei.bib
-	/opt/jabref/bin/JabRef -n -o publications-kllab_snippets.html,mylistrefs_snippets -i ../publications-kllab.bib
+	$(PYTHON) $(CONVERTER) --mode snippet ../publications-feng.bib -o publications-feng_snippets.html
+	$(PYTHON) $(CONVERTER) --mode snippet ../publications-yanfei.bib -o publications-yanfei_snippets.html
+	$(PYTHON) $(CONVERTER) --mode snippet ../publications-kllab.bib -o publications-kllab_snippets.html
 
 sync:
 	rsync -av publications-feng.html ${HOME}/nextcloud/feng.li/cv/publications.html
