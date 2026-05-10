@@ -1,4 +1,4 @@
-# Feng Li's customized html exporter
+# Feng Li's customized BibLaTeX html exporter
 
 - The original layout files are from [https://github.com/JabRef/jabref](https://github.com/JabRef/jabref/tree/main/jablib/src/main/resources/resource/layout/listrefs)
 
@@ -41,8 +41,6 @@ Add a `code` field inside any BibLaTeX entry to show a `[Code]` link:
 - Active layout files
   - `listrefs.begin.layout`
   - `listrefs.end.layout`
-  - `listrefs.layout`
-  - `listrefs.misc.layout`
 
 `bib_to_html.py` reads the shared begin/end layout files for both full-page and
 snippet exports. Snippet output is derived by trimming the document wrapper and
