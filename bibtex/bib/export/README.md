@@ -26,14 +26,16 @@ and hidden Abstract/Review/BibTeX blocks.
 - Optional links
 
 Optional link fields are rendered only when present; absent fields are omitted.
-Add a `code` field inside any BibLaTeX entry to show a `[Code]` link:
+The `[Software]` link can come from either a `code` field or the `software` item
+inside an `annotation` field:
 
 ``` bibtex
 @article{ZhuX2021LeastSquareApproximation,
   title = {Least-Square Approximation for a Distributed System},
   ...
   url = {https://arxiv.org/abs/1908.04904},
-  code = {https://github.com/feng-li/dlsa},
+  annotation = {software: https://github.com/feng-li/dlsa\\
+contribution: (First Author, ABS4)},
   doi = {10.1080/10618600.2021.1923517}
 }
 ```

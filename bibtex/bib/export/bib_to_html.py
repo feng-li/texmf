@@ -60,7 +60,7 @@ BIB_BLOCK_FIELDS = (
 OPTIONAL_LINK_FIELDS = (
     ("doi", "DOI"),
     ("url", "Preprint"),
-    ("code", "Code"),
+    ("software", "Software"),
 )
 
 DEFAULT_BIB_GLOB = "publications-*.bib"
@@ -265,6 +265,51 @@ def clean(value: str | None) -> str:
     return value.strip()
 
 
+def annotation_items(entry: dict[str, str]) -> dict[str, str]:
+    value = entry.get("annotation")
+    if not value:
+        return {}
+
+    text = value.replace("\r\n", "\n").replace("\r", "\n")
+    text = re.sub(r"\\\\\s*", "\n", text)
+
+    items: dict[str, str] = {}
+    current_key = ""
+    current_value: list[str] = []
+
+    def save_current() -> None:
+        if current_key:
+            parsed_value = clean(" ".join(current_value))
+            if parsed_value:
+                items[current_key] = parsed_value
+
+    for line in text.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        match = re.match(r"^([A-Za-z][A-Za-z0-9_-]*)\s*:\s*(.*)$", line)
+        if match:
+            save_current()
+            current_key = match.group(1).lower()
+            current_value = [match.group(2)]
+        elif current_key:
+            current_value.append(line)
+
+    save_current()
+    return items
+
+
+def annotation_value(entry: dict[str, str], key: str) -> str:
+    return annotation_items(entry).get(key.lower(), "")
+
+
+def contribution_text(entry: dict[str, str]) -> str:
+    value = annotation_value(entry, "contribution")
+    if value.startswith("(") and value.endswith(")"):
+        return value[1:-1].strip()
+    return value
+
+
 def field(entry: dict[str, str], name: str) -> str:
     if name == "year":
         return year(entry)
@@ -369,6 +414,26 @@ def external_link_url(name: str, value: str) -> str:
     return value
 
 
+def first_url(value: str) -> str:
+    match = re.search(r"https?://[^\s<>{}]+", clean(value))
+    if match:
+        return match.group(0).rstrip(".,;")
+    return clean(value)
+
+
+def optional_link_value(entry: dict[str, str], name: str) -> str:
+    if name == "code":
+        return first_url(field(entry, "code") or annotation_value(entry, "software"))
+    return field(entry, name)
+
+
+def external_anchor(url: str, label: str) -> str:
+    return (
+        f"""<a href="{html_attr(url)}" target="_blank" """
+        f"""rel="noopener noreferrer">{html_text(label)}</a>"""
+    )
+
+
 def pages_for_display(value: str) -> str:
     return clean(value).replace("--", "-")
 
@@ -395,12 +460,10 @@ def render_links(entry: dict[str, str], key: str, static: bool = False) -> str:
         )
 
     for name, label in OPTIONAL_LINK_FIELDS:
-        value = field(entry, name)
+        value = optional_link_value(entry, name)
         if not value:
             continue
-        links.append(
-            f"""[<a href="{html_attr(external_link_url(name, value))}" target="_blank">{label}</a>]"""
-        )
+        links.append(f"[{external_anchor(external_link_url(name, value), label)}]")
 
     return " ".join(links)
 
@@ -449,6 +512,10 @@ def render_summary(entry: dict[str, str]) -> str:
     publisher = field(entry, "publisher")
     if publisher:
         pieces.append(f" {html_text(publisher)}")
+
+    contribution = contribution_text(entry)
+    if contribution:
+        pieces.append(f""" <span class="contribution">{html_text(contribution)}</span>""")
 
     return "".join(pieces)
 

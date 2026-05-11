@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>JabRef references</title>
+<title>References</title>
 <meta http-equiv="Content-Type" content="text/html; charset=\encoding">
 <script type="text/javascript">
 <!--
@@ -454,6 +454,7 @@ div#settings.hidden {display:none;}
 .invalidsearch { background-color: red; }
 input[type="button"] { background-color: #efefef; border: 1px #2E2E2E solid;}
 
+#qs_table li { margin-bottom: 0.7em; }
 li a { color: navy; text-decoration: none; }
 li a:hover  { text-decoration: underline; }
 
@@ -465,6 +466,7 @@ li div.abstract, li div.review { padding: 1em; box-sizing: border-box; }
 
 li div.bibtex pre { width: 100%; overflow: auto; white-space: pre-wrap;}
 p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
+span.contribution { display: block; color: #800080; font-style: italic; }
 
 .bib {
     font-size: 12px;
