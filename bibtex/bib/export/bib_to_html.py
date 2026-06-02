@@ -415,15 +415,25 @@ def external_link_url(name: str, value: str) -> str:
 
 
 def first_url(value: str) -> str:
-    match = re.search(r"https?://[^\s<>{}]+", clean(value))
+    text = clean(value)
+    previous = None
+    while previous != text:
+        previous = text
+        text = re.sub(r"(https?://[^\s<>{}]+/)\s+([^\s<>{}]+)", r"\1\2", text)
+
+    match = re.search(r"https?://[^\s<>{}]+", text)
     if match:
         return match.group(0).rstrip(".,;")
-    return clean(value)
+    return text
 
 
 def optional_link_value(entry: dict[str, str], name: str) -> str:
-    if name == "code":
-        return first_url(field(entry, "code") or annotation_value(entry, "software"))
+    if name == "software":
+        return first_url(
+            field(entry, "software")
+            or field(entry, "code")
+            or annotation_value(entry, "software")
+        )
     return field(entry, name)
 
 
@@ -515,7 +525,7 @@ def render_summary(entry: dict[str, str]) -> str:
 
     contribution = contribution_text(entry)
     if contribution:
-        pieces.append(f""" <span class="contribution">{html_text(contribution)}</span>""")
+        pieces.append(f"""<br><span class="contribution">[<i>{html_text(contribution)}</i>]</span>""")
 
     return "".join(pieces)
 
@@ -548,6 +558,18 @@ def render_entry(entry: dict[str, str], static: bool = False) -> str:
     review = field(entry, "review")
     links = render_links(entry, key, static)
 
+    if static:
+        parts = [
+            (
+                f"""<li id="{html_attr(key)}" data-reftype="{html_attr(entry_type_label(entry))}" """
+                f"""class="bibitem">{render_summary(entry)}"""
+            ),
+        ]
+        if links:
+            parts.append(f"""  <p class="infolinks">{links}</p>""")
+        parts.append("</li>")
+        return "\n".join(parts)
+
     parts = [
         "<li>",
         (
@@ -558,10 +580,6 @@ def render_entry(entry: dict[str, str], static: bool = False) -> str:
     if links:
         parts.append(f"""  <p class="infolinks">{links}</p>""")
     parts.append("  </div>")
-
-    if static:
-        parts.append("</li>")
-        return "\n".join(parts)
 
     if abstract:
         parts.extend(
@@ -577,7 +595,7 @@ def render_entry(entry: dict[str, str], static: bool = False) -> str:
         parts.extend(
             [
                 f"""<div id="rev_{html_attr(key)}" class="review noshow">""",
-                f"\t<td><strong>Review</strong>: {html_text(review)}</td>",
+                f"\t<strong>Review</strong>: {html_text(review)}",
                 "</div>",
             ]
         )

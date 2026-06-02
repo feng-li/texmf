@@ -466,7 +466,6 @@ li div.abstract, li div.review { padding: 1em; box-sizing: border-box; }
 
 li div.bibtex pre { width: 100%; overflow: auto; white-space: pre-wrap;}
 p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
-span.contribution { display: block; color: #800080; font-style: italic; }
 
 .bib {
     font-size: 12px;
