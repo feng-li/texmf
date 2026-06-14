@@ -46,7 +46,7 @@ contribution: IF 7.9, JCR Q1},
   abstract = {Accurate forecasts are vital for supporting the decisions of modern companies. Forecasters typically select the most appropriate statistical model for each time series. However, statistical models usually presume some data generation process while making strong assumptions about the errors. In this paper, we present a novel data-centric approach — ‘forecasting with cross-similarity’, which tackles model uncertainty in a model-free manner. Existing similarity-based methods focus on identifying similar patterns within the series, i.e., ‘self-similarity’. In contrast, we propose searching for similar patterns from a reference set, i.e., ‘cross-similarity’. Instead of extrapolating, the future paths of the similar series are aggregated to obtain the forecasts of the target series. Building on the cross-learning concept, our approach allows the application of similarity-based forecasting on series with limited lengths. We evaluate the approach using a rich collection of real data and show that it yields competitive accuracy in both points forecasts and prediction intervals.},
   language = {en},
   keywords = {Dynamic time warping,Empirical evaluation,Forecasting,M competitions,Time series similarity},
-  annotation = {contribution: Corresponding author.},
+  annotation = {contribution: Corresponding author},
   file = {/home/fli/.zotero/zotero-data/storage/YA4XG22N/Kang et al. - 2021 - Déjà vu A data-centric forecasting approach through time series cross-similarity.pdf}
 }
 
@@ -83,7 +83,7 @@ contribution: IF 7.9, JCR Q1},
   abstract = {Feature-based time series representations have attracted substantial attention in a wide range of time series analysis methods. Recently, the use of time series features for forecast model averaging has been an emerging research focus in the forecasting community. Nonetheless, most of the existing approaches depend on the manual choice of an appropriate set of features. Exploiting machine learning methods to extract features from time series automatically becomes crucial in state-of-the-art time series analysis. In this paper, we introduce an automated approach to extract time series features based on time series imaging. We first transform time series into recurrence plots, from which local features can be extracted using computer vision algorithms. The extracted features are used for forecast model averaging. Our experiments show that forecasting based on automatically extracted features, with less human intervention and a more comprehensive view of the raw time series data, yields highly comparable performances with the best methods in the largest forecasting competition dataset (M4) and outperforms the top methods in the Tourism forecasting competition dataset.},
   language = {en},
   keywords = {Forecast combination,Forecasting,Recurrence plots,Time series feature extraction,Time series imaging},
-  annotation = {contribution: Corresponding author.},
+  annotation = {contribution: Corresponding author},
   file = {/home/fli/.zotero/zotero-data/storage/L4NECA35/Li et al. - 2020 - Forecasting with time series imaging.pdf}
 }
 
@@ -102,7 +102,7 @@ contribution: IF 7.9, JCR Q1},
   abstract = {In this work, we develop a distributed least-square approximation (DLSA) method that is able to solve a large family of regression problems (e.g., linear regression, logistic regression, and Cox’s model) on a distributed system. By approximating the local objective function using a local quadratic form, we are able to obtain a combined estimator by taking a weighted average of local estimators. The resulting estimator is proved to be statistically as efficient as the global estimator. Moreover, it requires only one round of communication. We further conduct a shrinkage estimation based on the DLSA estimation using an adaptive Lasso approach. The solution can be easily obtained by using the LARS algorithm on the master node. It is theoretically shown that the resulting estimator possesses the oracle property and is selection consistent by using a newly designed distributed Bayesian information criterion. The finite sample performance and computational efficiency are further illustrated by an extensive numerical study and an airline dataset. The airline dataset is 52 GB in size. The entire methodology has been implemented in Python for a de-facto standard Spark system. The proposed DLSA algorithm on the Spark system takes 26 min to obtain a logistic regression estimator, which is more efficient and memory friendly than conventional methods. Supplementary materials for this article are available online.},
   keywords = {Distributed BIC,Distributed system,Least-squares approximation,Shrinkage estimation},
   annotation = {software: https://github.com/feng-li/dstats\\
-contribution: Corresponding author.},
+contribution: Corresponding author},
   file = {/home/fli/.zotero/zotero-data/storage/FGDL2EJ5/Zhu et al. - 2021 - Least-Square Approximation for a Distributed System.pdf}
 }
 
@@ -158,7 +158,7 @@ contribution: Corresponding author.},
   abstract = {Forecasting is an indispensable element of operational research (OR) and an important aid to planning. The accurate estimation of the forecast uncertainty facilitates several operations management activities, predominantly in supporting decisions in inventory and supply chain management and effectively setting safety stocks. In this paper, we introduce a feature-based framework, which links the relationship between time series features and the interval forecasting performance into providing reliable interval forecasts. We propose an optimal threshold ratio searching algorithm and a new weight determination mechanism for selecting an appropriate subset of models and assigning combination weights for each time series tailored to the observed features. We evaluate our approach using a large set of time series from the M4 competition. Our experiments show that our approach significantly outperforms a wide range of benchmark models, both in terms of point forecasts as well as prediction intervals.},
   keywords = {forecast combination,Forecasting,nsfc2015,prediction intervals,time series features,uncertainty estimation},
   annotation = {software: https://github.com/xqnwang/fuma\\
-contribution: Corresponding author.},
+contribution: Corresponding author},
   file = {/home/fli/.zotero/zotero-data/storage/ZK4RBDZS/Wang_Kang_Petropoulos_Li_2022_The uncertainty estimation of feature-based forecast combinations3.pdf}
 }
 
@@ -196,7 +196,7 @@ contribution: Corresponding author.},
   language = {en},
   keywords = {Covariate-dependent copula,Financial forecasting,Kendall’s,MCMC,nsfc2015,Tail-dependence},
   annotation = {software: https://github.com/feng-li/cdcopula\\
-contribution: Corresponding author.},
+contribution: Corresponding author},
   file = {/home/fli/.zotero/zotero-data/storage/8MYQUD6W/Li_Kang_2018_Improving forecasting performance using covariate-dependent copula models.pdf;/home/fli/.zotero/zotero-data/storage/PC9UPWJA/Li_Kang_2018_Improving forecasting performance using covariate-dependent copula models2.pdf}
 }
 
@@ -256,7 +256,7 @@ contribution: Corresponding author.},
   abstract = {Forecast combinations have been widely applied in the last few decades to improve forecasting. Estimating optimal weights that can outperform simple averages is not always an easy task. In recent years, the idea of using time series features for forecast combinations has flourished. Although this idea has been proved to be beneficial in several forecasting competitions, it may not be practical in many situations. For example, the task of selecting appropriate features to build forecasting models is often challenging. Even if there was an acceptable way to define the features, existing features are estimated based on the historical patterns, which are likely to change in the future. Other times, the estimation of the features is infeasible due to limited historical data. In this work, we suggest a change of focus from the historical data to the produced forecasts to extract features. We use out-of-sample forecasts to obtain weights for forecast combinations by amplifying the diversity of the pool of methods being combined. A rich set of time series is used to evaluate the performance of the proposed method. Experimental results show that our diversity-based forecast combination framework not only simplifies the modeling process but also achieves superior forecasting performance in terms of both point forecasts and prediction intervals. The value of our proposition lies on its simplicity, transparency, and computational efficiency, elements that are important from both an optimization and a decision analysis perspective.},
   language = {en},
   keywords = {Empirical evaluation,Empirical Evaluation,Forecast combination,Forecast Combination,Forecast diversity,Forecast Diversity,Forecasting,Prediction intervals,Prediction Intervals},
-  annotation = {contribution: Corresponding author, ABS4.},
+  annotation = {contribution: Corresponding author, ABS4},
   file = {/home/fli/.zotero/zotero-data/storage/IH9SVS4B/Kang et al. - 2022 - Forecast with forecasts Diversity matters.pdf}
 }
 
@@ -271,7 +271,7 @@ contribution: Corresponding author.},
   doi = {10.1016/j.ssci.2022.105850},
   abstract = {The semi-open character with high passenger flow in Metro Rail Transport Stations (MRTS) makes safety management of human-electromechanical interaction escalator systems more complex. Safety management should not consider only single failures, but also the complex interactions in the system. This study applies task driven behavior theory and system theory to reveal a generic framework of the MRTS escalator accident mechanism and uses Lasso-Logistic Regression (LLR) for escalator injury prediction. Escalator accidents in the Beijing MRTS are used as a case study to estimate the applicability of the methodologies. The main results affirm that the application of System-Theoretical Process Analysis (STPA) and Task Driven Accident Process Analysis (TDAPA) to the generic escalator accident mechanism reveals non-failure state task driven passenger behaviors and constraints on safety that are not addressed in previous studies. The results also confirm that LLR is able to predict escalator accidents where there is a relatively large number of variables with limited observations. Additionally, increasing the amount of data improves the prediction accuracy for all three types of injuries in the case study, suggesting the LLR model has good extrapolation ability. The results can be applied in MRTS as instruments for both escalator accident investigation and accident prevention.},
   keywords = {Accident prediction,Escalator incident,Lasso-Logistic Regression model,Subway station,System-Theoretical Process Analysis (STPA)},
-  annotation = {contribution: Corresponding author.},
+  annotation = {contribution: Corresponding author},
   file = {/home/fli/.zotero/zotero-data/storage/GZJ9XHID/Wang_Pang_Gan_Skitmore_Li_2022_Escalator accident mechanism analysis and injury prediction approaches in heavy.pdf}
 }
 
@@ -306,7 +306,7 @@ contribution: Corresponding author.},
   doi = {10.1007/978-3-030-46161-4_21},
   url = {https://www.researchgate.net/publication/341587390},
   abstract = {This article considers a bilinear model that includes two different latent effects. The first effect has a direct influence on the response variable, whereas the second latent effect is assumed to first influence other latent variables, which in turn affect the response variable. In this article, latent variables are modelled via rank restrictions on unknown mean parameters and the models which are used are often referred to as reduced rank regression models. This article presents a likelihood-based approach that results in explicit estimators. In our model, the latent variables act as covariates that we know exist, but their direct influence is unknown and will therefore not be considered in detail. One example is if we observe hundreds of weather variables, but we cannot say which or how these variables affect plant growth.},
-  annotation = {contribution: Authors in alphabetical order.},
+  annotation = {contribution: Authors in alphabetical order},
   file = {/home/fli/.zotero/zotero-data/storage/HTXFM5WN/Hao_Li_von Rosen_2020_A Bilinear Reduced Rank Model.pdf}
 }
 
@@ -322,7 +322,7 @@ contribution: Corresponding author.},
   url = {https://arxiv.org/abs/2204.08283},
   abstract = {Intermittent demand forecasting is a ubiquitous and challenging problem in production systems and supply chain management. In recent years, there has been a growing focus on developing forecasting approaches for intermittent demand from academic and practical perspectives. However, limited attention has been given to forecast combination methods, which have achieved competitive performance in forecasting fast-moving time series. The current study aims to examine the empirical outcomes of some existing forecast combination methods and propose a generalized feature-based framework for intermittent demand forecasting. The proposed framework has been shown to improve the accuracy of point and quantile forecasts based on two real data sets. Further, some analysis of features, forecasting pools and computational efficiency is also provided. The findings indicate the intelligibility and flexibility of the proposed approach in intermittent demand forecasting and offer insights regarding inventory decisions.},
   language = {en},
-  annotation = {contribution: Corresponding author.},
+  annotation = {contribution: Corresponding author},
   file = {/home/fli/.zotero/zotero-data/storage/LU6VASBG/Li et al. - 2023 - Feature-based intermittent demand forecast combinations accuracy and inventory implications.pdf;/home/fli/.zotero/zotero-data/storage/SB7L6FV9/Li et al. - 2023 - Feature-based intermittent demand forecast combinations accuracy and inventory implications.pdf}
 }
 
@@ -343,7 +343,7 @@ contribution: Corresponding author.},
   language = {en},
   keywords = {mixture autoregressive models,simulation,time series features,time series forecasting,time series generation},
   annotation = {software: https://github.com/ykang/gratis\\
-contribution: Corresponding author.},
+contribution: Corresponding author},
   file = {/home/fli/.zotero/zotero-data/storage/BR5UA6QX/Kang et al. - 2020 - GRATIS GeneRAting TIme Series with diverse and controllable characteristics.pdf}
 }
 
@@ -378,7 +378,7 @@ contribution: Corresponding author.},
   abstract = {Forecasting has always been at the forefront of decision making and planning. The uncertainty that surrounds the future is both exciting and challenging, with individuals and organisations seeking to minimise risks and maximise utilities. The large number of forecasting applications calls for a diverse set of forecasting methods to tackle real-life challenges. This article provides a non-systematic review of the theory and the practice of forecasting. We provide an overview of a wide range of theoretical, state-of-the-art models, methods, principles, and approaches to prepare, produce, organise, and evaluate forecasts. We then demonstrate how such theoretical concepts are applied in a variety of real-life contexts. We do not claim that this review is an exhaustive list of methods and applications. However, we wish that our encyclopedic presentation will offer a point of reference for the rich work that has been undertaken over the last decades, with some key insights for the future of forecasting theory and practice. Given its encyclopedic nature, the intended mode of reading is non-linear. We offer cross-references to allow the readers to navigate through the various topics. We complement the theoretical concepts and applications covered by large lists of free or open-source software implementations and publicly-available databases.},
   language = {en},
   keywords = {Applications,Encyclopedia,Methods,Prediction,Principles,Review,Time series},
-  annotation = {contribution: ESI Highly Cited Paper.},
+  annotation = {contribution: ESI Highly Cited Paper},
   file = {/home/fli/.zotero/zotero-data/storage/NHPTYYM8/Petropoulos_Apiletti_Assimakopoulos et al_2022_Forecasting2.pdf;/home/fli/.zotero/zotero-data/storage/Z8GB9KRH/Petropoulos_Apiletti_Assimakopoulos et al_2022_Forecasting.pdf}
 }
 
@@ -413,7 +413,7 @@ contribution: Corresponding author.},
   abstract = {The practical importance of coherent forecasts in hierarchical forecasting has inspired many studies on forecast reconciliation. Under this approach, so-called base forecasts are produced for every series in the hierarchy and are subsequently adjusted to be coherent in a second reconciliation step. Reconciliation methods have been shown to improve forecast accuracy, but will, in general, adjust the base forecast of every series. However, in an operational context, it is sometimes necessary or beneficial to keep forecasts of some variables unchanged after forecast reconciliation. In this paper, we formulate reconciliation methodology that keeps forecasts of a pre-specified subset of variables unchanged or "immutable". In contrast to existing approaches, these immutable forecasts need not all come from the same level of a hierarchy, and our method can also be applied to grouped hierarchies. We prove that our approach preserves unbiasedness in base forecasts. Our method can also account for correlations between base forecasting errors and ensure non-negativity of forecasts. We also perform empirical experiments, including an application to sales of a large scale online retailer, to assess the impacts of our proposed methodology.},
   language = {en},
   annotation = {software: https://github.com/AngelPone/chf\\
-contribution: Corresponding author, ABS4.},
+contribution: Corresponding author, ABS4},
   file = {/home/fli/.zotero/zotero-data/storage/IABKIRH3/Zhang et al. - 2023 - Optimal reconciliation with immutable forecasts.pdf}
 }
 
@@ -434,7 +434,7 @@ contribution: Corresponding author, ABS4.},
   abstract = {Forecast combinations have flourished remarkably in the forecasting community and, in recent years, have become part of mainstream forecasting research and activities. Combining multiple forecasts produced for a target time series is now widely used to improve accuracy through the integration of information gleaned from different sources, thereby avoiding the need to identify a single “best” forecast. Combination schemes have evolved from simple combination methods without estimation to sophisticated techniques involving time-varying weights, nonlinear combinations, correlations among components, and cross-learning. They include combining point forecasts and combining probabilistic forecasts. This paper provides an up-to-date review of the extensive literature on forecast combinations and a reference to available open-source software implementations. We discuss the potential and limitations of various methods and highlight how these ideas have developed over time. Some crucial issues concerning the utility of forecast combinations are also surveyed. Finally, we conclude with current research gaps and potential insights for future research.},
   language = {en},
   keywords = {Combination forecast,Cross learning,Forecast combination puzzle,Forecast ensembles,Model averaging,Open-source software,Pooling,Probabilistic forecasts,Quantile forecasts},
-  annotation = {contribution: ESI Highly Cited Paper, IJF Best Paper Award.},
+  annotation = {contribution: ESI Highly Cited Paper, IJF Best Paper Award},
   file = {/home/fli/.zotero/zotero-data/storage/W66HVGAL/Wang_Hyndman_Li_Kang_2022_Forecast combinations2.pdf;/home/fli/.zotero/zotero-data/storage/YYZDREUL/Wang_Hyndman_Li_Kang_2022_Forecast combinations5.pdf}
 }
 
@@ -454,7 +454,7 @@ contribution: Corresponding author, ABS4.},
   abstract = {Hierarchical forecasting with intermittent time series is a challenge in both research and empirical studies. Extensive research focuses on improving the accuracy of each hierarchy, especially the intermittent time series at bottom levels. Then, hierarchical reconciliation can be used to improve the overall performance further. In this paper, we present a hierarchical-forecasting-with-alignment approach that treats the bottom-level forecasts as mutable to ensure higher forecasting accuracy on the upper levels of the hierarchy. We employ a pure deep learning forecasting approach, N-BEATS, for continuous time series at the top levels, and a widely used tree-based algorithm, LightGBM, for intermittent time series at the bottom level. The hierarchical-forecasting-with-alignment approach is a simple yet effective variant of the bottom-up method, accounting for biases that are difficult to observe at the bottom level. It allows suboptimal forecasts at the lower level to retain a higher overall performance. The approach in this empirical study was developed by the first author during the M5 Accuracy competition, ranking second place. The method is also business orientated and can be used to facilitate strategic business planning.},
   language = {en},
   keywords = {Deep learning forecasting,Forecasting reconciliation,Hierarchical alignment,Hierarchical forecasting,M5 competition},
-  annotation = {contribution: Corresponding author. The method ranked 2nd place in the M5 competition.},
+  annotation = {contribution: Corresponding author. The method ranked 2nd place in the M5 competition},
   file = {/home/fli/.zotero/zotero-data/storage/JUB7UEED/Anderer and Li - 2022 - Hierarchical forecasting with a top-down alignment of independent-level forecasts.pdf}
 }
 
@@ -486,7 +486,7 @@ contribution: Corresponding author, ABS4.},
   language = {en},
   keywords = {ARIMA models,Distributed forecasting,Least squares approximation,MapReduce,Ultra-long time series},
   annotation = {software: https://github.com/feng-li/dstats\\
-contribution: Corresponding author.},
+contribution: Corresponding author},
   file = {/home/fli/.zotero/zotero-data/storage/AB8S5KBL/Wang_Kang_Hyndman_Li_2023_Distributed ARIMA models for ultra-long time series.pdf;/home/fli/.zotero/zotero-data/storage/ESSIEYVN/Wang et al. - 2023 - Distributed ARIMA models for ultra-long time series.pdf}
 }
 
@@ -507,7 +507,7 @@ contribution: Corresponding author.},
   language = {en},
   keywords = {Bayesian density forecasting,Forecast combination,Interpretability,Log predictive score,Time-varying features},
   annotation = {software: https://github.com/feng-li/gsm\\
-contribution: Corresponding author.},
+contribution: Corresponding author},
   file = {/home/fli/.zotero/zotero-data/storage/3JMEMNPE/Li_Kang_Li_2023_Bayesian forecast combination using time-varying features.pdf;/home/fli/.zotero/zotero-data/storage/TX63I58Q/Li_Kang_Li_2023_Bayesian forecast combination using time-varying features2.pdf}
 }
 
@@ -580,7 +580,7 @@ contribution: Corresponding author},
   abstract = {We examine the information asymmetry between local and nonlocal investors with a large dataset of stock message board postings. We document that abnormal relative postings of a firm, i.e., unusual changes in the volume of postings from local versus nonlocal investors, capture locals' information advantage. This measure positively predicts firms' short-term stock returns as well as those of peer firms in the same city. Sentiment analysis shows that posting activities primarily reflect good news, potentially due to social transmission bias and short-sales constraints. We identify the information driving return predictability through content-based analysis. Abnormal relative postings also lead analysts' forecast revisions. Overall, investors' interactions on social media contain valuable geography-based private information.},
   keywords = {Local Information Advantage,Return Predictability,Sentiment Analysis,Social Media,Topical Analysis},
   annotation = {software: https://github.com/feng-li/local-information-advantage\\
-contribution: Authors in alphabetical order, FT50. Top 10 most-cited papers published by the journal in 2024.},
+contribution: Authors in alphabetical order, FT50. Top 10 most-cited papers published by the journal in 2024},
   file = {/home/fli/.zotero/zotero-data/storage/KSUNLFP8/Huang et al. - 2024 - Local Information Advantage and Stock Returns Evidence from Social Media.pdf}
 }
 
@@ -596,7 +596,7 @@ contribution: Authors in alphabetical order, FT50. Top 10 most-cited papers publ
   abstract = {Forecast combination integrates information from various sources by consolidating multiple forecast results from the target time series. Instead of the need to select a single optimal forecasting model, this paper introduces a deep learning ensemble forecasting model based on the Dirichlet process. Initially, the learning rate is sampled with three basis distributions as hyperparameters to convert the infinite mixture into a finite one. All checkpoints are collected to establish a deep learning sub-model pool, and weight adjustment and diversity strategies are developed during the combination process. The main advantage of this method is its ability to generate the required base learners through a single training process, utilizing the decaying strategy to tackle the challenge posed by the stochastic nature of gradient descent in determining the optimal learning rate. To ensure the method’s generalizability and competitiveness, this paper conducts an empirical analysis using the weekly dataset from the M4 competition and explores sensitivity to the number of models to be combined. The results demonstrate that the ensemble model proposed offers substantial improvements in prediction accuracy and stability compared to a single benchmark model.},
   eventtitle = {2023 IEEE International Conference on Data Mining Workshops (ICDMW)},
   keywords = {Data models,Dirichlet process,Diversity reception,Ensemble learning,Forecast combinations,Forecasting,Predictive models,Stochastic processes,Time series analysis,Training},
-  annotation = {contribution: Corresponding author.},
+  annotation = {contribution: Corresponding author},
   file = {/home/fli/.zotero/zotero-data/storage/8JBZ2SDJ/Ren et al. - 2023 - Infinite forecast combinations based on Dirichlet process.pdf}
 }
 
@@ -644,7 +644,7 @@ contribution: Authors in alphabetical order, FT50. Top 10 most-cited papers publ
   abstract = {本文对结构性变化的旅游需求进行研究,基于带有外生变量的向量自回归(VARX)模型,提出了一种分段组合预测的方法。与既有研究普遍采用的基于完整数据集构建组合预测模型不同,本文创新性地将时间因素纳入组合预测考量,通过将不同时间段的变量视为独立的单元,构建出分段时间序列数据集的组合预测模型。该方法以游客的网络搜索行为作为外生变量用于预测旅游人数,并捕捉这些外生变量在不同时间节点上对旅游人数产生的差异化影响,特别是在新冠疫情等突发冲击下的动态变化。实证结果显示,VARX模型的分段组合在预测中国出境旅游人数时展现出更高的准确性,其预测精度因考虑了外生变量在不同时间段的特异性影响而得以提升。事后分析进一步显示,特别是针对2024年中国出境旅游趋势的外样本预测结果,随着新冠疫情影响的逐渐消退及全球旅游市场的逐步复苏,中国出境旅游人数将呈现积极向上的增长态势。这一结论与现有公开文献中的趋势分析相吻合,进一步印证了本文预测方法的实践应用价值。},
   language = {zh-CN},
   keywords = {分段组合,带有外生变量的向量自回归模型,旅游预测},
-  annotation = {(Corresponding author)},
+  annotation = {contribution: Corresponding author},
   file = {/home/fli/.zotero/zotero-data/storage/EPM4DGEN/王雯 and 李丰 - 2025 - 基于分段组合VARX模型的中国出境游客数量预测.pdf;/home/fli/.zotero/zotero-data/storage/PIRP8J53/基于分段组合VARX模型的中国出境游客数量预测.pdf}
 }
 
@@ -681,7 +681,7 @@ feng-li/forecasting-with-optimal-starting-point},
   abstract = {Background The global rise in myopia, particularly in Asia, presents significant public health challenges. Analyzing trends and forecasting impacts are critical for developing strategies to mitigate this burden. Methods We conducted the largest study to date on myopia and high myopia prevalence in Chinese children and adolescents aged 7–18 years, analyzing data from 5,095,256 individuals across 119 studies from 1998 to 2022. Data variability between cycloplegia and non-cycloplegia measurements was addressed using a distance-based model averaging calibration. Aggregated prevalence and age-specific urban-rural trends were estimated using thin plate spline regression, with projections to 2050 derived from time series modeling. Findings Myopia prevalence plateaued in 2006 in urban areas and in 2013 in rural areas, with the urban-rural prevalence gap narrowing since 2015 (urban/rural ratio below 1.3 for all ages). By 2050, myopia prevalence is projected to stabilize at 27.1\% (95\% CI: 10.0–44.4\%) for ages 7–9 and 81.5\% (74.7–88.3\%) for ages 16–18 in urban areas, and at 20.1\% (8.6–31.7\%) and 74.1\% (63.2–84.8\%), respectively, in rural areas. High myopia prevalence among adolescents aged 16–18 is expected to rise from 7.3\% in 2001 to 22.1\% by 2050. Prevalence correlated significantly with the Human Development Index (P {$<$} 0.001). Interpretation Despite stabilization in overall myopia prevalence, the continued rise in high myopia underscores the need for targeted control measures. Projections emphasize the importance of addressing regional disparities and prioritizing public health interventions. Funding National Natural Science Foundation of China (\#82271086; \#82388101; \#72495123).},
   keywords = {Children and adolescents,High myopia,Myopia prevalence,Urban-rural disparities},
   annotation = {software: https://github.com/feng-li/myopia\\
-contribution: Equally share the first authorship.},
+contribution: Equally share the first authorship},
   file = {/home/fli/.zotero/zotero-data/storage/9NFNB5ZW/Pan et al. - 2025 - Myopia and high myopia trends in Chinese children and adolescents over 25 years a nationwide study.pdf}
 }
 
@@ -718,7 +718,7 @@ contribution: Equally share the first authorship.},
   abstract = {We propose a three-stage framework named as Recovery-Informed Strategy Enhancement (RISE) to forecast the recovery of Chinese outbound tourism following the coronavirus disease 2019 pandemic. The framework decomposes the forecasts into three parts: the initial forecasts, the terminal forecasts and the recovery curve forecasts that connect the two points. We integrate multiple sources of information and employ forecast combination techniques in all stages, enhancing both the accuracy and robustness of recovery forecasts. Compared with conventional forecasting approaches, our framework provides a structured and transparent pipeline to integrate model-based forecasts with expert-informed judgment under structural breaks and high uncertainty. Our findings demonstrate the effectiveness of this framework, offering an adaptable tool for recovery trajectory forecasting in post-crisis contexts.},
   keywords = {Expert judgment,Forecast combination,Forecast reconciliation,Recovery forecasting,Structural breaks,Tourism forecasting},
   annotation = {software: https://github.com/feng-li/rise-forecasting\\
-contribution: First Author, ABS4. The method ranked first place in point forecasting in Tourism Forecasting Competition II.},
+contribution: First Author, ABS4. The method ranked first place in point forecasting in Tourism Forecasting Competition II},
   file = {/home/fli/.zotero/zotero-data/storage/743GAQB8/Li and Ruan - 2026 - Recovery-Informed Forecasting Strategy Enhancement.pdf}
 }
 
