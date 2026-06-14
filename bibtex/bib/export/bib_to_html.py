@@ -63,6 +63,8 @@ OPTIONAL_LINK_FIELDS = (
     ("software", "Software"),
 )
 
+BOLD_AUTHOR_NAMES = {"feng li"}
+
 DEFAULT_BIB_GLOB = "publications-*.bib"
 DEFAULT_SNIPPET_SUFFIX = "_snippets"
 
@@ -394,6 +396,23 @@ def format_people(value: str) -> str:
     return ", ".join(names[:-1]) + " and " + names[-1]
 
 
+def format_people_html(value: str) -> str:
+    names = [format_name(name) for name in split_names(value)]
+    names = [name for name in names if name]
+    rendered = []
+    for name in names:
+        rendered_name = html_text(name)
+        if name.casefold() in BOLD_AUTHOR_NAMES:
+            rendered_name = f"<strong>{rendered_name}</strong>"
+        rendered.append(rendered_name)
+
+    if not rendered:
+        return ""
+    if len(rendered) == 1:
+        return rendered[0]
+    return ", ".join(rendered[:-1]) + " and " + rendered[-1]
+
+
 def strip_doi(value: str) -> str:
     doi = clean(value)
     doi = re.sub(r"^https?://(?:dx\.)?doi\.org/", "", doi, flags=re.IGNORECASE)
@@ -479,9 +498,9 @@ def render_links(entry: dict[str, str], key: str, static: bool = False) -> str:
 
 
 def render_summary(entry: dict[str, str]) -> str:
-    people = format_people(field(entry, "author")) or format_people(field(entry, "editor"))
+    people = format_people_html(field(entry, "author")) or format_people_html(field(entry, "editor"))
     title = html_text(field(entry, "title"))
-    pieces = [f"""{html_text(people)} ({html_text(field(entry, "year"))}). <i>"{title}". </i>"""]
+    pieces = [f"""{people} ({html_text(field(entry, "year"))}). <i>"{title}". </i>"""]
 
     journal = field(entry, "journal")
     if journal:
@@ -525,7 +544,7 @@ def render_summary(entry: dict[str, str]) -> str:
 
     contribution = contribution_text(entry)
     if contribution:
-        pieces.append(f"""<br><span class="contribution">[<i>{html_text(contribution)}</i>]</span>""")
+        pieces.append(f"""<br><span class="contribution">[<u>{html_text(contribution)}</u>]</span>""")
 
     return "".join(pieces)
 
