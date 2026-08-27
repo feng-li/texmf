@@ -62103,8 +62103,29 @@ AIF: 3.583},
   urldate = {2026-08-25},
   abstract = {Hierarchical forecasting with reconciliation requires forecasting values of a hierarchy (e.g.\textasciitilde customer demand in a state and district), such that forecast values are linked (e.g.\textasciitilde{} district forecasts should add up to the state forecast). Basic forecasting provides no guarantee for these desired structural relationships. Reconciliation addresses this problem, which is crucial for organizations requiring coherent predictions across multiple aggregation levels. Current methods like minimum trace (MinT) are mostly limited to tree structures and are computationally expensive. We introduce FlowRec, which reformulates hierarchical forecast reconciliation as a network flow optimization, enabling forecasting on generalized network structures. While reconciliation under the \$\textbackslash ell\_0\$ norm is NP-hard, we prove polynomial-time solvability for all \$\textbackslash ell\_\{p {$>$} 0\}\$ norms and , for any strictly convex and continuously differentiable loss function. For sparse networks, FlowRec achieves \$O(n\textasciicircum 2\textbackslash log n)\$ complexity, significantly improving upon MinT's \$O(n\textasciicircum 3)\$. Furthermore, we prove that FlowRec extends MinT to handle general networks, replacing MinT's error-covariance estimation step with direct network structural information. A key novelty of our approach is its handling of dynamic scenarios: while traditional methods recompute both base forecasts and reconciliation, FlowRec provides efficient localised updates with optimality guarantees. Monotonicity ensures that when forecasts improve incrementally, the initial reconciliation remains optimal. We also establish efficient, error-bounded approximate reconciliation, enabling fast updates in time-critical applications. Experiments on both simulated and real benchmarks demonstrate that FlowRec improves accuracy, runtime by 3-40x and memory usage by 5-7x. These results establish FlowRec as a powerful tool for large-scale hierarchical forecasting applications.},
   language = {en},
-  organization = {arXiv.org},
+  pubstate = {prepublished},
   file = {/home/fli/.zotero/zotero-data/storage/UULWJE83/Sharma et al. - 2025 - Hierarchical Forecast Reconciliation on Networks A Network Flow Optimization Formulation.pdf}
+}
+
+@article{LiuK2026StatisticalImpossibility,
+  title = {Statistical Impossibility and Possibility of Aligning LLMs with Human Preferences: From Condorcet Paradox to Nash Equilibrium},
+  shorttitle = {Statistical Impossibility and Possibility of Aligning LLMs with Human Preferences},
+  author = {Liu, Kaizhao and Long, Qi and Shi, Zhekun and Su, Weijie J. and Xiao, Jiancong},
+  date = {2026-08},
+  journaltitle = {The Annals of Statistics},
+  shortjournal = {Ann. Stat.},
+  volume = {54},
+  number = {4},
+  pages = {2110--2135},
+  publisher = {Institute of Mathematical Statistics},
+  issn = {0090-5364, 2168-8966},
+  doi = {10.1214/26-AOS2643},
+  url = {https://projecteuclid.org/journals/annals-of-statistics/volume-54/issue-4/Statistical-impossibility-and-possibility-of-aligning-LLMs-with-human-preferences/10.1214/26-AOS2643.full},
+  urldate = {2026-08-26},
+  abstract = {Aligning large language models (LLMs) with diverse human preferences is critical for ensuring fairness and informed outcomes when deploying these models for decision-making. In this paper, we seek to uncover fundamental statistical limits concerning aligning LLMs with human preferences, with a focus on the probabilistic representation of human preferences and the preservation of diverse preferences in aligned LLMs. We first show that human preferences can be represented by a reward model if and only if the preference among LLM-generated responses is free of any Condorcet cycle. Moreover, we prove that Condorcet cycles exist with probability converging to one exponentially fast under a general probabilistic preference model called the Luce model, thereby demonstrating the impossibility of fully aligning human preferences using reward-based approaches such as reinforcement learning from human feedback. Next, we explore the conditions under which LLMs would employ mixed strategies—meaning they do not collapse to a single response—when aligned in the limit using a nonreward-based approach, such as Nash learning from human feedback. We identify a necessary and sufficient condition for mixed strategies: the absence of a response that is preferred over all others by a majority. As a blessing, we prove that this condition holds with high probability under the Luce model, thereby highlighting the statistical possibility of preserving minority preferences without explicit regularization in aligning LLMs.},
+  language = {en},
+  keywords = {62F07,62P25,Condorcet paradox,Large language models,Nash equilibrium,preference alignment,reward model},
+  file = {/home/fli/.zotero/zotero-data/storage/DULK7CRI/Liu et al. - 2026 - Statistical impossibility and possibility of aligning LLMs with human preferences From Condorcet pa.pdf}
 }
 
 @preamble{ "\ifdefined\DeclarePrefChars\DeclarePrefChars{'’-}\else\fi " }
